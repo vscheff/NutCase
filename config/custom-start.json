@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "dimensioning": {"mode": "custom", "include": [], "exclude": []},
+  "views": {"isometric": false, "opposite_end": true, "section": true, "opening_detail": true},
+  "sheet": {"size": "ANSI-B"},
+  "scale": 2,
+  "metadata": {"title": "CUSTOM GEOMETRY REVIEW", "drawing_number": "", "revision": ""}
+}

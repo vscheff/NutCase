@@ -1,0 +1,2 @@
+# Optional compatibility stage. Keep FreeCAD's bundled Python unmodified.
+pypdf==6.10.0

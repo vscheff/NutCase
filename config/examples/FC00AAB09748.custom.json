@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "dimensioning": {
+    "mode": "custom",
+    "include": [
+      "g1-92e203a211dfec54caefabb9da020af19767f7e96cd7b0c65bfd4bf0b491fcd7",
+      "g1-dfd29447811d06a4c0990948e1ebcf7de0d9ed4765e95f93ba3e16904056eb76",
+      "g1-1d14935bfeefc111dccbf02c1e300551ceaf84867fe36877d556a8eac3334d7c",
+      "g1-648878b33870959294db74f1aff00684936685cff80c622fe5a5efd4cea6bfc8",
+      "g1-039d1b84b21a21c274f959d328f3e7c7e07507c490f9ee6a5de758f7bfa9c892"
+    ],
+    "exclude": [
+      "g1-b5284477f464b1f2f8513fc7d414c87622c444b3c5cfcc0197893f0ca7c947a2",
+      "g1-18f7626d1993a26e91c30111736e67dbd8fd921ed1102754b15095bb29cec4f9",
+      "g1-25690b13bcfbfc8d95a76bb92aec2911b9712df23bcb5c850c5805bb3df2ab31",
+      "g1-7ef41276cac3e2a82f9f97f439db7c2b8bfd97c06b15d487e4d56fb3ac504041",
+      "g1-723731e8b1bac89d009113e1ebc7a2c3e4c53f161df1ba0f2289615962aa5cd1",
+      "g1-19ed921811022e46121fc7598217aa32c80fd88c2c55a8559a28fa22a15e780e"
+    ]
+  },
+  "views": {
+    "isometric": false,
+    "opposite_end": true,
+    "section": true,
+    "opening_detail": true
+  },
+  "sheet": {
+    "size": "ANSI-B"
+  },
+  "scale": 2,
+  "orientation": {
+    "axis": null,
+    "up": null
+  },
+  "metadata": {
+    "title": "CUSTOM GEOMETRY REVIEW",
+    "drawing_number": "FC00AAB09748",
+    "revision": "P4",
+    "date": "2026-10-12"
+  },
+  "source_binding": {
+    "geometry_id": "447e0fedea6f50cc2976bac63c99fd640880cc1cb3f7205a95af331b636e37a6",
+    "source_sha256": "f3d97d4cab35e9a0443a20ff4c61d68d488860eaa27936d7200dc907d4264264",
+    "candidate_ids": [
+      "g1-039d1b84b21a21c274f959d328f3e7c7e07507c490f9ee6a5de758f7bfa9c892",
+      "g1-0d6a2cf06bab6af0ec5da6f8fefbe633a158371e7e5bd5b3caa2a7527f850123",
+      "g1-18f7626d1993a26e91c30111736e67dbd8fd921ed1102754b15095bb29cec4f9",
+      "g1-19ed921811022e46121fc7598217aa32c80fd88c2c55a8559a28fa22a15e780e",
+      "g1-1d14935bfeefc111dccbf02c1e300551ceaf84867fe36877d556a8eac3334d7c",
+      "g1-25690b13bcfbfc8d95a76bb92aec2911b9712df23bcb5c850c5805bb3df2ab31",
+      "g1-458a1d9379943299364a162062bf07b13488b296532d377168b5921ae891b415",
+      "g1-51411a5d3d7d4f955a951ae6e3c262960c824e25fdaf8e335f892b0a2a9f0725",
+      "g1-5929de1f3a9d6eab5db1a5c5d98080096063d07db267a32bd9438c92ee2bc39a",
+      "g1-59860c117926a61213a6056c2104da28d305a7b3b80baed113abd022736f9240",
+      "g1-648878b33870959294db74f1aff00684936685cff80c622fe5a5efd4cea6bfc8",
+      "g1-723731e8b1bac89d009113e1ebc7a2c3e4c53f161df1ba0f2289615962aa5cd1",
+      "g1-754b0f64f3bae61aa94da93f1fa71ee896f08102add470c557e939dd3ae497ea",
+      "g1-7ef41276cac3e2a82f9f97f439db7c2b8bfd97c06b15d487e4d56fb3ac504041",
+      "g1-8af9fd1787c9377ca1cea239cc4c3894d7395d5e8270fa3ac48e1758adce82cb",
+      "g1-92e203a211dfec54caefabb9da020af19767f7e96cd7b0c65bfd4bf0b491fcd7",
+      "g1-a6e2bc5b022ad0941a6f17c6acdc866972a56db5ef48d884309ea9a0f7f908db",
+      "g1-a93a91fabcec3e3231f64d7348b608d78891604e686b531e00161cbf948f3036",
+      "g1-b5284477f464b1f2f8513fc7d414c87622c444b3c5cfcc0197893f0ca7c947a2",
+      "g1-b8fe621df4b98022f79bb6e05f2b95fe86844d75917d0e80e29eeb3038664d1e",
+      "g1-c1b14b4865826983ab7216153853c1ee168b12340bce610018ef86cd1769a35f",
+      "g1-cb80b5be174b784db35f67308dc743485344e0abc26c3b594ab35889f573d54f",
+      "g1-dfd29447811d06a4c0990948e1ebcf7de0d9ed4765e95f93ba3e16904056eb76",
+      "g1-e9f0fa607f452566f884fa4896864d2fa984ec232e6a15c5d76810ce2df2e835"
+    ]
+  }
+}

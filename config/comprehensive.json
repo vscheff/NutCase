@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "dimensioning": {"mode": "comprehensive", "include": [], "exclude": []},
+  "views": {"isometric": true, "opposite_end": true, "section": true, "opening_detail": true},
+  "sheet": {"size": "auto"},
+  "scale": "auto",
+  "orientation": {"axis": null, "up": null},
+  "metadata": {"title": "IMPORTED STEP GEOMETRY", "drawing_number": "", "revision": "", "date": null}
+}
