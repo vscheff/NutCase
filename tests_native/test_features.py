@@ -1,5 +1,5 @@
 from local_samples import require_samples, samples
-"""Independent native reference geometry for generalized Phase 3 discovery."""
+"""Independent native reference geometry for generalized feature discovery."""
 import unittest
 import FreeCAD as App
 import Part

@@ -1,5 +1,5 @@
 from local_samples import require_samples, samples
-"""Phase 3 selection and actual native section/dimension/persistence regressions."""
+"""Feature selection and actual native section/dimension/persistence regressions."""
 import json
 import unittest
 from pathlib import Path
@@ -94,7 +94,7 @@ class ComprehensiveIntegrationTests(unittest.TestCase):
             result=run_generator(source,directory,'--dimensions','--dimension-scope','comprehensive')
             self.assertIn(result.returncode,(0,2),result.stdout+result.stderr)
             report=json.loads((Path(directory)/(source.stem+'.drawing.json')).read_text(encoding='utf-8'))
-            self.assertEqual(report['phase'],3)
+            self.assertEqual(report['operation'],'comprehensive_dimensioning')
             self.assertEqual(report['reopen_checks']['native_view_count'],5)
             placed=[r for r in report['dimensions'].values() if r['status']=='created']
             diameters=sorted(round(r['verification']['native_value_mm'],5) for r in placed if r['candidate']['kind']=='diameter')
@@ -122,7 +122,7 @@ class ComprehensiveIntegrationTests(unittest.TestCase):
                 self.assertTrue(r['unresolved_dimensions'])
                 self.assertTrue(all(v.get('reason') for v in r['dimensions'].values() if v['status']!='created'))
                 self.assertEqual(before,sha256(sample))
-                self.assertNotEqual(r['phase1_analysis']['validation']['boolean_check']['status'],'passed')
+                self.assertNotEqual(r['source_analysis']['validation']['boolean_check']['status'],'passed')
                 self.assertEqual(r['layout']['sheet'],'ANSI-B')
                 self.assertEqual(r['layout']['scale'],2)
                 self.assertEqual(r['reopen_checks']['native_drafting_centerlines_verified'],6)

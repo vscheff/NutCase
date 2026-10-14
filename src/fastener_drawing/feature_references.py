@@ -1,4 +1,4 @@
-"""General source proofs and native view matching for Phase 3 candidates.
+"""General source proofs and native view matching for geometric candidates.
 
 Projected vertices are measured native geometry, not cosmetic points. Every
 match retains its source loci and fingerprints for a second check after reopen.

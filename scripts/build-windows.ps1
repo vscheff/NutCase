@@ -48,17 +48,19 @@ try {
     if ($LASTEXITCODE -ne 0) {throw 'Windows installer build failed'}
     & $python (Join-Path $repository 'packaging\prepare_bundle.py') --release-artifacts --artifact-directory $artifacts
     if ($LASTEXITCODE -ne 0) {throw 'Release checksum/source archive creation failed'}
-    & $python (Join-Path $repository 'packaging\licensing\fetch_reviewed.py') --materials (Join-Path $repository 'artifacts\phase6_2')
+    & $python (Join-Path $repository 'packaging\licensing\fetch_reviewed.py') --materials (Join-Path $repository 'artifacts\licensing-materials')
     if ($LASTEXITCODE -ne 0) {throw 'Reviewed licensing source material retrieval failed'}
     $complianceReport=Join-Path $artifacts 'compliance-report.json'
-    & $python (Join-Path $repository 'packaging\licensing\verify.py') --bundle $bundle --review (Join-Path $repository 'packaging\licensing\inventory.json') --materials (Join-Path $repository 'artifacts\phase6_2') --supplemental-materials (Join-Path $repository 'artifacts\phase6_3\research') --installer (Join-Path $artifacts ("NutCase-$version-windows-x64-setup.exe")) --report $complianceReport
+    $reviewPath=Join-Path $repository 'packaging\licensing\inventory.json'
+    if (-not (Test-Path -LiteralPath $reviewPath)) {$reviewPath=Join-Path $repository 'packaging\licensing\reference-inventory.zip'}
+    & $python (Join-Path $repository 'packaging\licensing\verify.py') --bundle $bundle --review $reviewPath --materials (Join-Path $repository 'artifacts\licensing-materials') --supplemental-materials (Join-Path $repository 'artifacts\licensing-candidate\research') --installer (Join-Path $artifacts ("NutCase-$version-windows-x64-setup.exe")) --report $complianceReport
     if ($LASTEXITCODE -ne 0) {
         $compliance=Get-Content -LiteralPath $complianceReport -Raw | ConvertFrom-Json
         $integrityFailures=@($compliance.findings | Where-Object { $_.code -notin @('component_review','obligation') })
         if (-not $AllowUnresolvedLicensing -or $integrityFailures.Count -gt 0) {throw 'Release compliance gate failed; see artifacts/compliance-report.json. Changed files require a new audit, not an automatic inventory refresh.'}
         Write-Warning 'Local candidate only: recorded licensing obligations remain unresolved. Public release is blocked.'
     }
-    & $python (Join-Path $repository 'packaging\licensing\package_review.py') --output (Join-Path $artifacts 'licensing-release') --supplemental-materials (Join-Path $repository 'artifacts\phase6_3\research')
+    & $python (Join-Path $repository 'packaging\licensing\package_review.py') --output (Join-Path $artifacts 'licensing-release') --supplemental-materials (Join-Path $repository 'artifacts\licensing-candidate\research')
     if ($LASTEXITCODE -ne 0) {throw 'Source/evidence release package creation failed'}
     Write-Host "Candidate installer: $artifacts\NutCase-$version-windows-x64-setup.exe"
 } finally {

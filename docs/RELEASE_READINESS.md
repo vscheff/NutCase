@@ -1,6 +1,6 @@
 # NutCase release-readiness checklist
 
-The current package is a local candidate. Check boxes reflect the retained automated evidence; exact Phase 6.3 outcomes are recorded in release-adjacent PHASE6_3_REVIEW.md and verification reports. Historical Phase 6/6.2 results remain available separately.
+The inspected package is a local candidate. Check boxes reflect its archived automated evidence, not a fresh build of the cleaned source. Exact outcomes are recorded in `artifacts/licensing-history.zip`; see [licensing workflow instructions](../packaging/licensing/README.md) for restoration. A new build requires a new explicit payload review and installer binding.
 
 ## Build and automated checks
 
@@ -17,7 +17,7 @@ The current package is a local candidate. Check boxes reflect the retained autom
 - [x] Windows cancellation/abrupt worker-exit tests kill native fixtures and descendants.
 - [ ] Force a full interactive GUI crash during real CAD generation and verify cleanup.
 - [x] Read-only installation and spaces/Unicode/ampersands work.
-- [x] Scripted install, shortcuts, same-version update, uninstall and reinstall preserve user files (exact count in the Phase 6.3 lifecycle report).
+- [x] Scripted install, shortcuts, same-version update, uninstall and reinstall preserve user files (exact count in the archived candidate lifecycle report).
 - [x] Corrected installed PDF association and detached FreeCAD launch requests pass.
 
 ## Final human acceptance
@@ -41,10 +41,10 @@ The current package is a local candidate. Check boxes reflect the retained autom
 - [ ] Review release notes, prerequisites, checksums and source artifacts.
 - [ ] Explicitly approve first public GitHub release. No automatic publication occurs.
 
-See PHASE6_REVIEW.md for historical packaging results and TEST_COVERAGE_RECOVERY.md
-for the restored Phase 6.1 suites (166 distinct methods). PHASE6_2_LICENSING_REVIEW.md
-records the historical licensing candidate. PHASE6_3_REVIEW.md records the current trimmed candidate and checks. Development-host automated
-tests do not erase remaining clean-machine or interactive acceptance requirements.
+Historical packaging, test-recovery and candidate acceptance records are retained in
+`artifacts/licensing-history.zip`. See [licensing workflow instructions](../packaging/licensing/README.md)
+for restoration and the exact reviewed candidate. Development-host automated tests
+do not erase remaining clean-machine or interactive acceptance requirements.
 
 - [x] Explicit Qt plugin/catalog exclusions and frozen locale/PDF/software-context probes.
 - [x] Retained native Qt section/source/build-SBOM correspondence.

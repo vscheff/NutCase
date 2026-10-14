@@ -29,7 +29,7 @@ def generate_drawing(path, output_dir, sheet="ANSI-B", isometric=True, opposite_
     output_dir.mkdir(parents=True, exist_ok=True)
     destination = output_dir / path.stem
     report_path = output_dir / (path.stem + ".drawing.json")
-    report = {"phase": 2, "stage": "B" if dimensions else "A", "preliminary": True, "requires_engineering_verification": True,
+    report = {"schema_version": 2, "operation": "native_drawing", "stage": "Measured dimensions" if dimensions else "Undimensioned views", "preliminary": True, "requires_engineering_verification": True,
               "dimensions_requested": dimensions, "dimensions_included": False, "drawing_status": "started", "source": str(path),
               "visual_review": {"status": "pending", "note": "Automated exports do not establish visual correctness; inspect rendered PDF previews."}}
     doc = None
@@ -42,13 +42,13 @@ def generate_drawing(path, output_dir, sheet="ANSI-B", isometric=True, opposite_
         isometric, opposite_end = configuration['views']['isometric'], configuration['views']['opposite_end']
         axis = configuration['orientation']['axis']
         date_text = normalize_metadata_date(configuration['metadata']['date']) or date_text
-    if comprehensive:report.update(phase=3,iteration='3.1',stage="Comprehensive feature dimensioning")
+    if comprehensive:report.update(operation='comprehensive_dimensioning',stage="Comprehensive feature dimensioning")
     if configuration is not None:
-        report.update(iteration='4.0',stage='Configured '+configuration['dimensioning']['mode']+' feature dimensioning')
+        report.update(operation='configured_dimensioning',stage='Configured '+configuration['dimensioning']['mode']+' feature dimensioning')
     try:
         Gui, TechDrawGui = initialize_gui()
         analysis = build_report(path)
-        report["phase1_analysis"] = analysis
+        report["source_analysis"] = analysis
         write_json(report, report_path)
         original, source_metadata = import_step(path)
         if source_metadata["sha256_before"] != analysis["source"]["sha256_before"]:
@@ -129,8 +129,8 @@ def generate_drawing(path, output_dir, sheet="ANSI-B", isometric=True, opposite_
         page.addProperty("App::PropertyString", "ValidationDiagnosticsJSON", "Provenance").ValidationDiagnosticsJSON = json.dumps(analysis["validation"])
         page.addProperty("App::PropertyString", "DrawingOrientationJSON", "Provenance").DrawingOrientationJSON = json.dumps(frames)
         page.addProperty("App::PropertyString", "SourceBRepSignatureJSON", "Provenance").SourceBRepSignatureJSON = json.dumps(signature)
-        stage_text = "Phase 3 - Comprehensive measured STEP dimensions" if comprehensive else "Stage B - Measured STEP dimensions" if dimensions else "Stage A - Undimensioned"
-        if configuration is not None:stage_text='Phase 4 - '+configuration['dimensioning']['mode']+' measured STEP dimensions'
+        stage_text = "Comprehensive measured STEP dimensions" if comprehensive else "Measured STEP dimensions" if dimensions else "Undimensioned STEP views"
+        if configuration is not None:stage_text=configuration['dimensioning']['mode'].title()+' measured STEP dimensions'
         page.addProperty("App::PropertyString", "DrawingStage", "Provenance").DrawingStage = stage_text + "; requires engineering verification"
         page.addProperty("App::PropertyString", "DrawingUnits", "Provenance").DrawingUnits = "mm"
         if configuration is not None:
@@ -277,7 +277,7 @@ def main(argv=None):
     parser.add_argument("--dimension-scope",choices=("basic","comprehensive"),default="comprehensive",help="General feature dimensions by default; basic preserves the reviewed four-dimension Stage B output")
     parser.add_argument("--axis", type=float, nargs=3, metavar=("X", "Y", "Z"), help="Explicit reviewed axis override")
     parser.add_argument("--date", help="Generated date override, YYYY-MM-DD or MM/dd/yyyy")
-    parser.add_argument('--config',type=Path,help='Phase 4 JSON policy; source selection remains independently verified')
+    parser.add_argument('--config',type=Path,help='Drawing JSON policy; source selection remains independently verified')
     args = parser.parse_args(argv)
     if args.axis and sum(value * value for value in args.axis) <= 1e-20:
         parser.error("--axis must be a nonzero direction vector")

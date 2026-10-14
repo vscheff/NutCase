@@ -1,4 +1,4 @@
-"""New real QProcess/CAD/PDF matrix, adapted from retained Phase 6 harness.
+"""Real QProcess/CAD/PDF matrix, adapted from the frozen verification harness.
 
 No generated-output baseline or supplied model is required for the synthetic
 matrix. Local samples are separate optional evidence, never shipped fixtures.
@@ -85,7 +85,7 @@ class CADWorkflowTests(unittest.TestCase):
                             self.assertEqual(release['pdf_audit']['status'],'passed')
                             self.assertEqual(release['pdf_audit']['poppler_warnings'],0)
                             self.assertTrue(release['pdf_audit']['vector_only'])
-                            self.assertTrue(Path(report['phase4']['native_pdf_retained']).is_file())
+                            self.assertTrue(Path(report['publication']['native_pdf_retained']).is_file())
                             self.assertEqual(window.preview.document.status(),QPdfDocument.Status.Ready)
                             self.assertFalse(window.preview.document.render(0,window.preview.view.size()).isNull())
                             placed=[r for r in report['dimensions'].values() if r['status']=='created']
@@ -103,7 +103,7 @@ class CADWorkflowTests(unittest.TestCase):
                                 dest=export_copy(release,key,directory/f'copy {index} {mode} {key}')
                                 self.assertEqual(dest.suffix,suffix);self.assertEqual(sha256(dest),sha256(release[key]))
                             rows.append({'source':original.name,'local_sample':local,'mode':mode.lower(),'exit_code':code,
-                                'dimensions':len(placed),'native_pdf':report['phase4']['native_pdf_retained'],
+                                'dimensions':len(placed),'native_pdf':report['publication']['native_pdf_retained'],
                                 'project':release['project'],'pdf':release['pdf'],'source_sha256':expected_hash,
                                 'pdf_verified':True,'native_reopened':True})
                     window.save_configuration();policy=window.store.load(source)

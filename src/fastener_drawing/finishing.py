@@ -20,7 +20,7 @@ def finish(plan_path):
     destination=Path(report.pop("destination"))
     layout,frames=report["layout"],report["orientation"]
     reports=report["dimensions"]
-    discovery=report["phase1_analysis"]["components"][0]["feature_discovery"]
+    discovery=report["source_analysis"]["components"][0]["feature_discovery"]
     page=doc.DrawingPage;page.ViewObject.show()
     views={r:doc.getObject(r.title().replace("_","")) for r in layout["positions"]}
     wait_for_views(doc,list(views.values()))
@@ -98,11 +98,11 @@ def finish(plan_path):
                     raise RuntimeError('Final native hatch material validation failed')
             finally:App.closeDocument(saved.Name)
     report["reopen_checks"]=verify_reopen(report["exports"]["project"],report["imported_brep_signature"],layout["scale"],len(views),layout,frames,reports)
-    if sha256(report["source"])!=report["phase1_analysis"]["source"]["sha256_before"]:
+    if sha256(report["source"])!=report["source_analysis"]["source"]["sha256_before"]:
         raise RuntimeError("Original STEP source changed during drawing generation")
     report.update(source_sha256_verified_unchanged=True,drawing_status="generated_pending_visual_review",
-                  geometry_requires_review=report["phase1_analysis"]["validation"]["status"]!="passed",
+                  geometry_requires_review=report["source_analysis"]["validation"]["status"]!="passed",
                   execution_host="Native FreeCAD bundled Python; separate fresh GUI host for persisted layout validation")
     write_summary(Path(str(destination)+".coverage.md"),report)
-    write_json(report["phase1_analysis"],Path(str(destination)+".analysis.json"))
+    write_json(report["source_analysis"],Path(str(destination)+".analysis.json"))
     write_json(report,Path(str(destination)+".drawing.json"))

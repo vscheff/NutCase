@@ -1,4 +1,4 @@
-"""New coverage for post-Phase-5 controls, selection and export refinements."""
+"""Coverage for desktop controls, selection and export refinements."""
 import copy
 import tempfile
 import unittest

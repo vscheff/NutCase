@@ -15,6 +15,8 @@ def main():
     args.installed=args.installed.resolve()
     args.installer=args.installer.resolve()
     path=ROOT/'packaging/licensing/inventory.json'
+    if not path.is_file():
+        raise ValueError('Create an explicit working payload review before installer binding. The archived reference review is immutable.')
     review=json.loads(path.read_text(encoding='utf-8'))
     expected={r['path']:r for r in review['files']}
     actual={p.relative_to(args.installed).as_posix():p for p in args.installed.rglob('*') if p.is_file()}

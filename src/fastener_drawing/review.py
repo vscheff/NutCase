@@ -3,7 +3,7 @@ import json
 
 
 def build_review(report):
-    analysis=report['phase1_analysis']
+    analysis=report['source_analysis']
     discovery=analysis['components'][0]['feature_discovery']
     rows=[]
     for c in discovery['dimension_candidates']:

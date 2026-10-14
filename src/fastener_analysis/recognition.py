@@ -108,7 +108,7 @@ def detect_threads(shape, geometry):
             "edge": index, "supporting_faces": adjacent, "sample_count": len(points),
             "turns_observed": abs(winding) / TAU, "fitted_radius_mm": radius,
             "fitted_signed_pitch_mm": pitch, "max_fit_residual_mm": residual,
-            "fitted_axial_phase_mm": mean_station - slope * mean_angle,
+            "fitted_axial_offset_mm": mean_station - slope * mean_angle,
             "axial_range_mm": [min(stations), max(stations)],
             "value_note": "Sampled native-curve classification diagnostic; not a recognized drawing dimension",
         })
@@ -118,16 +118,16 @@ def detect_threads(shape, geometry):
         group = None
         for chain in chains:
             pitch = chain["fitted_signed_pitch_mm"]
-            phase_delta = segment["fitted_axial_phase_mm"] - chain["fitted_axial_phase_mm"]
-            phase_delta -= abs(pitch) * round(phase_delta / abs(pitch))
+            axial_offset_delta = segment["fitted_axial_offset_mm"] - chain["fitted_axial_offset_mm"]
+            axial_offset_delta -= abs(pitch) * round(axial_offset_delta / abs(pitch))
             if (abs(segment["fitted_radius_mm"] - chain["fitted_radius_mm"]) <= eps * 10
                     and abs(segment["fitted_signed_pitch_mm"] - pitch) <= abs(pitch) * 0.01
-                    and abs(phase_delta) <= max(eps * 10, abs(pitch) * 0.005)
+                    and abs(axial_offset_delta) <= max(eps * 10, abs(pitch) * 0.005)
                     and segment["axial_range_mm"][0] <= chain["axial_range_mm"][1] + eps * 10):
                 group = chain
                 break
         if group is None:
-            group = {key: segment[key] for key in ("fitted_radius_mm", "fitted_signed_pitch_mm", "fitted_axial_phase_mm")}
+            group = {key: segment[key] for key in ("fitted_radius_mm", "fitted_signed_pitch_mm", "fitted_axial_offset_mm")}
             group.update(edges=[], supporting_faces=[], axial_range_mm=list(segment["axial_range_mm"]))
             chains.append(group)
         group["edges"].append(segment["edge"])

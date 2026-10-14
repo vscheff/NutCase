@@ -240,7 +240,7 @@ def components(rows,notice_records,materials):
         result.append({'id':identifier,'name':name,'version':version,'license_expression':license_expression,
             'status':status,'outstanding':outstanding,'file_count':len(matching),'notice_files':notices_for_component,
             'evidence':['Full installed file hashes and package-member hash matches in inventory.json',
-                        'Original installer, upstream source checksums where available, actual wheel notices and immutable conda recipes in artifacts/phase6_2'],
+                        'Original installer, upstream source checksums where available, actual wheel notices and immutable conda recipes in artifacts/licensing-materials'],
             'upstream_and_distributor':'Per-file provenance and source-manifest.json; original distributor metadata retained',
             'copyright_and_notice_obligations':'Retain verbatim component notices, conditions and disclaimers. See notice_files / NOTICE_INDEX.json.',
             'corresponding_source':'source-manifest.json; conda recipes and source archives retained',
@@ -302,7 +302,6 @@ def main():
     notice_records=notices()
     shutil.copytree(REVIEW/'notices',candidate/'licenses/audit',dirs_exist_ok=True)
     for filename in ('THIRD_PARTY_NOTICES.md',):shutil.copy2(ROOT/filename,candidate/filename)
-    shutil.copy2(ROOT/'PHASE6_REVIEW.md',candidate/'PHASE6_REVIEW.md')
     for filename in ('SOURCE_AVAILABILITY.md','LICENSING_AUDIT.md','RELEASE_READINESS.md'):
         shutil.copy2(ROOT/'docs'/filename,candidate/'docs'/filename)
     for filename in ('BUILD_AND_REPLACEMENT.md','UPSTREAM_CLARIFICATIONS.md'):

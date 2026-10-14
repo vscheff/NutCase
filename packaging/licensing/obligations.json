@@ -42,7 +42,7 @@
   {
     "id": "source-delivery",
     "status": "REQUIRES HUMAN/LEGAL REVIEW",
-    "detail": "Separate Phase 6.3 application and dependency-source/evidence assets preserve full original sources plus SDK source/build SBOMs and new attribution evidence. Native Qt source correlation is established; binding configuration and Mesa notice closure remain open. Review GPLv2 3(a), GPLv3 6(d), LGPLv3 4, free adjacent source downloads, retention/backup and any User Product installation information. Nothing published; no written offer relied on."
+    "detail": "Separate current candidate application and dependency-source/evidence assets preserve full original sources plus SDK source/build SBOMs and new attribution evidence. Native Qt source correlation is established; binding configuration and Mesa notice closure remain open. Review GPLv2 3(a), GPLv3 6(d), LGPLv3 4, free adjacent source downloads, retention/backup and any User Product installation information. Nothing published; no written offer relied on."
   },
   {
     "id": "owner-rights",
@@ -57,6 +57,6 @@
   {
     "id": "public-release",
     "status": "REQUIRES HUMAN/LEGAL REVIEW",
-    "detail": "Full recovered development-host suites and disposable installation checks are recorded in PHASE6_3_REVIEW.md. Clean Windows 10/11, RDP/VM graphics, interactive acceptance, real version upgrade and explicit publication approval remain pending. No release or external correspondence created."
+    "detail": "Full recovered development-host suites and disposable installation checks are recorded in archived candidate acceptance records. Clean Windows 10/11, RDP/VM graphics, interactive acceptance, real version upgrade and explicit publication approval remain pending. No release or external correspondence created."
   }
 ]

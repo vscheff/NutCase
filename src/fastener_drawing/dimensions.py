@@ -41,7 +41,7 @@ def native_measurement(dimension, feature, matching):
     if (dimension.Arbitrary or dimension.ArbitraryTolerances or dimension.TheoreticalExact or dimension.AngleOverride
             or dimension.OverTolerance.Value != 0 or dimension.UnderTolerance.Value != 0):
         raise UnresolvedDimension("Dimension contains a text override or unintended engineering specification")
-    result = {"native_value_mm": value, "difference_from_phase1_mm": abs(value - expected),
+    result = {"native_value_mm": value, "difference_from_source_mm": abs(value - expected),
             "difference_from_independent_source_mm": abs(value - feature["independent_source_value_mm"]),
             "difference_from_projected_geometry_mm": abs(value - matching["projection_value_mm"]),
             "numerical_validation_threshold_mm": MATCH_MM, "arbitrary_value_override": False,
@@ -136,7 +136,7 @@ def create_dimensions(doc, page, source, views, geometry, recognition, frames, l
                 "position_relative_to_view_mm": [dim.X.Value, dim.Y.Value], "verification": checked,
                 "requires_engineering_verification": True}
             dim.addProperty("App::PropertyString", "MeasuredCharacteristic", "Provenance").MeasuredCharacteristic = key
-            LOG.info("%s: native %.6f mm, verified against independent source and Phase 1", key, checked["native_value_mm"])
+            LOG.info("%s: native %.6f mm, verified against independent source geometry", key, checked["native_value_mm"])
         except (UnresolvedDimension, RuntimeError, ValueError) as exc:
             if dim is not None:
                 doc.removeObject(dim.Name)

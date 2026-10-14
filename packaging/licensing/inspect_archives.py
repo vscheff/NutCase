@@ -8,7 +8,7 @@ import zipfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-OUT = ROOT/'artifacts/phase6_2'
+OUT = ROOT/'artifacts/licensing-materials'
 sys.path.insert(0, str(OUT/'audit-tools'))
 
 

@@ -1,6 +1,6 @@
 # Ready-to-send upstream clarification requests
 
-None have been sent. Attach the exact affected file/wheel rows from inventory.json, plus the named evidence extracts. Do not attach the full source archive.
+None have been sent. Attach the exact affected file/wheel rows from `inventory.json` inside `reference-inventory.zip`, plus the named evidence extracts. Do not attach the full source archive.
 
 ## Qt for Python maintainers
 

@@ -30,7 +30,7 @@ from the frozen worker; native CAD stays in the prerequisite's own interpreter.
 
 Windows job objects retain the GUI → worker → native descendant containment.
 Cooperative cancellation still precedes atomic publication. Exit 2 remains a
-complete preliminary drawing requiring review. Nothing in this phase relaxes
+complete preliminary drawing requiring review. Packaging preserves
 manifest hashes, source binding, PDF normalization, native reopen/measurement
 checks, source integrity or previous-release preservation.
 
@@ -104,7 +104,7 @@ reinstalls and uninstalls again while checking retained data. `-OpenExternal`
 additionally opens the final PDF and FCStd; close the test viewers when finished.
 `-OpenExisting` checks external dispatch against retained results without
 regenerating them. The tests create real per-user Windows registration/shortcuts
-and use an isolated data directory. See the Phase 6 review for measured results
+and use an isolated data directory. See the archived packaging evidence for measured results
 and this host's AppData virtualization limitation. A developer-machine test is
 not a clean-VM test.
 

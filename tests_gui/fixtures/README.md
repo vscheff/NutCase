@@ -15,4 +15,4 @@ PDF behavior is covered separately by the existing native/PDF suites and the
 nine-case `tests_gui/test_cad_workflow.py` matrix when optional local samples are
 enabled (three cases with the independent synthetic source alone).
 
-The fast GUI suite does not depend on prior generated `output/phase4/` files.
+The fast GUI suite does not depend on prior generated drawing files.

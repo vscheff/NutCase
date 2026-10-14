@@ -34,7 +34,7 @@ validation = analysis['validation']
 validation['boolean_check'] = {'status': 'failed', 'message': 'BOPAlgo MOCK warning for GUI branch coverage only'}
 analysis['source']['path'] = '@SOURCE@'
 report = {'fixture_only': True, 'source': '@SOURCE@', 'configuration': config,
-          'phase1_analysis': analysis, 'geometry_requires_review': True, 'unresolved_dimensions': [],
+          'source_analysis': analysis, 'geometry_requires_review': True, 'unresolved_dimensions': [],
           'source_sha256_verified_unchanged': True,
           'reopen_checks': {'reopened_successfully': True, 'dimension_checks': {}},
           'dimensions': {c['id']: {'status': 'unresolved' if c['verification_status'] == 'unsupported' else 'suppressed',

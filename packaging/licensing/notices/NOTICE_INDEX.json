@@ -13045,57 +13045,57 @@
     "sha256": "b76585ad68860b271fc4c5a346444e4a70cacd48a3fd688cb2e8dd18d5935cd1"
   },
   {
-    "source_evidence": "Phase 6.3 official SDK/codec evidence: aom-3.14.1-LICENSE.txt",
+    "source_evidence": "current candidate official SDK/codec evidence: aom-3.14.1-LICENSE.txt",
     "installed_notice": "licenses/audit/aom-3.14.1-LICENSE.txt",
     "sha256": "4764a286d8b2faeaf42f4418e7d7a28d58fc8fd4d00a3d0a7f44b0a4099de7f2"
   },
   {
-    "source_evidence": "Phase 6.3 official SDK/codec evidence: aom-3.14.1-PATENTS.txt",
+    "source_evidence": "current candidate official SDK/codec evidence: aom-3.14.1-PATENTS.txt",
     "installed_notice": "licenses/audit/aom-3.14.1-PATENTS.txt",
     "sha256": "661fb8e504744e95587b556b94a58343448300606a41bea8c7a9b97125696e61"
   },
   {
-    "source_evidence": "Phase 6.3 official SDK/codec evidence: dav1d-1.5.3-COPYING.txt",
+    "source_evidence": "current candidate official SDK/codec evidence: dav1d-1.5.3-COPYING.txt",
     "installed_notice": "licenses/audit/dav1d-1.5.3-COPYING.txt",
     "sha256": "dd92c3c2247c5651606fc23a5e2d6a1ebc5ace9a3e49cbde0e12f05ad1cb1ee5"
   },
   {
-    "source_evidence": "Phase 6.3 official SDK/codec evidence: libyuv-644251f25-AUTHORS.txt",
+    "source_evidence": "current candidate official SDK/codec evidence: libyuv-644251f25-AUTHORS.txt",
     "installed_notice": "licenses/audit/libyuv-644251f25-AUTHORS.txt",
     "sha256": "0c4a51c72a06b3431bb2b750e3b04dbe3694b22e2fcae6e370216424eec56d52"
   },
   {
-    "source_evidence": "Phase 6.3 official SDK/codec evidence: libyuv-644251f25-LICENSE.txt",
+    "source_evidence": "current candidate official SDK/codec evidence: libyuv-644251f25-LICENSE.txt",
     "installed_notice": "licenses/audit/libyuv-644251f25-LICENSE.txt",
     "sha256": "2b2cc1180c7e6988328ad2033b04b80117419db9c4c584918bbb3cfec7e9364f"
   },
   {
-    "source_evidence": "Phase 6.3 official SDK/codec evidence: libyuv-644251f25-PATENTS.txt",
+    "source_evidence": "current candidate official SDK/codec evidence: libyuv-644251f25-PATENTS.txt",
     "installed_notice": "licenses/audit/libyuv-644251f25-PATENTS.txt",
     "sha256": "4da84211f947c6f9f7dd8fbce513e1522e01833407ae732b8c9a2bbb75fed495"
   },
   {
-    "source_evidence": "Phase 6.3 official SDK/codec evidence: Qt-Mesa-official-attribution.html",
+    "source_evidence": "current candidate official SDK/codec evidence: Qt-Mesa-official-attribution.html",
     "installed_notice": "licenses/audit/Qt-Mesa-official-attribution.html",
     "sha256": "55432a584d21f4c4c7e058a5244c5488bda97f94182504b723a668de203d210f"
   },
   {
-    "source_evidence": "Phase 6.3 official SDK/codec evidence: Qt-SDK-qtbase-6.12.0.spdx.json",
+    "source_evidence": "current candidate official SDK/codec evidence: Qt-SDK-qtbase-6.12.0.spdx.json",
     "installed_notice": "licenses/audit/Qt-SDK-qtbase-6.12.0.spdx.json",
     "sha256": "ec627100f721386be2a72e904af13f2ef3d52e2714aee3e25db279fc9464884d"
   },
   {
-    "source_evidence": "Phase 6.3 official SDK/codec evidence: Qt-SDK-qtpdf-6.140.0.spdx.json",
+    "source_evidence": "current candidate official SDK/codec evidence: Qt-SDK-qtpdf-6.140.0.spdx.json",
     "installed_notice": "licenses/audit/Qt-SDK-qtpdf-6.140.0.spdx.json",
     "sha256": "0a05a608201528d188eac8fbc8a4f0a1859b08f1ad1e9a861b402e958a87533e"
   },
   {
-    "source_evidence": "Phase 6.3 official SDK/codec evidence: Qt-SDK-qtsvg-6.12.0.spdx.json",
+    "source_evidence": "current candidate official SDK/codec evidence: Qt-SDK-qtsvg-6.12.0.spdx.json",
     "installed_notice": "licenses/audit/Qt-SDK-qtsvg-6.12.0.spdx.json",
     "sha256": "70ea12dda11f4b39772fd731c3fb50a7dd4ed72afc06800a88494d3904e11e36"
   },
   {
-    "source_evidence": "Phase 6.3 official SDK/codec evidence: Qt-SDK-qtwebengine-chromium-pdf-6.140.0.spdx.json",
+    "source_evidence": "current candidate official SDK/codec evidence: Qt-SDK-qtwebengine-chromium-pdf-6.140.0.spdx.json",
     "installed_notice": "licenses/audit/Qt-SDK-qtwebengine-chromium-pdf-6.140.0.spdx.json",
     "sha256": "c5f132fd5278205df491e1352de1d98c7f533dc3f3499a6ea731be40f0d40142"
   }

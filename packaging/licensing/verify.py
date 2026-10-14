@@ -16,6 +16,28 @@ def sha256(path):
         return hashlib.file_digest(stream,'sha256').hexdigest()
 
 
+def review_bytes(path):
+    """Read the exact reviewed JSON, including an immutable reference snapshot."""
+    path=Path(path)
+    if path.suffix.lower()=='.zip':
+        with zipfile.ZipFile(path) as archive:
+            if archive.namelist().count('inventory.json')!=1:
+                raise ValueError('Reference archive must contain exactly one inventory.json')
+            return archive.read('inventory.json')
+    return path.read_bytes()
+
+
+def load_review(path):
+    return json.loads(review_bytes(path).decode('utf-8-sig'))
+
+
+def review_path(directory):
+    """Prefer a new explicit working review; otherwise retain the old reference."""
+    directory=Path(directory)
+    working=directory/'inventory.json'
+    return working if working.is_file() else directory/'reference-inventory.zip'
+
+
 def confined(root, relative):
     value=PurePosixPath(relative)
     if value.is_absolute() or '..' in value.parts or '\\' in relative or ':' in relative:
@@ -112,16 +134,17 @@ def main():
     args=parser.parse_args()
     review=None
     try:
-        review=json.loads(args.review.read_text(encoding='utf-8-sig'))
+        review=load_review(args.review)
         findings=verify(args.bundle,review,args.materials,args.installer,args.supplemental_materials)
-    except (ValueError,OSError,KeyError,TypeError,AttributeError) as error:
+    except (ValueError,OSError,KeyError,TypeError,AttributeError,zipfile.BadZipFile) as error:
         review=None
         findings=[{'status':'BLOCKED','code':'invalid_review','detail':str(error)}]
     blocked=any(f['status'] not in ('VERIFIED','NOT APPLICABLE') for f in findings)
     integrity_passed=all(f['code'] in ('integrity','component_review','obligation') for f in findings)
     result={'schema_version':1,'release_ready':not blocked,'legal_certification':False,
             'technical_integrity_passed':integrity_passed,
-            'review_sha256':sha256(args.review) if args.review.is_file() else None,
+            'review_sha256':hashlib.sha256(review_bytes(args.review)).hexdigest() if review is not None else None,
+            'review_container_sha256':sha256(args.review) if args.review.is_file() else None,
             'payload_files_checked':len(review.get('files',[])) if review else 0,
             'source_materials_checked':len(review.get('materials',[]))+len(review.get('supplemental_materials',[])) if review else 0,
             'installer_sha256':sha256(args.installer) if args.installer and args.installer.is_file() else None,

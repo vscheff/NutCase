@@ -64,6 +64,6 @@ def verify_pdf(pdf, drawing_report, directory, poppler):
             'renderer_comparison':{'dark_pixel_counts':counts,'unmatched_ink_beyond_two_pixels':unmatched,'unmatched_fraction':fractions,
                                    'maximum_allowed_fraction':.01,'basis':'Presentation discrepancy gate, not measurement or conformance proof'},
             'visual_review':'Required; two agreeing renderers can share an omitted drawing element',
-            'nitro_review':'Not performed automatically; Phase 3.2 normalization contract retained'}
+            'nitro_review':'Not performed automatically; operator-preserving normalization contract retained'}
     (directory/'verification.json').write_text(json.dumps(result,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
     return result

@@ -1,4 +1,4 @@
-# Microsoft runtime decision for Phase 6.3
+# Microsoft runtime decision for current candidate
 
 All 24 app-local copies are retained. Exact origins below describe observed content, not owner redistribution authorization. No prerequisite-only candidate has been built or accepted.
 
@@ -29,7 +29,7 @@ All 24 app-local copies are retained. Exact origins below describe observed cont
 | `vendor/poppler/Library/bin/vcruntime140.dll` | 14.51.36247.0 | MSVC separately redistributable runtime; .build-tools/python.3.13.16.nupkg; .build-tools/Release-26.09.0-0.zip; vc14_runtime-14.51.36247-habf1de7_41.conda | REQUIRES HUMAN/LEGAL REVIEW: conditional Microsoft authorization; no owner entitlement evidence recorded |
 | `vendor/poppler/Library/bin/vcruntime140_1.dll` | 14.51.36247.0 | MSVC separately redistributable runtime; .build-tools/python.3.13.16.nupkg; .build-tools/Release-26.09.0-0.zip; vc14_runtime-14.51.36247-habf1de7_41.conda | REQUIRES HUMAN/LEGAL REVIEW: conditional Microsoft authorization; no owner entitlement evidence recorded |
 
-The UCRT copies match Windows SDK/conda 10.0.26100.4654. They are API-set forwarders, not a copy of Windows ucrtbase.dll. MSVC copies are 14.44.35211 or 14.51.36247. Per-file SHA256 and package-member hashes remain in inventory.json; verbatim SDK/runtime terms remain in installed audit notices.
+The UCRT copies match Windows SDK/conda 10.0.26100.4654. They are API-set forwarders, not a copy of Windows ucrtbase.dll. MSVC copies are 14.44.35211 or 14.51.36247. Per-file SHA256 and package-member hashes remain in `inventory.json` inside `reference-inventory.zip`; verbatim SDK/runtime terms remain in installed audit notices.
 
 | Choice | Installation / permissions | Offline / versions | Licensing and maintenance |
 |---|---|---|---|
@@ -40,4 +40,4 @@ The inspected host has VC runtime 14.50.35719, older than the newest packaged 14
 
 Owner decision: document application-local authorization, or explicitly select the prerequisite path for a subsequent tested candidate. Do not infer rights from Qt/conda redistributing the same bytes.
 
-Primary references: [Microsoft redistribution guidance](https://learn.microsoft.com/en-us/cpp/windows/redistributing-visual-cpp-files?view=msvc-170), [Visual Studio REDIST list](https://learn.microsoft.com/en-us/visualstudio/releases/2022/redistribution), [supported runtime/version guidance](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170). Local terms and receipts were preserved in Phase 6.2; refreshed Microsoft pages are in Phase 6.3 research.
+Primary references: [Microsoft redistribution guidance](https://learn.microsoft.com/en-us/cpp/windows/redistributing-visual-cpp-files?view=msvc-170), [Visual Studio REDIST list](https://learn.microsoft.com/en-us/visualstudio/releases/2022/redistribution), [supported runtime/version guidance](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170). Local terms and receipts were preserved in baseline candidate; refreshed Microsoft pages are in current candidate research.

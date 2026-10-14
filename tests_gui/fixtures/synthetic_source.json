@@ -436,9 +436,8 @@
     "binding_policy": "Conservative native geometry fingerprint; changed pose/trim/topology requires review, even at equal dimension values. 1e-9 rounding is numeric fingerprint resolution, never a manufacturing tolerance."
   },
   "analysis": {
-    "schema_version": "1.1",
+    "schema_version": "1.2",
     "tool_version": "0.3.0",
-    "phase": 1,
     "generated_at_utc": "2026-10-13T17:13:12.992887+00:00",
     "units": "mm",
     "preliminary": true,
@@ -1455,7 +1454,8 @@
       }
     ],
     "evidence_indexing": "Face/edge numbers are one-based within each native Solid component; tied to this import and source hash, not guaranteed stable across readers/versions.",
-    "analysis_status": "completed_preliminary"
+    "analysis_status": "completed_preliminary",
+    "operation": "step_analysis"
   },
   "config": {
     "schema_version": 1,
@@ -1540,10 +1540,9 @@
         ]
       }
     },
-    "phase1_analysis": {
-      "schema_version": "1.1",
+    "source_analysis": {
+      "schema_version": "1.2",
       "tool_version": "0.3.0",
-      "phase": 1,
       "generated_at_utc": "2026-10-13T17:13:12.992887+00:00",
       "units": "mm",
       "preliminary": true,
@@ -2560,7 +2559,8 @@
         }
       ],
       "evidence_indexing": "Face/edge numbers are one-based within each native Solid component; tied to this import and source hash, not guaranteed stable across readers/versions.",
-      "analysis_status": "completed_preliminary"
+      "analysis_status": "completed_preliminary",
+      "operation": "step_analysis"
     },
     "geometry_requires_review": true,
     "unresolved_dimensions": [],

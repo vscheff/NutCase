@@ -8,7 +8,7 @@ import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-OUT = ROOT / 'artifacts/phase6_2'
+OUT = ROOT / 'artifacts/licensing-materials'
 
 
 def fetch(url, destination):

@@ -26,7 +26,7 @@ def build_report(path):
     for issue in validation["issues"]:
         LOG.warning(issue)
     report = {
-        "schema_version": "1.1", "tool_version": __version__, "phase": 1,
+        "schema_version": "1.2", "tool_version": __version__, "operation": "step_analysis",
         "generated_at_utc": datetime.now(timezone.utc).isoformat(), "units": "mm",
         "preliminary": True, "requires_engineering_verification": True,
         "notice": "PRELIMINARY GEOMETRY ANALYSIS. Requires engineering verification. No tolerances, material, finish or GD&T are assigned.",
@@ -57,7 +57,7 @@ def build_report(path):
 
 
 def main(argv=None):
-    parser = argparse.ArgumentParser(description="Phase 1: preliminary STEP fastener geometry analysis using native FreeCAD")
+    parser = argparse.ArgumentParser(description="Preliminary STEP fastener geometry analysis using native FreeCAD")
     parser.add_argument("input", nargs="?", type=Path, help="Input .stp or .step file (read only)")
     parser.add_argument("--output-dir", type=Path, default=Path("output"))
     parser.add_argument("--inspect-environment", action="store_true", help="Write environment.json without analyzing a file")
@@ -90,7 +90,7 @@ def main(argv=None):
     except Exception as exc:
         LOG.exception("Analysis failed: %s", exc)
         try:
-            write_json({"phase": 1, "analysis_status": "failed", "preliminary": True,
+            write_json({"schema_version": "1.2", "operation": "step_analysis", "analysis_status": "failed", "preliminary": True,
                         "input": str(args.input), "error": {"type": type(exc).__name__, "message": str(exc)}}, destination)
         except OSError as write_error:
             LOG.error("Could not save error report to %s: %s", destination, write_error)

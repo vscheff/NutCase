@@ -11,7 +11,9 @@ Downloads must be free and directly accessible without an account. Release notes
 must link directly to each source artifact next to the installer download.
 A generic repository homepage or current HEAD is insufficient.
 
-Prepared local files are under `artifacts/phase6_3/release/`:
+The inspected candidate and its source assets are retained in `artifacts/licensing-history.zip`.
+Restore the candidate evidence using `packaging/licensing/restore_reference.py --scope candidate`
+to access them under `artifacts/licensing-candidate/release/`:
 
 - `NutCase-0.6.0-windows-x64-setup.exe`: trimmed local candidate.
 - `NutCase-0.6.0-source.zip`: application source, build/install scripts, recovered
@@ -29,8 +31,8 @@ remain local provenance evidence. They are excluded from the public source ZIP
 to avoid introducing additional binary redistribution obligations.
 
 `packaging/licensing/source-manifest.json` records per-archive SHA256, upstream
-URL, known source/build entry points and status. Retrieved sources are retained
-at `artifacts/phase6_2/sources/`. Sources are independently versioned; two PDFium
+URL, known source/build entry points and status. Archived sources can be restored
+with `restore_reference.py --scope materials` to `artifacts/licensing-materials/sources/`. Sources are independently versioned; two PDFium
 builds must not share an invented common snapshot. The Qt PDF source is the full
 6.140.0 extension archive, including Chromium's PDFium tree; pypdfium2's PDFium
 DLL separately matches `pdfium-binaries` chromium/8076.
@@ -67,6 +69,6 @@ obligations remain explicit. `BUILD_AND_REPLACEMENT.md` gives the supported
 library layout, compatible replacement procedure and NutCase rebuild path.
 
 FreeCAD remains a separate prerequisite. Supplied STEP files are excluded from
-both installer and application source pending owner rights review. Only the documented unused Qt catalogs/plugins are excluded; required Qt PDF and software rendering remain. Historical Phase 6.2 artifacts are retained unchanged.
+both installer and application source pending owner rights review. Only the documented unused Qt catalogs/plugins are excluded; required Qt PDF and software rendering remain. Historical baseline artifacts are retained unchanged in the licensing archive.
 
-Phase 6.3 supplemental evidence is separately hash-bound in source-manifest.json and included under `phase6_3-research/` in the dependency evidence ZIP. The Qt SDK binary archives stay local; their build/source SBOMs, per-section comparisons and metadata are included.
+Supplemental evidence is separately hash-bound in source-manifest.json. New dependency evidence packages use the `supplemental-research/` namespace; the archived original packages retain their historical namespace and bytes. Qt SDK binary comparison archives stay local; their build/source SBOMs, per-section comparisons and metadata are included.

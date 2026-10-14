@@ -97,7 +97,6 @@ def stage():
     shutil.copytree(ROOT/'docs',BUNDLE/'docs',dirs_exist_ok=True,ignore=shutil.ignore_patterns('screenshots'))
     for name in ('VERSION','LICENSE','README.md'):
         shutil.copy2(ROOT/name,BUNDLE/name)
-    if (ROOT/'PHASE6_REVIEW.md').exists():shutil.copy2(ROOT/'PHASE6_REVIEW.md',BUNDLE/'PHASE6_REVIEW.md')
     shutil.copy2(ROOT/'THIRD_PARTY_NOTICES.md',BUNDLE/'THIRD_PARTY_NOTICES.md')
     shutil.copytree(ROOT/'packaging/licensing/notices',BUNDLE/'licenses/audit',dirs_exist_ok=True)
     for name in ('BUILD_AND_REPLACEMENT.md','UPSTREAM_CLARIFICATIONS.md','MICROSOFT_RUNTIME_DECISION.md'):
@@ -136,10 +135,10 @@ def release_artifacts(artifact_directory=None):
             for path in sorted((ROOT/name).rglob('*')):
                 if path.is_file() and '__pycache__' not in path.parts and path.suffix!='.pyc':
                     archive.write(path,path.relative_to(ROOT).as_posix())
-        for name in ('VERSION','LICENSE','README.md','PHASE6_REVIEW.md','requirements-build.txt',
+        for name in ('VERSION','LICENSE','README.md','requirements-build.txt',
                      'requirements-gui.txt','requirements-pipeline.txt','requirements-pdf.txt','NutCase.cmd','.gitignore'):
             archive.write(ROOT/name,name)
-        for name in ('THIRD_PARTY_NOTICES.md','PHASE6_2_LICENSING_REVIEW.md','TEST_COVERAGE_RECOVERY.md','requirements-tests.txt'):
+        for name in ('THIRD_PARTY_NOTICES.md','requirements-tests.txt'):
             if (ROOT/name).is_file():archive.write(ROOT/name,name)
     installer=artifacts/('NutCase-'+version+'-windows-x64-setup.exe')
     (artifacts/'SHA256SUMS.txt').write_text(''.join(sha256(path)+'  '+path.name+'\n' for path in (installer,source)),encoding='ascii')

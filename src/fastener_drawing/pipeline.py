@@ -94,7 +94,7 @@ def generate(source, output, freecad_python, poppler, config_path=None, mode=Non
     os.write(fd, f'pid={os.getpid()}\n'.encode());os.close(fd)
     run_id=datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S')+'-'+uuid.uuid4().hex[:10]
     run=output/'runs'/run_id
-    state={'phase':4,'status':'started','run_id':run_id,'source':str(source),'staging_directory':str(run),
+    state={'schema_version':2,'operation':'drawing_pipeline','status':'started','run_id':run_id,'source':str(source),'staging_directory':str(run),
            'external_python':sys.executable,'freecad_python':str(freecad_python),'steps':[]}
     manifest=output/(source.stem+'.current.json')
     try:
@@ -131,7 +131,7 @@ def generate(source, output, freecad_python, poppler, config_path=None, mode=Non
         stage('Verifying PDF Structure, Labels And Independent Renderers')
         verification=verify_pdf(normalized,report,run/'verification',poppler)
         state['steps'].append('independent_pdf_verification')
-        if digest(source)!=source_hash or report['phase1_analysis']['source']['sha256_before']!=source_hash:
+        if digest(source)!=source_hash or report['source_analysis']['source']['sha256_before']!=source_hash:
             raise ValueError('Source changed during pipeline; publication refused')
         # Repeating a long STEP filename as both directory and filename exceeds
         # MAX_PATH on this Windows runtime. Keep the full filenames, shorten only
@@ -156,7 +156,7 @@ def generate(source, output, freecad_python, poppler, config_path=None, mode=Non
         write_review(candidate/(source.stem+'.review.json'),review)
         for name in ('poppler.png','pdfium.png'):
             shutil.copy2(run/'verification'/name,candidate/name)
-        report['phase4']={'configuration_preserved':True,'review_report':str(release/(source.stem+'.review.json')),
+        report['publication']={'configuration_preserved':True,'review_report':str(release/(source.stem+'.review.json')),
                          'native_pdf_retained':str(native/(source.stem+'.pdf')),'staging_directory':str(run),
                          'normalization':normalization,'pdf_verification':verification}
         report['pdf_compatibility']=normalization

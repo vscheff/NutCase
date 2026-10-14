@@ -18,7 +18,7 @@ SOURCE=FIXTURES/'publication Ω & fixture.step'
 SOURCE.write_bytes(b'Independent publication transport fixture; mocked native input')
 REPORT=copy.deepcopy(DATA['report'])
 REPORT.update(drawing_status='generated_fixture',native_render_checks={'actual_dimension_labels':['20.00','10.00']})
-REPORT['phase1_analysis']['source']['sha256_before']=digest(SOURCE)
+REPORT['source_analysis']['source']['sha256_before']=digest(SOURCE)
 FREECAD=Path(sys.executable).parent/'mock-native-python.exe'
 FREECAD.write_bytes(b'Never executed: native worker injected by this suite')
 PLACEHOLDER_RENDERER=sys.executable  # fault injection never executes the renderer

@@ -1,8 +1,8 @@
-# NutCase Phase 6.3 redistribution audit - 2026-10-14
+# NutCase redistribution audit - 2026-10-14
 
-Public distribution remains blocked. This technical review is not legal certification. The separate Phase 6.3 installer, actual installed inventory and acceptance reports are retained with the source/review assets in artifacts/phase6_3/release. The release-adjacent PHASE6_3_REVIEW.md records exact final hashes, sizes and test outcomes; consult those reports for the inspected candidate identity.
+Public distribution remains blocked. This technical review is not legal certification. The inspected candidate installer, actual installed inventory and acceptance reports are preserved in `artifacts/licensing-history.zip`. See [licensing workflow instructions](../packaging/licensing/README.md) to restore the reference evidence under `artifacts/licensing-candidate`. Archived acceptance records give the exact hashes, sizes and test outcomes for that candidate.
 
-The preserved Phase 6.2 baseline is artifacts/phase6_3/baseline/baseline.json and its copied licensing directory. The historical installer SHA256 is 97841d9430eff7176ac53236dbf533089ab8a0f588b4d968bb8bc2be4906aba6. All 110 native staged files, source/evidence assets, 21 findings and recovered tests were checked before modification. Historical Phase 6.2 artifacts remain unchanged.
+The archived baseline includes `baseline/baseline.json` and its copied licensing directory. The historical installer SHA256 is 97841d9430eff7176ac53236dbf533089ab8a0f588b4d968bb8bc2be4906aba6. All 110 native staged files, source/evidence assets, 21 findings and recovered tests were checked before candidate remediation. The baseline and candidate evidence remain byte-identical in the archive; the active source cleanup does not revalidate them or approve a new build.
 
 ## Dependency minimization and runtime evidence
 
@@ -14,7 +14,7 @@ Actual frozen PDF renders and QPdfView captures pass with software, desktop and 
 
 ## Native Qt source and notice correspondence
 
-All 20 retained native Qt libraries/plugins match every corresponding official MSVC SDK section, including code, constants/data, resources and relocations. Whole-file signatures/headers differ; matching rebuilt file hashes are not asserted as a license requirement. Official SDK receipts, sections, source/build SBOMs and feature metadata are in artifacts/phase6_3/research.
+All 20 retained native Qt libraries/plugins match every corresponding official MSVC SDK section, including code, constants/data, resources and relocations. Whole-file signatures/headers differ; matching rebuilt file hashes are not asserted as a license requirement. Official SDK receipts, sections, source/build SBOMs and feature metadata are in artifacts/licensing-candidate/research.
 
 Source tags match SDK source commits: Qtbase 025bdad181de241e81bf853c8a2d7bf3d19261a9; SVG 883a58532078d003cefef0a549bfe9f885ce41f5; PDF d505fc23640d2bd6345e6483eb73daf4e19f5829. Source checksum comparisons match 23,105 Qtbase and 632 SVG files directly or after Windows/Unix EOL conversion; 1,771 PDF files match raw hashes. Remaining differences are release .tag metadata and omitted .gitignore/.gitattributes files. Full original official source archives are preserved. SDK binary/source SBOMs record build flags, third-party versions/copyrights and configured Chromium-PDF notice text; four official binary notice SBOMs accompany the staged installer notices. Full SDK SBOMs also mention SDK tools and unshipped targets, which are not declared NutCase runtime components.
 
@@ -38,6 +38,6 @@ UPSTREAM_CLARIFICATIONS.md contains narrowed ready-to-send Qt binding/Mesa, Pill
 
 ## Validation evidence and limits
 
-The full recovered run with supplied samples passed 184 tests, zero skips: native 78, GUI/process 48, PDF 24, launchers 3 and packaging/licensing 31. The subsequent focused packaging/licensing run passed all 36 tests, including supplemental-evidence integrity and installer-scope preservation cases. Frozen locale/PDF/graphics probes passed with developer Python/PATH removed. The installed six-case matrix, lifecycle, installer-bound gate and source ZIP/SPDX checks have their own reports beside the Phase 6.3 release assets. Earlier Phase 6.2 installed checks remain historical evidence; development-host results do not establish clean Windows/RDP/VM or complete interactive acceptance.
+The archived full run with supplied samples passed 184 tests, zero skips: native 78, GUI/process 48, PDF 24, launchers 3 and packaging/licensing 31. The subsequent focused packaging/licensing run passed all 36 tests, including supplemental-evidence integrity and installer-scope preservation cases. Frozen locale/PDF/graphics probes passed with developer Python/PATH removed. The installed six-case matrix, lifecycle, installer-bound gate and source ZIP/SPDX checks have their own archived candidate reports. These describe retained historical runs; development-host results do not establish clean Windows/RDP/VM or complete interactive acceptance.
 
 Primary references retained with hashes: [Qt translator semantics](https://doc.qt.io/qt-6/qtranslator.html), [Qt Windows graphics](https://doc.qt.io/qt-6/windows-graphics.html), [Qt community distribution](https://doc.qt.io/qtforpython-6/commercial/index.html), [Microsoft redistribution](https://learn.microsoft.com/en-us/cpp/windows/redistributing-visual-cpp-files?view=msvc-170). Exact local receipts and configured SDK SBOMs provide the native-source correlation evidence. inventory.json/source-manifest.json and the fail-closed checker retain the individual classifications and evidence integrity separately from legal adequacy.

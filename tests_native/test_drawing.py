@@ -196,8 +196,8 @@ class NativeDrawingIntegrationTests(unittest.TestCase):
                     report = json.loads((Path(directory) / (sample.stem + ".drawing.json")).read_text(encoding="utf-8"))
                     self.assertEqual(report["drawing_status"], "generated_pending_visual_review")
                     self.assertEqual(report["visual_review"]["status"], "pending")
-                    self.assertTrue(report["phase1_analysis"]["validation"]["basic_valid"])
-                    self.assertNotEqual(report["phase1_analysis"]["validation"]["boolean_check"]["status"], "passed")
+                    self.assertTrue(report["source_analysis"]["validation"]["basic_valid"])
+                    self.assertNotEqual(report["source_analysis"]["validation"]["boolean_check"]["status"], "passed")
                     self.assertEqual(report["layout"]["scale"], 3)
                     reopen = report["reopen_checks"]
                     self.assertTrue(reopen["reopened_successfully"])

@@ -62,7 +62,7 @@ class DimensionGeometryTests(unittest.TestCase):
 
 class NativeDimensionIntegrationTests(unittest.TestCase):
     def assert_dimensions(self, report, expected):
-        self.assertEqual(report["stage"], "B")
+        self.assertEqual(report["stage"], "Measured dimensions")
         self.assertEqual(report["unresolved_dimensions"], [])
         self.assertEqual(report["reopen_checks"]["dimension_count"], 4)
         for key, value in expected.items():
@@ -113,7 +113,7 @@ class NativeDimensionIntegrationTests(unittest.TestCase):
                     self.assertEqual(result.returncode, 2, result.stdout + result.stderr)
                     report = json.loads((Path(directory) / (sample.stem + ".drawing.json")).read_text(encoding="utf-8"))
                     self.assert_dimensions(report, dict(zip(("overall_axial_length", "flange_diameter", "bore_diameter", "external_hex_across_flats"), values)))
-                    self.assertNotEqual(report["phase1_analysis"]["validation"]["boolean_check"]["status"], "passed")
+                    self.assertNotEqual(report["source_analysis"]["validation"]["boolean_check"]["status"], "passed")
 
     def test_ambiguous_bore_is_omitted_in_native_sheet_and_reported(self):
         with temporary_directory() as directory:

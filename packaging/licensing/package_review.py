@@ -5,7 +5,7 @@ import shutil
 import zipfile
 from pathlib import Path
 from research import ROOT, OUT, digest
-from verify import confined
+from verify import confined, review_path
 
 
 def main():
@@ -38,7 +38,7 @@ def main():
             if args.supplemental_materials is None:raise ValueError('Supplemental audit evidence root required')
             path=confined(args.supplemental_materials,record['path'])
             if digest(path)!=record['sha256']:raise ValueError('Supplemental evidence changed: '+str(path))
-            if record.get('public_delivery',True):archive.write(path,'phase6_3-research/'+record['path'])
+            if record.get('public_delivery',True):archive.write(path,'supplemental-research/'+record['path'])
         for folder in ('research','extracted-evidence'):
             for path in sorted((args.materials/folder).rglob('*')):
                 if path.is_file() and path.suffix.lower() not in ('.dll','.pyd','.exe','.pyc'):
@@ -56,11 +56,17 @@ def main():
         for path in sorted(ROOT.iterdir()):
             if path.is_file() and (path.suffix in ('.md','.txt','.cmd') or path.name in ('VERSION','LICENSE','.gitignore')):
                 archive.write(path,path.name)
-    for name in ('inventory.json','source-manifest.json','NutCase-0.6.0.spdx.json','binary-inventory.csv','COMPONENT_MATRIX.md','embedded-python.json'):
+    for name in ('source-manifest.json','binary-inventory.csv','COMPONENT_MATRIX.md','embedded-python.json'):
         shutil.copy2(review/name,args.output/name)
+    inventory=review_path(review)
+    if inventory.suffix=='.zip':
+        with zipfile.ZipFile(inventory) as archived:
+            for name in ('inventory.json','NutCase-0.6.0.spdx.json'):
+                (args.output/name).write_bytes(archived.read(name))
+    else:
+        shutil.copy2(inventory,args.output/'inventory.json')
+        shutil.copy2(review/'NutCase-0.6.0.spdx.json',args.output/'NutCase-0.6.0.spdx.json')
     shutil.copy2(review/'OUTSTANDING_OBLIGATIONS.md',args.output/'OUTSTANDING_OBLIGATIONS.md')
-    shutil.copy2(ROOT/'PHASE6_2_LICENSING_REVIEW.md',args.output/'PHASE6_2_LICENSING_REVIEW.md')
-    if (ROOT/'PHASE6_3_REVIEW.md').exists():shutil.copy2(ROOT/'PHASE6_3_REVIEW.md',args.output/'PHASE6_3_REVIEW.md')
     checksums=''.join(digest(p)+'  '+p.name+'\n' for p in sorted(args.output.iterdir()) if p.is_file() and p.name!='SHA256SUMS.txt')
     (args.output/'SHA256SUMS.txt').write_text(checksums,encoding='ascii')
     print('Application source, dependency source/evidence and review assets retained at',args.output)

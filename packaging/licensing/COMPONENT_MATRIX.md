@@ -1,6 +1,6 @@
-# NutCase Phase 6.3 component matrix
+# NutCase component evidence matrix
 
-VERIFIED describes the recorded technical evidence, not global legal certification. Exact per-file origins/hashes and source/SBOM references remain in inventory.json and source-manifest.json.
+VERIFIED describes the recorded technical evidence, not global legal certification. Exact per-file origins/hashes remain in `inventory.json` inside `reference-inventory.zip`; source/SBOM references remain in `source-manifest.json`.
 
 | Component | Version | Selected terms | Files | Status | Evidence / remaining requirement |
 |---|---|---|---:|---|---|
