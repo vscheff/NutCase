@@ -22,6 +22,9 @@ LOG = logging.getLogger("fastener_drawing")
 
 
 def generate_drawing(path, output_dir, sheet="ANSI-B", isometric=True, opposite_end=True, axis=None, date_text=None, dimensions=False, dimension_scope="comprehensive", configuration=None):
+    from .configuration import normalize_metadata_date
+    if date_text:
+        date_text=normalize_metadata_date(date_text)
     path, output_dir = Path(path).resolve(), Path(output_dir).resolve()
     output_dir.mkdir(parents=True, exist_ok=True)
     destination = output_dir / path.stem
@@ -38,7 +41,7 @@ def generate_drawing(path, output_dir, sheet="ANSI-B", isometric=True, opposite_
         sheet = sheet if configuration['sheet']['size']=='auto' else configuration['sheet']['size']
         isometric, opposite_end = configuration['views']['isometric'], configuration['views']['opposite_end']
         axis = configuration['orientation']['axis']
-        date_text = configuration['metadata']['date'] or date_text
+        date_text = normalize_metadata_date(configuration['metadata']['date']) or date_text
     if comprehensive:report.update(phase=3,iteration='3.1',stage="Comprehensive feature dimensioning")
     if configuration is not None:
         report.update(iteration='4.0',stage='Configured '+configuration['dimensioning']['mode']+' feature dimensioning')
@@ -273,16 +276,17 @@ def main(argv=None):
     parser.add_argument("--dimensions", action="store_true", help="Add independently verified native geometric dimensions")
     parser.add_argument("--dimension-scope",choices=("basic","comprehensive"),default="comprehensive",help="General feature dimensions by default; basic preserves the reviewed four-dimension Stage B output")
     parser.add_argument("--axis", type=float, nargs=3, metavar=("X", "Y", "Z"), help="Explicit reviewed axis override")
-    parser.add_argument("--date", help="Generated date override, YYYY-MM-DD")
+    parser.add_argument("--date", help="Generated date override, YYYY-MM-DD or MM/dd/yyyy")
     parser.add_argument('--config',type=Path,help='Phase 4 JSON policy; source selection remains independently verified')
     args = parser.parse_args(argv)
     if args.axis and sum(value * value for value in args.axis) <= 1e-20:
         parser.error("--axis must be a nonzero direction vector")
     if args.date:
         try:
-            datetime.strptime(args.date, "%Y-%m-%d")
-        except ValueError:
-            parser.error("--date must use YYYY-MM-DD")
+            from .configuration import normalize_metadata_date
+            args.date=normalize_metadata_date(args.date)
+        except ValueError as error:
+            parser.error(str(error))
     args.output_dir.mkdir(parents=True, exist_ok=True)
     logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
     handler = logging.FileHandler(args.output_dir / (args.input.stem + ".drawing.log"), mode="w", encoding="utf-8")

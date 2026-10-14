@@ -1,0 +1,53 @@
+name: Windows acceptance candidate
+on:
+  workflow_dispatch:
+  push:
+    tags: ['v*']
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: windows-2022
+    timeout-minutes: 30
+    defaults:
+      run:
+        shell: pwsh
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Check version tag
+        env:
+          REF_TYPE: ${{ github.ref_type }}
+          REF_NAME: ${{ github.ref_name }}
+        run: |
+          $version = (Get-Content VERSION -Raw).Trim()
+          if ($env:REF_TYPE -eq 'tag' -and $env:REF_NAME -ne "v$version") {
+            throw 'Version tag must match VERSION exactly'
+          }
+      - name: Build pinned Windows application and installer
+        run: .\scripts\build-windows.ps1 -Bootstrap
+      - name: Frozen smoke checks without developer Python
+        run: |
+          $env:PATH = Join-Path $env:SystemRoot 'System32'
+          $env:NUTCASE_DATA_HOME = Join-Path $env:RUNNER_TEMP 'NutCase-check'
+          $report = Join-Path (Get-Location) 'artifacts\startup-check.json'
+          $gui = Start-Process -FilePath '.\dist\NutCase\NutCase.exe' -ArgumentList @('--startup-check', '--check-report', ('"'+$report+'"')) -WindowStyle Hidden -PassThru
+          if (-not $gui.WaitForExit(60000)) { $gui.Kill(); throw 'Frozen GUI startup timed out' }
+          if ($gui.ExitCode -ne 0) { throw 'Frozen GUI failed' }
+          $result = Get-Content -LiteralPath $report -Raw | ConvertFrom-Json
+          if ($result.status -ne 'GUI_STARTUP_OK' -or -not $result.frozen) { throw 'Startup report failed' }
+          & '.\dist\NutCase\NutCaseWorker.exe' diagnose | Set-Content 'artifacts\worker-check.json'
+          if ($LASTEXITCODE -ne 0) { throw 'Frozen worker failed' }
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        if: always()
+        with:
+          name: NutCase-Windows-candidate
+          path: |
+            artifacts/*.exe
+            artifacts/*.zip
+            artifacts/*.txt
+            artifacts/*.json
+            artifacts/*.md
+            artifacts/licensing-release/*
+          if-no-files-found: error
+          retention-days: 30
+      # Deliberately no release publication, signing secret or contents:write.

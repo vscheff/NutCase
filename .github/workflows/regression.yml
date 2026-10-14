@@ -1,0 +1,35 @@
+name: Regression tests
+on:
+  push:
+    branches: ['main']
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  external-windows:
+    runs-on: windows-2022
+    timeout-minutes: 15
+    defaults:
+      run:
+        shell: pwsh
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: pip
+          cache-dependency-path: requirements-*.txt
+      - name: Install external test environment
+        run: python -m pip install -r requirements-tests.txt
+      - name: PDF, Qt, real Windows process and packaging regressions
+        run: python scripts/run-tests.py --suite fast --results build/test-results/ci
+      - name: Retain results even on failure
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: external-windows-test-results
+          path: build/test-results/ci/*
+          if-no-files-found: warn
+      # No installer build, release publication or supplied STEP redistribution.
+      # FreeCAD, Poppler integration and private-model runs use the local full command.

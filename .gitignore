@@ -1,6 +1,46 @@
+# Python bytecode and caches
 __pycache__/
 *.py[cod]
-output/
-tmp/
-.venv-gui/
-.venv-pdf/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+
+# Local Python environments
+/.venv/
+/.venv-*/
+/venv/
+/env/
+
+# Build tools, bundles, installers and generated drawing/test output
+/.build-tools/
+/build/
+/dist/
+/artifacts/
+/output/
+/tmp/
+*.egg-info/
+.eggs/
+
+# Coverage reports
+.coverage
+.coverage.*
+/htmlcov/
+/coverage.xml
+
+# Local environment settings (keep shareable templates)
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+
+# Editor, operating-system and FreeCAD backup files
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.FCStd[0-9]*

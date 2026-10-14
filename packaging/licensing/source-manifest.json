@@ -1,0 +1,1943 @@
+{
+  "materials": [
+    {
+      "path": "sources/3.2.0.tar.gz",
+      "sha256": "980dd81f425082aa6d7c9e47fef27554ce7a9ffc8e2f6e863b97d263c5c50858",
+      "size": 2537858,
+      "role": "source-and-build-evidence",
+      "upstream": "https://github.com/libjpeg-turbo/libjpeg-turbo/archive/3.2.0.tar.gz",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/6.12.0-0-202609281005qtwebengine-everywhere-src-6.140.0.zip",
+      "sha256": "9a4d5de7056464d50991d0acaabdee28984b18dfbc492865ea76e5ae281f3ff3",
+      "size": 1038658601,
+      "role": "corresponding-source",
+      "upstream": "https://download.qt.io/online/qtsdkrepository/windows_x86/extensions/qtwebengine/6120/61400/src_doc_examples/extensions.qtwebengine.6120.61400.src/6.12.0-0-202609281005qtwebengine-everywhere-src-6.140.0.zip",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true,
+      "required_members": [
+        "CMakeLists.txt",
+        "src/pdf/CMakeLists.txt",
+        "src/3rdparty/chromium/third_party/pdfium/DEPS"
+      ],
+      "source_members": [
+        "src/pdf/qpdfdocument.cpp",
+        "src/3rdparty/chromium/third_party/pdfium/fpdfsdk/fpdf_view.cpp"
+      ],
+      "completeness_evidence": "Preserved entire versioned upstream archive, with source/build/interface entry points. Binary configuration/source-delivery obligations are separately recorded and not approved here."
+    },
+    {
+      "path": "sources/cpython-source-deps-bzip2-1.0.8.tar.gz",
+      "sha256": "e09697066106f0cb83326e53867868d2d045a28d1f107fddf1fb692ccc19b5a1",
+      "size": 818767,
+      "role": "source-and-build-evidence",
+      "upstream": "https://api.github.com/repos/python/cpython-source-deps/tarball/bzip2-1.0.8",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/cpython-source-deps-libffi-3.4.4.tar.gz",
+      "sha256": "bc8e66e4f06926422ad519bc06d4a49b489a2077af8199bba05326d285b43852",
+      "size": 1375934,
+      "role": "source-and-build-evidence",
+      "upstream": "https://api.github.com/repos/python/cpython-source-deps/tarball/libffi-3.4.4",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/cpython-source-deps-mpdecimal-4.0.0.tar.gz",
+      "sha256": "3a8bc8ac501d20ec83f47ea842d2af916f3bd8eac1c9b185dfad9801c1f5ac29",
+      "size": 319648,
+      "role": "source-and-build-evidence",
+      "upstream": "https://api.github.com/repos/python/cpython-source-deps/tarball/mpdecimal-4.0.0",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/cpython-source-deps-openssl-3.5.9.tar.gz",
+      "sha256": "a8ab83c90b9204f9d547d6143d0febd595d36744ec73ef6cf407802a0cfa5c6c",
+      "size": 53468263,
+      "role": "source-and-build-evidence",
+      "upstream": "https://api.github.com/repos/python/cpython-source-deps/tarball/openssl-3.5.9",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/cpython-source-deps-xz-5.2.5.tar.gz",
+      "sha256": "1793abe3b34c9d7ce969ef569b69325d52a9ef02d194969f2053ac181e2e5e88",
+      "size": 1744771,
+      "role": "source-and-build-evidence",
+      "upstream": "https://api.github.com/repos/python/cpython-source-deps/tarball/xz-5.2.5",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/cpython-source-deps-zlib-1.3.1.tar.gz",
+      "sha256": "5e70abfb16fbfb58b8258ad24418dab797ac93d1e67ce3c1ca5ca50c899a7d5b",
+      "size": 1570875,
+      "role": "source-and-build-evidence",
+      "upstream": "https://api.github.com/repos/python/cpython-source-deps/tarball/zlib-1.3.1",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/curl-8.22.0.tar.bz2",
+      "sha256": "5d956a6a22b3c279f50c421ee5d3c9e9d660cb6f115dcf881b579e952130549c",
+      "size": 3403128,
+      "role": "source-and-build-evidence",
+      "upstream": "http://curl.haxx.se/download/curl-8.22.0.tar.bz2",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/freetype-2.14.3.tar.gz",
+      "sha256": "e61b31ab26358b946e767ed7eb7f4bb2e507da1cfefeb7a8861ace7fd5c899a1",
+      "size": 4134916,
+      "role": "source-and-build-evidence",
+      "upstream": "https://download.savannah.gnu.org/releases/freetype/freetype-2.14.3.tar.gz",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/icu-78.3-h5112557_2.conda",
+      "sha256": "75c549b55b673e15de8785a8e5dd85bca7eb612eee0ff4dc8d7bdaa15eacbdbb",
+      "size": 16835644,
+      "role": "binary-provenance-evidence-local-only",
+      "upstream": "https://conda.anaconda.org/conda-forge/win-64/icu-78.3-h5112557_2.conda",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": false
+    },
+    {
+      "path": "sources/icu-feedstock-05cd48dd0219b71d577103cc880a443ab7ba3acf.tar.gz",
+      "sha256": "764cb9704fa0f09734b7b7c8bf537e5b8e28f711ffa2df18eda1b9ac5811feaf",
+      "size": 179030,
+      "role": "source-and-build-evidence",
+      "upstream": "https://api.github.com/repos/conda-forge/icu-feedstock/tarball/05cd48dd0219b71d577103cc880a443ab7ba3acf",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/icu4c-78.3-data.zip",
+      "sha256": "9d8b3899096aeb83e4e21ef8a40fec9e03b28db18c48452efac882ce25a91e27",
+      "size": 20187983,
+      "role": "source-and-build-evidence",
+      "upstream": "https://github.com/unicode-org/icu/releases/download/release-78.3/icu4c-78.3-data.zip",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/icu4c-78.3-sources.tgz",
+      "sha256": "3a2e7a47604ba702f345878308e6fefeca612ee895cf4a5f222e7955fabfe0c0",
+      "size": 27977255,
+      "role": "source-and-build-evidence",
+      "upstream": "https://github.com/unicode-org/icu/releases/download/release-78.3/icu4c-78.3-sources.tgz",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/inno-is-7_1_0.tar.gz",
+      "sha256": "4d1aa32410e71a33bbcfdf2e60facd9e021d568eda28d955b63d088d9cc81a20",
+      "size": 7641368,
+      "role": "source-and-build-evidence",
+      "upstream": "https://api.github.com/repos/jrsoftware/issrc/tarball/is-7_1_0",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/lcms2-2.19-hf2c6c5f_0.conda",
+      "sha256": "500b1907b06c5a1bd43d07203b3d58219a3c31b53e1f20c9c79e97d8a14077fc",
+      "size": 521617,
+      "role": "binary-provenance-evidence-local-only",
+      "upstream": "https://conda.anaconda.org/conda-forge/win-64/lcms2-2.19-hf2c6c5f_0.conda",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": false
+    },
+    {
+      "path": "sources/lcms2-2.19.1-hf2c6c5f_2.conda",
+      "sha256": "df1c1a4dd44c54f238dc0a230d31eab9e73ada472dc4fa357552333b35641804",
+      "size": 523808,
+      "role": "binary-provenance-evidence-local-only",
+      "upstream": "https://conda.anaconda.org/conda-forge/win-64/lcms2-2.19.1-hf2c6c5f_2.conda",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": false
+    },
+    {
+      "path": "sources/lcms2-2.19.1-hf2c6c5f_3.conda",
+      "sha256": "7c5f96b473b721a4279708b448591dc3d89ed274280ff480dea1b4f9b13e1fcd",
+      "size": 525499,
+      "role": "binary-provenance-evidence-local-only",
+      "upstream": "https://conda.anaconda.org/conda-forge/win-64/lcms2-2.19.1-hf2c6c5f_3.conda",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": false
+    },
+    {
+      "path": "sources/lcms2-2.19.1.tar.gz",
+      "sha256": "bfc54f7bab59fbc921012014a8032e4cba4abd46db47d46b76416a8c0b2815c8",
+      "size": 5728743,
+      "role": "source-and-build-evidence",
+      "upstream": "https://github.com/mm2/Little-CMS/releases/download/lcms2.19.1/lcms2-2.19.1.tar.gz",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/lcms2-2.19.tar.gz",
+      "sha256": "49e7e134e4299733dd0eda434fa468997a28ab3d33fa397c642b03644f552216",
+      "size": 5726199,
+      "role": "source-and-build-evidence",
+      "upstream": "https://github.com/mm2/Little-CMS/releases/download/lcms2.19/lcms2-2.19.tar.gz",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/lcms2-feedstock-1cb7cab3cf50328c955b07f9b1bf5af4c7744117.tar.gz",
+      "sha256": "979a2b81c4a472249805a4af8eed73808a48be68bf3a50a569d3a35270ecb3c7",
+      "size": 16173,
+      "role": "source-and-build-evidence",
+      "upstream": "https://api.github.com/repos/conda-forge/lcms2-feedstock/tarball/1cb7cab3cf50328c955b07f9b1bf5af4c7744117",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/lcms2-feedstock-3cefa7a569e5d8918e253214097b6c4fdef2eef0.tar.gz",
+      "sha256": "52e8b43e7c883a4ab58882722bae618578fe388e9ee9bdde1237d99f300f7701",
+      "size": 17322,
+      "role": "source-and-build-evidence",
+      "upstream": "https://api.github.com/repos/conda-forge/lcms2-feedstock/tarball/3cefa7a569e5d8918e253214097b6c4fdef2eef0",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/lcms2-feedstock-bac3f953b79df2e1dcf0f5585a822805fcb12383.tar.gz",
+      "sha256": "c44456d85019b768c62d46bf0be28e79b9b67b5180c759fb219d52ac1b1dd610",
+      "size": 16773,
+      "role": "source-and-build-evidence",
+      "upstream": "https://api.github.com/repos/conda-forge/lcms2-feedstock/tarball/bac3f953b79df2e1dcf0f5585a822805fcb12383",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/lerc-4.2.0-hd936e49_0.conda",
+      "sha256": "93d666f63f284ef77b87b0b1f77b70f7d36d315a132f9afa64bc0012d937ba39",
+      "size": 175297,
+      "role": "binary-provenance-evidence-local-only",
+      "upstream": "https://conda.anaconda.org/conda-forge/win-64/lerc-4.2.0-hd936e49_0.conda",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": false
+    },
+    {
+      "path": "sources/lerc-feedstock-11a9b9cedb32ef23cd0dc48743e0a354fc4f7342.tar.gz",
+      "sha256": "5f1d34fbc11d7d5224eeae5e161f17ae67128f223855353629681a88348b3d72",
+      "size": 15955,
+      "role": "source-and-build-evidence",
+      "upstream": "https://api.github.com/repos/conda-forge/lerc-feedstock/tarball/11a9b9cedb32ef23cd0dc48743e0a354fc4f7342",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/libcurl-8.22.0-hdb0ef4a_0.conda",
+      "sha256": "5fe063cffa90ad3ef04e25c76b1a79cdbc4f6c43747164a7dcdd89c4faebb84e",
+      "size": 413226,
+      "role": "binary-provenance-evidence-local-only",
+      "upstream": "https://conda.anaconda.org/conda-forge/win-64/libcurl-8.22.0-hdb0ef4a_0.conda",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": false
+    },
+    {
+      "path": "sources/libcurl-feedstock-4112bf00cdcc525cd7fa7ed1bba5a4b1c43eeb53.tar.gz",
+      "sha256": "ac5796fe16ceaa60df8e10db4e918af964a08accff3f0f793a45467fc940db43",
+      "size": 17410,
+      "role": "source-and-build-evidence",
+      "upstream": "https://api.github.com/repos/conda-forge/curl-feedstock/tarball/4112bf00cdcc525cd7fa7ed1bba5a4b1c43eeb53",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/libdeflate-1.25-h1a1d4e4_1.conda",
+      "sha256": "af1cda21d4653f594fbef20aa4e1ff158a546902b3307ef8af9a9b44b43862d2",
+      "size": 157828,
+      "role": "binary-provenance-evidence-local-only",
+      "upstream": "https://conda.anaconda.org/conda-forge/win-64/libdeflate-1.25-h1a1d4e4_1.conda",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": false
+    },
+    {
+      "path": "sources/libdeflate-feedstock-995dda5e8253e79324b87cb9b2fcf8cd40357ed2.tar.gz",
+      "sha256": "4af0270c26fa2b24b7e810eddb6e4a6bd5b5b271619b495d17506add03b68cb6",
+      "size": 15490,
+      "role": "source-and-build-evidence",
+      "upstream": "https://api.github.com/repos/conda-forge/libdeflate-feedstock/tarball/995dda5e8253e79324b87cb9b2fcf8cd40357ed2",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/libfreetype6-2.14.3-hdbac1cb_2.conda",
+      "sha256": "cbc650854003e434d4ff6c7b1a2667e38a4242ad8a391a1c5ff89721624065ce",
+      "size": 340385,
+      "role": "binary-provenance-evidence-local-only",
+      "upstream": "https://conda.anaconda.org/conda-forge/win-64/libfreetype6-2.14.3-hdbac1cb_2.conda",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": false
+    },
+    {
+      "path": "sources/libfreetype6-feedstock-3520c4122afde3a5c30609f035de7cc4f501c069.tar.gz",
+      "sha256": "6e0fd54193ed9221416a23ec074ffd2810f0bb1e0694360f8f5de97500524ee4",
+      "size": 17250,
+      "role": "source-and-build-evidence",
+      "upstream": "https://api.github.com/repos/conda-forge/freetype-feedstock/tarball/3520c4122afde3a5c30609f035de7cc4f501c069",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/libjpeg-turbo-3.2.0-hfd05255_1.conda",
+      "sha256": "df78ab4c0eecb3dd9331898f96baeed8e5ca1c363346332517abeb0b614b9a53",
+      "size": 990125,
+      "role": "binary-provenance-evidence-local-only",
+      "upstream": "https://conda.anaconda.org/conda-forge/win-64/libjpeg-turbo-3.2.0-hfd05255_1.conda",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": false
+    },
+    {
+      "path": "sources/libjpeg-turbo-feedstock-cc922f6dba346613d6c2820d58011f1c6c175e7d.tar.gz",
+      "sha256": "4c2afe59568fae7b95db1c4914b2b1af24811ad16704661f90508e2206bf81c6",
+      "size": 22289,
+      "role": "source-and-build-evidence",
+      "upstream": "https://api.github.com/repos/conda-forge/libjpeg-turbo-feedstock/tarball/cc922f6dba346613d6c2820d58011f1c6c175e7d",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/liblzma-5.8.3-hfd05255_1.conda",
+      "sha256": "d36c4a1e1f80fd08e18a407e03622ff2f34dfdd022da6488ad19603dea19e6d5",
+      "size": 105809,
+      "role": "binary-provenance-evidence-local-only",
+      "upstream": "https://conda.anaconda.org/conda-forge/win-64/liblzma-5.8.3-hfd05255_1.conda",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": false
+    },
+    {
+      "path": "sources/liblzma-feedstock-bc37fbf54469221332fc589c1404294a159f403b.tar.gz",
+      "sha256": "e41ad098885cd63f4887a13747fd0f7a0611f2f5e06dfec86efcdcd0cddb7191",
+      "size": 20643,
+      "role": "source-and-build-evidence",
+      "upstream": "https://api.github.com/repos/conda-forge/xz-feedstock/tarball/bc37fbf54469221332fc589c1404294a159f403b",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/libpng-1.6.58-hdc8cecf_1.conda",
+      "sha256": "8c49c32adf3ba2c59783630b82377f54ab72204ea99e2bafc90a47a8e25c1032",
+      "size": 385462,
+      "role": "binary-provenance-evidence-local-only",
+      "upstream": "https://conda.anaconda.org/conda-forge/win-64/libpng-1.6.58-hdc8cecf_1.conda",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": false
+    },
+    {
+      "path": "sources/libpng-1.6.58.tar.gz",
+      "sha256": "8c9b05b675ca7301a458df2c2e46f26e1d41ff36b8863f8c33530bc58c2e6225",
+      "size": 1582074,
+      "role": "source-and-build-evidence",
+      "upstream": "https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.gz",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/libpng-feedstock-60f3bc443248f84e4ac8a2649db925f8ca3e63f9.tar.gz",
+      "sha256": "860460b3d6a6cfa62590f9b6ac9618516e3def08d6c9cfff4c46351e03984002",
+      "size": 17740,
+      "role": "source-and-build-evidence",
+      "upstream": "https://api.github.com/repos/conda-forge/libpng-feedstock/tarball/60f3bc443248f84e4ac8a2649db925f8ca3e63f9",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/libpsl-0.23.1-h9b16d47_1.conda",
+      "sha256": "e53fe3b09f82b59b644264133d6d148ac31bb5451b7583cff55690bf038f2f62",
+      "size": 73511,
+      "role": "binary-provenance-evidence-local-only",
+      "upstream": "https://conda.anaconda.org/conda-forge/win-64/libpsl-0.23.1-h9b16d47_1.conda",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": false
+    },
+    {
+      "path": "sources/libpsl-0.23.1.tar.gz",
+      "sha256": "8fbb03054556498ba9c4cc48fcaa36a4483748c6504a65bdb9ba348f555b0e56",
+      "size": 7821902,
+      "role": "source-and-build-evidence",
+      "upstream": "https://github.com/rockdaboot/libpsl/releases/download/0.23.1/libpsl-0.23.1.tar.gz",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/libpsl-feedstock-d93d163e4ace3c8de663d880c0381630b65d4590.tar.gz",
+      "sha256": "d5225db11241dfef99f91cd562699976789b09f1ca9940a31a270c4f78834d66",
+      "size": 17340,
+      "role": "source-and-build-evidence",
+      "upstream": "https://api.github.com/repos/conda-forge/libpsl-feedstock/tarball/d93d163e4ace3c8de663d880c0381630b65d4590",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/libssh2-1.11.1-h734d217_1.conda",
+      "sha256": "1097b08429b4f53f5751a32c6d99a083d227ca7f7812c0b239eea124cec073a0",
+      "size": 295149,
+      "role": "binary-provenance-evidence-local-only",
+      "upstream": "https://conda.anaconda.org/conda-forge/win-64/libssh2-1.11.1-h734d217_1.conda",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": false
+    },
+    {
+      "path": "sources/libssh2-1.11.1.tar.gz",
+      "sha256": "d9ec76cbe34db98eec3539fe2c899d26b0c837cb3eb466a56b0f109cabf658f7",
+      "size": 1093012,
+      "role": "source-and-build-evidence",
+      "upstream": "https://www.libssh2.org/download/libssh2-1.11.1.tar.gz",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/libssh2-feedstock-e5701cd76588f38d76a9fd704185ffc88184c102.tar.gz",
+      "sha256": "aad051a5589feb6f4581c65fdb43d1959a0145ac94b1904523e738f35ed68bee",
+      "size": 17282,
+      "role": "source-and-build-evidence",
+      "upstream": "https://api.github.com/repos/conda-forge/libssh2-feedstock/tarball/e5701cd76588f38d76a9fd704185ffc88184c102",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/libtiff-4.7.2-h8f73337_1.conda",
+      "sha256": "3575a092e3e52625a1767804a4ebd321becaadf61b63dcd6735ebb88c0b3c359",
+      "size": 1014211,
+      "role": "binary-provenance-evidence-local-only",
+      "upstream": "https://conda.anaconda.org/conda-forge/win-64/libtiff-4.7.2-h8f73337_1.conda",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": false
+    },
+    {
+      "path": "sources/libtiff-feedstock-69b00df993d8c9571dbd2aa423e50a10f1adfeda.tar.gz",
+      "sha256": "e7b44a7b6ee4d814b87c6b2e23853de1af816ff37471d5548f3e9ab5f5bb9269",
+      "size": 17701,
+      "role": "source-and-build-evidence",
+      "upstream": "https://api.github.com/repos/conda-forge/libtiff-feedstock/tarball/69b00df993d8c9571dbd2aa423e50a10f1adfeda",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/libzlib-1.3.2-hfd05255_3.conda",
+      "sha256": "0629c2cc0404d3bb29d6baa7b4ba62da80797015e86de050db81ea5a07050527",
+      "size": 58529,
+      "role": "binary-provenance-evidence-local-only",
+      "upstream": "https://conda.anaconda.org/conda-forge/win-64/libzlib-1.3.2-hfd05255_3.conda",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": false
+    },
+    {
+      "path": "sources/libzlib-feedstock-044fc2361e1c5f1a35c8f417f1434a585e627297.tar.gz",
+      "sha256": "897fa30f241baa60ab36aaca4df582b12d7c1da39280844edbfadce0c374e323",
+      "size": 17435,
+      "role": "source-and-build-evidence",
+      "upstream": "https://api.github.com/repos/conda-forge/zlib-feedstock/tarball/044fc2361e1c5f1a35c8f417f1434a585e627297",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/llvm-3.6.2.src.tar.xz",
+      "sha256": "f60dc158bfda6822de167e87275848969f0558b3134892ff54fced87e4667b94",
+      "size": 12802380,
+      "role": "source-and-build-evidence",
+      "upstream": "https://releases.llvm.org/3.6.2/llvm-3.6.2.src.tar.xz",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/mesa-11.2.2.tar.xz",
+      "sha256": "40e148812388ec7c6d7b6657d5a16e2e8dabba8b97ddfceea5197947647bdfb4",
+      "size": 7860932,
+      "role": "source-and-build-evidence",
+      "upstream": "https://archive.mesa3d.org/older-versions/11.x/11.2.2/mesa-11.2.2.tar.xz",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/opengl32sw-64-mesa_11_2_2-signed.7z",
+      "sha256": "e2927d195699ef03685f38a64009b4c791d85f066a7d0ca580540eacb5b50a3d",
+      "size": 5017569,
+      "role": "binary-provenance-evidence-local-only",
+      "upstream": "https://download.qt.io/development_releases/prebuilt/llvmpipe/windows/opengl32sw-64-mesa_11_2_2-signed.7z",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": false
+    },
+    {
+      "path": "sources/opengl32sw-64-mesa_11_2_2-signed_sha256.7z",
+      "sha256": "c61f801c1760aa24b02c7a8354323cddf368b86f8f5c34b50b3b224f7d728afd",
+      "size": 5023568,
+      "role": "binary-provenance-evidence-local-only",
+      "upstream": "https://download.qt.io/development_releases/prebuilt/llvmpipe/windows/opengl32sw-64-mesa_11_2_2-signed_sha256.7z",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": false
+    },
+    {
+      "path": "sources/opengl32sw-64-mesa_11_2_2.7z",
+      "sha256": "142a74bfbe7d2b1bf633925f130b29eb10ffa9fb87cc1bbd05ee2624ee81d261",
+      "size": 5013770,
+      "role": "binary-provenance-evidence-local-only",
+      "upstream": "https://download.qt.io/development_releases/prebuilt/llvmpipe/windows/opengl32sw-64-mesa_11_2_2.7z",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": false
+    },
+    {
+      "path": "sources/openjpeg-2.5.4-h90fa87c_2.conda",
+      "sha256": "d1c630ccd9ae0898b48d84e986f4c330f66a25e535f99efe8cbf03f042b33da5",
+      "size": 274994,
+      "role": "binary-provenance-evidence-local-only",
+      "upstream": "https://conda.anaconda.org/conda-forge/win-64/openjpeg-2.5.4-h90fa87c_2.conda",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": false
+    },
+    {
+      "path": "sources/openjpeg-feedstock-00d4e8f7d73043cb46153df594d005aef33e05c7.tar.gz",
+      "sha256": "a2e2d87b64fe39fcc60df19dea88b9a9946661e5a452abb53e79a46e44a726ee",
+      "size": 25471,
+      "role": "source-and-build-evidence",
+      "upstream": "https://api.github.com/repos/conda-forge/openjpeg-feedstock/tarball/00d4e8f7d73043cb46153df594d005aef33e05c7",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/openssl-3.6.4-hf411b9b_0.conda",
+      "sha256": "9dddb559ba49744d5d94092d8d13cb0567f5c3b3f439f3acf28433d1f4256acc",
+      "size": 9474879,
+      "role": "binary-provenance-evidence-local-only",
+      "upstream": "https://conda.anaconda.org/conda-forge/win-64/openssl-3.6.4-hf411b9b_0.conda",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": false
+    },
+    {
+      "path": "sources/openssl-3.6.4.tar.gz",
+      "sha256": "9bffaa1ad1e07b354c21bd3324ec02fa15579f45a7d0494b3e74bc449b7333ef",
+      "size": 55003802,
+      "role": "source-and-build-evidence",
+      "upstream": "https://github.com/openssl/openssl/releases/download/openssl-3.6.4/openssl-3.6.4.tar.gz",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/openssl-feedstock-8d5465a6a4ce539acb53d275df6b992a64902e29.tar.gz",
+      "sha256": "08e7a64aedea938922d8cce71ab8b7c888710b87fa4ad9d1a39344975111e53b",
+      "size": 19698,
+      "role": "source-and-build-evidence",
+      "upstream": "https://api.github.com/repos/conda-forge/openssl-feedstock/tarball/8d5465a6a4ce539acb53d275df6b992a64902e29",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/pdfium-binaries-build.tar.gz",
+      "sha256": "05005045e321ae1fe91bef361150982a892be59bcd707126839b7e31ae6ba9ce",
+      "size": 142803,
+      "role": "source-and-build-evidence",
+      "upstream": "https://api.github.com/repos/bblanchon/pdfium-binaries/tarball/f2e9a1c45bb17b85b540abf1af30146ef65416ac",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/pdfium-win-x64.tgz",
+      "sha256": "808d36da9bc5a3104315fb307c80998121f565ee53953633bf33e80d7429e5ac",
+      "size": 3826721,
+      "role": "binary-provenance-evidence-local-only",
+      "upstream": "https://github.com/bblanchon/pdfium-binaries/releases/download/chromium/8076/pdfium-win-x64.tgz",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": false
+    },
+    {
+      "path": "sources/pillow-12.3.0.tar.gz",
+      "sha256": "3b8182a766685eaa002637e28b4ec8d6b18819a0c71f579bf0dbaa5830297cce",
+      "size": 47025035,
+      "role": "source-and-build-evidence",
+      "upstream": "https://files.pythonhosted.org/packages/1c/3d/bb7fca845737cf9d7dbde16ed1843984665ff2e0a518f5db43e77ec540b9/pillow-12.3.0.tar.gz",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/poppler-26.09.0-h924501e_0.conda",
+      "sha256": "bb319f6881d91e175f90a9d33a25313e4cfddc15dd234521519985baf92fefcd",
+      "size": 2803695,
+      "role": "binary-provenance-evidence-local-only",
+      "upstream": "https://conda.anaconda.org/conda-forge/win-64/poppler-26.09.0-h924501e_0.conda",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": false
+    },
+    {
+      "path": "sources/poppler-26.09.0.tar.xz",
+      "sha256": "8059eadb6805340768f138c465b57f8164c92b4a0773c37ef031ea6c0d987b2e",
+      "size": 2041828,
+      "role": "corresponding-source",
+      "upstream": "https://poppler.freedesktop.org/poppler-26.09.0.tar.xz",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true,
+      "required_members": [
+        "poppler-26.09.0/CMakeLists.txt",
+        "poppler-26.09.0/COPYING"
+      ],
+      "source_members": [
+        "poppler-26.09.0/utils/pdftoppm.cc",
+        "poppler-26.09.0/poppler/PDFDoc.cc"
+      ],
+      "completeness_evidence": "Preserved entire versioned upstream archive, with source/build/interface entry points. Binary configuration/source-delivery obligations are separately recorded and not approved here."
+    },
+    {
+      "path": "sources/poppler-data-0.4.12-hd8ed1ab_0.conda",
+      "sha256": "2f227e17b3c0346112815faa605502b66c1c4511a856127f2899abf15a98a2cf",
+      "size": 2348171,
+      "role": "binary-provenance-evidence-local-only",
+      "upstream": "https://conda.anaconda.org/conda-forge/noarch/poppler-data-0.4.12-hd8ed1ab_0.conda",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": false
+    },
+    {
+      "path": "sources/poppler-data-0.4.12.tar.gz",
+      "sha256": "c835b640a40ce357e1b83666aabd95edffa24ddddd49b8daff63adb851cdab74",
+      "size": 4504754,
+      "role": "corresponding-source",
+      "upstream": "https://poppler.freedesktop.org/poppler-data-0.4.12.tar.gz",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true,
+      "required_members": [
+        "poppler-data-0.4.12/COPYING",
+        "poppler-data-0.4.12/Makefile"
+      ],
+      "source_members": [
+        "poppler-data-0.4.12/cidToUnicode/Adobe-Japan1"
+      ],
+      "completeness_evidence": "Preserved entire versioned upstream archive, with source/build/interface entry points. Binary configuration/source-delivery obligations are separately recorded and not approved here."
+    },
+    {
+      "path": "sources/poppler-feedstock-13d784d77510e73d6066a75a79cd8e6040a6a261.tar.gz",
+      "sha256": "49f97052f98fb4a117f28cefa4933db7d136f42f5d9aeddc1569dce65b93caf6",
+      "size": 22092,
+      "role": "source-and-build-evidence",
+      "upstream": "https://api.github.com/repos/conda-forge/poppler-feedstock/tarball/13d784d77510e73d6066a75a79cd8e6040a6a261",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/poppler-feedstock.tar.gz",
+      "sha256": "49f97052f98fb4a117f28cefa4933db7d136f42f5d9aeddc1569dce65b93caf6",
+      "size": 22092,
+      "role": "source-and-build-evidence",
+      "upstream": "https://api.github.com/repos/conda-forge/poppler-feedstock/tarball/13d784d77510e73d6066a75a79cd8e6040a6a261",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/poppler-windows-v26.09.0-0.tar.gz",
+      "sha256": "84a4f455e70787da8efd6b919e2e2e6ce1c68d1b86d334f4746e991221d23368",
+      "size": 5577,
+      "role": "source-and-build-evidence",
+      "upstream": "https://api.github.com/repos/oschwartz10612/poppler-windows/tarball/v26.09.0-0",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/pyinstaller-6.22.3.tar.gz",
+      "sha256": "05eb2f5615503e72939a7224d68b4aff572c6b0438ee4a17d0a4b481f399362d",
+      "size": 4437180,
+      "role": "source-and-build-evidence",
+      "upstream": "https://files.pythonhosted.org/packages/63/41/f90302845945abd4ed647933ff5ee7c6ac93983187be67f897b6cb613331/pyinstaller-6.22.3.tar.gz",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/pypdf-6.10.0.tar.gz",
+      "sha256": "4c5a48ba258c37024ec2505f7e8fd858525f5502784a2e1c8d415604af29f6ef",
+      "size": 5314833,
+      "role": "source-and-build-evidence",
+      "upstream": "https://files.pythonhosted.org/packages/b8/9f/ca96abf18683ca12602065e4ed2bec9050b672c87d317f1079abc7b6d993/pypdf-6.10.0.tar.gz",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/pypdfium2-5.14.0.tar.gz",
+      "sha256": "c5f009b3157f10e97dceb55963f5910eff92feb00587ba10a76f12b87ce1a4b6",
+      "size": 376498,
+      "role": "source-and-build-evidence",
+      "upstream": "https://files.pythonhosted.org/packages/95/d0/c81d3a7c2a9af37b817ace1de0acd40cf44d15f12407c5e86b3668364a5c/pypdfium2-5.14.0.tar.gz",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/pyside-setup-everywhere-src-6.12.0.tar.xz",
+      "sha256": "099c1a597cf33c1b000e11cf68a0b82d216fb802bf81726efc720394f10c7751",
+      "size": 18211772,
+      "role": "corresponding-source",
+      "upstream": "https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.12.0-src/pyside-setup-everywhere-src-6.12.0.tar.xz",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true,
+      "required_members": [
+        "pyside-setup-everywhere-src-6.12.0/setup.py"
+      ],
+      "source_members": [
+        "pyside-setup-everywhere-src-6.12.0/sources/shiboken6/libshiboken/basewrapper.cpp"
+      ],
+      "completeness_evidence": "Preserved entire versioned upstream archive, with source/build/interface entry points. Binary configuration/source-delivery obligations are separately recorded and not approved here."
+    },
+    {
+      "path": "sources/Python-3.13.16.tar.xz",
+      "sha256": "f4b1bfb3c79b5bb11b8d228a12504163b4c0dab4d679828d8f5f26b6cb6ab35d",
+      "size": 23225704,
+      "role": "source-and-build-evidence",
+      "upstream": "https://www.python.org/ftp/python/3.13.16/Python-3.13.16.tar.xz",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/qtbase-everywhere-src-6.12.0.tar.xz",
+      "sha256": "a951bd163c7b80fc6b8c88d7668fb56abf91c152373e13c10666763238131307",
+      "size": 51220268,
+      "role": "corresponding-source",
+      "upstream": "https://download.qt.io/official_releases/qt/6.12/6.12.0/submodules/qtbase-everywhere-src-6.12.0.tar.xz",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true,
+      "required_members": [
+        "qtbase-everywhere-src-6.12.0/CMakeLists.txt"
+      ],
+      "source_members": [
+        "qtbase-everywhere-src-6.12.0/src/corelib/kernel/qobject.cpp"
+      ],
+      "completeness_evidence": "Preserved entire versioned upstream archive, with source/build/interface entry points. Binary configuration/source-delivery obligations are separately recorded and not approved here."
+    },
+    {
+      "path": "sources/qtimageformats-everywhere-src-6.12.0.tar.xz",
+      "sha256": "0943132b5db8de6b6a7f1d162682173e8763c7ed94e80fd39113292845f67762",
+      "size": 1848620,
+      "role": "source-and-build-evidence",
+      "upstream": "https://download.qt.io/official_releases/qt/6.12/6.12.0/submodules/qtimageformats-everywhere-src-6.12.0.tar.xz",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/qtsvg-everywhere-src-6.12.0.tar.xz",
+      "sha256": "e4ab39534ec97987b1b9b60ef7f4d3253d5912a69f8c713a01753174a4029331",
+      "size": 2341876,
+      "role": "source-and-build-evidence",
+      "upstream": "https://download.qt.io/official_releases/qt/6.12/6.12.0/submodules/qtsvg-everywhere-src-6.12.0.tar.xz",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/qttranslations-everywhere-src-6.12.0.tar.xz",
+      "sha256": "85929c0c30d6f273f23bd879bb69803ea17b010ab73cab2f8abf95357f6f6bbb",
+      "size": 1745884,
+      "role": "source-and-build-evidence",
+      "upstream": "https://download.qt.io/official_releases/qt/6.12/6.12.0/submodules/qttranslations-everywhere-src-6.12.0.tar.xz",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/tiff-4.7.2.tar.gz",
+      "sha256": "672bd7d10aee4606171afb864f3570b83340f6a33e2c186dc0512f7145ffdf6a",
+      "size": 4083368,
+      "role": "source-and-build-evidence",
+      "upstream": "https://download.osgeo.org/libtiff/tiff-4.7.2.tar.gz",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/ucrt-10.0.26100.0-h57928b3_0.conda",
+      "sha256": "3005729dce6f3d3f5ec91dfc49fc75a0095f9cd23bab49efb899657297ac91a5",
+      "size": 694692,
+      "role": "binary-provenance-evidence-local-only",
+      "upstream": "https://conda.anaconda.org/conda-forge/win-64/ucrt-10.0.26100.0-h57928b3_0.conda",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": false
+    },
+    {
+      "path": "sources/v1.25.tar.gz",
+      "sha256": "d11473c1ad4c57d874695e8026865e38b47116bbcb872bfc622ec8f37a86017d",
+      "size": 197494,
+      "role": "source-and-build-evidence",
+      "upstream": "https://github.com/ebiggers/libdeflate/archive/v1.25.tar.gz",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/v1.5.7.tar.gz",
+      "sha256": "37d7284556b20954e56e1ca85b80226768902e2edabd3b649e9e72c0c9012ee3",
+      "size": 2451884,
+      "role": "source-and-build-evidence",
+      "upstream": "https://github.com/facebook/zstd/archive/v1.5.7.tar.gz",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/v2.5.4.tar.gz",
+      "sha256": "a695fbe19c0165f295a8531b1e4e855cd94d0875d2f88ec4b61080677e27188a",
+      "size": 2157028,
+      "role": "source-and-build-evidence",
+      "upstream": "https://github.com/uclouvain/openjpeg/archive/v2.5.4.tar.gz",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/v4.2.0.tar.gz",
+      "sha256": "a1fb593ed1fcb5b38800caf3c4454f872745202e961d00d745e53d81447e17c9",
+      "size": 4059752,
+      "role": "source-and-build-evidence",
+      "upstream": "https://github.com/Esri/lerc/archive/v4.2.0.tar.gz",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/vc14_runtime-14.51.36247-habf1de7_41.conda",
+      "sha256": "4e4cb599cdc41bf2109d1464c127b5bcbddf548ce3e322e612afb691338b48f8",
+      "size": 767955,
+      "role": "binary-provenance-evidence-local-only",
+      "upstream": "https://conda.anaconda.org/conda-forge/win-64/vc14_runtime-14.51.36247-habf1de7_41.conda",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": false
+    },
+    {
+      "path": "sources/xz-5.8.3.tar.gz",
+      "sha256": "3d3a1b973af218114f4f889bbaa2f4c037deaae0c8e815eec381c3d546b974a0",
+      "size": 2771455,
+      "role": "source-and-build-evidence",
+      "upstream": "https://github.com/tukaani-project/xz/releases/download/v5.8.3/xz-5.8.3.tar.gz",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/zlib-1.3.2.tar.gz",
+      "sha256": "bb329a0a2cd0274d05519d61c667c062e06990d72e125ee2dfa8de64f0119d16",
+      "size": 1502830,
+      "role": "source-and-build-evidence",
+      "upstream": "http://zlib.net/zlib-1.3.2.tar.gz",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    },
+    {
+      "path": "sources/zstd-1.5.7-h534d264_7.conda",
+      "sha256": "ca7daae4f218a11fab82cc2857f0ea518ec3f46acec60490485347a4c22c6b3e",
+      "size": 387535,
+      "role": "binary-provenance-evidence-local-only",
+      "upstream": "https://conda.anaconda.org/conda-forge/win-64/zstd-1.5.7-h534d264_7.conda",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": false
+    },
+    {
+      "path": "sources/zstd-feedstock-24c0f94340c0875e1a3bb815611276850f7cd7ca.tar.gz",
+      "sha256": "7b8b1c2ab1478a33f5e7384ad6c803caaed50256fc7309f7059374baa4af2ad4",
+      "size": 18142,
+      "role": "source-and-build-evidence",
+      "upstream": "https://api.github.com/repos/conda-forge/zstd-feedstock/tarball/24c0f94340c0875e1a3bb815611276850f7cd7ca",
+      "status": "ACQUIRED; archive availability is not a compliance decision",
+      "public_delivery": true
+    }
+  ],
+  "supplemental_materials": [
+    {
+      "path": "02-checkout.sh",
+      "sha256": "75eafb141796de6e37a076cb920c305d2aca46d6408c4bc13f64cc65ac7b91a9",
+      "size": 680,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "05-configure.sh",
+      "sha256": "68c83ed42a18d39ef2846b45f8d162ebd07a919139555d9ca4e90c3fe4511833",
+      "size": 3730,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "07-stage.sh",
+      "sha256": "1d98cd66666ce08b0aac73dcfb8a519948803ef53220c5ff6a0427b381e8708c",
+      "size": 2011,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "08-licenses.sh",
+      "sha256": "25944e0d3c02d595283dd1cbde7b4aefdbece6e88eed919d00c3805590742724",
+      "size": 3515,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "acquire-extra-sdk.py",
+      "sha256": "1a8962164085c854baf430164889187ab2411e3445790e41b360c459e6c1c2b1",
+      "size": 1382,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "acquire-libyuv-notices.py",
+      "sha256": "38b74a63f79804156dd86510b4aeedd932ac881ca66197bb6d9410da232fbc30",
+      "size": 883,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "acquire-pillow-notices.py",
+      "sha256": "6f0c3fe161c07e3aa2cb4a39679313e997658fecf0ca77bbf5db8f8186e61e12",
+      "size": 1669,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "acquire-published-evidence.py",
+      "sha256": "984b4cb607353353c0117df3a217ac145c90865c859c2dc039620e6be27fd5b5",
+      "size": 1992,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "acquire-qt-sdk.py",
+      "sha256": "44b570c525b9e028caa3edf2c9d2833943245487620f9778ec9003bae638894c",
+      "size": 875,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "acquire-qtpdf-sdk.py",
+      "sha256": "4c301607cd0fb1aa912db5477b0df73887943fff5857d9059ab4329b4d2dd418",
+      "size": 1332,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "additional-published-evidence.py",
+      "sha256": "20b6daaf223316683307d2413bd39cddb93a4c8900ec5a33b1d0ae6c2681636e",
+      "size": 1375,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "aom-3.14.1-LICENSE.txt",
+      "sha256": "4764a286d8b2faeaf42f4418e7d7a28d58fc8fd4d00a3d0a7f44b0a4099de7f2",
+      "size": 1316,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "aom-3.14.1-PATENTS.txt",
+      "sha256": "661fb8e504744e95587b556b94a58343448300606a41bea8c7a9b97125696e61",
+      "size": 5701,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "baseline.py",
+      "sha256": "6266c81720eaf2bdda1fbff462fc3073fedb1aba3bcb18e1963b67700650346f",
+      "size": 1947,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "build_prepare.py",
+      "sha256": "599261894f109cb15418b6a2cdf2fc3a9b78e0479747b965897724968422ec2d",
+      "size": 28260,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "compare-qt-sdk.py",
+      "sha256": "8cc71e16ba59ceb735e4b269c0710cec4cff097031a7b718fb23b0b966ac0c45",
+      "size": 1254,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "dav1d-1.5.3-COPYING.txt",
+      "sha256": "dd92c3c2247c5651606fc23a5e2d6a1ebc5ace9a3e49cbde0e12f05ad1cb1ee5",
+      "size": 1317,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "finalize-checkpoint-docs.py",
+      "sha256": "44c379990948c145d69aea247fdb7c15aa806d8339095f99a5ae7367d3d51e56",
+      "size": 3678,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "find-qt-sdk.py",
+      "sha256": "832153e99222be738419c8436861b1871a39972e07b1a86b431dfec27fa89288",
+      "size": 758,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "inspect-qt-sdk-more.py",
+      "sha256": "1ac93d5a0a7963d07be0f787226212184662bf1afb45f61e39a6b19e85262c91",
+      "size": 782,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "inspect-qt-sdk.py",
+      "sha256": "bdc6e9a7b0433a952a70f1b187770ce4b0c068de6dd6ce0bb1ac81dbb7ce41a5",
+      "size": 750,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "inspect-qtpdf-sdk.py",
+      "sha256": "bd729f44e592a4a452508f4ceaad3041ed7cacec3c93be874bf5a36129756f0d",
+      "size": 817,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "inspect-remaining.py",
+      "sha256": "c88c583eaf529f59deba751589f7fa0bad727c2d749b0e743b32535c2642faf6",
+      "size": 1186,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "libavif-1.4.2-source.tar.gz",
+      "sha256": "e7f11216722ef8b17dcf0186d6be1739be634bbe73312b16a025aa53c08c3d7a",
+      "size": 14666008,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "libavif-aom.cmd",
+      "sha256": "05b75457014f96e62a26ced9a06ca5b2282c06fa67f395a7405e1ec2a28361a8",
+      "size": 966,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "libavif-dav1d.cmd",
+      "sha256": "c9052173ab3fd38ad8f8d58f76cc63478950ad336f06c52a4914afe078304e83",
+      "size": 1187,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "libavif-dav1d_android.sh",
+      "sha256": "310d521b826a707d35c2d9a0067e356d9f79391bf2f15fe833e688672250f7d5",
+      "size": 1239,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "libavif-libsharpyuv.cmd",
+      "sha256": "8067bc54032ed7a27c0fcb2c5af883f0cad35657e28757b32c4a970394a74553",
+      "size": 1076,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "libavif-libyuv.cmd",
+      "sha256": "ed0167e37e7f1ec57ff2e9a5805f96b33f3eb0f7f622ecda4e9aafc6cc9bfe1e",
+      "size": 1382,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "libavif-libyuv_android.sh",
+      "sha256": "502178384fff8cd021e048b5dfdde34ec264e2bb7c2872f5a22ddedc4b0953e9",
+      "size": 1116,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "libavif-svt.cmd",
+      "sha256": "b6b7120b1e0a3a62349c68ce43b3d2c6284e4d004aac156f47eeadb675a6ccd5",
+      "size": 829,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "libavif-svt.sh",
+      "sha256": "fa2a70f471ea40d1239fb6b7822f31807ea5502f073248f0d845cf45250f1613",
+      "size": 430,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "libyuv-644251f25-AUTHORS.txt",
+      "sha256": "0c4a51c72a06b3431bb2b750e3b04dbe3694b22e2fcae6e370216424eec56d52",
+      "size": 179,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "libyuv-644251f25-LICENSE.txt",
+      "sha256": "2b2cc1180c7e6988328ad2033b04b80117419db9c4c584918bbb3cfec7e9364f",
+      "size": 1506,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "libyuv-644251f25-PATENTS.txt",
+      "sha256": "4da84211f947c6f9f7dd8fbce513e1522e01833407ae732b8c9a2bbb75fed495",
+      "size": 1387,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "mesa-section-comparison.json",
+      "sha256": "3e74d40e71b83d14e8f2f23f9218957faf0b9a2050920859f9e0ad89b088708f",
+      "size": 3898,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "msvc-redistribution.html",
+      "sha256": "af9ea5388e0a0c25212d28122574f80a5e713c64813fae4acf97c5ab54397983",
+      "size": 60516,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "msvc-supported-runtime.html",
+      "sha256": "1ef909f75d8cbc84f0cc268a87d011a9f9c331dec97e417500fc75905462a9df",
+      "size": 65853,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "payload-comparison.json",
+      "sha256": "a56c09445aa94f7a11280c82751bd26cb1c302bd80f44c33c3ecb724866d7f9c",
+      "size": 20031,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "pdfium-8076-build/licenses/abseil.txt",
+      "sha256": "f54fff0b905df5b3464527c652a30e903b172d6dcab4d89b5e6f105d5e4a4603",
+      "size": 11564,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "pdfium-8076-build/licenses/agg23.txt",
+      "sha256": "c110d3ea2ad77467ce0dcff7d3337e6c8be8049a5103f4b9bd5fd911a77972e5",
+      "size": 725,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "pdfium-8076-build/licenses/fast_float.txt",
+      "sha256": "bf1b57355feca8fce77ee95f48002f8d4789fb71b30ec7599c06cda4901fbb2b",
+      "size": 1106,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "pdfium-8076-build/licenses/freetype.txt",
+      "sha256": "f4b133e25df1f86ad3ffea453aa0e613f0474f34778dbbb3e437e7b2724937d8",
+      "size": 6741,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "pdfium-8076-build/licenses/icu.txt",
+      "sha256": "93679f4389d53b6835d89843f251844fb9bc455b35bab036d3c8e7abe497a47a",
+      "size": 28286,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "pdfium-8076-build/licenses/lcms.txt",
+      "sha256": "7312b68c5b25e9bf2b828706fb4e29588f22705112f411fd42e1f7d84c3d139a",
+      "size": 1353,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "pdfium-8076-build/licenses/libjpeg_turbo.md",
+      "sha256": "be2b2b5ab168bce87bc3e31f2a5c5adba4b7f6e9e51d618e958d1d46972ebd95",
+      "size": 5755,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "pdfium-8076-build/licenses/libopenjpeg.txt",
+      "sha256": "c5ab0890a737c2dfa7ba675036554f6d17741d98629b0c2a145354d00617e6b2",
+      "size": 1794,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "pdfium-8076-build/licenses/libpng.txt",
+      "sha256": "452390433ba0f88aa3e2b122c647741b72a0c117cd6ed7a329b49785aecb5511",
+      "size": 5479,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "pdfium-8076-build/licenses/llvm-libc.txt",
+      "sha256": "3b6226c32e168c83b891d8d6f0d3c29c2116dc3ef93dc93c307b54f279ecf383",
+      "size": 15418,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "pdfium-8076-build/licenses/pdfium.txt",
+      "sha256": "961eacd9633fff6d051db7208b755e9210e30efac7adec3e6a6d52798f0ccf0e",
+      "size": 12818,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "pdfium-8076-build/licenses/simdutf.txt",
+      "sha256": "c172a0ba936ff31230febb5dad869e25cb7c1a07480c7a381be8cf011bb52719",
+      "size": 1077,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "pdfium-8076-build/licenses/zlib.txt",
+      "sha256": "33fd641c9f3b0e0be64bc78fea9e94807674cdd70c48477599226cb8956565fe",
+      "size": 1332,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "pdfium-8076-commit.json",
+      "sha256": "5c041191e9feb71d3e70b2247b31088f17d63edfaaccb5359ff7c62a928b85f5",
+      "size": 2202,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "pdfium-build-jobs.json",
+      "sha256": "b1df6569e2aba04780f37fcf0bf3a71802561c686ba2692ece637f9e6762a8c0",
+      "size": 101779,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "pdfium-build-runs.json",
+      "sha256": "c9add856689a331cfcf4dd1132442f0745bfe815007c22c9177ae658218158e9",
+      "size": 138128,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "pdfium-build.py",
+      "sha256": "089577a60b8ee121c1432109558230a27313190256c6d3286c52f56aae43cc46",
+      "size": 519,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "pdfium-details.py",
+      "sha256": "ecf3cbc9ebb9161e00336675f05ad7da5787e1b4ccc81338018c061d774a4ebc",
+      "size": 583,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "pdfium-log-unavailability.json",
+      "sha256": "a1625c268105a58a8b4a3250197f5cb0bdd29bd1717a5d987b1574b186767751",
+      "size": 134,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "pdfium-notice-coverage.json",
+      "sha256": "2fcf79cacf1f4d5561978e54f351ae359a1ca3fe9bf37b0d456f02db586d10ce",
+      "size": 4131,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "pdfium-notices.py",
+      "sha256": "6fbda45ccccac37a15ffee0576e42ee31cfcb1b7798e59a041e4021c81f1faff",
+      "size": 863,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "pe-imports.py",
+      "sha256": "0799a3139fe561b117b42d1be31bc1aa0e6875b70ecc335e5ff9defd52a3d9a8",
+      "size": 708,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "pillow-additional-notices.json",
+      "sha256": "7ce39d17442ca3a745f8bbb347318be111ebb987121041daf170d7d043829165",
+      "size": 1903,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "pillow-pe-imports.json",
+      "sha256": "9b83df2d1540c37a50ef18a94043ba814d06f50bda7cf960fcee8442780857ec",
+      "size": 3254,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-community-licensing.html",
+      "sha256": "2fe3b6af2041e62d7609fc7e42abab98f27aea2805e061f5777a9e2b69f21beb",
+      "size": 356213,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-graphics.html",
+      "sha256": "5d043f0e1ddb6bcf9580946d84942235196b5ca963f88b468b7437ef979bc780",
+      "size": 31417,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-llvm-notices.html",
+      "sha256": "bfe20ff114060c7210dce227e8e76cb3af29a8b7a4f872120fe66b7fcf4321ef",
+      "size": 25171,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-llvmpipe-notices.html",
+      "sha256": "55432a584d21f4c4c7e058a5244c5488bda97f94182504b723a668de203d210f",
+      "size": 23095,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-pdf-Updates.xml",
+      "sha256": "b4c2b80540d49e076d39ee15926d9a581f6129201c952153bfad0dcd7de36d9b",
+      "size": 3205,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-pe-imports.json",
+      "sha256": "1d14ead2c06e3470d2641a70b8afced18bc7005bf93b5a2ae074912118b31dcc",
+      "size": 1670,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-binary-receipt.json",
+      "sha256": "3c54782682456e85bb174b9f88c0f034410e07531115afffaa07774c34636f86",
+      "size": 551,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-comparison-summary.txt",
+      "sha256": "163f9acc6ff372b415b0833e88d2c670de5d7866f990312e864b88c9b4183271",
+      "size": 7697,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-comparison.json",
+      "sha256": "49d4aac18b0c82df34bac382261a0b7ac276118600b4024a7c05a88ec9083b2c",
+      "size": 34673,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-extracted/lib/cmake/Qt6/Qt6Config.cmake",
+      "sha256": "bf6794311b9c0e96189e9ff790524ac76e5b21e005f79c8de6e6b59526ad24ad",
+      "size": 13741,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-extracted/lib/cmake/Qt6/QtPublicSbomAttributionHelpers.cmake",
+      "sha256": "b718f21f594881c6110e0114c049dd2ae411b39cce2c24928ea7275b6b6b8b24",
+      "size": 28176,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-extracted/lib/cmake/Qt6/QtPublicSbomBuildToolHelpers.cmake",
+      "sha256": "a58d1160005422b060f6dcc39877e576b2ac8ca81fe8b7a7ecfc86e16a58de18",
+      "size": 14009,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-extracted/lib/cmake/Qt6/QtPublicSbomCommonGenerationHelpers.cmake",
+      "sha256": "fc7f07d74df17aa7111c2386304ce991e4c6a58505683baab10b23285a5f6399",
+      "size": 32970,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-extracted/lib/cmake/Qt6/QtPublicSbomCpeHelpers.cmake",
+      "sha256": "4e52ddd8b24ea860dad5ac84888e6b1fc8072721ee1081bed70b87d05a7e8f97",
+      "size": 2904,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-extracted/lib/cmake/Qt6/QtPublicSbomCycloneDXHelpers.cmake",
+      "sha256": "787af7e2986c1419293ecde254525b9c4330b65c6e294a747fa4102fd1772dbf",
+      "size": 16979,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-extracted/lib/cmake/Qt6/QtPublicSbomDepHelpers.cmake",
+      "sha256": "f5acdcdc3801ed9c95ba1a4e352b1a6c60a8b292d7a38c7d7130ae0c2cb933f0",
+      "size": 16295,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-extracted/lib/cmake/Qt6/QtPublicSbomDocumentNamespaceHelpers.cmake",
+      "sha256": "b7542190741288400dc5a0908bfceadca12796cc42b6f948c8d4c73a26503c28",
+      "size": 18134,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-extracted/lib/cmake/Qt6/QtPublicSbomExternalReferenceHelpers.cmake",
+      "sha256": "c00c23a7eccd55855cb000926251454f8741e9069ce59550157807638e1bd501",
+      "size": 31250,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-extracted/lib/cmake/Qt6/QtPublicSbomFileHelpers.cmake",
+      "sha256": "da0f2fe600cba3ca8728c1bf654bf290d783d51383ccb960c715d530dc853e81",
+      "size": 44507,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-extracted/lib/cmake/Qt6/QtPublicSbomGenerationCycloneDXHelpers.cmake",
+      "sha256": "8089be64ea8637f066fed6ec720ca05dba06eb8d08b3099c0805cfc60ee155b6",
+      "size": 15778,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-extracted/lib/cmake/Qt6/QtPublicSbomGenerationHelpers.cmake",
+      "sha256": "7195ca1c7e9837818a8a589520c329d50d3b97be92c570f42fbdd0cbeb56b0cf",
+      "size": 43857,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-extracted/lib/cmake/Qt6/QtPublicSbomHelpers.cmake",
+      "sha256": "3809d31313a38c2467fd216824304abe4caeecfbf9bad281dbe8c305d2ca4e67",
+      "size": 121320,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-extracted/lib/cmake/Qt6/QtPublicSbomLicenseHelpers.cmake",
+      "sha256": "759f0a08937a3657882ccd37303e7bc033434d4677fd9f3b099a5f4ceba54194",
+      "size": 3728,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-extracted/lib/cmake/Qt6/QtPublicSbomOpsHelpers.cmake",
+      "sha256": "97d5aaef72ab25a2bb6d963be6424e0e5c27dfdbd6d942c567f7f9d4885b8163",
+      "size": 54369,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-extracted/lib/cmake/Qt6/QtPublicSbomPurlHelpers.cmake",
+      "sha256": "ae8a5f2cda92171b4e2455458a0ec41824c7d63b3c90003d4ac77ed669be8a7f",
+      "size": 13062,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-extracted/lib/cmake/Qt6/QtPublicSbomPythonHelpers.cmake",
+      "sha256": "d528f91db519e4dd9cde90b02c96e1d8cc0625e95cb4f83c840d0eb18f3aff77",
+      "size": 17869,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-extracted/lib/cmake/Qt6/QtPublicSbomQtEntityHelpers.cmake",
+      "sha256": "f32de2f2e226a3d9bd5c35fae4fc0d5eb8fb04746a132ebd23119273f8da3985",
+      "size": 20229,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-extracted/lib/cmake/Qt6/QtPublicSbomRelationshipHelpers.cmake",
+      "sha256": "4ff249da5fe2b2b432468967f1b0203ad8b80cf4dc1169b2870d0677f3a34aff",
+      "size": 23872,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-extracted/lib/cmake/Qt6/QtPublicSbomSystemDepHelpers.cmake",
+      "sha256": "4a4185002918874e0857f2e8efc2e6061bac3020cdad24882bbba2a3ee00d162",
+      "size": 7724,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-extracted/lib/cmake/Qt6/QtSbomHelpers.cmake",
+      "sha256": "ada5d536cc82a868362c4c1b93d11d76f00740c4fc7417ba4ea128d5cba259b2",
+      "size": 11470,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-extracted/lib/cmake/Qt6Core/Qt6CoreConfigExtras.cmake",
+      "sha256": "e2053bd3d6b24b3f2d40b7b9be03a0d4520fd7b99a766ac6f39424d0929888e7",
+      "size": 2530,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-extracted/mkspecs/modules/qt_lib_pdf.pri",
+      "sha256": "dfe46858691ed8fa0233d8f0da5cf6d7770ce9ee6c64e3a86b7f7d5bf19b0717",
+      "size": 482,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-extracted/mkspecs/modules/qt_lib_pdf_private.pri",
+      "sha256": "c3d3559f43e0636e002e76748d55feb0e77e28738aaadea2f0987738b8fdf958",
+      "size": 545,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-extracted/mkspecs/modules/qt_lib_pdfquick.pri",
+      "sha256": "a56ef3e3cc3e51e493c3876742ccfd13bdbf652f00834f69156532a9ffc5992d",
+      "size": 561,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-extracted/mkspecs/modules/qt_lib_pdfquick_private.pri",
+      "sha256": "4e443f26c0d63114816fdeba7602ecd26cba5c1e697b2034d3e2a8a26c484fbf",
+      "size": 557,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-extracted/mkspecs/modules/qt_lib_pdfwidgets.pri",
+      "sha256": "5afda6a9ce07036b9526e9434c25f26d7ad637139221ed504dc9b0901c8a0688",
+      "size": 597,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-extracted/mkspecs/modules/qt_lib_pdfwidgets_private.pri",
+      "sha256": "f856a952a5f0f4e60fc5ad386210e71f70a9faaa183988a03b3f0cef638b69cd",
+      "size": 563,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-extracted/mkspecs/modules/qt_lib_svg.pri",
+      "sha256": "af9089b4c2c990026e3bb64f51315018e46d759f528b212560952e070c72e2b6",
+      "size": 451,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-extracted/mkspecs/modules/qt_lib_svg_private.pri",
+      "sha256": "561028413de6aef50db4aa93df46d3e575fa60f4a46ddb799a90ad222215af93",
+      "size": 473,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-extracted/mkspecs/modules/qt_lib_svgwidgets.pri",
+      "sha256": "2e2f7f44fcceaa302aff6e5ca785c7f6216203313b441ae8118c8f93d4c4cd80",
+      "size": 596,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-extracted/mkspecs/qconfig.pri",
+      "sha256": "4ff768999685b0b736f68eedca9c0d954393a5f059224c94c14a75664f25058a",
+      "size": 912,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-extracted/sbom/qtbase-6.12.0.cdx.json",
+      "sha256": "1a3fcf6b54e0062a01a5a48bd9022cf9308155aa0bb1d6dab1070d1ee7376366",
+      "size": 307029,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-extracted/sbom/qtbase-6.12.0.source.spdx",
+      "sha256": "9c0252130605a6f21699d847552ea1d1a63c329273165c3021c2979eec366247",
+      "size": 10750856,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-extracted/sbom/qtbase-6.12.0.spdx",
+      "sha256": "1cbd06d2949e86010d2a03893803b85664c074ae53f79f09af96daafdbc89ce2",
+      "size": 2375572,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-extracted/sbom/qtbase-6.12.0.spdx.json",
+      "sha256": "ec627100f721386be2a72e904af13f2ef3d52e2714aee3e25db279fc9464884d",
+      "size": 3908727,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-extracted/sbom/qtpdf-6.140.0.cdx.json",
+      "sha256": "2064abf7e4d6e1a4b16439c6cb26e9de3a575d4266aae1dd7d8b7cf3dbf674aa",
+      "size": 22933,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-extracted/sbom/qtpdf-6.140.0.source.spdx",
+      "sha256": "705ca239da88e562adda62b3ba87ea9a11b8b9f980aa7c41e02bc95e784c527c",
+      "size": 822351,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-extracted/sbom/qtpdf-6.140.0.spdx",
+      "sha256": "6147c46969ecfff875667f5bad0f100f9cc2079e04005ca8ff5a2759ffb4080d",
+      "size": 84156,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-extracted/sbom/qtpdf-6.140.0.spdx.json",
+      "sha256": "0a05a608201528d188eac8fbc8a4f0a1859b08f1ad1e9a861b402e958a87533e",
+      "size": 142608,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-extracted/sbom/qtsvg-6.12.0.cdx.json",
+      "sha256": "9e9df4859cc12bc58a06dddc3ff67b8db17fd083e888303e1359b168cca2de21",
+      "size": 18641,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-extracted/sbom/qtsvg-6.12.0.source.spdx",
+      "sha256": "b361f27470d7b1aee5ddcac0a9e6e503e823ec6972652aa88c2831c848de8cea",
+      "size": 291485,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-extracted/sbom/qtsvg-6.12.0.spdx",
+      "sha256": "dc254b451fc3f60641abd984536ef17b3c78df58c733f16b75105b67ed939975",
+      "size": 66189,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-extracted/sbom/qtsvg-6.12.0.spdx.json",
+      "sha256": "70ea12dda11f4b39772fd731c3fb50a7dd4ed72afc06800a88494d3904e11e36",
+      "size": 112764,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-extracted/sbom/qtwebengine-chromium-pdf-6.140.0.cdx.json",
+      "sha256": "4f0ca1b60ad70e37d8d5fab8c824c47508ec89d0bb172d2a09a4708845060102",
+      "size": 94902,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-extracted/sbom/qtwebengine-chromium-pdf-6.140.0.spdx",
+      "sha256": "edc15d9b2957af88cbefdecad449b2b0c420929b77cfe0320e7396e377de5fe5",
+      "size": 85964,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-extracted/sbom/qtwebengine-chromium-pdf-6.140.0.spdx.json",
+      "sha256": "c5f132fd5278205df491e1352de1d98c7f533dc3f3499a6ea731be40f0d40142",
+      "size": 92702,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-extracted/share/qt6/wayland/protocols/MIT_LICENSE.txt",
+      "sha256": "6eb3ff98ddb1198d05e0077a3d2f7811feaff63f9fca47d0e62643e72a6206d3",
+      "size": 1073,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-extracted/share/qt6/wayland/protocols/text-input/v2/HPND_LICENSE.txt",
+      "sha256": "e3454fe5d373f926d7277d0d849c63a6874552c1de0d342bdc8e4f77272d340a",
+      "size": 1115,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-member-list.json",
+      "sha256": "99b4cb712408167bc2a24edd6b647e0889343b21a7a9b67067905661837996d7",
+      "size": 225792,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-package.json",
+      "sha256": "e51b463a8b6b7e6283d0583a1f0ffecf8059004277db6df3bdd765c418129b03",
+      "size": 19809,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-sdk-Updates.xml",
+      "sha256": "ba09f355a6e42e1373b939d26d7742df7348f298a465420083b3cfd28ed2914b",
+      "size": 120913,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-source-correlation.py",
+      "sha256": "89ca0fa83294083bd106eafa9576f99e74f34ae514685a7678f81c96818dddbf",
+      "size": 1997,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-source-file-correlation.json",
+      "sha256": "f27a1e863de561b2d9de6ab3b370b1d7018a1758f8b898e276354f40917efa11",
+      "size": 3213,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-svg-sdk-receipt.json",
+      "sha256": "23fb736af1738e9f758855e767a56b9cdb58863c6b10932d43fb2d96c1ab695b",
+      "size": 379,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qt-translator.html",
+      "sha256": "c44eea23d4a7959a09fc87e3b5aebecfa00291f72aee649f0aa9f03abea121f9",
+      "size": 41724,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qtpdf-sdk-member-list.json",
+      "sha256": "f45528b4d983259433c2f2f60f2163c61a36416e68a37ba77b749b839001004c",
+      "size": 10367,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qtpdf-sdk-receipt.json",
+      "sha256": "85d37b43a90de778c7b3ba1a65feb81933c3189934eaecba81e8f5c52a73e7f4",
+      "size": 398,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "qtpdf-sdk-Updates.xml",
+      "sha256": "40590ba082bf508acd91b1815c1a43082199a74b35355dfdbabc5bb3228801d4",
+      "size": 1232,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "references.json",
+      "sha256": "5926f06ccb587783e2acd9472bec468fd93b7a38f0ec87b58fdc9f4d17e2ca26",
+      "size": 2735,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "runtime-desktop.json",
+      "sha256": "843bf4ca9a3249c4fc5bddd7141453a972670a7d676c6c53a2a94c46ff393f7f",
+      "size": 17559,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "runtime-offscreen.json",
+      "sha256": "74c1195c668a822d3bf63a6f0f8e47122a8758e1b0f372de00daa4ee04eb2786",
+      "size": 14713,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "runtime-software.json",
+      "sha256": "b7f9d16d61bab9899a50122d1da15062633e3d4feb13495c52a0e88a3ad7a330",
+      "size": 17589,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "update-audit-checkpoint.py",
+      "sha256": "73c4a23af6964a7abc0db04fe8b4459b340424a13e07fd4c2dc216f1a29f4ce2",
+      "size": 8271,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "update-decisions.py",
+      "sha256": "8dcb0665eac71e225efd62750388c734b7d5e1c4e434b4093f29201b63b4d4c1",
+      "size": 8189,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    },
+    {
+      "path": "update-docs.py",
+      "sha256": "1291ac190b3edde7227eb6d4d9a0183604cf4724446cad2a7f4eb866599ef611",
+      "size": 11393,
+      "role": "supplemental-source-build-notice-evidence",
+      "public_delivery": true,
+      "upstream": "See retained download receipts and references.json; authored analyses identify their inputs"
+    }
+  ]
+}

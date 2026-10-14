@@ -1,0 +1,3 @@
+# Test-only environment. unittest is standard-library; production dependencies
+# provide the real Qt/PDF controls. FreeCAD tests use its separate bundled Python.
+-r requirements-gui.txt

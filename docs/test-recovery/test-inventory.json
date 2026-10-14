@@ -1,0 +1,283 @@
+[
+  {
+    "module": "tests_native\\test_analysis.py",
+    "test_methods": [
+      "test_rotated_translated_pin_extent_uses_intrinsic_axis",
+      "test_hex_bolt_dimensions_have_independent_known_values",
+      "test_hex_bolt_recognition_survives_arbitrary_orientation",
+      "test_circular_head_has_geometry_supported_diameter",
+      "test_hollow_hex_body_does_not_become_a_bolt",
+      "test_smooth_bore_is_not_a_thread_size",
+      "test_terminal_annular_flange",
+      "test_plain_washer_has_no_invented_head_or_flange",
+      "test_cube_does_not_have_a_longitudinal_axis",
+      "test_regular_hex_prism_has_supported_inertia_axis",
+      "test_cone_radius_is_not_promoted_to_head_diameter",
+      "test_competing_perpendicular_cylinders_withhold_axis",
+      "test_open_geometry_withholds_feature_dimensions",
+      "test_external_thread_appearance_requires_native_helical_flanks",
+      "test_rotated_thread_evidence_is_orientation_independent",
+      "test_helical_coil_is_not_classified_as_thread",
+      "test_invalid_brep_withholds_recognition_even_when_envelope_available",
+      "test_analysis_refuses_aggregate_assembly_geometry",
+      "test_step_roundtrip_and_original_preservation",
+      "test_assembly_is_reported_as_separate_components",
+      "test_missing_file_produces_error_json_and_failure_exit",
+      "test_malformed_step_does_not_claim_success"
+    ]
+  },
+  {
+    "module": "tests_native\\test_comprehensive.py",
+    "test_methods": [
+      "test_native_locus_checks_reject_wrong_centers_and_parallel_offsets",
+      "test_corner_offset_dedup_requires_the_actual_tangent_polygon",
+      "test_cone_rim_dedup_rejects_an_offset_cylinder_with_equal_diameter",
+      "test_axial_selection_is_spanning_baselines_not_closed_chain",
+      "test_equal_diameter_and_flats_are_distinct_measurements",
+      "test_source_plane_intersection_is_native_and_unmodified",
+      "test_expanded_layout_reserves_axial_lanes_and_can_enlarge",
+      "test_rotated_hollow_steps_known_measurements_native_section_and_reopen",
+      "test_supplied_models_increase_coverage_and_report_unresolved"
+    ]
+  },
+  {
+    "module": "tests_native\\test_configuration.py",
+    "test_methods": [
+      "test_native_stable_id_survives_transient_candidate_feature_and_face_reordering",
+      "test_same_diameter_on_different_native_locus_cannot_reuse_saved_binding",
+      "test_changed_length_refuses_saved_selection_even_when_external_diameter_unchanged",
+      "test_explicit_custom_policy_selects_only_requested_source_candidates",
+      "test_unbound_invalid_and_conflicting_selections_are_refused",
+      "test_basic_is_supported_geometry_and_no_fabricated_semantics",
+      "test_orientation_override_changes_only_frame_and_rejects_nontransverse_up",
+      "test_configuration_rejects_unknown_fields_and_nonfinite_scale"
+    ]
+  },
+  {
+    "module": "tests_native\\test_dimensions.py",
+    "test_methods": [
+      "test_independent_fixture_measurements_survive_rigid_motion",
+      "test_stepped_bore_is_not_arbitrarily_promoted_to_single_diameter",
+      "test_geometry_fingerprint_rejects_equal_radius_at_wrong_center",
+      "test_collision_check_rejects_overlap_and_insufficient_clearance",
+      "test_layout_reserves_dimension_lanes_and_reduces_scale",
+      "test_independent_rotated_fixture_native_dimensions_and_vector_pdf",
+      "test_both_supplied_parts_native_dimensions_and_reopen",
+      "test_ambiguous_bore_is_omitted_in_native_sheet_and_reported"
+    ]
+  },
+  {
+    "module": "tests_native\\test_drawing.py",
+    "test_methods": [
+      "test_known_pin_extents_survive_arbitrary_rotation_and_translation",
+      "test_hex_flat_fixes_roll_under_rigid_transformation",
+      "test_third_angle_end_views_preserve_up_and_correct_handedness",
+      "test_isometric_is_orthogonal_and_equally_inclined",
+      "test_unresolved_axis_requires_explicit_reviewed_override",
+      "test_supported_sheets_fit_spaced_views_and_captions",
+      "test_optional_views_allow_larger_scale_without_phantom_cells",
+      "test_tiny_views_reserve_legible_caption_spacing",
+      "test_native_signature_detects_changed_internal_geometry_with_same_envelope",
+      "test_native_signature_distinguishes_serialization_from_small_roundtrip_noise",
+      "test_title_block_embeds_exact_source_and_no_invented_manufacturing_fields",
+      "test_dimension_template_marks_measured_geometry_and_no_manufacturing_approval",
+      "test_both_original_samples_export_reopen_and_keep_validation_failures",
+      "test_native_two_view_a4_option_and_known_rotated_pin",
+      "test_native_unresolved_axis_writes_failure_report_without_pdf"
+    ]
+  },
+  {
+    "module": "tests_native\\test_features.py",
+    "test_methods": [
+      "test_irregular_opening_groups_proved_equal_wall_spacings",
+      "test_multiple_external_and_internal_steps_measured_independently",
+      "test_variable_flange_thickness_is_not_cylinder_radius_or_nominal_size",
+      "test_rotation_translation_preserve_feature_dimensions",
+      "test_non_circular_terminal_opening_is_not_forced_to_bore",
+      "test_conical_transition_keeps_measured_angle_and_axial_extent",
+      "test_annular_recess_has_known_width_and_depth",
+      "test_native_toroidal_fillet_radius",
+      "test_nonconcentric_bore_is_not_coaxial_diameter"
+    ]
+  },
+  {
+    "module": "tests_native\\test_presentation.py",
+    "test_methods": [
+      "test_diameter_text_arrow_clearance_rounding_and_native_reopen"
+    ]
+  },
+  {
+    "module": "tests_native\\test_quality.py",
+    "test_methods": [
+      "test_independent_fastener_families_preserve_measured_lengths_under_rotation",
+      "test_nested_section_material_excludes_bore_and_validates_complete_hatch_segments",
+      "test_open_section_refuses_reconstruction_and_keeps_successful_native_case_separate",
+      "test_unresolved_axis_has_complete_diagnostic_schema",
+      "test_compact_angles_use_actual_corner_and_physical_radius",
+      "test_new_independent_step_families_native_dimensioning_and_reopen"
+    ]
+  },
+  {
+    "module": "tests_pdf\\test_compatibility.py",
+    "test_methods": [
+      "test_independent_both_defects_keep_valid_paths_and_text",
+      "test_repeated_output_is_byte_deterministic_and_idempotent",
+      "test_valid_pdf_needs_no_operator_changes",
+      "test_missing_label_fails_before_output_publication",
+      "test_refuses_in_place_source_overwrite",
+      "test_unknown_color_defects_are_not_guessed",
+      "test_color_without_immediate_reset_is_rejected",
+      "test_graphics_stack_and_clipping_are_not_suppressed",
+      "test_actual_samples_keep_every_label_and_resource",
+      "test_native_independent_unicode_control_preserves_both_text_paths"
+    ]
+  },
+  {
+    "module": "tests_pdf\\test_concurrency.py",
+    "test_methods": [
+      "test_two_processes_cannot_publish_into_the_same_output"
+    ]
+  },
+  {
+    "module": "tests_pdf\\test_gates.py",
+    "test_methods": [
+      "test_normalization_preserves_prior_target_when_repair_is_ambiguous",
+      "test_valid_rgb_and_real_closed_path_are_unchanged",
+      "test_encryption_annotations_and_xobjects_are_refused",
+      "test_structural_gate_rejects_wrong_sheet_missing_label_and_extra_page",
+      "test_two_independent_renderers_verify_normalized_minimal_vector_fixture",
+      "test_json_dates_duplicate_fields_and_nonfinite_numbers"
+    ]
+  },
+  {
+    "module": "tests_pdf\\test_pipeline.py",
+    "test_methods": [
+      "test_failed_native_export_never_changes_previous_manifest",
+      "test_actual_truncated_native_pdf_aborts_before_publication",
+      "test_failed_independent_pdf_verification_cannot_publish",
+      "test_atomic_commit_failure_leaves_old_complete_release_current",
+      "test_successful_manifest_points_to_complete_hash_verified_set",
+      "test_unreadable_final_child_paths_never_commit_manifest",
+      "test_existing_generation_lock_refuses_concurrent_publisher"
+    ]
+  },
+  {
+    "module": "tests_gui\\test_cad_workflow.py",
+    "test_methods": [
+      "test_all_modes_publication_preview_persistence_and_failure_boundaries"
+    ]
+  },
+  {
+    "module": "tests_gui\\test_export_failures.py",
+    "test_methods": [
+      "test_corrupt_pending_copy_cannot_replace_existing_destination",
+      "test_locked_destination_preserves_existing_bytes"
+    ]
+  },
+  {
+    "module": "tests_gui\\test_file_opener.py",
+    "test_methods": [
+      "test_launch_arguments_preserve_spaces_and_use_external_python",
+      "test_dispatch_is_responsive_and_does_not_claim_viewer_rendering",
+      "test_default_viewer_failure_is_reported",
+      "test_hung_default_viewer_dispatch_is_bounded"
+    ]
+  },
+  {
+    "module": "tests_gui\\test_interface.py",
+    "test_methods": [
+      "test_configuration_controls_serialize_existing_schema",
+      "test_checkbox_selection_uses_stable_source_identity",
+      "test_generate_passes_bound_config_and_prevents_concurrent_edit",
+      "test_failed_generation_clears_preview_and_preserves_old_manifest",
+      "test_review_exit_is_success_and_exposes_boolean_warnings",
+      "test_invalid_metadata_cannot_start_generation",
+      "test_source_change_disables_generation_and_clears_old_candidates",
+      "test_changed_binding_preserves_configuration_until_explicit_reset",
+      "test_preview_zoom_fit_and_page_controls",
+      "test_dimension_picker_fills_tab_and_hides_unsupported_items",
+      "test_invocation_uses_external_worker_arguments_without_shell",
+      "test_actual_qprocess_keeps_event_loop_responsive_and_handles_review_exit",
+      "test_cancel_is_a_cooperative_marker_not_a_process_kill"
+    ]
+  },
+  {
+    "module": "tests_gui\\test_process_control.py",
+    "test_methods": [
+      "test_cancellation_kills_native_worker_and_its_descendant",
+      "test_abnormal_worker_exit_kills_descendant_via_owning_job",
+      "test_abrupt_gui_exit_kills_qprocess_worker_and_native_descendant"
+    ]
+  },
+  {
+    "module": "tests_gui\\test_refinements.py",
+    "test_methods": [
+      "test_printed_precision_and_trimmed_zero_policy",
+      "test_picker_uses_shared_precision_and_values_are_read_only",
+      "test_date_accepts_month_day_and_keeps_iso_hint",
+      "test_browse_selects_step_without_starting_backend",
+      "test_json_reload_preserves_explicit_exclusion_and_detects_stale_binding",
+      "test_missing_export_extensions_and_wrong_extension_rejection",
+      "test_title_and_mode_tooltips_remain_explanatory"
+    ]
+  },
+  {
+    "module": "tests_gui\\test_runtime_probe.py",
+    "test_methods": [
+      "test_dependency_order_and_success_markers",
+      "test_failed_import_does_not_print_success",
+      "test_windows_powershell_invokes_real_external_dependency_probes"
+    ]
+  },
+  {
+    "module": "tests_gui\\test_state.py",
+    "test_methods": [
+      "test_source_bound_selection_and_roundtrip",
+      "test_suppression_remains_explicit",
+      "test_unknown_identity_is_not_remapped_by_equal_value",
+      "test_changed_source_preserves_policy_and_requires_explicit_fresh_start",
+      "test_replacing_policy_retains_readable_history",
+      "test_explicit_fresh_save_preserves_corrupt_old_configuration_bytes",
+      "test_backend_exit_codes",
+      "test_current_release_and_preview_are_normalized_published_artifacts",
+      "test_another_run_cannot_be_shown_as_new_result",
+      "test_invalid_or_missing_output_paths",
+      "test_historical_selection_validates_same_artifacts",
+      "test_save_as_preserves_release_and_verifies_copy"
+    ]
+  },
+  {
+    "module": "tests_gui\\test_transport_failures.py",
+    "test_methods": [
+      "test_missing_program_finishes_once_and_restores_idle_state",
+      "test_utf8_character_split_across_pipe_reads_is_preserved",
+      "test_worker_failure_reports_error_without_a_fake_result"
+    ]
+  },
+  {
+    "module": "tests_launchers\\test_windows_launcher.py",
+    "test_methods": [
+      "test_windows_powershell_full_gui_startup",
+      "test_double_click_command_full_gui_startup",
+      "test_command_preserves_failure_status"
+    ]
+  },
+  {
+    "module": "tests\\test_packaging.py",
+    "test_methods": [
+      "test_worker_crash_terminates_native_process_and_descendant",
+      "test_installed_data_cannot_be_written_into_application_directory",
+      "test_cancellation_terminates_native_process_and_descendant",
+      "test_frozen_worker_never_relaunches_gui_as_python",
+      "test_native_environment_drops_gui_contamination",
+      "test_installed_native_sources_use_same_user_data_as_frozen_gui",
+      "test_missing_freecad_has_install_guidance",
+      "test_invalid_explicit_poppler_is_not_silently_replaced",
+      "test_exit_two_is_success_with_engineering_warning",
+      "test_configuration_restart_and_history_preserve_format",
+      "test_publication_failure_retains_previous_manifest",
+      "test_complete_publication_hashes_exact_artifacts",
+      "test_cancel_before_publication_preserves_prior_release"
+    ]
+  }
+]

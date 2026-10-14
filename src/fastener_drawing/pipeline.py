@@ -15,7 +15,8 @@ from .configuration import read_config
 from .pdf_compatibility import normalize_pdf
 from .pdf_verification import verify_pdf
 from .review import build_review, write_review
-from fastener_paths import PROJECT_ROOT as ROOT, ENTRYPOINTS
+from fastener_paths import PROJECT_ROOT as ROOT, ENTRYPOINTS, DATA_ROOT, INSTALLED, require_user_data_path
+from nutcase_runtime import clean_environment, external_dll_search
 
 
 def digest(path):
@@ -30,8 +31,10 @@ def write_json(path, value):
 
 
 def native_process(python, script, arguments, log):
-    completed=subprocess.run([str(python),str(ENTRYPOINTS/script),*map(str,arguments)],
-        cwd=ROOT,capture_output=True,text=True,timeout=600,creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0))
+    with external_dll_search():
+        completed=subprocess.run([str(python),str(ENTRYPOINTS/script),*map(str,arguments)],
+            cwd=ROOT,env=clean_environment(),capture_output=True,text=True,timeout=600,
+            creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0))
     Path(log).write_text(completed.stdout+completed.stderr,encoding='utf-8')
     if completed.returncode not in (0,2):
         raise RuntimeError(script+' failed; '+completed.stderr[-2000:]+'; log: '+str(log))
@@ -77,7 +80,7 @@ def generate(source, output, freecad_python, poppler, config_path=None, mode=Non
         if control:
             return control.run([str(python),str(ENTRYPOINTS/script),*map(str,arguments)],ROOT,log)
         return native_process(python,script,arguments,log)
-    source,output=Path(source).resolve(),Path(output).resolve()
+    source,output=Path(source).resolve(),require_user_data_path(output)
     freecad_python=Path(freecad_python).resolve()
     if Path(sys.executable).resolve()==freecad_python:
         raise ValueError('Run the pipeline in external Python; normalization must remain outside FreeCAD')
@@ -189,7 +192,7 @@ def generate(source, output, freecad_python, poppler, config_path=None, mode=Non
 def main(argv=None):
     p=argparse.ArgumentParser(description='STEP to verified native drawing and normalized PDF, with atomic complete release publication')
     p.add_argument('input',type=Path)
-    p.add_argument('--output-dir',type=Path,default=ROOT/'output')
+    p.add_argument('--output-dir',type=Path,default=DATA_ROOT/'drawings' if INSTALLED else ROOT/'output')
     p.add_argument('--freecad-python',required=True,type=Path)
     p.add_argument('--poppler',default=shutil.which('pdftoppm'))
     p.add_argument('--config',type=Path)

@@ -1,6 +1,7 @@
 """Independent release gate outside FreeCAD: structure, labels and two renderers."""
 import json
 import subprocess
+from nutcase_runtime import clean_environment, external_dll_search
 from pathlib import Path
 
 
@@ -37,8 +38,10 @@ def verify_pdf(pdf, drawing_report, directory, poppler):
     if changes:
         raise ValueError('PDF still contains identified Qt export defects')
     prefix = directory/'poppler'
-    completed = subprocess.run([str(poppler), '-scale-to','2000','-png','-singlefile',str(pdf),str(prefix)],
-                               capture_output=True, text=True, timeout=60, creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0))
+    with external_dll_search():
+        completed = subprocess.run([str(poppler), '-scale-to','2000','-png','-singlefile',str(pdf),str(prefix)],
+                                   env=clean_environment(), capture_output=True, text=True, timeout=60,
+                                   creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0))
     (directory/'poppler.log').write_text(completed.stderr, encoding='utf-8')
     if completed.returncode or completed.stderr.strip():
         raise ValueError('PDF render failed or emitted diagnostics: '+completed.stderr[-2000:])

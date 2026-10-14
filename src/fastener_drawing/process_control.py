@@ -7,6 +7,7 @@ import os
 import subprocess
 import time
 from pathlib import Path
+from nutcase_runtime import clean_environment, external_dll_search
 
 
 class Cancelled(RuntimeError):
@@ -95,9 +96,10 @@ class ProcessControl:
         process = None
         start = time.monotonic()
         try:
-            process = subprocess.Popen(command, cwd=cwd, stdout=subprocess.PIPE,
-                stderr=subprocess.STDOUT, text=True, encoding='utf-8', errors='replace',
-                creationflags=getattr(subprocess, 'CREATE_NO_WINDOW', 0))
+            with external_dll_search():
+                process = subprocess.Popen(command, cwd=cwd, stdout=subprocess.PIPE,
+                    stderr=subprocess.STDOUT, text=True, encoding='utf-8', errors='replace',
+                    env=clean_environment(), creationflags=getattr(subprocess, 'CREATE_NO_WINDOW', 0))
             job.assign(process)
             while True:
                 self.check()

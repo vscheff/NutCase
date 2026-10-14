@@ -2,8 +2,17 @@
 import os
 import sys
 
-if __name__=='__main__':
-    try:os.startfile(sys.argv[1])
+import _bootstrap
+from nutcase_runtime import external_dll_search
+
+
+def main():
+    try:
+        with external_dll_search():os.startfile(sys.argv[1])
     except Exception as error:
         print(str(error),file=sys.stderr)
-        raise SystemExit(1)
+        return 1
+    return 0
+
+
+if __name__=='__main__':raise SystemExit(main())

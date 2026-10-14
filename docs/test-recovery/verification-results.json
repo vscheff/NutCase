@@ -1,0 +1,283 @@
+{
+  "date": "2026-10-13",
+  "status": "passed_across_full_and_targeted_reruns",
+  "distinct_methods": 166,
+  "first_full_invocation_passed": false,
+  "ci_run": false,
+  "installer_rebuilt": false,
+  "records": {
+    "native_full": {
+      "path": "build/test-results/full/native.json",
+      "status": "passed",
+      "tests_run": 78,
+      "skipped": [],
+      "elapsed_seconds": 306.578,
+      "python": "C:\\Program Files\\FreeCAD 1.1\\bin\\python.exe",
+      "version": "3.11.14 | packaged by conda-forge | (main, Oct 13 2025, 14:00:26) [MSC v.1944 64 bit (AMD64)]"
+    },
+    "native_control_final": {
+      "path": "build/test-results/presentation-final/native.json",
+      "status": "passed",
+      "tests_run": 1,
+      "skipped": [],
+      "elapsed_seconds": 10.266,
+      "python": "C:\\Program Files\\FreeCAD 1.1\\bin\\python.exe",
+      "version": "3.11.14 | packaged by conda-forge | (main, Oct 13 2025, 14:00:26) [MSC v.1944 64 bit (AMD64)]"
+    },
+    "gui_real_matrix": {
+      "path": "build/test-results/full/gui.json",
+      "status": "passed",
+      "tests_run": 46,
+      "skipped": [],
+      "elapsed_seconds": 436.33,
+      "python": "C:\\Users\\vsche\\repos\\NutCase\\.venv-build\\Scripts\\python.exe",
+      "version": "3.13.16 (tags/v3.13.16:cbc944f, Sep 30 2026, 19:17:50) [MSC v.1944 64 bit (AMD64)]"
+    },
+    "gui_final_with_fonts": {
+      "path": "build/test-results/gui-final-fonts/gui.json",
+      "status": "passed",
+      "tests_run": 48,
+      "skipped": [
+        {
+          "test": "test_all_modes_publication_preview_persistence_and_failure_boundaries (test_cad_workflow.CADWorkflowTests.test_all_modes_publication_preview_persistence_and_failure_boundaries)",
+          "reason": "Real integration requires --freecad-python and --poppler"
+        }
+      ],
+      "elapsed_seconds": 11.733,
+      "python": "C:\\Users\\vsche\\repos\\NutCase\\.venv-build\\Scripts\\python.exe",
+      "version": "3.13.16 (tags/v3.13.16:cbc944f, Sep 30 2026, 19:17:50) [MSC v.1944 64 bit (AMD64)]"
+    },
+    "pdf_final": {
+      "path": "build/test-results/full/pdf.json",
+      "status": "passed",
+      "tests_run": 24,
+      "skipped": [],
+      "elapsed_seconds": 13.787,
+      "python": "C:\\Users\\vsche\\repos\\NutCase\\.venv-build\\Scripts\\python.exe",
+      "version": "3.13.16 (tags/v3.13.16:cbc944f, Sep 30 2026, 19:17:50) [MSC v.1944 64 bit (AMD64)]"
+    },
+    "launchers": {
+      "path": "build/test-results/full/launchers.json",
+      "status": "passed",
+      "tests_run": 3,
+      "skipped": [],
+      "elapsed_seconds": 4.284,
+      "python": "C:\\Users\\vsche\\repos\\NutCase\\.venv-build\\Scripts\\python.exe",
+      "version": "3.13.16 (tags/v3.13.16:cbc944f, Sep 30 2026, 19:17:50) [MSC v.1944 64 bit (AMD64)]"
+    },
+    "packaging": {
+      "path": "build/test-results/full/packaging.json",
+      "status": "passed",
+      "tests_run": 13,
+      "skipped": [],
+      "elapsed_seconds": 0.531,
+      "python": "C:\\Users\\vsche\\repos\\NutCase\\.venv-build\\Scripts\\python.exe",
+      "version": "3.13.16 (tags/v3.13.16:cbc944f, Sep 30 2026, 19:17:50) [MSC v.1944 64 bit (AMD64)]"
+    },
+    "late_export_tests": {
+      "path": "build/test-results/export-failures/gui.json",
+      "status": "passed",
+      "tests_run": 2,
+      "skipped": [],
+      "elapsed_seconds": 0.147,
+      "python": "C:\\Users\\vsche\\repos\\NutCase\\.venv-build\\Scripts\\python.exe",
+      "version": "3.13.16 (tags/v3.13.16:cbc944f, Sep 30 2026, 19:17:50) [MSC v.1944 64 bit (AMD64)]"
+    },
+    "readiness_based_process_final": {
+      "path": "build/test-results/process-final/gui.json",
+      "status": "passed",
+      "tests_run": 3,
+      "skipped": [],
+      "elapsed_seconds": 0.642,
+      "python": "C:\\Users\\vsche\\repos\\NutCase\\.venv-build\\Scripts\\python.exe",
+      "version": "3.13.16 (tags/v3.13.16:cbc944f, Sep 30 2026, 19:17:50) [MSC v.1944 64 bit (AMD64)]"
+    }
+  },
+  "matrix": [
+    {
+      "source": "countersunk_pin.step",
+      "local_sample": false,
+      "mode": "basic",
+      "exit_code": 0,
+      "dimensions": 2,
+      "native_pdf": "C:\\Users\\vsche\\repos\\NutCase\\build\\test-results\\full\\workflow-2e30ece1\\drawings-0\\runs\\20261013T172919-ae89decfe0\\native\\model 0 \u03a9 & nut.pdf",
+      "project": "C:\\Users\\vsche\\repos\\NutCase\\build\\test-results\\full\\workflow-2e30ece1\\drawings-0\\releases\\model-0-----nut-30038cc6daa6\\20261013T172919-ae89decfe0\\model 0 \u03a9 & nut.FCStd",
+      "pdf": "C:\\Users\\vsche\\repos\\NutCase\\build\\test-results\\full\\workflow-2e30ece1\\drawings-0\\releases\\model-0-----nut-30038cc6daa6\\20261013T172919-ae89decfe0\\model 0 \u03a9 & nut.pdf",
+      "source_sha256": "344b584f9614e29f38cfbacbf1cdc5f1c063c6dc04fa6a9344cdec2abc96b83a",
+      "pdf_verified": true,
+      "native_reopened": true
+    },
+    {
+      "source": "countersunk_pin.step",
+      "local_sample": false,
+      "mode": "comprehensive",
+      "exit_code": 0,
+      "dimensions": 4,
+      "native_pdf": "C:\\Users\\vsche\\repos\\NutCase\\build\\test-results\\full\\workflow-2e30ece1\\drawings-0\\runs\\20261013T172940-40cdf8a194\\native\\model 0 \u03a9 & nut.pdf",
+      "project": "C:\\Users\\vsche\\repos\\NutCase\\build\\test-results\\full\\workflow-2e30ece1\\drawings-0\\releases\\model-0-----nut-30038cc6daa6\\20261013T172940-40cdf8a194\\model 0 \u03a9 & nut.FCStd",
+      "pdf": "C:\\Users\\vsche\\repos\\NutCase\\build\\test-results\\full\\workflow-2e30ece1\\drawings-0\\releases\\model-0-----nut-30038cc6daa6\\20261013T172940-40cdf8a194\\model 0 \u03a9 & nut.pdf",
+      "source_sha256": "344b584f9614e29f38cfbacbf1cdc5f1c063c6dc04fa6a9344cdec2abc96b83a",
+      "pdf_verified": true,
+      "native_reopened": true
+    },
+    {
+      "source": "countersunk_pin.step",
+      "local_sample": false,
+      "mode": "custom",
+      "exit_code": 0,
+      "dimensions": 1,
+      "native_pdf": "C:\\Users\\vsche\\repos\\NutCase\\build\\test-results\\full\\workflow-2e30ece1\\drawings-0\\runs\\20261013T173000-39d43a8fff\\native\\model 0 \u03a9 & nut.pdf",
+      "project": "C:\\Users\\vsche\\repos\\NutCase\\build\\test-results\\full\\workflow-2e30ece1\\drawings-0\\releases\\model-0-----nut-30038cc6daa6\\20261013T173000-39d43a8fff\\model 0 \u03a9 & nut.FCStd",
+      "pdf": "C:\\Users\\vsche\\repos\\NutCase\\build\\test-results\\full\\workflow-2e30ece1\\drawings-0\\releases\\model-0-----nut-30038cc6daa6\\20261013T173000-39d43a8fff\\model 0 \u03a9 & nut.pdf",
+      "source_sha256": "344b584f9614e29f38cfbacbf1cdc5f1c063c6dc04fa6a9344cdec2abc96b83a",
+      "pdf_verified": true,
+      "native_reopened": true
+    },
+    {
+      "source": "FC00AAB09748_003-NUT_RIVET HEX.DRIVE; refset Entire Part.stp",
+      "local_sample": true,
+      "mode": "basic",
+      "exit_code": 2,
+      "dimensions": 6,
+      "native_pdf": "C:\\Users\\vsche\\repos\\NutCase\\build\\test-results\\full\\workflow-2e30ece1\\drawings-1\\runs\\20261013T173033-969bcd3426\\native\\model 1 \u03a9 & nut.pdf",
+      "project": "C:\\Users\\vsche\\repos\\NutCase\\build\\test-results\\full\\workflow-2e30ece1\\drawings-1\\releases\\model-1-----nut-665471bfd61e\\20261013T173033-969bcd3426\\model 1 \u03a9 & nut.FCStd",
+      "pdf": "C:\\Users\\vsche\\repos\\NutCase\\build\\test-results\\full\\workflow-2e30ece1\\drawings-1\\releases\\model-1-----nut-665471bfd61e\\20261013T173033-969bcd3426\\model 1 \u03a9 & nut.pdf",
+      "source_sha256": "f3d97d4cab35e9a0443a20ff4c61d68d488860eaa27936d7200dc907d4264264",
+      "pdf_verified": true,
+      "native_reopened": true
+    },
+    {
+      "source": "FC00AAB09748_003-NUT_RIVET HEX.DRIVE; refset Entire Part.stp",
+      "local_sample": true,
+      "mode": "comprehensive",
+      "exit_code": 2,
+      "dimensions": 11,
+      "native_pdf": "C:\\Users\\vsche\\repos\\NutCase\\build\\test-results\\full\\workflow-2e30ece1\\drawings-1\\runs\\20261013T173110-6ce1dbf57c\\native\\model 1 \u03a9 & nut.pdf",
+      "project": "C:\\Users\\vsche\\repos\\NutCase\\build\\test-results\\full\\workflow-2e30ece1\\drawings-1\\releases\\model-1-----nut-665471bfd61e\\20261013T173110-6ce1dbf57c\\model 1 \u03a9 & nut.FCStd",
+      "pdf": "C:\\Users\\vsche\\repos\\NutCase\\build\\test-results\\full\\workflow-2e30ece1\\drawings-1\\releases\\model-1-----nut-665471bfd61e\\20261013T173110-6ce1dbf57c\\model 1 \u03a9 & nut.pdf",
+      "source_sha256": "f3d97d4cab35e9a0443a20ff4c61d68d488860eaa27936d7200dc907d4264264",
+      "pdf_verified": true,
+      "native_reopened": true
+    },
+    {
+      "source": "FC00AAB09748_003-NUT_RIVET HEX.DRIVE; refset Entire Part.stp",
+      "local_sample": true,
+      "mode": "custom",
+      "exit_code": 2,
+      "dimensions": 1,
+      "native_pdf": "C:\\Users\\vsche\\repos\\NutCase\\build\\test-results\\full\\workflow-2e30ece1\\drawings-1\\runs\\20261013T173142-17f0916795\\native\\model 1 \u03a9 & nut.pdf",
+      "project": "C:\\Users\\vsche\\repos\\NutCase\\build\\test-results\\full\\workflow-2e30ece1\\drawings-1\\releases\\model-1-----nut-665471bfd61e\\20261013T173142-17f0916795\\model 1 \u03a9 & nut.FCStd",
+      "pdf": "C:\\Users\\vsche\\repos\\NutCase\\build\\test-results\\full\\workflow-2e30ece1\\drawings-1\\releases\\model-1-----nut-665471bfd61e\\20261013T173142-17f0916795\\model 1 \u03a9 & nut.pdf",
+      "source_sha256": "f3d97d4cab35e9a0443a20ff4c61d68d488860eaa27936d7200dc907d4264264",
+      "pdf_verified": true,
+      "native_reopened": true
+    },
+    {
+      "source": "FC00AAB13125_002.0006-NUT_SPRG._U_1THD - _U_ SHAPED; refset Entire Part.stp",
+      "local_sample": true,
+      "mode": "basic",
+      "exit_code": 2,
+      "dimensions": 7,
+      "native_pdf": "C:\\Users\\vsche\\repos\\NutCase\\build\\test-results\\full\\workflow-2e30ece1\\drawings-2\\runs\\20261013T173219-3166967d35\\native\\model 2 \u03a9 & nut.pdf",
+      "project": "C:\\Users\\vsche\\repos\\NutCase\\build\\test-results\\full\\workflow-2e30ece1\\drawings-2\\releases\\model-2-----nut-3dd147fd5a73\\20261013T173219-3166967d35\\model 2 \u03a9 & nut.FCStd",
+      "pdf": "C:\\Users\\vsche\\repos\\NutCase\\build\\test-results\\full\\workflow-2e30ece1\\drawings-2\\releases\\model-2-----nut-3dd147fd5a73\\20261013T173219-3166967d35\\model 2 \u03a9 & nut.pdf",
+      "source_sha256": "546fafd4f1317079f929c56af69d96cc51c4450bc8e66e8782b79e7ac5860093",
+      "pdf_verified": true,
+      "native_reopened": true
+    },
+    {
+      "source": "FC00AAB13125_002.0006-NUT_SPRG._U_1THD - _U_ SHAPED; refset Entire Part.stp",
+      "local_sample": true,
+      "mode": "comprehensive",
+      "exit_code": 2,
+      "dimensions": 23,
+      "native_pdf": "C:\\Users\\vsche\\repos\\NutCase\\build\\test-results\\full\\workflow-2e30ece1\\drawings-2\\runs\\20261013T173327-494aa69ec5\\native\\model 2 \u03a9 & nut.pdf",
+      "project": "C:\\Users\\vsche\\repos\\NutCase\\build\\test-results\\full\\workflow-2e30ece1\\drawings-2\\releases\\model-2-----nut-3dd147fd5a73\\20261013T173327-494aa69ec5\\model 2 \u03a9 & nut.FCStd",
+      "pdf": "C:\\Users\\vsche\\repos\\NutCase\\build\\test-results\\full\\workflow-2e30ece1\\drawings-2\\releases\\model-2-----nut-3dd147fd5a73\\20261013T173327-494aa69ec5\\model 2 \u03a9 & nut.pdf",
+      "source_sha256": "546fafd4f1317079f929c56af69d96cc51c4450bc8e66e8782b79e7ac5860093",
+      "pdf_verified": true,
+      "native_reopened": true
+    },
+    {
+      "source": "FC00AAB13125_002.0006-NUT_SPRG._U_1THD - _U_ SHAPED; refset Entire Part.stp",
+      "local_sample": true,
+      "mode": "custom",
+      "exit_code": 2,
+      "dimensions": 1,
+      "native_pdf": "C:\\Users\\vsche\\repos\\NutCase\\build\\test-results\\full\\workflow-2e30ece1\\drawings-2\\runs\\20261013T173525-5a9e483aae\\native\\model 2 \u03a9 & nut.pdf",
+      "project": "C:\\Users\\vsche\\repos\\NutCase\\build\\test-results\\full\\workflow-2e30ece1\\drawings-2\\releases\\model-2-----nut-3dd147fd5a73\\20261013T173525-5a9e483aae\\model 2 \u03a9 & nut.FCStd",
+      "pdf": "C:\\Users\\vsche\\repos\\NutCase\\build\\test-results\\full\\workflow-2e30ece1\\drawings-2\\releases\\model-2-----nut-3dd147fd5a73\\20261013T173525-5a9e483aae\\model 2 \u03a9 & nut.pdf",
+      "source_sha256": "546fafd4f1317079f929c56af69d96cc51c4450bc8e66e8782b79e7ac5860093",
+      "pdf_verified": true,
+      "native_reopened": true
+    }
+  ],
+  "preservation": [
+    {
+      "path": "C:\\Users\\vsche\\repos\\NutCase\\artifacts\\NutCase-0.6.0-windows-x64-setup.exe",
+      "sha256": "e5b5b5431bf40c8f729d31a0b3e982390d45fa8b758dacf255ac4bd19c3c8cac",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\vsche\\repos\\NutCase\\artifacts\\NutCase-0.6.0-source.zip",
+      "sha256": "8a723c894e6b1f28bfb3cc24b25f90a903d5db746d5d91d64923084993b8c9b3",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\vsche\\repos\\NutCase\\tests\\test_packaging.py",
+      "sha256": "319a4ab36e17e87d9e5aa04786c7424ec131a45bae32f9916eda136233df300d",
+      "unchanged": true
+    }
+  ],
+  "source_hashes": {
+    "FC00AAB09748_003-NUT_RIVET HEX.DRIVE; refset Entire Part.stp": "f3d97d4cab35e9a0443a20ff4c61d68d488860eaa27936d7200dc907d4264264",
+    "FC00AAB13125_002.0006-NUT_SPRG._U_1THD - _U_ SHAPED; refset Entire Part.stp": "546fafd4f1317079f929c56af69d96cc51c4450bc8e66e8782b79e7ac5860093"
+  },
+  "test_source_hashes": {
+    "tests\\test_packaging.py": "319a4ab36e17e87d9e5aa04786c7424ec131a45bae32f9916eda136233df300d",
+    "tests_native\\native_reference_checks.py": "8661bca24df0ba6d5a8fd305db5384febe6c56e5ab3363dc6b249a0bcc772bc3",
+    "tests_native\\test_analysis.py": "a114e043c494c6315f1ca9ff48ecc45cbbc06928f30cfdb7e6d074987cc24274",
+    "tests_native\\test_comprehensive.py": "f750c9c3476adf2c746291dbb2e2dbdf78717fb7e2829ec7380ff23f958d19ee",
+    "tests_native\\test_configuration.py": "5e1b8dfda2d9d9171775e886848727f99ce8127c86890ed630b58b89909997f0",
+    "tests_native\\test_dimensions.py": "de0791629f6bb1f59b41155d484d8c7d84c2b4718da360df9811b5a1b9e98e8f",
+    "tests_native\\test_drawing.py": "eb7858188f41b6310a0a1e5154acb6bdf979999e95a7aa03ac1848e67a1efa8b",
+    "tests_native\\test_features.py": "55eb53470f56d4ea62d5eb41dd5c0fabff312962ae5a035f2fd2896521dd7cfd",
+    "tests_native\\test_presentation.py": "ba2b423bc1de3c718ad0900bef7ab00b07b24efae63404270e2131e343d03156",
+    "tests_native\\test_quality.py": "ed5b3e4e85452c602133a6052883159b95af1881fcda6731a8acba27f754e023",
+    "tests_pdf\\test_compatibility.py": "3f4033d3913e3fb6af4ecfc2314f2cf021a9ceb3bc4519cc0b94fd84dfd19f98",
+    "tests_pdf\\test_concurrency.py": "f3741d2f5bafebbbc231407d55ec1212bad8df1684e13f4d863b5aecb39057be",
+    "tests_pdf\\test_gates.py": "099f735e7503823d3f52ab3dd564c57fb364f0712ac3add2eb4f8ab30b1a2a13",
+    "tests_pdf\\test_pipeline.py": "1b7ee49e2424acfcf22df943a8a5f9ae3781c7fa8f75c4433d2f0f361d1a8506",
+    "tests_gui\\fixture.py": "4e9fa4186d626440c10df39db93040d7a8fdebddc79506767a40a01bc0f9ccf2",
+    "tests_gui\\test_cad_workflow.py": "bff0c663267f980ab5c45c4c9250370cc93af51dd6fe0c2ae23b386fe87da65c",
+    "tests_gui\\test_export_failures.py": "61813178de357043c9b3d1ef06d12fb08be4b5604844b94b3cca416de325b3df",
+    "tests_gui\\test_file_opener.py": "0d5554dbd412595b090ea4be5b6182e37078269333dbf536cf77f83100db04a0",
+    "tests_gui\\test_interface.py": "1c2a0b9db4e19b72bc39a87de6ac61b35975fabc2bd78c96e7c8ecb103fdf6e9",
+    "tests_gui\\test_process_control.py": "948f0d418f49f3060f42d4beb979e34be370fca326b001aad36e3ac1ba1d8d96",
+    "tests_gui\\test_refinements.py": "04abd018484a3f1a20a5f683156489651f9651572134f2171ff2dd48b7fcb116",
+    "tests_gui\\test_runtime_probe.py": "c011947a60c573504bdfd587dc227cdd985d40cb1f03c5399abade4e3a452aad",
+    "tests_gui\\test_state.py": "d75b26d6b608902b240df07c28c2e5533eb625217ad69cdfd40e692e4d4fe186",
+    "tests_gui\\test_transport_failures.py": "6c8ca4dd1ca0a351f0d7832d52c99b0c388c72cdbdd009d9e44aa368c42930da",
+    "tests_launchers\\test_windows_launcher.py": "bc6b2fb56d1e42631ed7e47852436fdd152ca42b23599bfa029eabb865391af8",
+    "tests_support\\build_gui_fixture.py": "3a6285d770f46781b7fbedfca967920a948de447fca93235c556fe97e01844cf",
+    "tests_support\\build_quality_fixtures.py": "cd400b852ae75d53d6f2db707f50b59fcf0b9c6ddda80b3e0ea2f01483f19b07",
+    "tests_support\\local_samples.py": "3aeb8547e1c4ce76f2f32c3909180a9fdeb971756f7a57810e85ca1c49c35f06",
+    "tests_support\\pdf_fixture.py": "ae98f663384a389f537a930ea889cc801c475417d6a9da5dc53ab34ed40b959a",
+    "tests_support\\qt_test_runtime.py": "b435e60ca961c9f8b691d1e25a3a6090347f97424e801a10382bbab57beee24f"
+  },
+  "visual_review": {
+    "performed": true,
+    "images": [
+      "C:\\Users\\vsche\\repos\\NutCase\\build\\test-results\\full\\workflow-2e30ece1\\drawings-1\\releases\\model-1-----nut-665471bfd61e\\20261013T173110-6ce1dbf57c\\poppler.png",
+      "C:\\Users\\vsche\\repos\\NutCase\\build\\test-results\\full\\workflow-2e30ece1\\drawings-2\\releases\\model-2-----nut-3dd147fd5a73\\20261013T173327-494aa69ec5\\poppler.png"
+    ],
+    "basis": "Local PNG visual inspection, not Nitro or engineering approval"
+  },
+  "external_dependencies": {
+    "PySide6": "6.12.0",
+    "PySide6_Pdf": "6.12.0.140",
+    "pypdf": "6.10.0",
+    "pypdfium2": "5.14.0",
+    "Pillow": "12.3.0"
+  }
+}

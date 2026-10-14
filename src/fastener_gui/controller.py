@@ -10,10 +10,11 @@ from PySide6.QtCore import QObject, QProcess, QProcessEnvironment, Signal
 from .state import ROOT, atomic_json
 from fastener_drawing.process_control import WindowsJob
 from fastener_paths import ENTRYPOINTS
+from nutcase_runtime import worker_invocation, clean_environment
 
 
 def invocation(request_path, python=None):
-    return str(python or sys.executable), ['-u', str(ENTRYPOINTS/'gui_worker.py'), str(request_path)]
+    return worker_invocation('gui-job', request_path, python=python)
 
 
 class BackendController(QObject):
@@ -48,11 +49,9 @@ class BackendController(QObject):
         self._decoder = codecs.getincrementaldecoder('utf-8')(errors='replace')
         self._job = WindowsJob()
         process = self.process = QProcess(self)
-        environment = QProcessEnvironment.systemEnvironment()
-        # Never leak the interactive Qt plugin paths into FreeCAD's Qt runtime.
-        for name in ('PYTHONPATH', 'PYTHONHOME', 'QT_PLUGIN_PATH', 'QML2_IMPORT_PATH', 'QT_QPA_PLATFORM'):
-            environment.remove(name)
-        environment.insert('PYTHONIOENCODING', 'utf-8')
+        environment = QProcessEnvironment()
+        for name, value in clean_environment().items():
+            environment.insert(name, value)
         process.setProcessEnvironment(environment)
         process.setWorkingDirectory(str(ROOT))
         process.setProcessChannelMode(QProcess.ProcessChannelMode.MergedChannels)

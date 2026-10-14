@@ -3,9 +3,10 @@ import logging
 from collections import defaultdict
 
 from fastener_analysis.geometry import App
-from fastener_paths import PROJECT_ROOT
+from fastener_paths import CACHE_ROOT
 from . import feature_references as refs
 from .dimensions import native_measurement, references_record, presentation_record, set_presentation
+from .formatting import dimension_format_spec
 from .references import MATCH_MM, UnresolvedDimension
 from .selection import Selection
 from .views import wait_for_views
@@ -14,12 +15,12 @@ LOG=logging.getLogger("fastener_drawing")
 
 
 def presentation(dim,candidate,matching):
-    set_presentation(dim,"")
+    set_presentation(dim,"",candidate.get("units","mm"))
     kind=candidate["kind"]
-    prefix="⌀" if kind in ("diameter","curve_diameter") else "R" if kind in ("radius","torus_radius") else ""
+    prefix="⌀ " if kind in ("diameter","curve_diameter") else "R" if kind in ("radius","torus_radius") else ""
     if candidate.get("repeat_count",1)>1:prefix=f"{candidate['repeat_count']}X "+prefix
     suffix=" AF" if kind=="across_flats" else ""  # Native angular dimensions append their own degree symbol.
-    dim.FormatSpec=prefix+"%.2f"+suffix
+    dim.FormatSpec=dimension_format_spec(candidate.get("units","mm"),prefix,suffix)
     dim.ViewObject.StandardAndStyle="ASME Referencing" if kind in ("radius","torus_radius") else "ASME Inlined"
     if matching["native_dimension_type"]=="Diameter":dim.ViewObject.RenderingExtent="Expanded"
     if kind in ('plane_angle','cone_angle'):dim.ViewObject.Arrowsize=2.0
@@ -125,11 +126,12 @@ def create(doc,page,source,views,discovery,layout,decisions=None):
 def settle_placement(doc,reports,layout,paper_boxes,views):
     """Check actual native text bounds and relocate datums into reserved lanes."""
     attempts=defaultdict(int)
-    from .svg_placement import check
+    from .svg_placement import check, ArrowTextCollision
     import os
     import FreeCADGui as Gui
     import TechDrawGui
-    svg=PROJECT_ROOT/f'tmp/placement-scene-{os.getpid()}.svg'
+    CACHE_ROOT.mkdir(parents=True,exist_ok=True)
+    svg=CACHE_ROOT/f'placement-scene-{os.getpid()}.svg'
     for _ in range(140):
         Gui.updateGui()
         TechDrawGui.exportPageAsSvg(doc.DrawingPage,str(svg))
@@ -138,6 +140,16 @@ def settle_placement(doc,reports,layout,paper_boxes,views):
             key=str(exc).split(":",1)[0]
             if key not in reports or reports[key]["status"]!="created":raise
             r=reports[key];dim=doc.getObject(r["object_name"]);attempts[key]+=1
+            if isinstance(exc,ArrowTextCollision) and not r.get('arrow_clearance_repair'):
+                # FreeCAD auto-flips only when text exceeds the endpoints;
+                # the native scene proves whether the arrowheads also fit.
+                dim.ViewObject.FlipArrowheads=not dim.ViewObject.FlipArrowheads
+                r['arrow_clearance_repair']={'native_arrowheads_flipped':True,
+                    'basis':'Collision of rendered diameter text with native filled-arrow polygons',
+                    'minimum_gap_mm':exc.minimum_gap_mm}
+                r['presentation']=presentation_record(dim)
+                wait_for_views(doc,list(views.values()))
+                continue
             if attempts[key]>16 or "rendered dimension text was not found" in str(exc):
                 raise RuntimeError('Layout requires a larger sheet or additional view; meaningful dimension retained: '+str(exc))
             # Deterministic exploration around the original datum anchor.

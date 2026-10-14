@@ -18,6 +18,23 @@ DEFAULT = {
 }
 
 
+def normalize_metadata_date(value):
+    """Accept ISO or month/day/year input and return canonical ISO text."""
+    if value is None or (isinstance(value, str) and not value.strip()):
+        return None
+    if not isinstance(value, str):
+        raise ValueError("Date must be YYYY-MM-DD or MM/dd/yyyy")
+    from datetime import date, datetime
+    text=value.strip()
+    try:
+        return date.fromisoformat(text).isoformat()
+    except ValueError:
+        try:
+            return datetime.strptime(text, "%m/%d/%Y").date().isoformat()
+        except ValueError as exc:
+            raise ValueError("Date must be a valid YYYY-MM-DD or MM/dd/yyyy date") from exc
+
+
 def read_config(path=None):
     def unique_pairs(pairs):
         result={}
@@ -38,6 +55,7 @@ def read_config(path=None):
             result[key].update(value)
         else:
             result[key] = value
+    result["metadata"]["date"] = normalize_metadata_date(result["metadata"]["date"])
     validate_config(result)
     return result
 
@@ -73,8 +91,7 @@ def validate_config(c):
         if not isinstance(m[key], str) or len(m[key]) > limit or any(ord(x) < 32 for x in m[key]):
             raise ValueError("Invalid or overlong metadata." + key)
     if m["date"] is not None:
-        from datetime import date
-        date.fromisoformat(m["date"])
+        normalize_metadata_date(m["date"])
     if c["source_binding"] is not None and (not isinstance(c["source_binding"], dict) or
             set(c["source_binding"]) != {"geometry_id", "source_sha256", "candidate_ids"}):
         raise ValueError("Invalid source_binding; use an emitted bound configuration")

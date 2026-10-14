@@ -1,24 +1,28 @@
 # NutCase
 *Because sometimes you've got to examine your nuts from every angle.*
-
+---
 A Windows Python application that analyzes STEP fasteners with FreeCAD and generates preliminary native TechDraw drawings, editable FreeCAD projects, and normalized, independently checked PDFs. Measurements come from CAD geometry. Unsupported feature classifications remain unresolved.
 
 ## Desktop application
 
-Double-click **Launch Fastener Drawing.cmd**. Browse a STEP file, analyze it, choose dimensions and views, then generate and review the drawing. Input files may be anywhere; `input/` retains the two supplied example STEP files.
+The Windows candidate is **NutCase 0.6.0**. Install `NutCase-0.6.0-windows-x64-setup.exe`, then launch **NutCase** from the Start Menu. Users need a separate **64-bit FreeCAD 1.1.x** installation, but no Python, pip, virtual environment or PowerShell setup. Browse a STEP file, analyze it, choose dimensions and views, then generate and review the drawing.
 
-The prepared `.venv-gui` runs the desktop application and PDF processing. FreeCAD's bundled Python runs geometry analysis and native drawing export in separate processes. Keep both environments intact.
+See [installation and troubleshooting](docs/INSTALLATION.md), [packaging/build architecture](docs/WINDOWS_PACKAGING.md), [dependency licensing audit](docs/LICENSING_AUDIT.md), and [candidate validation and release checklist](docs/RELEASE_READINESS.md). This is an unsigned local acceptance candidate. Public distribution remains blocked by unresolved dependency source/notice and redistribution decisions, ownership review, and final human acceptance, including clean-machine testing.
 
-See [desktop usage and setup](docs/PHASE5_USAGE.md) for configuration persistence, runtime overrides, cancellation, preview, and exporting PDF/FCStd files.
+For source development, double-click **NutCase.cmd**. Input files may be anywhere; `input/` retains the two supplied example STEP files.
 
-![Custom selections and final drawing preview](docs/screenshots/phase5-dimensions.jpg)
+The source launcher uses `.venv-gui` for the desktop application and PDF processing. The installed application instead includes its own frozen Python runtime and worker. FreeCAD's bundled Python runs geometry analysis and native drawing export in separate processes in both cases.
 
-![Drawing configuration controls](docs/screenshots/phase5-configure.jpg)
+See [desktop usage and setup](docs/DESKTOP_USAGE.md) for configuration persistence, runtime overrides, cancellation, preview, and exporting PDF/FCStd files.
 
-## Requirements and startup checks
+![Custom selections and final drawing preview](docs/screenshots/drawing-dimensions.jpg)
 
-- Windows with a working FreeCAD installation, including its bundled Python, Part and TechDraw APIs.
-- External Windows CPython, with `requirements-gui.txt` for the desktop application or `requirements-pipeline.txt` for the command-line pipeline.
+![Drawing configuration controls](docs/screenshots/drawing-configuration.jpg)
+
+## Source-development requirements and startup checks
+
+- 64-bit Windows with a working FreeCAD 1.1.x desktop installation, including its bundled Python, Part and TechDraw APIs. The recorded native checks used FreeCAD 1.1.4.
+- External 64-bit Windows CPython. Source checks have used Python 3.12 and the build/test environment uses Python 3.13. Install `requirements-gui.txt` for the desktop application or `requirements-pipeline.txt` for the command-line pipeline.
 - Poppler's `pdftoppm.exe`, available on PATH, through `FASTENER_POPPLER`, or supplied explicitly.
 
 For a new external environment:
@@ -28,12 +32,12 @@ py -3.12 -m venv .venv-gui
 .\.venv-gui\Scripts\python.exe -m pip install -r requirements-gui.txt
 ```
 
-The existing prepared environment does not contain pip; its update command is documented in the desktop usage guide. Do not install these dependencies into FreeCAD's bundled Python.
+If an existing environment lacks pip, use the base interpreter's `pip --python` command documented in the desktop usage guide. Keep GUI and PDF dependencies in external Python; FreeCAD uses its own bundled interpreter.
 
-FreeCAD is discovered from PATH, uninstall records, and installation directories. Override with `-FreeCADHome` if necessary; no installation path is assumed by the launcher. The observed development installation was FreeCAD 1.1.4, bundled Python 3.11.14 and Open CASCADE 7.8.1.
+FreeCAD is discovered from PATH, uninstall records, and installation directories. The PowerShell launchers accept `-FreeCADHome` or `FREECAD_HOME` to select an installation root. The GUI also permits choosing its `bin/python.exe` in Settings. No installation path is assumed.
 
 ```powershell
-& '.\Launch Fastener Drawing.cmd' -StartupCheck
+& '.\NutCase.cmd' -StartupCheck
 .\scripts\analyze-step.ps1 -InspectEnvironment
 ```
 
@@ -74,15 +78,17 @@ Human-readable examples are in `config/basic.json`, `config/comprehensive.json`,
 | Field | Meaning |
 | --- | --- |
 | `dimensioning.mode` | `basic`, `comprehensive`, or `custom` |
-| `dimensioning.include`, `.exclude` | Stable geometric candidate identities; exclusion takes priority. An identity in both lists is rejected. |
+| `dimensioning.include`, `.exclude` | Explicit inclusions/exclusions using stable geometric candidate identities. An identity in both lists is rejected. |
 | `views.isometric`, `.opposite_end`, `.section`, `.opening_detail` | Optional native views. Longitudinal and right-end views are always present. |
-| `sheet.size` | `auto`, ANSI A/B/C/D, A3 or A4. Auto begins with ANSI B and enlarges when necessary. |
+| `sheet.size` | `auto`, `ANSI-A`, `ANSI-B`, `ANSI-C`, `ANSI-D`, `A3`, or `A4`. Auto begins with ANSI B and can enlarge to ANSI C or D. |
 | `scale` | `auto` or a positive paper/model ratio, e.g. `2` for 2:1. Opening details retain separately verified automatic scales. |
 | `orientation.axis`, `.up` | Optional finite three-vectors; up must be perpendicular to the selected axis. |
-| `metadata.title`, `.drawing_number`, `.revision`, `.date` | User-supplied title-block fields; date is ISO YYYY-MM-DD or null. |
+| `metadata.title`, `.drawing_number`, `.revision`, `.date` | User-supplied title-block fields; date accepts `MM/dd/yyyy` or ISO `yyyy-MM-dd`, then is normalized to ISO, or may be blank. |
 | `source_binding` | Native geometry fingerprint, source hash and candidate identity set. Preserve this block when editing a saved policy. |
 
 Basic mode prioritizes supported overall length, external diameters, the smallest recognized coaxial bore, across-flats and terminal enlargement geometry. Comprehensive retains the reviewed feature-based selection and redundancy rules. Custom starts with no dimensions and includes only explicit stable identities. Selection does not bypass source, reference, measurement or layout verification.
+
+Diameter labels include a space after `⌀`. Layout checks require at least 2 mm of paper clearance between diameter text and rendered filled-arrow bounds, including their stroke. Crowded native arrowheads are flipped or the label is relocated, then checked again after saving and reopening the FreeCAD project. This is a presentation gap, not an engineering tolerance. Regenerate existing drawings to apply the change.
 
 Prepare an editable source-bound policy with `-CatalogOnly`. Copy the emitted `.config.json`, select `g1-...` identities from its catalog/review, and generate with that saved file. Sequential `D001` labels and projected `EdgeN` indices are not configuration identities.
 
@@ -98,7 +104,7 @@ The GUI validates every recorded artifact before previewing or exporting. A fail
 
 The atomic manifest replacement is the publication commit. Failed export, normalization or verification cannot replace a valid current drawing. An interrupted run can leave diagnostics, an unreferenced complete candidate, or a stale `.generation.lock`; inspect its PID and run before removing a stale lock. Generation never steals a lock.
 
-Saved GUI settings and configurations live under `output/gui-state/`. The currently configured drawing directory is recorded in `settings.json`. Project-local `tmp/` holds disposable launcher inspections and isolated batch FreeCAD preferences and is recreated as needed.
+Installed settings and source-bound configurations live under `%LOCALAPPDATA%\NutCase\gui-state`; generated files default to `%LOCALAPPDATA%\NutCase\drawings`, logs to `logs/`, and disposable runtime data to `cache/` beside them. Updates and uninstall preserve these files. Source-launch settings remain under `output/gui-state/`, with drawing output under `output/gui/` and temporary data under `tmp/`. The configured drawing directory is recorded in `settings.json`; existing configuration JSON and release manifests remain compatible.
 
 ## Engineering limits and report interpretation
 
@@ -115,7 +121,7 @@ Each component separates:
 - `geometry`: direct BRep measurements, surface inventory, candidate axes, aligned envelope, cylindrical bands and external hexagonal supporting-plane spacings.
 - `recognition`: inferred feature roles, recognized dimensions with supporting face references, unrecognized dimensions with `value_mm: null`, thread appearance and manual-review notes.
 - `validation`: native basic validity, detailed BRep check, extended Boolean check, solid closure/volume and diagnostic text.
-- `feature_discovery`: Phase 3 geometric features, source supports, generalized candidates and recognition limits, separate from semantic fastener roles.
+- `feature_discovery`: geometric features, source supports, generalized dimension candidates and recognition limits, separate from semantic fastener roles.
 
 Lengths use FreeCAD's native millimeter convention; the STEP reader handles file units. Area and volume are explicitly tagged `mm2` and `mm3`. Both supplied STEP files declare millimeter units. Surface UV parameter bounds are native parameters, with units depending on the surface.
 
@@ -144,13 +150,19 @@ Basic invalid/open/zero-volume geometry blocks recognized dimensions. An extende
 
 | Directory/file | Purpose |
 | --- | --- |
-| `Launch Fastener Drawing.cmd` | Windows desktop launcher |
+| `NutCase.cmd` | Windows desktop launcher |
 | `src/fastener_gui/` | Desktop controls, saved state, worker management, preview and verified export |
 | `src/fastener_analysis/` | Native STEP import, validation, geometry and conservative recognition |
 | `src/fastener_drawing/` | Configuration, TechDraw views/dimensions, material checks, layout, export and PDF pipeline |
 | `src/entrypoints/` | Python command-line entry points, internal workers and dependency probes |
 | `src/fastener_paths.py` | Shared source, entry-point and project-data locations |
 | `scripts/` | Windows PowerShell launchers |
+| `packaging/` | Frozen executable specification, installer, toolchain/wheel hash locks and verification harness |
+| `tests/` | Packaging, licensing, Qt deployment and publication/data-safety regressions |
+| `tests_native/`, `tests_pdf/`, `tests_gui/`, `tests_launchers/` | Restored and extended regression suites, separated by interpreter/runtime |
+| `tests_support/`, `requirements-tests.txt` | Independent fixture builders and external test environment requirements |
+| `VERSION`, `LICENSE` | Application version and GPL-3.0-or-later application license |
+| `dist/NutCase/`, `artifacts/` | Ignored local application bundle, candidate installer, source archive, checksums and evidence |
 | `config/` | Editable drawing policies and source-bound examples |
 | `input/` | Original supplied example STEP files |
 | `output/` | Saved GUI state, current verified releases and their native diagnostics |
@@ -159,6 +171,46 @@ Basic invalid/open/zero-volume geometry blocks recognized dimensions. An extende
 
 All Python application source lives under `src/`. Direct Python commands use `src/entrypoints/`; the root desktop launcher and PowerShell commands remain the same. A small entry-point bootstrap exposes the source packages to both external Python and FreeCAD's bundled interpreter without installing the application into either environment. `fastener_paths.py` resolves paths from its own location, so working-directory changes do not redirect settings, configuration or output defaults into `src/`.
 
-Development regression suites, synthetic fixtures and historical investigation artifacts were removed during the requested directory cleanup. This runtime-focused directory retains the generation pipeline's automatic measurement, reference, reopen, PDF and publication verification gates.
+The regression suites use independent fixtures rather than requiring historical output archives. See [test coverage and recovery provenance](TEST_COVERAGE_RECOVERY.md) for behavioral coverage, recorded results and remaining gaps. The generation pipeline's automatic measurement, reference, reopen, PDF and publication verification gates remain active.
 
-The `src` refactor was validated on 2026-10-12 through the actual Windows batch startup route (also from another working directory), Windows PowerShell 5.1 catalog generation, and the GUI's real QProcess generation pipeline for FC00AAB13125. Its 23 dimensions passed native reopen, reference and measurement checks; PDF normalization, both independent renderer checks and Qt PDF rendering passed. Exit 2 retained the existing geometry-review requirement. Original STEP files, saved GUI state and existing current manifests/releases passed integrity checks. These were runtime checks; the removed historical regression suites were not rerun.
+## Regression tests
+
+Use external Python with `requirements-tests.txt` installed for PDF, Qt and process tests. FreeCAD tests run in its own bundled interpreter; PDF normalization remains external. `unittest` is used, so no extra test framework is shipped with the application. Example setup for a separate development test environment:
+
+```powershell
+python -m venv .venv-test
+.\.venv-test\Scripts\python.exe -m pip install -r requirements-tests.txt
+.\.venv-test\Scripts\python.exe scripts\run-tests.py --suite fast
+```
+
+Available commands (replace executable paths with locally discovered runtimes):
+
+```powershell
+.\.venv-test\Scripts\python.exe scripts\run-tests.py --suite pdf
+.\.venv-test\Scripts\python.exe scripts\run-tests.py --suite gui
+.\.venv-test\Scripts\python.exe scripts\run-tests.py --suite packaging
+& $FreeCADPython scripts\run-tests.py --suite native
+.\.venv-test\Scripts\python.exe scripts\run-tests.py --suite launchers --freecad-python $FreeCADPython
+.\.venv-test\Scripts\python.exe scripts\run-tests.py --suite full --freecad-python $FreeCADPython --poppler $Poppler
+```
+
+Set `$FreeCADPython` to the bundled Python in the installation you intend to test, and `$Poppler` to its separate `pdftoppm.exe` executable (an installed Poppler or the candidate bundle's `vendor/poppler/Library/bin/pdftoppm.exe`). The existing discovery launcher can identify FreeCAD without assuming an installation directory:
+
+```powershell
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts\analyze-step.ps1 -InspectEnvironment -OutputDirectory build\native-environment
+$FreeCADPython = (Get-Content build\native-environment\environment.json -Raw | ConvertFrom-Json).python_executable
+```
+
+`fast` runs PDF, GUI and packaging suites. `full` runs native tests first, followed by GUI integration, PDF checks, Windows launchers and packaging. Launcher checks need Windows and `--freecad-python`; they pass the selected external test interpreter to the GUI launcher explicitly. Add `--samples` to include the two supplied local STEP models; those files are optional and excluded from release source archives. Native synthetic tests create their own STEP files. Fast GUI widget tests use mocked CAD discovery and generated placeholder releases; real GUI/CAD integration cases run when their prerequisites are available.
+
+Results and generated evidence default to `build/test-results/`; choose a new `--results` directory to retain separate runs. Every suite writes JSON with counts, failures, errors, skips and interpreter details, plus a text log when dispatched by `fast` or `full`. Missing optional prerequisites produce explicit skips; a full run without a native interpreter is unsuccessful. Use `--pattern test_presentation.py` with the native suite for targeted diagnosis. The CI workflow runs the practical external Windows subset; native CAD and the optional private-model matrix remain local checks.
+
+## Build the Windows candidate
+
+Maintainers on Windows x64 can run `scripts/build-windows.ps1 -Bootstrap`. It downloads hash-pinned PSF CPython, Poppler and Inno Setup inputs and installs exact hash-locked dependencies into a separate build environment. It runs packaging tests, builds the frozen application and installer, and applies the independent licensing gate. The current review contains unresolved findings, so a successful public-release build is not available. Changed payload or installer hashes require a new review and actual installer binding; `-AllowUnresolvedLicensing` permits only already-recorded review findings and cannot bypass integrity failures.
+
+`scripts/verify-windows.ps1` runs the frozen two-model regressions with local STEP assets and a separate FreeCAD installation. `scripts/verify-installer.ps1` exercises disposable installation and user-data preservation. These are maintainer checks, not end-user setup commands. The GitHub Actions workflow runs on matching version tags or manual dispatch, uses the strict licensing gate, and retains workflow artifacts even after failure. It has no automatic release-publication step.
+
+NutCase application code is **GPL-3.0-or-later**; dependencies retain their own licenses. The inspected local candidate includes license notices and a build inventory, with separate application-source and dependency-source/evidence archives. Supplied STEP models are excluded from these assets. The [audit](docs/LICENSING_AUDIT.md) records the remaining source/build correspondence, notice, Microsoft redistribution, LGPL/source-delivery and ownership decisions.
+
+Recorded development-host validation on 2026-10-14 includes a full 184-test run with supplied samples and zero skips, followed by a focused 36-test packaging/licensing run. The full run comprised 78 native, 48 GUI/process, 24 PDF, three launcher and 31 packaging/licensing tests; the later focused run includes additional tests. The inspected installer also passed the six-case Basic/Comprehensive/Custom generation matrix, native/PDF checks and scripted lifecycle/data-preservation checks. The [release checklist](docs/RELEASE_READINESS.md) distinguishes that evidence from pending clean-machine, interactive and real-version-upgrade acceptance. These results describe the retained candidate and test runs; documentation changes do not rebuild or revalidate that installer.

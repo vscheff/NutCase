@@ -3,10 +3,11 @@ import sys
 from pathlib import Path
 from PySide6.QtCore import QObject, QProcess, QProcessEnvironment, QTimer, Signal
 from fastener_paths import ENTRYPOINTS
+from nutcase_runtime import worker_invocation, clean_environment
 
 
 def invocation(path):
-    return sys.executable,[str(ENTRYPOINTS/'open_system_file.py'),str(path)]
+    return worker_invocation('open-file', path)
 
 
 class FileOpener(QObject):
@@ -21,9 +22,8 @@ class FileOpener(QObject):
         path=Path(path).resolve()
         if not path.is_file():raise ValueError('Published File Is Missing')
         process=QProcess(self);self.processes.add(process)
-        environment=QProcessEnvironment.systemEnvironment()
-        for key in ('PYTHONHOME','PYTHONPATH','QT_PLUGIN_PATH','QML2_IMPORT_PATH','QT_QPA_PLATFORM'):environment.remove(key)
-        environment.insert('PYTHONIOENCODING','utf-8')
+        environment=QProcessEnvironment()
+        for key,value in clean_environment().items():environment.insert(key,value)
         process.setProcessEnvironment(environment)
         process.setProcessChannelMode(QProcess.ProcessChannelMode.MergedChannels)
         timer=QTimer(process);timer.setSingleShot(True)

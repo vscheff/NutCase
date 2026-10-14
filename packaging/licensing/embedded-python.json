@@ -1,0 +1,3894 @@
+{
+  "schema_version": 1,
+  "runtime_archives": [
+    {
+      "executable": "NutCase.exe",
+      "sha256": "46895ef367e614534dcd9fa3b5a334e9e873a4d5643349e166c13cb270e7b1c1",
+      "members": [
+        {
+          "path": "struct",
+          "module": "struct",
+          "component": "CPython standard library",
+          "decoded_archive_member_sha256": "666e6d97b4616f6bf7eecfd2b61fc6f7a72edaedb6681bbd7e88388da1c3117b"
+        },
+        {
+          "path": "pyimod01_archive",
+          "module": "pyimod01_archive",
+          "component": "PyInstaller runtime",
+          "decoded_archive_member_sha256": "29550c602ee911e0960ffb1845e0b02c40aca8e66511b7fb394c3737e7a3ed40"
+        },
+        {
+          "path": "pyimod02_importers",
+          "module": "pyimod02_importers",
+          "component": "PyInstaller runtime",
+          "decoded_archive_member_sha256": "c44a73566899863d3f2cb8c9595d8a1f602f864de8366cba28b0211063e4fbd5"
+        },
+        {
+          "path": "pyimod03_ctypes",
+          "module": "pyimod03_ctypes",
+          "component": "PyInstaller runtime",
+          "decoded_archive_member_sha256": "0ce7934e89d7ff83273907b384e52886effb68d5f951b64a70a5a8ce0c8c6d30"
+        },
+        {
+          "path": "pyimod04_pywin32",
+          "module": "pyimod04_pywin32",
+          "component": "PyInstaller runtime",
+          "decoded_archive_member_sha256": "200b5b6925d51fe606273859632c851dfb2cfc4eee30cfe0265f6e75768203f3"
+        },
+        {
+          "path": "pyiboot01_bootstrap",
+          "module": "pyiboot01_bootstrap",
+          "component": "PyInstaller runtime",
+          "decoded_archive_member_sha256": "7b97c32bbacfd86b3f635582225041305ff831ae5293c60f9154826849878eb7"
+        },
+        {
+          "path": "pyi_rth_inspect",
+          "module": "pyi_rth_inspect",
+          "component": "PyInstaller runtime",
+          "decoded_archive_member_sha256": "2611bd49bd0b36640e2e5d910bed962f44dd751267deba6a4fdca38949c1993c"
+        },
+        {
+          "path": "pyi_rth_pyside6",
+          "module": "pyi_rth_pyside6",
+          "component": "PyInstaller runtime",
+          "decoded_archive_member_sha256": "e3966ff7bb989fe2557152ee214e052840320d3f3c8e1c35a9337731ab02af37"
+        },
+        {
+          "path": "gui_main",
+          "module": "gui_main",
+          "component": "NutCase",
+          "decoded_archive_member_sha256": "a4e93d7e2d9daf94457823180bdaea94c68957a05e68059c20e72b9d9e2faf44"
+        },
+        {
+          "path": "PYZ.pyz/PySide6",
+          "module": "PySide6",
+          "component": "PySide6",
+          "decoded_code_sha256": "c564d9490d149c820379ee4bb41f3a72beaa41dce552ae34211fbecc8477f105"
+        },
+        {
+          "path": "PYZ.pyz/PySide6.support",
+          "module": "PySide6.support",
+          "component": "PySide6",
+          "decoded_code_sha256": "9c23dbfe59e288af7cac86fca930c635ae09945c4fc91a9a8ee7d1e38c77c9b0"
+        },
+        {
+          "path": "PYZ.pyz/PySide6.support.deprecated",
+          "module": "PySide6.support.deprecated",
+          "component": "PySide6",
+          "decoded_code_sha256": "4d4b1b09d6508dd04f35f317cdc6b50de9ba9af53aff0f1e6f76afde69a5909e"
+        },
+        {
+          "path": "PYZ.pyz/__future__",
+          "module": "__future__",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "0170c8cde8826e23523d128934edb505fd51d46696ef4c5e0d85887ecb152f94"
+        },
+        {
+          "path": "PYZ.pyz/_aix_support",
+          "module": "_aix_support",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "35cd69b70551b544e0023902f4207546b457a3aa765c58b43b9dc6a1b9717519"
+        },
+        {
+          "path": "PYZ.pyz/_bootstrap",
+          "module": "_bootstrap",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "beba11d15d217aa9b60a8945c60f01b9baaa1a5aafac553a8b008f09e00519e9"
+        },
+        {
+          "path": "PYZ.pyz/_colorize",
+          "module": "_colorize",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "96fa2c0223d13004b8e1ab51eeb8b322e8ded34aa1aa95c88914864b74ac9326"
+        },
+        {
+          "path": "PYZ.pyz/_compat_pickle",
+          "module": "_compat_pickle",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "d7e6378f43c6e6552b1c1f56f84817777b278dad5ed369c5f6324f318144f5bc"
+        },
+        {
+          "path": "PYZ.pyz/_compression",
+          "module": "_compression",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "ff7a3c8e793c628f7677955bc85a92832ea585e9ced8cc8cc58e957c12fd8736"
+        },
+        {
+          "path": "PYZ.pyz/_opcode_metadata",
+          "module": "_opcode_metadata",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "4a22c4b04bab0aabca561bdaac8faadccde4f0efde39cce7fb3cf98766df33a7"
+        },
+        {
+          "path": "PYZ.pyz/_py_abc",
+          "module": "_py_abc",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "df0e5d92f62bd0f48c80a492ff3680302ec4f05f5886f0b6fc358f8f2b89b397"
+        },
+        {
+          "path": "PYZ.pyz/_pydatetime",
+          "module": "_pydatetime",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "8125dbdcf67011e902443d4c7539ddd9e58b59ac11283aa26092861f23930d0b"
+        },
+        {
+          "path": "PYZ.pyz/_pydecimal",
+          "module": "_pydecimal",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "37fbb6c37531b0cf399ae99d5c8854e4a27718dd8934126ed25e2a30f0897120"
+        },
+        {
+          "path": "PYZ.pyz/_pyi_rth_utils",
+          "module": "_pyi_rth_utils",
+          "component": "PyInstaller runtime",
+          "decoded_code_sha256": "701eb954b414c128365c3552e4057db10d7b74480d84beb92cd930a89492a96a"
+        },
+        {
+          "path": "PYZ.pyz/_pyi_rth_utils.qt",
+          "module": "_pyi_rth_utils.qt",
+          "component": "PyInstaller runtime",
+          "decoded_code_sha256": "03d5457c3498e1c7b8a609b4543cdb74b826eda33f1bd50e4598d30f7b8adc1b"
+        },
+        {
+          "path": "PYZ.pyz/_strptime",
+          "module": "_strptime",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "0d423cd8f132b00a3566d8e07954cc0d730d0a0a9095c69f91b228bef7329268"
+        },
+        {
+          "path": "PYZ.pyz/_threading_local",
+          "module": "_threading_local",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "8a0295b99355d0f8c83cbdd9d305309775bf6f5eb2b97c458d60f45d3a0be1c1"
+        },
+        {
+          "path": "PYZ.pyz/argparse",
+          "module": "argparse",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "11329c2b53866c8394dc52469cd3051e5efe05ffb515910f7bdaff148265da99"
+        },
+        {
+          "path": "PYZ.pyz/ast",
+          "module": "ast",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "94e42b55b0496f7f789cbe2635191e5d7cfb3147879ff50bc14f2cafe95f6377"
+        },
+        {
+          "path": "PYZ.pyz/base64",
+          "module": "base64",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "5aab39fe225ca2db74db5df71f1b6ffe3ebfb34cbbd5b9ae9cf4b64b0280d48e"
+        },
+        {
+          "path": "PYZ.pyz/bisect",
+          "module": "bisect",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "ce3946aeaf67b7a32185992b0b845dbb171e1f6866a3024f38926df4f6d3c495"
+        },
+        {
+          "path": "PYZ.pyz/bz2",
+          "module": "bz2",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "90153af1de9f9a757bf228ab1162c76c6597a4a4f691418d241360b54d9e626b"
+        },
+        {
+          "path": "PYZ.pyz/calendar",
+          "module": "calendar",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "08df14328b7632c391fcc0a55f0bf551acd240646a311a3183b8761b51a0e8f9"
+        },
+        {
+          "path": "PYZ.pyz/contextlib",
+          "module": "contextlib",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "763d93cda35dd5592c81255d0a88aff0a75422b534d2ffa636646076bc40d7d3"
+        },
+        {
+          "path": "PYZ.pyz/contextvars",
+          "module": "contextvars",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "fa8fb0b77eaa898276b847b76111fb98e8678b83909487843e20fd7c03139128"
+        },
+        {
+          "path": "PYZ.pyz/copy",
+          "module": "copy",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "7dd55e3ce45f952a9481cfed116c52838e48039b7928e3bff268330d000f4a6b"
+        },
+        {
+          "path": "PYZ.pyz/csv",
+          "module": "csv",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "9197043f6871399564d8af4be2b3e4028a8c6961645bdb3a6c75b9e6dae5022b"
+        },
+        {
+          "path": "PYZ.pyz/ctypes",
+          "module": "ctypes",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "b1219fea98a81dd661265c68d3a65e99434fd67a7aded78ca95ea2cdadb2f06a"
+        },
+        {
+          "path": "PYZ.pyz/ctypes._endian",
+          "module": "ctypes._endian",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "9b0f148aab7484b2c1b2e0359fd6b23f7476f80edd577e3460173df590ef5346"
+        },
+        {
+          "path": "PYZ.pyz/ctypes.wintypes",
+          "module": "ctypes.wintypes",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "76e4c7fef701b9af8911a632166dff568f117b87239eea076069a00614827255"
+        },
+        {
+          "path": "PYZ.pyz/dataclasses",
+          "module": "dataclasses",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "11195dd2914becfa9fed83c0cdf577747db32c7ebfea13865bc40b789604d4ca"
+        },
+        {
+          "path": "PYZ.pyz/datetime",
+          "module": "datetime",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "6cf727f15d93925bb5c0d6a1454bf2be4b9d7ffcc1c4c1d187ab7ba3ea880c32"
+        },
+        {
+          "path": "PYZ.pyz/decimal",
+          "module": "decimal",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "0cd9c90eb55141d29284570a0218be61bfdae325c1ee43d71e0c0636fe11ab64"
+        },
+        {
+          "path": "PYZ.pyz/dis",
+          "module": "dis",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "725e3384caf9706aa0c10ca8ec399ca7f43ce0ab49f4493dc4994311219448b7"
+        },
+        {
+          "path": "PYZ.pyz/email",
+          "module": "email",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "e1656e59fcc9c57ec913148c64b4afa871597155fe070955bbd662adf6d38663"
+        },
+        {
+          "path": "PYZ.pyz/email._encoded_words",
+          "module": "email._encoded_words",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "09d08fad89a8b76303f829f52b88eb21282111a63b8b1a27c51192c69b57d3be"
+        },
+        {
+          "path": "PYZ.pyz/email._header_value_parser",
+          "module": "email._header_value_parser",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "d83c44fd6290a5a27b64c0713492ac459136e58f7356f531bb9627ab6e6af0ac"
+        },
+        {
+          "path": "PYZ.pyz/email._parseaddr",
+          "module": "email._parseaddr",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "3641691ea3057039108bc3de037efc69709fb7425edd1f509878823bf2194076"
+        },
+        {
+          "path": "PYZ.pyz/email._policybase",
+          "module": "email._policybase",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "211f78aa5a6675e5d65f1ffb11924faa5bbf21cc4a3530f613229bedd9fcf769"
+        },
+        {
+          "path": "PYZ.pyz/email.base64mime",
+          "module": "email.base64mime",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "d2058dba82f11bf854a8127baff75dcfa3c621affb126d33968b76e3bb7b5402"
+        },
+        {
+          "path": "PYZ.pyz/email.charset",
+          "module": "email.charset",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "731e83c0bde35c7fb7fbac71c9feecc15b3a0693277042600c09950ef433af1a"
+        },
+        {
+          "path": "PYZ.pyz/email.contentmanager",
+          "module": "email.contentmanager",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "f4c6d1c901c52a7b7b72fa3b87b5becce0e4f1fb44a05efb4ce9b862d28a3ffb"
+        },
+        {
+          "path": "PYZ.pyz/email.encoders",
+          "module": "email.encoders",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "027db46d9368251ad070d7746e9963e8f7e09d9922c1caa9f0aa1584dee13128"
+        },
+        {
+          "path": "PYZ.pyz/email.errors",
+          "module": "email.errors",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "507b3a03458a3e2d220b4d9a06cba2b542a4d7b8651bb3186d20f9f0fd3ddcaf"
+        },
+        {
+          "path": "PYZ.pyz/email.feedparser",
+          "module": "email.feedparser",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "a69f27bee55d142c17aafcfeefa66e67ee8cbd6817815a5622f18f86d4399543"
+        },
+        {
+          "path": "PYZ.pyz/email.generator",
+          "module": "email.generator",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "621f4a1bf846408279e8298c4f72cc9778c309f2c7ebaed8cd4847f566ecc097"
+        },
+        {
+          "path": "PYZ.pyz/email.header",
+          "module": "email.header",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "8fcdf9e54acca2e51b635a7ca0be83dbf656856d48038b942cb9a04d98f8ccae"
+        },
+        {
+          "path": "PYZ.pyz/email.headerregistry",
+          "module": "email.headerregistry",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "60547d6ff41b288cdfb99cc742e0fb5816aaeb30d4278f403eefbd8e85f9cc34"
+        },
+        {
+          "path": "PYZ.pyz/email.iterators",
+          "module": "email.iterators",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "9afa3a62438054304352ab239a3781bacde825aa75f99dfa4bc24aa6960675b6"
+        },
+        {
+          "path": "PYZ.pyz/email.message",
+          "module": "email.message",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "e52038a59c2937347ae79e452551ecfbc94ecd243cc56ca0022038bf23adb4b4"
+        },
+        {
+          "path": "PYZ.pyz/email.parser",
+          "module": "email.parser",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "7c14017d788399333228b506c2869bfa5c2c8107e51d93d41e4a0e42077023e6"
+        },
+        {
+          "path": "PYZ.pyz/email.policy",
+          "module": "email.policy",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "13769180ca2bd9b89a8fe1d6c88f6684630266d3d43e4d404988374e767e841b"
+        },
+        {
+          "path": "PYZ.pyz/email.quoprimime",
+          "module": "email.quoprimime",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "892275ee60c21465f657a5f294ea826b1653f40405d98a799b13795836382ffc"
+        },
+        {
+          "path": "PYZ.pyz/email.utils",
+          "module": "email.utils",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "ddabeb6bb3e11d166159a3088c1bd0d07d92178d8846e8c86e1e7b9551a338b5"
+        },
+        {
+          "path": "PYZ.pyz/entrypoints",
+          "module": "entrypoints",
+          "component": "NutCase",
+          "decoded_code_sha256": "46f9707968302615fd5eafe46dec0a8e2b821639dca95dde9c894c31683b76c3"
+        },
+        {
+          "path": "PYZ.pyz/entrypoints.fastener_gui",
+          "module": "entrypoints.fastener_gui",
+          "component": "NutCase",
+          "decoded_code_sha256": "1339eec3fad78824a5b0979ff35f5b2655b9c1c0b4900e7b2da7ed8942d57f2d"
+        },
+        {
+          "path": "PYZ.pyz/fastener_analysis",
+          "module": "fastener_analysis",
+          "component": "NutCase",
+          "decoded_code_sha256": "288563465f1f692bb35f40963fef3456ccafb9d40f7fe58bb4beb3a0fe1421d3"
+        },
+        {
+          "path": "PYZ.pyz/fastener_analysis.geometry",
+          "module": "fastener_analysis.geometry",
+          "component": "NutCase",
+          "decoded_code_sha256": "92b2d94aae4fef1d58d6bf37b84f7ffb22b1cb4350c7dfcd6b4fb1f5a4a1eb6f"
+        },
+        {
+          "path": "PYZ.pyz/fastener_analysis.runtime",
+          "module": "fastener_analysis.runtime",
+          "component": "NutCase",
+          "decoded_code_sha256": "bbe3b171434ec5d08c2ab744f21ac3e1c562b752ed999bb8248d3cff1bf8c0ec"
+        },
+        {
+          "path": "PYZ.pyz/fastener_drawing",
+          "module": "fastener_drawing",
+          "component": "NutCase",
+          "decoded_code_sha256": "d7b7e0d41c3ba2b3c8782ad28b40d5f7f1da94c2e4228d586c736f6d8a7ac7f8"
+        },
+        {
+          "path": "PYZ.pyz/fastener_drawing.configuration",
+          "module": "fastener_drawing.configuration",
+          "component": "NutCase",
+          "decoded_code_sha256": "a3183a9169fb80e2e968d652eb40f624ca38f082e0a9f86ce91aa4656a090dce"
+        },
+        {
+          "path": "PYZ.pyz/fastener_drawing.formatting",
+          "module": "fastener_drawing.formatting",
+          "component": "NutCase",
+          "decoded_code_sha256": "4e5e20cf4e3d4b2a59bd3930aa83f172860ce52f79d93210bf6fef9e46223de3"
+        },
+        {
+          "path": "PYZ.pyz/fastener_drawing.layout",
+          "module": "fastener_drawing.layout",
+          "component": "NutCase",
+          "decoded_code_sha256": "94c2ffa3e2b38a51506cba0af82d80840e5dce0dfa8939c6a2b913200307c374"
+        },
+        {
+          "path": "PYZ.pyz/fastener_drawing.process_control",
+          "module": "fastener_drawing.process_control",
+          "component": "NutCase",
+          "decoded_code_sha256": "0d5043a9ea89f33bdfa663ac8962294c367860d7684a749b49302e71f72dd2bd"
+        },
+        {
+          "path": "PYZ.pyz/fastener_drawing.references",
+          "module": "fastener_drawing.references",
+          "component": "NutCase",
+          "decoded_code_sha256": "d51286fc97061564075e59d1d81fd0b1af0570735c5f8e70ee766c04651e138b"
+        },
+        {
+          "path": "PYZ.pyz/fastener_drawing.selection",
+          "module": "fastener_drawing.selection",
+          "component": "NutCase",
+          "decoded_code_sha256": "d960538085cd5901c076292f8f556d16e6c88771eb9b2a376aa1b3f2202b58f9"
+        },
+        {
+          "path": "PYZ.pyz/fastener_gui",
+          "module": "fastener_gui",
+          "component": "NutCase",
+          "decoded_code_sha256": "ed5a3a7a784674c12e6a8c3f6849be0062a618b5de96ab3041b2a77de9228f84"
+        },
+        {
+          "path": "PYZ.pyz/fastener_gui.controller",
+          "module": "fastener_gui.controller",
+          "component": "NutCase",
+          "decoded_code_sha256": "1f2ecbeb51e40fa140fdd841b52df7f310f307cd5e491f1afb85cc2f611dd92a"
+        },
+        {
+          "path": "PYZ.pyz/fastener_gui.file_opener",
+          "module": "fastener_gui.file_opener",
+          "component": "NutCase",
+          "decoded_code_sha256": "fc939723641ae230f676322adc118b09ceb5242da9b38a43a7d385842c5cd97c"
+        },
+        {
+          "path": "PYZ.pyz/fastener_gui.outputs",
+          "module": "fastener_gui.outputs",
+          "component": "NutCase",
+          "decoded_code_sha256": "de0567aea712d81bcf260b7c2ad7f1dbeff1f119be1955ab845c44f24dfb48d6"
+        },
+        {
+          "path": "PYZ.pyz/fastener_gui.preview",
+          "module": "fastener_gui.preview",
+          "component": "NutCase",
+          "decoded_code_sha256": "1d0617e1a752844a56672f91aaa3eb37a1fd9e4d294af2cb1c13ebb1258e500a"
+        },
+        {
+          "path": "PYZ.pyz/fastener_gui.state",
+          "module": "fastener_gui.state",
+          "component": "NutCase",
+          "decoded_code_sha256": "9933c80d95582350f1d6559b101cfc0236161d77bcddc683c7552e6171407168"
+        },
+        {
+          "path": "PYZ.pyz/fastener_gui.theme",
+          "module": "fastener_gui.theme",
+          "component": "NutCase",
+          "decoded_code_sha256": "3b4ec8c2417f32486289a333fb4cba0e94ba2368474ff312dd45900c097a06dc"
+        },
+        {
+          "path": "PYZ.pyz/fastener_gui.window",
+          "module": "fastener_gui.window",
+          "component": "NutCase",
+          "decoded_code_sha256": "aba177d1688d0a8417b29984c2f930b8f6e21a68d30bad2a4b366fe42538f607"
+        },
+        {
+          "path": "PYZ.pyz/fastener_paths",
+          "module": "fastener_paths",
+          "component": "NutCase",
+          "decoded_code_sha256": "5e3d8bad751ff5e5fcc2a40c8c6c866d5974c668ac15ac735634ec9ff360bd07"
+        },
+        {
+          "path": "PYZ.pyz/fnmatch",
+          "module": "fnmatch",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "1ea87dcb6e029ee7d90391a18d783818f285a4dc62fae680a8ab677e69b499a5"
+        },
+        {
+          "path": "PYZ.pyz/fractions",
+          "module": "fractions",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "efec45e24bf49f69338f17a055303aba6810f85c1c053a935e30ec8daee1ce9a"
+        },
+        {
+          "path": "PYZ.pyz/getopt",
+          "module": "getopt",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "de5dc911e5963a429f56c5dbc4c524801811d19236899946e521bb8156a7db6c"
+        },
+        {
+          "path": "PYZ.pyz/gettext",
+          "module": "gettext",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "b57707ceb2e40505d01c9445f56cd471f57a1658a8bccea27f987149355d501b"
+        },
+        {
+          "path": "PYZ.pyz/glob",
+          "module": "glob",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "c91c86f1e0337a3f299e214aab68b9046a9b02b88c7ae9401c09821c215c24d0"
+        },
+        {
+          "path": "PYZ.pyz/gzip",
+          "module": "gzip",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "3aa1b9396e7aa847c45a90c782a57a128d85717a4a1622a5863814a7df37a374"
+        },
+        {
+          "path": "PYZ.pyz/hashlib",
+          "module": "hashlib",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "e2e5234f3a0048384197e191e0f223f2cf3e65207604668f4287cafe7292345b"
+        },
+        {
+          "path": "PYZ.pyz/hmac",
+          "module": "hmac",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "ef3df186d63b559187af54670fec0c8a93d70811fdc07df91174a23f03cdb108"
+        },
+        {
+          "path": "PYZ.pyz/http",
+          "module": "http",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "6b5719e9626c3de5b9919c75dcdf2d09788cfa606e626e2b96384694074cd114"
+        },
+        {
+          "path": "PYZ.pyz/http.client",
+          "module": "http.client",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "06947321869ee6ee567fca6bc7b327f8e52f8869327f872a7a623dae7eea68dd"
+        },
+        {
+          "path": "PYZ.pyz/importlib",
+          "module": "importlib",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "ac1210bb2c005d7de31317f74c0d19e3a0f9b875c60724a5a2370543add5d503"
+        },
+        {
+          "path": "PYZ.pyz/importlib._abc",
+          "module": "importlib._abc",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "20cc24e10db9e5cb117f8b1dea4725b49fe971913198ca612b12d58e677cfa38"
+        },
+        {
+          "path": "PYZ.pyz/importlib._bootstrap",
+          "module": "importlib._bootstrap",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "d14c0b44e9d29c4d8d464465c58a186ca7f84ba2520f8e0aab0fd609b854e1b5"
+        },
+        {
+          "path": "PYZ.pyz/importlib._bootstrap_external",
+          "module": "importlib._bootstrap_external",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "ae4617b84095b7c7690e2d34ff9734e3f3ca9da5f4700d87a5fef9d9f81bd9bf"
+        },
+        {
+          "path": "PYZ.pyz/importlib.abc",
+          "module": "importlib.abc",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "51b623e758586bac2fe8322a04d53dd0710d71520edd369bc40ec369f3aec735"
+        },
+        {
+          "path": "PYZ.pyz/importlib.machinery",
+          "module": "importlib.machinery",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "2641812590dfeef4bf43bc4e1d75292e8cd1c44a116d19a99e630e40ffdeb281"
+        },
+        {
+          "path": "PYZ.pyz/importlib.metadata",
+          "module": "importlib.metadata",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "05896f50b7b92dab15983e04a5f25fd5169bad11c81ef09c002dae0bdb1998c8"
+        },
+        {
+          "path": "PYZ.pyz/importlib.metadata._adapters",
+          "module": "importlib.metadata._adapters",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "782438dd5369b6516054429ed6646bc3cbd9360759adc5fa45a3cdec02152a89"
+        },
+        {
+          "path": "PYZ.pyz/importlib.metadata._collections",
+          "module": "importlib.metadata._collections",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "09eea5c450aeb6da1b41e0e3ba050bf7f23e86c1e3f7a79b4169f101273108a0"
+        },
+        {
+          "path": "PYZ.pyz/importlib.metadata._functools",
+          "module": "importlib.metadata._functools",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "5790ad9671570e59c05b85cf4d256af664929eb3ace7f3a74a3a82fec1b070e8"
+        },
+        {
+          "path": "PYZ.pyz/importlib.metadata._itertools",
+          "module": "importlib.metadata._itertools",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "cb5b21bf797aa4d1b22c0a59930aa571c52c3b8a31899cbfab3107404e744a0d"
+        },
+        {
+          "path": "PYZ.pyz/importlib.metadata._meta",
+          "module": "importlib.metadata._meta",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "2a7f3efcd1999f51c33f5446b8e24da832269e068228021d48bf24276017e98d"
+        },
+        {
+          "path": "PYZ.pyz/importlib.metadata._text",
+          "module": "importlib.metadata._text",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "d0d63c6aca49f8e714bae44661ebc16b814acc4b89074f24691ee77b94c9e94d"
+        },
+        {
+          "path": "PYZ.pyz/importlib.readers",
+          "module": "importlib.readers",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "a79c349faab9bc6001e11a47a1d6d2569907a3055ec9f6843bf186808160a388"
+        },
+        {
+          "path": "PYZ.pyz/importlib.resources",
+          "module": "importlib.resources",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "3d381b9acd654c07046404ba62d4ac90f0a6d7510ec3847005d7157619317475"
+        },
+        {
+          "path": "PYZ.pyz/importlib.resources._adapters",
+          "module": "importlib.resources._adapters",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "49a8c73c37470b3f74a8a3da05401a718c4167edd94ea4d219b9425b2e2a6236"
+        },
+        {
+          "path": "PYZ.pyz/importlib.resources._common",
+          "module": "importlib.resources._common",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "b6388b0583cb0ab79afce3cfe3d188e7d076fb809da2edf871a6338a109c28cd"
+        },
+        {
+          "path": "PYZ.pyz/importlib.resources._functional",
+          "module": "importlib.resources._functional",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "0495402e4c9ac7d7705b56bc746abb5e88e472636c70b698b53736a90d25113e"
+        },
+        {
+          "path": "PYZ.pyz/importlib.resources._itertools",
+          "module": "importlib.resources._itertools",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "9a2e2e59bf416c90c17b8015d33a86e7bf19f2f590ede012a44f0e8b49fcb541"
+        },
+        {
+          "path": "PYZ.pyz/importlib.resources.abc",
+          "module": "importlib.resources.abc",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "57e7a7e860768a022f9926c4ad0c627f349b9bd98ad79cca96faff267c6fc2d2"
+        },
+        {
+          "path": "PYZ.pyz/importlib.resources.readers",
+          "module": "importlib.resources.readers",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "fe7993a5b44dc06ab379500fe6aaaac55ab9c641e28f59a7610153fceeb3f9bc"
+        },
+        {
+          "path": "PYZ.pyz/importlib.util",
+          "module": "importlib.util",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "75e3f7294a2bd3b2e93031516b957087876780343ff43bbdfb13392134d3f617"
+        },
+        {
+          "path": "PYZ.pyz/inspect",
+          "module": "inspect",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "6110a0c830f8496254826f67d7547b30316337a36c9a10426dd342f9cbcfc4f7"
+        },
+        {
+          "path": "PYZ.pyz/ipaddress",
+          "module": "ipaddress",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "41d127040a09895b9b2315ba7cdcd25f2a8e03e300a2694d075df6e63b19d4ac"
+        },
+        {
+          "path": "PYZ.pyz/json",
+          "module": "json",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "d05930492ec3ad8ef06d105aba5b1177318d114a616c1bfe595a6ec19b26857a"
+        },
+        {
+          "path": "PYZ.pyz/json.decoder",
+          "module": "json.decoder",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "2a68ffed7f25baaa7fd863cb81068996207e501a9eba6a560d8aeb55666dad0d"
+        },
+        {
+          "path": "PYZ.pyz/json.encoder",
+          "module": "json.encoder",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "9079ddd5f7980d57cbd9e7d670fcdcf2117c72abf4972632daadcfdff239fa28"
+        },
+        {
+          "path": "PYZ.pyz/json.scanner",
+          "module": "json.scanner",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "3b12f3b350bc81a411b811bf97b4a368257a502b265169bf486183cc21b50e16"
+        },
+        {
+          "path": "PYZ.pyz/logging",
+          "module": "logging",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "a1f7cb849440d065072bf4e1acd8ef199ee024b400dd8f81cc5f8d54300d3a17"
+        },
+        {
+          "path": "PYZ.pyz/logging.handlers",
+          "module": "logging.handlers",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "c488d02922256c6df3831f69a8109e96ba2010cfc4d040959223b38b26ef1772"
+        },
+        {
+          "path": "PYZ.pyz/lzma",
+          "module": "lzma",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "2f6cd20637ad444a453dd247f3d96c7fffea8373efb3c626b9140f165011c0ae"
+        },
+        {
+          "path": "PYZ.pyz/numbers",
+          "module": "numbers",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "f2fab431ae044760a411d0d3d209b03e30bedce5ec9b1ec3bb1240512c4cc71f"
+        },
+        {
+          "path": "PYZ.pyz/nutcase_discovery",
+          "module": "nutcase_discovery",
+          "component": "NutCase",
+          "decoded_code_sha256": "26af938b951cbd99041b9dbe0a203e7ee74da2f223166a806cc420c9ab4c9965"
+        },
+        {
+          "path": "PYZ.pyz/nutcase_runtime",
+          "module": "nutcase_runtime",
+          "component": "NutCase",
+          "decoded_code_sha256": "4cd631a4da061a1092e9bc24c350ea220072a5ddce9a17fb20dbd5248945d6ff"
+        },
+        {
+          "path": "PYZ.pyz/opcode",
+          "module": "opcode",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "38011fb6771b2c0e5e0d0ab0b0d5e1cca07c45f0350e66f06789509f5fe8c732"
+        },
+        {
+          "path": "PYZ.pyz/pathlib",
+          "module": "pathlib",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "499bd742d65f24c71150d9ec8c0c0dd2021a3c2d0776acfa6300942e05e116d6"
+        },
+        {
+          "path": "PYZ.pyz/pathlib._abc",
+          "module": "pathlib._abc",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "ad7d349a92d0656af4774cf08f5db8a6f19787cf69c14a38c9017bb843e212f9"
+        },
+        {
+          "path": "PYZ.pyz/pathlib._local",
+          "module": "pathlib._local",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "1e57dfe8f096345c79a72c630eeda40ad5586998ebca8403cf7982ccd7020e7c"
+        },
+        {
+          "path": "PYZ.pyz/pickle",
+          "module": "pickle",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "633f3a070154f7d0bb397cc7da4d19f6e9ecd192867b869216fb17383d88b799"
+        },
+        {
+          "path": "PYZ.pyz/platform",
+          "module": "platform",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "ccccc3b8eb58fade704a872875e4f99ae518242aee4df06f9146a48f119012ee"
+        },
+        {
+          "path": "PYZ.pyz/pprint",
+          "module": "pprint",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "d48bdc0c7ce928b53bfbac5558a484f28895c1fd8899c060bb00901116fd62b9"
+        },
+        {
+          "path": "PYZ.pyz/py_compile",
+          "module": "py_compile",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "f44342f7a0c275e4ab8ddd0d88e4b6ffd3ddac6d85d588c04a38bde9c4358af7"
+        },
+        {
+          "path": "PYZ.pyz/queue",
+          "module": "queue",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "70b369fb454244b16968b97dfe853d8d1669ec69deb54c9dd059415e38dc00af"
+        },
+        {
+          "path": "PYZ.pyz/quopri",
+          "module": "quopri",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "6982f31449bd139a00388801990c812258197151b448c10c7dd03439602400c3"
+        },
+        {
+          "path": "PYZ.pyz/random",
+          "module": "random",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "e8cbd297b6b4a590146e3db354994128fac105b450793746c3680c72137adf81"
+        },
+        {
+          "path": "PYZ.pyz/selectors",
+          "module": "selectors",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "b35ad965a7342c107916526965c18eb0312b8461ce7a26cd0e01f5567d8b1dd9"
+        },
+        {
+          "path": "PYZ.pyz/shiboken6",
+          "module": "shiboken6",
+          "component": "shiboken6",
+          "decoded_code_sha256": "4d14a47108ffbd1f02cfec54aa1aa47455f4ba627f04091b16aa2853525dd784"
+        },
+        {
+          "path": "PYZ.pyz/shutil",
+          "module": "shutil",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "7631c0d28998740ce0b51edb2b56925536ddf2ee7a1002fb03e41db582096a05"
+        },
+        {
+          "path": "PYZ.pyz/signal",
+          "module": "signal",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "e58f798ef5cb1004773cc3b6f876596216ddbb77a5f5d966d6195f1bf5b1851c"
+        },
+        {
+          "path": "PYZ.pyz/smtplib",
+          "module": "smtplib",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "3c8232aa819caeea81570925730440ed79da6f89a7654a68368496d2683bea8b"
+        },
+        {
+          "path": "PYZ.pyz/socket",
+          "module": "socket",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "d42a2a6341bcb00959652904227601e19fd2386cf11ea7ec3436e31755cc19cd"
+        },
+        {
+          "path": "PYZ.pyz/ssl",
+          "module": "ssl",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "d9aff7440113edc8bacbd0842b436d15ede432492161ac97e11a6bec283898c0"
+        },
+        {
+          "path": "PYZ.pyz/statistics",
+          "module": "statistics",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "8aa63bfb16368f090b0519093db9726dea16c05b5a107b9ad652350ae7520f48"
+        },
+        {
+          "path": "PYZ.pyz/string",
+          "module": "string",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "8f796005bf8c229454129d8ce1bf0f7055b8d82431c29f4e349c66b3623c430f"
+        },
+        {
+          "path": "PYZ.pyz/stringprep",
+          "module": "stringprep",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "1952d0041104d1955e236fa40a29c3cca0cf1d136c536e87f7d029409ab00fd7"
+        },
+        {
+          "path": "PYZ.pyz/subprocess",
+          "module": "subprocess",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "1b31a0b860116ade23acf4c53650281381fc24cf0a1ad8d968e8401d119783d0"
+        },
+        {
+          "path": "PYZ.pyz/sysconfig",
+          "module": "sysconfig",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "be99486b4a384166edcc321d72623d1b4b54bced3f53c6c643820aceec5063cf"
+        },
+        {
+          "path": "PYZ.pyz/tarfile",
+          "module": "tarfile",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "4a5316cb440355bfa2432ea87603084f37e941dcde17f29a4fc70e5f4d20073a"
+        },
+        {
+          "path": "PYZ.pyz/tempfile",
+          "module": "tempfile",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "8c49ab591d4292ba6f7dc7b707dbef57128bcaf434eb91f654cc8d85a1ac1580"
+        },
+        {
+          "path": "PYZ.pyz/textwrap",
+          "module": "textwrap",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "3e80d33304c4f3dc2203de0f3fdd9293284ec8e0469c9133f0e4f727e267895f"
+        },
+        {
+          "path": "PYZ.pyz/threading",
+          "module": "threading",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "21195f292ba83d9e7911e07cad8a911ebb3f87a88890bd08f66eab5025922b5f"
+        },
+        {
+          "path": "PYZ.pyz/token",
+          "module": "token",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "57085b89f84f0b72fd9376cabacf89909d46d389fd2ae4c60044106e523bda7f"
+        },
+        {
+          "path": "PYZ.pyz/tokenize",
+          "module": "tokenize",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "309315ba7435a8115392114b31f7bf83561fd73803286ee210ef11bd255f0cf1"
+        },
+        {
+          "path": "PYZ.pyz/tracemalloc",
+          "module": "tracemalloc",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "f213b433f7071c05e0e1b132aa25b26fe15f3181a7fa667bb414ddc0b670ae0a"
+        },
+        {
+          "path": "PYZ.pyz/typing",
+          "module": "typing",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "f85a0920a48c7912950ae40d8bc3f7d583f1e0c754452f99f74ead8cae6790ef"
+        },
+        {
+          "path": "PYZ.pyz/urllib",
+          "module": "urllib",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "bbf2d4c6a62b60d2b60ecd7e90f0ba64494ebde5d7824c9767f84a154a3aec8d"
+        },
+        {
+          "path": "PYZ.pyz/urllib.parse",
+          "module": "urllib.parse",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "2a3817561e4bb105469632fece7ac27fb31677c72775eeeb55f121cdfd573898"
+        },
+        {
+          "path": "PYZ.pyz/uuid",
+          "module": "uuid",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "63e579fb5f6c1b22cb7c7ff5d022a8d71c6add3552515400b7fda646b3f7085c"
+        },
+        {
+          "path": "PYZ.pyz/zipfile",
+          "module": "zipfile",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "695c9264a86861c873c5bbe3cf381a32fa4dcca1f3bce4ffc774fb9921f38a6c"
+        },
+        {
+          "path": "PYZ.pyz/zipfile._path",
+          "module": "zipfile._path",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "b46ee0a23d8496776c1f7f1db12318fed86cfe2ef1e479eedb31e882c55180a0"
+        },
+        {
+          "path": "PYZ.pyz/zipfile._path.glob",
+          "module": "zipfile._path.glob",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "99b71fce035e4c5b3923f6816b5e8e9f7ab4d9198507c71673dfcdc9ca2cb022"
+        }
+      ]
+    },
+    {
+      "executable": "NutCaseWorker.exe",
+      "sha256": "ace86b52541b2302a9eb518b0db2891e573920a55bb8d1a5ce87706f857afcd9",
+      "members": [
+        {
+          "path": "struct",
+          "module": "struct",
+          "component": "CPython standard library",
+          "decoded_archive_member_sha256": "666e6d97b4616f6bf7eecfd2b61fc6f7a72edaedb6681bbd7e88388da1c3117b"
+        },
+        {
+          "path": "pyimod01_archive",
+          "module": "pyimod01_archive",
+          "component": "PyInstaller runtime",
+          "decoded_archive_member_sha256": "29550c602ee911e0960ffb1845e0b02c40aca8e66511b7fb394c3737e7a3ed40"
+        },
+        {
+          "path": "pyimod02_importers",
+          "module": "pyimod02_importers",
+          "component": "PyInstaller runtime",
+          "decoded_archive_member_sha256": "c44a73566899863d3f2cb8c9595d8a1f602f864de8366cba28b0211063e4fbd5"
+        },
+        {
+          "path": "pyimod03_ctypes",
+          "module": "pyimod03_ctypes",
+          "component": "PyInstaller runtime",
+          "decoded_archive_member_sha256": "507589e4f7496c37f35a128344124a4cc0814cbc172aac76352171cc9149ea7a"
+        },
+        {
+          "path": "pyimod04_pywin32",
+          "module": "pyimod04_pywin32",
+          "component": "PyInstaller runtime",
+          "decoded_archive_member_sha256": "200b5b6925d51fe606273859632c851dfb2cfc4eee30cfe0265f6e75768203f3"
+        },
+        {
+          "path": "pyiboot01_bootstrap",
+          "module": "pyiboot01_bootstrap",
+          "component": "PyInstaller runtime",
+          "decoded_archive_member_sha256": "7b97c32bbacfd86b3f635582225041305ff831ae5293c60f9154826849878eb7"
+        },
+        {
+          "path": "pyi_rth_inspect",
+          "module": "pyi_rth_inspect",
+          "component": "PyInstaller runtime",
+          "decoded_archive_member_sha256": "2611bd49bd0b36640e2e5d910bed962f44dd751267deba6a4fdca38949c1993c"
+        },
+        {
+          "path": "worker_main",
+          "module": "worker_main",
+          "component": "NutCase",
+          "decoded_archive_member_sha256": "81a8fe14f8a8a260e4639320eac4e4743654f510da44a9c8448c44dfa2cc0578"
+        },
+        {
+          "path": "PYZ.pyz/PIL",
+          "module": "PIL",
+          "component": "PIL",
+          "decoded_code_sha256": "9370c70f6a95264263596bf8c768ec7d48fbebad8c74d5211322d9f32e0a5793"
+        },
+        {
+          "path": "PYZ.pyz/PIL.AvifImagePlugin",
+          "module": "PIL.AvifImagePlugin",
+          "component": "PIL",
+          "decoded_code_sha256": "afc9e8b2d0b71245aa5003d6d697fee835174b7b92fbc652b20be256a120dd9e"
+        },
+        {
+          "path": "PYZ.pyz/PIL.BlpImagePlugin",
+          "module": "PIL.BlpImagePlugin",
+          "component": "PIL",
+          "decoded_code_sha256": "dcf8dcf56d869ac9ebc8829efcd8ad51dfd74a8734aa42229bc9cccf89276a2e"
+        },
+        {
+          "path": "PYZ.pyz/PIL.BmpImagePlugin",
+          "module": "PIL.BmpImagePlugin",
+          "component": "PIL",
+          "decoded_code_sha256": "367188a4bbcea4b505bc971aaa1b7f3374ff286b13a0c01948987cb4f4ff8cdf"
+        },
+        {
+          "path": "PYZ.pyz/PIL.BufrStubImagePlugin",
+          "module": "PIL.BufrStubImagePlugin",
+          "component": "PIL",
+          "decoded_code_sha256": "6f9171d8ecdef75cb8bca303f84b7806c6f454598a448e4fd955e169e919f330"
+        },
+        {
+          "path": "PYZ.pyz/PIL.CurImagePlugin",
+          "module": "PIL.CurImagePlugin",
+          "component": "PIL",
+          "decoded_code_sha256": "28b88f6c6245768ec49aa952a47cad7e1dc31562fa746d02cda35b802dabd18b"
+        },
+        {
+          "path": "PYZ.pyz/PIL.DcxImagePlugin",
+          "module": "PIL.DcxImagePlugin",
+          "component": "PIL",
+          "decoded_code_sha256": "a0777c7235f39f7e1f77a4b9c7dbebfbb63e721fe101106dcbe3c91fb729b67b"
+        },
+        {
+          "path": "PYZ.pyz/PIL.DdsImagePlugin",
+          "module": "PIL.DdsImagePlugin",
+          "component": "PIL",
+          "decoded_code_sha256": "b0b22f8a2e4395a4e32b0597a464b4edbb3643169e9eddbbdb467b65b749c33d"
+        },
+        {
+          "path": "PYZ.pyz/PIL.EpsImagePlugin",
+          "module": "PIL.EpsImagePlugin",
+          "component": "PIL",
+          "decoded_code_sha256": "44322177d0f264e86d9338ab5839fd2a258638a3593b0e1c0f27a1298a1abd56"
+        },
+        {
+          "path": "PYZ.pyz/PIL.ExifTags",
+          "module": "PIL.ExifTags",
+          "component": "PIL",
+          "decoded_code_sha256": "066121191431af296cfe1ebdf330e4280035c5656aa8ad3834912b4c1b38c93f"
+        },
+        {
+          "path": "PYZ.pyz/PIL.FitsImagePlugin",
+          "module": "PIL.FitsImagePlugin",
+          "component": "PIL",
+          "decoded_code_sha256": "bb18d49f758bc5f080e4a8af300e35cc2397b6a5acea4b38c798a76e0bab5664"
+        },
+        {
+          "path": "PYZ.pyz/PIL.FliImagePlugin",
+          "module": "PIL.FliImagePlugin",
+          "component": "PIL",
+          "decoded_code_sha256": "6f104aa167d9a1698986af79d8e04c2aec975a23342de9e72a232e9eb7371898"
+        },
+        {
+          "path": "PYZ.pyz/PIL.FpxImagePlugin",
+          "module": "PIL.FpxImagePlugin",
+          "component": "PIL",
+          "decoded_code_sha256": "8909ae697d4f1901585d51c8c16a3630f060caa4f996d4233798f6a021df77df"
+        },
+        {
+          "path": "PYZ.pyz/PIL.FtexImagePlugin",
+          "module": "PIL.FtexImagePlugin",
+          "component": "PIL",
+          "decoded_code_sha256": "0c87eb2310fcdb4850cded935debb67cacdad91f9be5e0ff4f5ed5b9ad13e89a"
+        },
+        {
+          "path": "PYZ.pyz/PIL.GbrImagePlugin",
+          "module": "PIL.GbrImagePlugin",
+          "component": "PIL",
+          "decoded_code_sha256": "0b826cef41216893d82629484acf8f5630d8970ca0b194af445bebabe46b368d"
+        },
+        {
+          "path": "PYZ.pyz/PIL.GifImagePlugin",
+          "module": "PIL.GifImagePlugin",
+          "component": "PIL",
+          "decoded_code_sha256": "125f591919fd4c09147ef1a58255c61ac95ddbc3c5a862ce9ba3d28e3d65486d"
+        },
+        {
+          "path": "PYZ.pyz/PIL.GimpGradientFile",
+          "module": "PIL.GimpGradientFile",
+          "component": "PIL",
+          "decoded_code_sha256": "963b619c41ae632bfd75c36f9a6eddf3c8e928d40f48cbc5f78c18b911aaf933"
+        },
+        {
+          "path": "PYZ.pyz/PIL.GimpPaletteFile",
+          "module": "PIL.GimpPaletteFile",
+          "component": "PIL",
+          "decoded_code_sha256": "d029e0dda13cf660fbcbdc35e04afc6e4284e707fe3d204a1c400edd0fc177c0"
+        },
+        {
+          "path": "PYZ.pyz/PIL.GribStubImagePlugin",
+          "module": "PIL.GribStubImagePlugin",
+          "component": "PIL",
+          "decoded_code_sha256": "be4c4236bc7271a4897b9ccc419e1634108e62faefeffc37d7890cf4cb0a071c"
+        },
+        {
+          "path": "PYZ.pyz/PIL.Hdf5StubImagePlugin",
+          "module": "PIL.Hdf5StubImagePlugin",
+          "component": "PIL",
+          "decoded_code_sha256": "dbc30be506b4c4220d14d94dd60896b53bf3657f0c27a657e6e7f6b3dd785ba9"
+        },
+        {
+          "path": "PYZ.pyz/PIL.IcnsImagePlugin",
+          "module": "PIL.IcnsImagePlugin",
+          "component": "PIL",
+          "decoded_code_sha256": "6ebdae3ff406d0f7a756adcc8d02d48f49be8ac9d990388b2e72d910271a5072"
+        },
+        {
+          "path": "PYZ.pyz/PIL.IcoImagePlugin",
+          "module": "PIL.IcoImagePlugin",
+          "component": "PIL",
+          "decoded_code_sha256": "217142b1b679bd3cd0119b85d30f253cc733d0b7f01f8d79b260c4bd949bc8da"
+        },
+        {
+          "path": "PYZ.pyz/PIL.ImImagePlugin",
+          "module": "PIL.ImImagePlugin",
+          "component": "PIL",
+          "decoded_code_sha256": "e482634df349c080f06ae02e155dfacbc01756799cb164ce820714622c7ecae0"
+        },
+        {
+          "path": "PYZ.pyz/PIL.Image",
+          "module": "PIL.Image",
+          "component": "PIL",
+          "decoded_code_sha256": "e88c0eb65e1d2f9a15a545801762d74919f3892ab3cd35a11f1c9b54bec14d52"
+        },
+        {
+          "path": "PYZ.pyz/PIL.ImageChops",
+          "module": "PIL.ImageChops",
+          "component": "PIL",
+          "decoded_code_sha256": "a8e5df4dbb2175ee06ed0fefe304e43ff3069893ac3bf163cbbebe5a2d9446d3"
+        },
+        {
+          "path": "PYZ.pyz/PIL.ImageCms",
+          "module": "PIL.ImageCms",
+          "component": "PIL",
+          "decoded_code_sha256": "3c27b6cfbe5f98579c7ce5e95b91253560192958fa974ea6eb8e0711ae45db89"
+        },
+        {
+          "path": "PYZ.pyz/PIL.ImageColor",
+          "module": "PIL.ImageColor",
+          "component": "PIL",
+          "decoded_code_sha256": "15293c743326785e2804268e368f9184924522b7c8ec3b517f4799e9ededc4c1"
+        },
+        {
+          "path": "PYZ.pyz/PIL.ImageFile",
+          "module": "PIL.ImageFile",
+          "component": "PIL",
+          "decoded_code_sha256": "9d704e429cb51a666f1dacfbed6bf2c9e546d8b3ab42ce13f1ce360870731779"
+        },
+        {
+          "path": "PYZ.pyz/PIL.ImageFilter",
+          "module": "PIL.ImageFilter",
+          "component": "PIL",
+          "decoded_code_sha256": "001093e13c51368c5c24ac8ade6b2bf025ede5ddc69b01887ba14ca30a2fe363"
+        },
+        {
+          "path": "PYZ.pyz/PIL.ImageMath",
+          "module": "PIL.ImageMath",
+          "component": "PIL",
+          "decoded_code_sha256": "51d248f60c03612527ff5041a932d623a07f0215698dc587114ac35f00ef81c5"
+        },
+        {
+          "path": "PYZ.pyz/PIL.ImageMode",
+          "module": "PIL.ImageMode",
+          "component": "PIL",
+          "decoded_code_sha256": "b1c9b94edac68ea22018f9562c453e64c38452f249b1961c621b37cbc807d2b1"
+        },
+        {
+          "path": "PYZ.pyz/PIL.ImageOps",
+          "module": "PIL.ImageOps",
+          "component": "PIL",
+          "decoded_code_sha256": "e3848133cea0bc6f210b2675338ccdf60482bef1accc8a7e16075eefa508f028"
+        },
+        {
+          "path": "PYZ.pyz/PIL.ImagePalette",
+          "module": "PIL.ImagePalette",
+          "component": "PIL",
+          "decoded_code_sha256": "82b5129af04a073faa2b83875ba2b602080f71e17efd66261f5595b738b3b83a"
+        },
+        {
+          "path": "PYZ.pyz/PIL.ImageQt",
+          "module": "PIL.ImageQt",
+          "component": "PIL",
+          "decoded_code_sha256": "bcdccd3c7351caaa9e2515455074192d4c28b42840000d30ed14c75a6088ab1c"
+        },
+        {
+          "path": "PYZ.pyz/PIL.ImageSequence",
+          "module": "PIL.ImageSequence",
+          "component": "PIL",
+          "decoded_code_sha256": "91c84e45b4b8a20e87d50766cddd45684c3f8ac021ca2cc7c5b7dc4efffd66b0"
+        },
+        {
+          "path": "PYZ.pyz/PIL.ImageShow",
+          "module": "PIL.ImageShow",
+          "component": "PIL",
+          "decoded_code_sha256": "35c373e782b67e241e167b6fb43139235770ba4b17aa16e76fdf3e3707a0ad0d"
+        },
+        {
+          "path": "PYZ.pyz/PIL.ImageTk",
+          "module": "PIL.ImageTk",
+          "component": "PIL",
+          "decoded_code_sha256": "bb9d127b4a64893c3798359e2b1b620a7509260f333b5f75b3de97fe40b75668"
+        },
+        {
+          "path": "PYZ.pyz/PIL.ImageWin",
+          "module": "PIL.ImageWin",
+          "component": "PIL",
+          "decoded_code_sha256": "7cd1b3d49638366a58833b27affd5400b1c2e7240eca75534c0454c19bb5f67b"
+        },
+        {
+          "path": "PYZ.pyz/PIL.ImtImagePlugin",
+          "module": "PIL.ImtImagePlugin",
+          "component": "PIL",
+          "decoded_code_sha256": "c7e87c9fa4426ed07b1608684f880465ad2e1fcfe13b1cc65cb2711632181496"
+        },
+        {
+          "path": "PYZ.pyz/PIL.IptcImagePlugin",
+          "module": "PIL.IptcImagePlugin",
+          "component": "PIL",
+          "decoded_code_sha256": "d3e3b6e746cd71ec720b76b650f7d870a9e5108f41ece0feb62261c0d4bc19d1"
+        },
+        {
+          "path": "PYZ.pyz/PIL.Jpeg2KImagePlugin",
+          "module": "PIL.Jpeg2KImagePlugin",
+          "component": "PIL",
+          "decoded_code_sha256": "9fd1864b4ccc28a30768f4179b69d279d71fbf2d77b96ce91e543952a5fa63d2"
+        },
+        {
+          "path": "PYZ.pyz/PIL.JpegImagePlugin",
+          "module": "PIL.JpegImagePlugin",
+          "component": "PIL",
+          "decoded_code_sha256": "504f017f10a24e8677f5b1577612d6d78c78fcb8f28f89326986f73f9eb516ff"
+        },
+        {
+          "path": "PYZ.pyz/PIL.JpegPresets",
+          "module": "PIL.JpegPresets",
+          "component": "PIL",
+          "decoded_code_sha256": "b4e8ea6368de491afce33dd263ff1d7ef07747242fd7d24f3f7c3f089818d40c"
+        },
+        {
+          "path": "PYZ.pyz/PIL.McIdasImagePlugin",
+          "module": "PIL.McIdasImagePlugin",
+          "component": "PIL",
+          "decoded_code_sha256": "66e0a4454040d23306a11a3f66125c5695db8de8c2fa61d74156c46badbdaafb"
+        },
+        {
+          "path": "PYZ.pyz/PIL.MicImagePlugin",
+          "module": "PIL.MicImagePlugin",
+          "component": "PIL",
+          "decoded_code_sha256": "4b61a694e9839566ef141facda7bb94a9b5acd90f27cdacd3ab5d91c44861bf8"
+        },
+        {
+          "path": "PYZ.pyz/PIL.MpegImagePlugin",
+          "module": "PIL.MpegImagePlugin",
+          "component": "PIL",
+          "decoded_code_sha256": "2e6672bea1982371bde0c0c0f706a7859b21054b3f33cbfd957ec66315368077"
+        },
+        {
+          "path": "PYZ.pyz/PIL.MpoImagePlugin",
+          "module": "PIL.MpoImagePlugin",
+          "component": "PIL",
+          "decoded_code_sha256": "5ded9fd59c110a29a8d8cfff777ff6110bd275a9c542eac119a78da05cd9b614"
+        },
+        {
+          "path": "PYZ.pyz/PIL.MspImagePlugin",
+          "module": "PIL.MspImagePlugin",
+          "component": "PIL",
+          "decoded_code_sha256": "0c9e0de00d13bbf18179f4775cd3f540c37e57791ca3556db38cb9b67fb99d2a"
+        },
+        {
+          "path": "PYZ.pyz/PIL.PaletteFile",
+          "module": "PIL.PaletteFile",
+          "component": "PIL",
+          "decoded_code_sha256": "e2336f3c21e72e2acfa6c3bf2836dac9db2927da22086537b6ef350f8d46fa14"
+        },
+        {
+          "path": "PYZ.pyz/PIL.PalmImagePlugin",
+          "module": "PIL.PalmImagePlugin",
+          "component": "PIL",
+          "decoded_code_sha256": "4e370a083b47ff027010df0aa1bf02b125829c9072dd7242344fd18cf9401301"
+        },
+        {
+          "path": "PYZ.pyz/PIL.PcdImagePlugin",
+          "module": "PIL.PcdImagePlugin",
+          "component": "PIL",
+          "decoded_code_sha256": "81e61a8284708be94c8fd6da77c44356a4afa1874f3678d07466c217decf712b"
+        },
+        {
+          "path": "PYZ.pyz/PIL.PcxImagePlugin",
+          "module": "PIL.PcxImagePlugin",
+          "component": "PIL",
+          "decoded_code_sha256": "991785d2fd2b8594cda33b72a20d85070df7abeaad1aa921d359083ef167d5a0"
+        },
+        {
+          "path": "PYZ.pyz/PIL.PdfImagePlugin",
+          "module": "PIL.PdfImagePlugin",
+          "component": "PIL",
+          "decoded_code_sha256": "fd57a810efde0ac13596c527dc4bd75f2d577421173f86f1abd5c33c0f1be685"
+        },
+        {
+          "path": "PYZ.pyz/PIL.PdfParser",
+          "module": "PIL.PdfParser",
+          "component": "PIL",
+          "decoded_code_sha256": "712c23eca0f533e41a2ea7bdadab02b9b1ba0f342078736384ae0a5189d91206"
+        },
+        {
+          "path": "PYZ.pyz/PIL.PixarImagePlugin",
+          "module": "PIL.PixarImagePlugin",
+          "component": "PIL",
+          "decoded_code_sha256": "5ecc0d5cec706caf2a775a8fd09dc01d3a09fd112ea0d47e59dd44d49dc0f7be"
+        },
+        {
+          "path": "PYZ.pyz/PIL.PngImagePlugin",
+          "module": "PIL.PngImagePlugin",
+          "component": "PIL",
+          "decoded_code_sha256": "359e3be7932a94ea3a09e02a71ed906c7be08592f3fc4c560d81a1b9b538a114"
+        },
+        {
+          "path": "PYZ.pyz/PIL.PpmImagePlugin",
+          "module": "PIL.PpmImagePlugin",
+          "component": "PIL",
+          "decoded_code_sha256": "0143bf635c931c0ce4813c50102f0a433a11d6a910cafea228c6c77cf49e192d"
+        },
+        {
+          "path": "PYZ.pyz/PIL.PsdImagePlugin",
+          "module": "PIL.PsdImagePlugin",
+          "component": "PIL",
+          "decoded_code_sha256": "d795684614a665d0191611515f513753d1b2a78f14cce46cc09999be160d00f6"
+        },
+        {
+          "path": "PYZ.pyz/PIL.QoiImagePlugin",
+          "module": "PIL.QoiImagePlugin",
+          "component": "PIL",
+          "decoded_code_sha256": "99a1e1d27d06f46661e3c5ef6b86fbe981874ab1c47dd904514dbed1fa98aed5"
+        },
+        {
+          "path": "PYZ.pyz/PIL.SgiImagePlugin",
+          "module": "PIL.SgiImagePlugin",
+          "component": "PIL",
+          "decoded_code_sha256": "c7eaa2fe79f860130d5657a1b377a8751c14f9a95ddabc1dff81500ef75bb65e"
+        },
+        {
+          "path": "PYZ.pyz/PIL.SpiderImagePlugin",
+          "module": "PIL.SpiderImagePlugin",
+          "component": "PIL",
+          "decoded_code_sha256": "75291e09450bea24b9519e946444c98623c89ffef4829977dab9cda6b7f36590"
+        },
+        {
+          "path": "PYZ.pyz/PIL.SunImagePlugin",
+          "module": "PIL.SunImagePlugin",
+          "component": "PIL",
+          "decoded_code_sha256": "0be56b53414f69a38b53fe58694af5c0338131ab07f184ac0d7bdadf8b97396b"
+        },
+        {
+          "path": "PYZ.pyz/PIL.TgaImagePlugin",
+          "module": "PIL.TgaImagePlugin",
+          "component": "PIL",
+          "decoded_code_sha256": "be04ac05f7af3c72cb92efa9bbb3455c3a2bf24d126659c5de33afdfbc8c06a3"
+        },
+        {
+          "path": "PYZ.pyz/PIL.TiffImagePlugin",
+          "module": "PIL.TiffImagePlugin",
+          "component": "PIL",
+          "decoded_code_sha256": "29ccf5472b3948713a15e589d49e59f31e1c5c4b5b67549cbf964d3399b2bdf5"
+        },
+        {
+          "path": "PYZ.pyz/PIL.TiffTags",
+          "module": "PIL.TiffTags",
+          "component": "PIL",
+          "decoded_code_sha256": "3ce609961e4c39da4dba3ed6a6cc144ff2d7ebafd8c493940e327032ec43dc0b"
+        },
+        {
+          "path": "PYZ.pyz/PIL.WebPImagePlugin",
+          "module": "PIL.WebPImagePlugin",
+          "component": "PIL",
+          "decoded_code_sha256": "41962283c0e9b773450add9ff63dbded3a70ab18b5cd316585f306e0a31b8100"
+        },
+        {
+          "path": "PYZ.pyz/PIL.WmfImagePlugin",
+          "module": "PIL.WmfImagePlugin",
+          "component": "PIL",
+          "decoded_code_sha256": "3f46cbe1a7b699b7864b049386c3fd0323a39bab49da8d9a5423cd43fff318e7"
+        },
+        {
+          "path": "PYZ.pyz/PIL.XVThumbImagePlugin",
+          "module": "PIL.XVThumbImagePlugin",
+          "component": "PIL",
+          "decoded_code_sha256": "45b1f65a6030c15e6534810104782242ec64d282eb2f3e05af0660bd381f2494"
+        },
+        {
+          "path": "PYZ.pyz/PIL.XbmImagePlugin",
+          "module": "PIL.XbmImagePlugin",
+          "component": "PIL",
+          "decoded_code_sha256": "574a9320652e144bdba2774955645236bac26ea269e6abdcf24b39b184f36202"
+        },
+        {
+          "path": "PYZ.pyz/PIL.XpmImagePlugin",
+          "module": "PIL.XpmImagePlugin",
+          "component": "PIL",
+          "decoded_code_sha256": "5172fa2a8eead9a23472d89ca119a61fa16170eaca0f125811095f45e3b63916"
+        },
+        {
+          "path": "PYZ.pyz/PIL._binary",
+          "module": "PIL._binary",
+          "component": "PIL",
+          "decoded_code_sha256": "143c9267fb0365a9b4d6d11e968c4655ad1f33fe8797303e5758ae993bfef460"
+        },
+        {
+          "path": "PYZ.pyz/PIL._deprecate",
+          "module": "PIL._deprecate",
+          "component": "PIL",
+          "decoded_code_sha256": "6083288d4b6838b6b4bae0d81e90767f042543ce565981aabbe4af5d7fbca3e0"
+        },
+        {
+          "path": "PYZ.pyz/PIL._typing",
+          "module": "PIL._typing",
+          "component": "PIL",
+          "decoded_code_sha256": "f1c12bcb8356fd99e2d74c6006d3a84a7a59e68259c05538a80fad5b28ebcc74"
+        },
+        {
+          "path": "PYZ.pyz/PIL._util",
+          "module": "PIL._util",
+          "component": "PIL",
+          "decoded_code_sha256": "2944f7057e0da34c2b8d9fb5799b1d23644dfd02e124a4395004b81a7513c608"
+        },
+        {
+          "path": "PYZ.pyz/PIL._version",
+          "module": "PIL._version",
+          "component": "PIL",
+          "decoded_code_sha256": "272f419ee7b85a25269aa3b2f5a01ced1c42735ecf70b4398a92e3e3ee62d2fc"
+        },
+        {
+          "path": "PYZ.pyz/PIL.features",
+          "module": "PIL.features",
+          "component": "PIL",
+          "decoded_code_sha256": "ea920f8ed9df170bf8e8c9f1dba0a6daec230372fe4797a6fe19034e75fb402e"
+        },
+        {
+          "path": "PYZ.pyz/__future__",
+          "module": "__future__",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "0170c8cde8826e23523d128934edb505fd51d46696ef4c5e0d85887ecb152f94"
+        },
+        {
+          "path": "PYZ.pyz/_aix_support",
+          "module": "_aix_support",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "35cd69b70551b544e0023902f4207546b457a3aa765c58b43b9dc6a1b9717519"
+        },
+        {
+          "path": "PYZ.pyz/_bootstrap",
+          "module": "_bootstrap",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "beba11d15d217aa9b60a8945c60f01b9baaa1a5aafac553a8b008f09e00519e9"
+        },
+        {
+          "path": "PYZ.pyz/_colorize",
+          "module": "_colorize",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "96fa2c0223d13004b8e1ab51eeb8b322e8ded34aa1aa95c88914864b74ac9326"
+        },
+        {
+          "path": "PYZ.pyz/_compat_pickle",
+          "module": "_compat_pickle",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "d7e6378f43c6e6552b1c1f56f84817777b278dad5ed369c5f6324f318144f5bc"
+        },
+        {
+          "path": "PYZ.pyz/_compression",
+          "module": "_compression",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "ff7a3c8e793c628f7677955bc85a92832ea585e9ced8cc8cc58e957c12fd8736"
+        },
+        {
+          "path": "PYZ.pyz/_opcode_metadata",
+          "module": "_opcode_metadata",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "4a22c4b04bab0aabca561bdaac8faadccde4f0efde39cce7fb3cf98766df33a7"
+        },
+        {
+          "path": "PYZ.pyz/_py_abc",
+          "module": "_py_abc",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "df0e5d92f62bd0f48c80a492ff3680302ec4f05f5886f0b6fc358f8f2b89b397"
+        },
+        {
+          "path": "PYZ.pyz/_pydatetime",
+          "module": "_pydatetime",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "8125dbdcf67011e902443d4c7539ddd9e58b59ac11283aa26092861f23930d0b"
+        },
+        {
+          "path": "PYZ.pyz/_pydecimal",
+          "module": "_pydecimal",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "37fbb6c37531b0cf399ae99d5c8854e4a27718dd8934126ed25e2a30f0897120"
+        },
+        {
+          "path": "PYZ.pyz/_strptime",
+          "module": "_strptime",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "0d423cd8f132b00a3566d8e07954cc0d730d0a0a9095c69f91b228bef7329268"
+        },
+        {
+          "path": "PYZ.pyz/_threading_local",
+          "module": "_threading_local",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "8a0295b99355d0f8c83cbdd9d305309775bf6f5eb2b97c458d60f45d3a0be1c1"
+        },
+        {
+          "path": "PYZ.pyz/argparse",
+          "module": "argparse",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "11329c2b53866c8394dc52469cd3051e5efe05ffb515910f7bdaff148265da99"
+        },
+        {
+          "path": "PYZ.pyz/ast",
+          "module": "ast",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "94e42b55b0496f7f789cbe2635191e5d7cfb3147879ff50bc14f2cafe95f6377"
+        },
+        {
+          "path": "PYZ.pyz/base64",
+          "module": "base64",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "5aab39fe225ca2db74db5df71f1b6ffe3ebfb34cbbd5b9ae9cf4b64b0280d48e"
+        },
+        {
+          "path": "PYZ.pyz/bisect",
+          "module": "bisect",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "ce3946aeaf67b7a32185992b0b845dbb171e1f6866a3024f38926df4f6d3c495"
+        },
+        {
+          "path": "PYZ.pyz/bz2",
+          "module": "bz2",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "90153af1de9f9a757bf228ab1162c76c6597a4a4f691418d241360b54d9e626b"
+        },
+        {
+          "path": "PYZ.pyz/calendar",
+          "module": "calendar",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "08df14328b7632c391fcc0a55f0bf551acd240646a311a3183b8761b51a0e8f9"
+        },
+        {
+          "path": "PYZ.pyz/colorsys",
+          "module": "colorsys",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "f4506c03622fc8f561eeaac7873da35709620d3c9a9fea7f8dcb6f0a994d133e"
+        },
+        {
+          "path": "PYZ.pyz/contextlib",
+          "module": "contextlib",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "763d93cda35dd5592c81255d0a88aff0a75422b534d2ffa636646076bc40d7d3"
+        },
+        {
+          "path": "PYZ.pyz/contextvars",
+          "module": "contextvars",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "fa8fb0b77eaa898276b847b76111fb98e8678b83909487843e20fd7c03139128"
+        },
+        {
+          "path": "PYZ.pyz/copy",
+          "module": "copy",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "7dd55e3ce45f952a9481cfed116c52838e48039b7928e3bff268330d000f4a6b"
+        },
+        {
+          "path": "PYZ.pyz/csv",
+          "module": "csv",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "b728f2f29ef9050cd0820d867a0279ed2ddce8ef1207c743ec28825d96f8dfa4"
+        },
+        {
+          "path": "PYZ.pyz/ctypes",
+          "module": "ctypes",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "b1219fea98a81dd661265c68d3a65e99434fd67a7aded78ca95ea2cdadb2f06a"
+        },
+        {
+          "path": "PYZ.pyz/ctypes._aix",
+          "module": "ctypes._aix",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "a37b96959ef6eada8dbaedc1ac44431126f55e446e1c8434b8939215e2022287"
+        },
+        {
+          "path": "PYZ.pyz/ctypes._endian",
+          "module": "ctypes._endian",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "9b0f148aab7484b2c1b2e0359fd6b23f7476f80edd577e3460173df590ef5346"
+        },
+        {
+          "path": "PYZ.pyz/ctypes.macholib",
+          "module": "ctypes.macholib",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "12c275742f28edc22492f8af1bfa90c7326e516b7d3fb066bc2e72cab159ec71"
+        },
+        {
+          "path": "PYZ.pyz/ctypes.macholib.dyld",
+          "module": "ctypes.macholib.dyld",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "8840cdfb8de3e09e41050b6e91d5c29e936999f72e90ecdfaffb13deb5318a29"
+        },
+        {
+          "path": "PYZ.pyz/ctypes.macholib.dylib",
+          "module": "ctypes.macholib.dylib",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "62be6969583083e13e1de7739582527ed0d352bd6c95d004c9e537dac330645e"
+        },
+        {
+          "path": "PYZ.pyz/ctypes.macholib.framework",
+          "module": "ctypes.macholib.framework",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "315058678e32f110fef107f25d221befb4a6fa98324bf37876d580f0d2a0c9d2"
+        },
+        {
+          "path": "PYZ.pyz/ctypes.util",
+          "module": "ctypes.util",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "0d6c42a3f0d8d00d2f836743a8514972cd8308c75ca4af4c7a1f54a24b3324d8"
+        },
+        {
+          "path": "PYZ.pyz/ctypes.wintypes",
+          "module": "ctypes.wintypes",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "76e4c7fef701b9af8911a632166dff568f117b87239eea076069a00614827255"
+        },
+        {
+          "path": "PYZ.pyz/dataclasses",
+          "module": "dataclasses",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "11195dd2914becfa9fed83c0cdf577747db32c7ebfea13865bc40b789604d4ca"
+        },
+        {
+          "path": "PYZ.pyz/datetime",
+          "module": "datetime",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "6cf727f15d93925bb5c0d6a1454bf2be4b9d7ffcc1c4c1d187ab7ba3ea880c32"
+        },
+        {
+          "path": "PYZ.pyz/decimal",
+          "module": "decimal",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "0cd9c90eb55141d29284570a0218be61bfdae325c1ee43d71e0c0636fe11ab64"
+        },
+        {
+          "path": "PYZ.pyz/dis",
+          "module": "dis",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "725e3384caf9706aa0c10ca8ec399ca7f43ce0ab49f4493dc4994311219448b7"
+        },
+        {
+          "path": "PYZ.pyz/email",
+          "module": "email",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "e1656e59fcc9c57ec913148c64b4afa871597155fe070955bbd662adf6d38663"
+        },
+        {
+          "path": "PYZ.pyz/email._encoded_words",
+          "module": "email._encoded_words",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "09d08fad89a8b76303f829f52b88eb21282111a63b8b1a27c51192c69b57d3be"
+        },
+        {
+          "path": "PYZ.pyz/email._header_value_parser",
+          "module": "email._header_value_parser",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "d83c44fd6290a5a27b64c0713492ac459136e58f7356f531bb9627ab6e6af0ac"
+        },
+        {
+          "path": "PYZ.pyz/email._parseaddr",
+          "module": "email._parseaddr",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "3641691ea3057039108bc3de037efc69709fb7425edd1f509878823bf2194076"
+        },
+        {
+          "path": "PYZ.pyz/email._policybase",
+          "module": "email._policybase",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "211f78aa5a6675e5d65f1ffb11924faa5bbf21cc4a3530f613229bedd9fcf769"
+        },
+        {
+          "path": "PYZ.pyz/email.base64mime",
+          "module": "email.base64mime",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "d2058dba82f11bf854a8127baff75dcfa3c621affb126d33968b76e3bb7b5402"
+        },
+        {
+          "path": "PYZ.pyz/email.charset",
+          "module": "email.charset",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "731e83c0bde35c7fb7fbac71c9feecc15b3a0693277042600c09950ef433af1a"
+        },
+        {
+          "path": "PYZ.pyz/email.contentmanager",
+          "module": "email.contentmanager",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "f4c6d1c901c52a7b7b72fa3b87b5becce0e4f1fb44a05efb4ce9b862d28a3ffb"
+        },
+        {
+          "path": "PYZ.pyz/email.encoders",
+          "module": "email.encoders",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "027db46d9368251ad070d7746e9963e8f7e09d9922c1caa9f0aa1584dee13128"
+        },
+        {
+          "path": "PYZ.pyz/email.errors",
+          "module": "email.errors",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "507b3a03458a3e2d220b4d9a06cba2b542a4d7b8651bb3186d20f9f0fd3ddcaf"
+        },
+        {
+          "path": "PYZ.pyz/email.feedparser",
+          "module": "email.feedparser",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "a69f27bee55d142c17aafcfeefa66e67ee8cbd6817815a5622f18f86d4399543"
+        },
+        {
+          "path": "PYZ.pyz/email.generator",
+          "module": "email.generator",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "621f4a1bf846408279e8298c4f72cc9778c309f2c7ebaed8cd4847f566ecc097"
+        },
+        {
+          "path": "PYZ.pyz/email.header",
+          "module": "email.header",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "8fcdf9e54acca2e51b635a7ca0be83dbf656856d48038b942cb9a04d98f8ccae"
+        },
+        {
+          "path": "PYZ.pyz/email.headerregistry",
+          "module": "email.headerregistry",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "60547d6ff41b288cdfb99cc742e0fb5816aaeb30d4278f403eefbd8e85f9cc34"
+        },
+        {
+          "path": "PYZ.pyz/email.iterators",
+          "module": "email.iterators",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "9afa3a62438054304352ab239a3781bacde825aa75f99dfa4bc24aa6960675b6"
+        },
+        {
+          "path": "PYZ.pyz/email.message",
+          "module": "email.message",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "e52038a59c2937347ae79e452551ecfbc94ecd243cc56ca0022038bf23adb4b4"
+        },
+        {
+          "path": "PYZ.pyz/email.parser",
+          "module": "email.parser",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "7c14017d788399333228b506c2869bfa5c2c8107e51d93d41e4a0e42077023e6"
+        },
+        {
+          "path": "PYZ.pyz/email.policy",
+          "module": "email.policy",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "13769180ca2bd9b89a8fe1d6c88f6684630266d3d43e4d404988374e767e841b"
+        },
+        {
+          "path": "PYZ.pyz/email.quoprimime",
+          "module": "email.quoprimime",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "892275ee60c21465f657a5f294ea826b1653f40405d98a799b13795836382ffc"
+        },
+        {
+          "path": "PYZ.pyz/email.utils",
+          "module": "email.utils",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "ddabeb6bb3e11d166159a3088c1bd0d07d92178d8846e8c86e1e7b9551a338b5"
+        },
+        {
+          "path": "PYZ.pyz/entrypoints",
+          "module": "entrypoints",
+          "component": "NutCase",
+          "decoded_code_sha256": "46f9707968302615fd5eafe46dec0a8e2b821639dca95dde9c894c31683b76c3"
+        },
+        {
+          "path": "PYZ.pyz/entrypoints.nutcase_worker",
+          "module": "entrypoints.nutcase_worker",
+          "component": "NutCase",
+          "decoded_code_sha256": "87d0b03586e5b936dbb022e4f47918e0780cfaae9d7d2c89f40edb633b07ca33"
+        },
+        {
+          "path": "PYZ.pyz/fastener_analysis",
+          "module": "fastener_analysis",
+          "component": "NutCase",
+          "decoded_code_sha256": "288563465f1f692bb35f40963fef3456ccafb9d40f7fe58bb4beb3a0fe1421d3"
+        },
+        {
+          "path": "PYZ.pyz/fastener_analysis.geometry",
+          "module": "fastener_analysis.geometry",
+          "component": "NutCase",
+          "decoded_code_sha256": "92b2d94aae4fef1d58d6bf37b84f7ffb22b1cb4350c7dfcd6b4fb1f5a4a1eb6f"
+        },
+        {
+          "path": "PYZ.pyz/fastener_analysis.runtime",
+          "module": "fastener_analysis.runtime",
+          "component": "NutCase",
+          "decoded_code_sha256": "bbe3b171434ec5d08c2ab744f21ac3e1c562b752ed999bb8248d3cff1bf8c0ec"
+        },
+        {
+          "path": "PYZ.pyz/fastener_drawing",
+          "module": "fastener_drawing",
+          "component": "NutCase",
+          "decoded_code_sha256": "d7b7e0d41c3ba2b3c8782ad28b40d5f7f1da94c2e4228d586c736f6d8a7ac7f8"
+        },
+        {
+          "path": "PYZ.pyz/fastener_drawing.configuration",
+          "module": "fastener_drawing.configuration",
+          "component": "NutCase",
+          "decoded_code_sha256": "a3183a9169fb80e2e968d652eb40f624ca38f082e0a9f86ce91aa4656a090dce"
+        },
+        {
+          "path": "PYZ.pyz/fastener_drawing.layout",
+          "module": "fastener_drawing.layout",
+          "component": "NutCase",
+          "decoded_code_sha256": "94c2ffa3e2b38a51506cba0af82d80840e5dce0dfa8939c6a2b913200307c374"
+        },
+        {
+          "path": "PYZ.pyz/fastener_drawing.pdf_compatibility",
+          "module": "fastener_drawing.pdf_compatibility",
+          "component": "NutCase",
+          "decoded_code_sha256": "d68f3a9f15f3803c35105fe88b0e2aaf5deb86f1f5a69541ef435b1125d12e19"
+        },
+        {
+          "path": "PYZ.pyz/fastener_drawing.pdf_verification",
+          "module": "fastener_drawing.pdf_verification",
+          "component": "NutCase",
+          "decoded_code_sha256": "3fc8471c8118f1780775a9a15d771108944d87367a53e15db0dbfb5379b161fc"
+        },
+        {
+          "path": "PYZ.pyz/fastener_drawing.pipeline",
+          "module": "fastener_drawing.pipeline",
+          "component": "NutCase",
+          "decoded_code_sha256": "bbee23de10c14f69762e4578b43493de2be7f8c0ebe33c0bc717e4a3aeb1e2bd"
+        },
+        {
+          "path": "PYZ.pyz/fastener_drawing.process_control",
+          "module": "fastener_drawing.process_control",
+          "component": "NutCase",
+          "decoded_code_sha256": "30e2c4b6088c7f67a0eede6fdca3dd55b5d157597ff844a7068eaf22a42fe1b0"
+        },
+        {
+          "path": "PYZ.pyz/fastener_drawing.references",
+          "module": "fastener_drawing.references",
+          "component": "NutCase",
+          "decoded_code_sha256": "d51286fc97061564075e59d1d81fd0b1af0570735c5f8e70ee766c04651e138b"
+        },
+        {
+          "path": "PYZ.pyz/fastener_drawing.review",
+          "module": "fastener_drawing.review",
+          "component": "NutCase",
+          "decoded_code_sha256": "f718dae39f01e746cfef1185920a7734eed3e943d6b637d56c40a05c99656667"
+        },
+        {
+          "path": "PYZ.pyz/fastener_drawing.selection",
+          "module": "fastener_drawing.selection",
+          "component": "NutCase",
+          "decoded_code_sha256": "d960538085cd5901c076292f8f556d16e6c88771eb9b2a376aa1b3f2202b58f9"
+        },
+        {
+          "path": "PYZ.pyz/fastener_gui",
+          "module": "fastener_gui",
+          "component": "NutCase",
+          "decoded_code_sha256": "ed5a3a7a784674c12e6a8c3f6849be0062a618b5de96ab3041b2a77de9228f84"
+        },
+        {
+          "path": "PYZ.pyz/fastener_gui.outputs",
+          "module": "fastener_gui.outputs",
+          "component": "NutCase",
+          "decoded_code_sha256": "de0567aea712d81bcf260b7c2ad7f1dbeff1f119be1955ab845c44f24dfb48d6"
+        },
+        {
+          "path": "PYZ.pyz/fastener_gui.state",
+          "module": "fastener_gui.state",
+          "component": "NutCase",
+          "decoded_code_sha256": "9933c80d95582350f1d6559b101cfc0236161d77bcddc683c7552e6171407168"
+        },
+        {
+          "path": "PYZ.pyz/fastener_paths",
+          "module": "fastener_paths",
+          "component": "NutCase",
+          "decoded_code_sha256": "5e3d8bad751ff5e5fcc2a40c8c6c866d5974c668ac15ac735634ec9ff360bd07"
+        },
+        {
+          "path": "PYZ.pyz/fnmatch",
+          "module": "fnmatch",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "1ea87dcb6e029ee7d90391a18d783818f285a4dc62fae680a8ab677e69b499a5"
+        },
+        {
+          "path": "PYZ.pyz/fractions",
+          "module": "fractions",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "efec45e24bf49f69338f17a055303aba6810f85c1c053a935e30ec8daee1ce9a"
+        },
+        {
+          "path": "PYZ.pyz/ftplib",
+          "module": "ftplib",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "4c11ba57ab6bb95ebba8ab9daa98c964ee43c16595f74dec2d702a4d4d7eeae1"
+        },
+        {
+          "path": "PYZ.pyz/getopt",
+          "module": "getopt",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "de5dc911e5963a429f56c5dbc4c524801811d19236899946e521bb8156a7db6c"
+        },
+        {
+          "path": "PYZ.pyz/getpass",
+          "module": "getpass",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "55f9ccbe5dfc2c4ee75d35d7becdf352f03a8a81f575534240a7ff24cbb807df"
+        },
+        {
+          "path": "PYZ.pyz/gettext",
+          "module": "gettext",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "b57707ceb2e40505d01c9445f56cd471f57a1658a8bccea27f987149355d501b"
+        },
+        {
+          "path": "PYZ.pyz/glob",
+          "module": "glob",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "c91c86f1e0337a3f299e214aab68b9046a9b02b88c7ae9401c09821c215c24d0"
+        },
+        {
+          "path": "PYZ.pyz/gui_worker",
+          "module": "gui_worker",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "bb1ed7e88b5ce50321ff5044f4f4ccf118639ce849e6de966cec242228c8ea7f"
+        },
+        {
+          "path": "PYZ.pyz/gzip",
+          "module": "gzip",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "3aa1b9396e7aa847c45a90c782a57a128d85717a4a1622a5863814a7df37a374"
+        },
+        {
+          "path": "PYZ.pyz/hashlib",
+          "module": "hashlib",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "e2e5234f3a0048384197e191e0f223f2cf3e65207604668f4287cafe7292345b"
+        },
+        {
+          "path": "PYZ.pyz/hmac",
+          "module": "hmac",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "ef3df186d63b559187af54670fec0c8a93d70811fdc07df91174a23f03cdb108"
+        },
+        {
+          "path": "PYZ.pyz/http",
+          "module": "http",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "6b5719e9626c3de5b9919c75dcdf2d09788cfa606e626e2b96384694074cd114"
+        },
+        {
+          "path": "PYZ.pyz/http.client",
+          "module": "http.client",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "06947321869ee6ee567fca6bc7b327f8e52f8869327f872a7a623dae7eea68dd"
+        },
+        {
+          "path": "PYZ.pyz/http.cookiejar",
+          "module": "http.cookiejar",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "a35d0f3d29eb6fca5ebf8725487ba96ebaa8744cc211d8b8b807849249cccd4e"
+        },
+        {
+          "path": "PYZ.pyz/importlib",
+          "module": "importlib",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "ac1210bb2c005d7de31317f74c0d19e3a0f9b875c60724a5a2370543add5d503"
+        },
+        {
+          "path": "PYZ.pyz/importlib._abc",
+          "module": "importlib._abc",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "20cc24e10db9e5cb117f8b1dea4725b49fe971913198ca612b12d58e677cfa38"
+        },
+        {
+          "path": "PYZ.pyz/importlib._bootstrap",
+          "module": "importlib._bootstrap",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "d14c0b44e9d29c4d8d464465c58a186ca7f84ba2520f8e0aab0fd609b854e1b5"
+        },
+        {
+          "path": "PYZ.pyz/importlib._bootstrap_external",
+          "module": "importlib._bootstrap_external",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "ae4617b84095b7c7690e2d34ff9734e3f3ca9da5f4700d87a5fef9d9f81bd9bf"
+        },
+        {
+          "path": "PYZ.pyz/importlib.abc",
+          "module": "importlib.abc",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "51b623e758586bac2fe8322a04d53dd0710d71520edd369bc40ec369f3aec735"
+        },
+        {
+          "path": "PYZ.pyz/importlib.machinery",
+          "module": "importlib.machinery",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "2641812590dfeef4bf43bc4e1d75292e8cd1c44a116d19a99e630e40ffdeb281"
+        },
+        {
+          "path": "PYZ.pyz/importlib.metadata",
+          "module": "importlib.metadata",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "05896f50b7b92dab15983e04a5f25fd5169bad11c81ef09c002dae0bdb1998c8"
+        },
+        {
+          "path": "PYZ.pyz/importlib.metadata._adapters",
+          "module": "importlib.metadata._adapters",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "782438dd5369b6516054429ed6646bc3cbd9360759adc5fa45a3cdec02152a89"
+        },
+        {
+          "path": "PYZ.pyz/importlib.metadata._collections",
+          "module": "importlib.metadata._collections",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "09eea5c450aeb6da1b41e0e3ba050bf7f23e86c1e3f7a79b4169f101273108a0"
+        },
+        {
+          "path": "PYZ.pyz/importlib.metadata._functools",
+          "module": "importlib.metadata._functools",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "5790ad9671570e59c05b85cf4d256af664929eb3ace7f3a74a3a82fec1b070e8"
+        },
+        {
+          "path": "PYZ.pyz/importlib.metadata._itertools",
+          "module": "importlib.metadata._itertools",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "cb5b21bf797aa4d1b22c0a59930aa571c52c3b8a31899cbfab3107404e744a0d"
+        },
+        {
+          "path": "PYZ.pyz/importlib.metadata._meta",
+          "module": "importlib.metadata._meta",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "2a7f3efcd1999f51c33f5446b8e24da832269e068228021d48bf24276017e98d"
+        },
+        {
+          "path": "PYZ.pyz/importlib.metadata._text",
+          "module": "importlib.metadata._text",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "d0d63c6aca49f8e714bae44661ebc16b814acc4b89074f24691ee77b94c9e94d"
+        },
+        {
+          "path": "PYZ.pyz/importlib.readers",
+          "module": "importlib.readers",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "a79c349faab9bc6001e11a47a1d6d2569907a3055ec9f6843bf186808160a388"
+        },
+        {
+          "path": "PYZ.pyz/importlib.resources",
+          "module": "importlib.resources",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "3d381b9acd654c07046404ba62d4ac90f0a6d7510ec3847005d7157619317475"
+        },
+        {
+          "path": "PYZ.pyz/importlib.resources._adapters",
+          "module": "importlib.resources._adapters",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "130809f4f847dea89bf42def54311c3956e1fc1be9e644f0f0da10af47297d9e"
+        },
+        {
+          "path": "PYZ.pyz/importlib.resources._common",
+          "module": "importlib.resources._common",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "b6388b0583cb0ab79afce3cfe3d188e7d076fb809da2edf871a6338a109c28cd"
+        },
+        {
+          "path": "PYZ.pyz/importlib.resources._functional",
+          "module": "importlib.resources._functional",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "0495402e4c9ac7d7705b56bc746abb5e88e472636c70b698b53736a90d25113e"
+        },
+        {
+          "path": "PYZ.pyz/importlib.resources._itertools",
+          "module": "importlib.resources._itertools",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "9a2e2e59bf416c90c17b8015d33a86e7bf19f2f590ede012a44f0e8b49fcb541"
+        },
+        {
+          "path": "PYZ.pyz/importlib.resources.abc",
+          "module": "importlib.resources.abc",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "57e7a7e860768a022f9926c4ad0c627f349b9bd98ad79cca96faff267c6fc2d2"
+        },
+        {
+          "path": "PYZ.pyz/importlib.resources.readers",
+          "module": "importlib.resources.readers",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "fe7993a5b44dc06ab379500fe6aaaac55ab9c641e28f59a7610153fceeb3f9bc"
+        },
+        {
+          "path": "PYZ.pyz/importlib.util",
+          "module": "importlib.util",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "75e3f7294a2bd3b2e93031516b957087876780343ff43bbdfb13392134d3f617"
+        },
+        {
+          "path": "PYZ.pyz/inspect",
+          "module": "inspect",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "6110a0c830f8496254826f67d7547b30316337a36c9a10426dd342f9cbcfc4f7"
+        },
+        {
+          "path": "PYZ.pyz/ipaddress",
+          "module": "ipaddress",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "41d127040a09895b9b2315ba7cdcd25f2a8e03e300a2694d075df6e63b19d4ac"
+        },
+        {
+          "path": "PYZ.pyz/json",
+          "module": "json",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "d05930492ec3ad8ef06d105aba5b1177318d114a616c1bfe595a6ec19b26857a"
+        },
+        {
+          "path": "PYZ.pyz/json.decoder",
+          "module": "json.decoder",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "2a68ffed7f25baaa7fd863cb81068996207e501a9eba6a560d8aeb55666dad0d"
+        },
+        {
+          "path": "PYZ.pyz/json.encoder",
+          "module": "json.encoder",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "9079ddd5f7980d57cbd9e7d670fcdcf2117c72abf4972632daadcfdff239fa28"
+        },
+        {
+          "path": "PYZ.pyz/json.scanner",
+          "module": "json.scanner",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "3b12f3b350bc81a411b811bf97b4a368257a502b265169bf486183cc21b50e16"
+        },
+        {
+          "path": "PYZ.pyz/logging",
+          "module": "logging",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "a1f7cb849440d065072bf4e1acd8ef199ee024b400dd8f81cc5f8d54300d3a17"
+        },
+        {
+          "path": "PYZ.pyz/lzma",
+          "module": "lzma",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "2f6cd20637ad444a453dd247f3d96c7fffea8373efb3c626b9140f165011c0ae"
+        },
+        {
+          "path": "PYZ.pyz/mimetypes",
+          "module": "mimetypes",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "2eb98051129278126de7f52bfe347fd6413c9df0a313141f8ced39f89a02736f"
+        },
+        {
+          "path": "PYZ.pyz/netrc",
+          "module": "netrc",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "8ae27ab4a5f06f2b5a13a5118f0dca661f15245d7a3336287353aafe7067c036"
+        },
+        {
+          "path": "PYZ.pyz/nturl2path",
+          "module": "nturl2path",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "7bdb32b8e8e8e26dd0a7cbbbea8dfd9ea1c06bcf28844968cdf2a056febf1047"
+        },
+        {
+          "path": "PYZ.pyz/numbers",
+          "module": "numbers",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "f2fab431ae044760a411d0d3d209b03e30bedce5ec9b1ec3bb1240512c4cc71f"
+        },
+        {
+          "path": "PYZ.pyz/nutcase_discovery",
+          "module": "nutcase_discovery",
+          "component": "NutCase",
+          "decoded_code_sha256": "26af938b951cbd99041b9dbe0a203e7ee74da2f223166a806cc420c9ab4c9965"
+        },
+        {
+          "path": "PYZ.pyz/nutcase_runtime",
+          "module": "nutcase_runtime",
+          "component": "NutCase",
+          "decoded_code_sha256": "4cd631a4da061a1092e9bc24c350ea220072a5ddce9a17fb20dbd5248945d6ff"
+        },
+        {
+          "path": "PYZ.pyz/opcode",
+          "module": "opcode",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "38011fb6771b2c0e5e0d0ab0b0d5e1cca07c45f0350e66f06789509f5fe8c732"
+        },
+        {
+          "path": "PYZ.pyz/open_system_file",
+          "module": "open_system_file",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "9cf980bf35fd1ac5ef08d14b91c5ee5652f9cd2bb93914951dae4cf596f3bcf8"
+        },
+        {
+          "path": "PYZ.pyz/pathlib",
+          "module": "pathlib",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "499bd742d65f24c71150d9ec8c0c0dd2021a3c2d0776acfa6300942e05e116d6"
+        },
+        {
+          "path": "PYZ.pyz/pathlib._abc",
+          "module": "pathlib._abc",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "ad7d349a92d0656af4774cf08f5db8a6f19787cf69c14a38c9017bb843e212f9"
+        },
+        {
+          "path": "PYZ.pyz/pathlib._local",
+          "module": "pathlib._local",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "1e57dfe8f096345c79a72c630eeda40ad5586998ebca8403cf7982ccd7020e7c"
+        },
+        {
+          "path": "PYZ.pyz/pickle",
+          "module": "pickle",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "633f3a070154f7d0bb397cc7da4d19f6e9ecd192867b869216fb17383d88b799"
+        },
+        {
+          "path": "PYZ.pyz/platform",
+          "module": "platform",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "ccccc3b8eb58fade704a872875e4f99ae518242aee4df06f9146a48f119012ee"
+        },
+        {
+          "path": "PYZ.pyz/pprint",
+          "module": "pprint",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "d48bdc0c7ce928b53bfbac5558a484f28895c1fd8899c060bb00901116fd62b9"
+        },
+        {
+          "path": "PYZ.pyz/py_compile",
+          "module": "py_compile",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "f44342f7a0c275e4ab8ddd0d88e4b6ffd3ddac6d85d588c04a38bde9c4358af7"
+        },
+        {
+          "path": "PYZ.pyz/pypdf",
+          "module": "pypdf",
+          "component": "pypdf",
+          "decoded_code_sha256": "df2c783ddf3bec9a15c12c54fc3bb3f9863e46c658eff86f6c835c6623c25fa8"
+        },
+        {
+          "path": "PYZ.pyz/pypdf._cmap",
+          "module": "pypdf._cmap",
+          "component": "pypdf",
+          "decoded_code_sha256": "04918067478a8dc898f2ea8b33bd60b48ba7924f99a9dc465b3ce4ffe9b43c50"
+        },
+        {
+          "path": "PYZ.pyz/pypdf._codecs",
+          "module": "pypdf._codecs",
+          "component": "pypdf",
+          "decoded_code_sha256": "0c946f3d0ceac62b11a1abcc9004ae4c93d73d079e825d787dbeeecef5711b61"
+        },
+        {
+          "path": "PYZ.pyz/pypdf._codecs._codecs",
+          "module": "pypdf._codecs._codecs",
+          "component": "pypdf",
+          "decoded_code_sha256": "dfb8458f1cdf05594772a97ae9c83e639245e0cba5fcdb31e6b80402c908052f"
+        },
+        {
+          "path": "PYZ.pyz/pypdf._codecs.adobe_glyphs",
+          "module": "pypdf._codecs.adobe_glyphs",
+          "component": "pypdf",
+          "decoded_code_sha256": "181a525ceba9463516ad533e0ae6a57fd86e521d8329c0fd2e3d8a99a04e1448"
+        },
+        {
+          "path": "PYZ.pyz/pypdf._codecs.core_font_metrics",
+          "module": "pypdf._codecs.core_font_metrics",
+          "component": "pypdf",
+          "decoded_code_sha256": "7c2cc2cb5fe229f49a0ddcb77850899ef848dee803ac10f01c60d7ebe44d90b0"
+        },
+        {
+          "path": "PYZ.pyz/pypdf._codecs.pdfdoc",
+          "module": "pypdf._codecs.pdfdoc",
+          "component": "pypdf",
+          "decoded_code_sha256": "74ab95fd77018561820c8030a4ac7a6cc6cc565a75c9dd7f0ac9f20a4667ea18"
+        },
+        {
+          "path": "PYZ.pyz/pypdf._codecs.std",
+          "module": "pypdf._codecs.std",
+          "component": "pypdf",
+          "decoded_code_sha256": "059de995e8023083ff217ae8ebbb6ac4094ba8491372718854d7cb370b579cb6"
+        },
+        {
+          "path": "PYZ.pyz/pypdf._codecs.symbol",
+          "module": "pypdf._codecs.symbol",
+          "component": "pypdf",
+          "decoded_code_sha256": "b981968db0ba7a78d166125916e3ec9b9bbe75673f4150315c217a0524b700b7"
+        },
+        {
+          "path": "PYZ.pyz/pypdf._codecs.zapfding",
+          "module": "pypdf._codecs.zapfding",
+          "component": "pypdf",
+          "decoded_code_sha256": "afd2dbe7b61ea8c98ad2de56969ce4d54c0680f8006fd40708f335a6559fa00b"
+        },
+        {
+          "path": "PYZ.pyz/pypdf._crypt_providers",
+          "module": "pypdf._crypt_providers",
+          "component": "pypdf",
+          "decoded_code_sha256": "32e2d9ab122d4494aa26631d8e8a9440523af9c6e53176e4506e8797fc1af88a"
+        },
+        {
+          "path": "PYZ.pyz/pypdf._crypt_providers._base",
+          "module": "pypdf._crypt_providers._base",
+          "component": "pypdf",
+          "decoded_code_sha256": "545dff65b427c2eac1df228def88d6dca950239bd8c3da269ab6db04db13f2a9"
+        },
+        {
+          "path": "PYZ.pyz/pypdf._crypt_providers._cryptography",
+          "module": "pypdf._crypt_providers._cryptography",
+          "component": "pypdf",
+          "decoded_code_sha256": "650363471e605e6f14827560d341cf5dae55b7887da235ad45c260c25e49760c"
+        },
+        {
+          "path": "PYZ.pyz/pypdf._crypt_providers._fallback",
+          "module": "pypdf._crypt_providers._fallback",
+          "component": "pypdf",
+          "decoded_code_sha256": "11e43d5badb3f78ea22e4f5524dc0af326c4db67aabba23f36ddecbb3ac59623"
+        },
+        {
+          "path": "PYZ.pyz/pypdf._crypt_providers._pycryptodome",
+          "module": "pypdf._crypt_providers._pycryptodome",
+          "component": "pypdf",
+          "decoded_code_sha256": "9349378d2bdae7e6aa31af93e76ece0dfa2348a89c038ae0e29456c27afab347"
+        },
+        {
+          "path": "PYZ.pyz/pypdf._doc_common",
+          "module": "pypdf._doc_common",
+          "component": "pypdf",
+          "decoded_code_sha256": "9408cd348cf5bc5aaab804ded04a16558e11ceda2e7697fdeeda5f2e7b85a961"
+        },
+        {
+          "path": "PYZ.pyz/pypdf._encryption",
+          "module": "pypdf._encryption",
+          "component": "pypdf",
+          "decoded_code_sha256": "9d77d4fb65c4328ee8545dbed9f38cd330e8d82a65749622d5523d03db640714"
+        },
+        {
+          "path": "PYZ.pyz/pypdf._font",
+          "module": "pypdf._font",
+          "component": "pypdf",
+          "decoded_code_sha256": "14c75fce1ed8533bb6cd681a3ae8246e5816afd3eaebc729d907486fe6f77262"
+        },
+        {
+          "path": "PYZ.pyz/pypdf._page",
+          "module": "pypdf._page",
+          "component": "pypdf",
+          "decoded_code_sha256": "add07686c61b0a293d682a79354adf799fdab6238ff25932fcc1741acc2ebb37"
+        },
+        {
+          "path": "PYZ.pyz/pypdf._page_labels",
+          "module": "pypdf._page_labels",
+          "component": "pypdf",
+          "decoded_code_sha256": "96b988823ac9e2a833bfcd6803c88a9a950b9862a6f2c4ea3e175c68613cc92e"
+        },
+        {
+          "path": "PYZ.pyz/pypdf._protocols",
+          "module": "pypdf._protocols",
+          "component": "pypdf",
+          "decoded_code_sha256": "43a305140c45083988b53d36cf17480ae5158a367a3fbd609e425bf8dc84e0e4"
+        },
+        {
+          "path": "PYZ.pyz/pypdf._reader",
+          "module": "pypdf._reader",
+          "component": "pypdf",
+          "decoded_code_sha256": "981bdfa33b6019f927e07751aa21034f011bd6bd337945ba7365766cbe5b76ce"
+        },
+        {
+          "path": "PYZ.pyz/pypdf._text_extraction",
+          "module": "pypdf._text_extraction",
+          "component": "pypdf",
+          "decoded_code_sha256": "167aaee0654a8a2892f3c2841147d02683923f1bc17114f05a9f5269266e98ed"
+        },
+        {
+          "path": "PYZ.pyz/pypdf._text_extraction._layout_mode",
+          "module": "pypdf._text_extraction._layout_mode",
+          "component": "pypdf",
+          "decoded_code_sha256": "45f763b0b27a343d2a7d5d54df7b9f3e1d77070fe952f6f2b85a5d697c613ebd"
+        },
+        {
+          "path": "PYZ.pyz/pypdf._text_extraction._layout_mode._fixed_width_page",
+          "module": "pypdf._text_extraction._layout_mode._fixed_width_page",
+          "component": "pypdf",
+          "decoded_code_sha256": "2fc0533e417340c6893111c2248d796dc1c1a0c84b95743553f097016976deab"
+        },
+        {
+          "path": "PYZ.pyz/pypdf._text_extraction._layout_mode._text_state_manager",
+          "module": "pypdf._text_extraction._layout_mode._text_state_manager",
+          "component": "pypdf",
+          "decoded_code_sha256": "cf4ff65296cdcf1f24258be6b917ab0ef64a1eb04bbddd3800bd5647df77b059"
+        },
+        {
+          "path": "PYZ.pyz/pypdf._text_extraction._layout_mode._text_state_params",
+          "module": "pypdf._text_extraction._layout_mode._text_state_params",
+          "component": "pypdf",
+          "decoded_code_sha256": "3731cbba7c7383005dfd399ec01c5b9afde7a97e0429f1880b3fa459390a4ee5"
+        },
+        {
+          "path": "PYZ.pyz/pypdf._text_extraction._text_extractor",
+          "module": "pypdf._text_extraction._text_extractor",
+          "component": "pypdf",
+          "decoded_code_sha256": "14e47df012b7b5d0273c4043aa50b91d7df7878e34f336d5a23ddf8b2a91eb4a"
+        },
+        {
+          "path": "PYZ.pyz/pypdf._utils",
+          "module": "pypdf._utils",
+          "component": "pypdf",
+          "decoded_code_sha256": "a34e7017676a68345e90ba8644d685f23577fba3728faab43388c0c097c469e2"
+        },
+        {
+          "path": "PYZ.pyz/pypdf._version",
+          "module": "pypdf._version",
+          "component": "pypdf",
+          "decoded_code_sha256": "428308016b4748cd56813fff4ed208a718b0c811322a3eb323e4b5fef61fe040"
+        },
+        {
+          "path": "PYZ.pyz/pypdf._writer",
+          "module": "pypdf._writer",
+          "component": "pypdf",
+          "decoded_code_sha256": "45976173a958f68aa1c2cae0473ec6474ec8f4b1eb43ca6588a0295e9ee1dc8a"
+        },
+        {
+          "path": "PYZ.pyz/pypdf.constants",
+          "module": "pypdf.constants",
+          "component": "pypdf",
+          "decoded_code_sha256": "ec680fe11e5e021f593bdab64c3f248cfebe6a04046dffb5acd3a790c2f07a83"
+        },
+        {
+          "path": "PYZ.pyz/pypdf.errors",
+          "module": "pypdf.errors",
+          "component": "pypdf",
+          "decoded_code_sha256": "bfcc936f09b1a9a79ad9a2efd28258d763685f12ebfcd7d92f02d7fa4d4a5ce7"
+        },
+        {
+          "path": "PYZ.pyz/pypdf.filters",
+          "module": "pypdf.filters",
+          "component": "pypdf",
+          "decoded_code_sha256": "1a7f935fc24d1a3ef66cfad61d23fe52b5ff27b858441f50cf2f35a6b9390c1d"
+        },
+        {
+          "path": "PYZ.pyz/pypdf.generic",
+          "module": "pypdf.generic",
+          "component": "pypdf",
+          "decoded_code_sha256": "4bc9e21bab2a9f460afd27d842222fad385b460a45ac994928d64d69e36ce8ca"
+        },
+        {
+          "path": "PYZ.pyz/pypdf.generic._appearance_stream",
+          "module": "pypdf.generic._appearance_stream",
+          "component": "pypdf",
+          "decoded_code_sha256": "d3334cfd005a909a8d44bc4ede9dcb2be7ebccba0a66eec188e1a92f218c21d9"
+        },
+        {
+          "path": "PYZ.pyz/pypdf.generic._base",
+          "module": "pypdf.generic._base",
+          "component": "pypdf",
+          "decoded_code_sha256": "cf4a8c7d9077d064a224eeb5323b9ce0e52f566a8b0bb3efc7c8377ba16157f7"
+        },
+        {
+          "path": "PYZ.pyz/pypdf.generic._data_structures",
+          "module": "pypdf.generic._data_structures",
+          "component": "pypdf",
+          "decoded_code_sha256": "a99c9a9107f9dc7863c0795ee395845cbee71463baa1ba6aca45242fb99a1130"
+        },
+        {
+          "path": "PYZ.pyz/pypdf.generic._files",
+          "module": "pypdf.generic._files",
+          "component": "pypdf",
+          "decoded_code_sha256": "0a0f7616acc3fb993c6d7544743f4c815f8b43eace2c99b898524d65fd0d770f"
+        },
+        {
+          "path": "PYZ.pyz/pypdf.generic._fit",
+          "module": "pypdf.generic._fit",
+          "component": "pypdf",
+          "decoded_code_sha256": "77bd84dc88308ccc84561464b5cabe3b6c32a4c786944f39ac798135ca3a2ada"
+        },
+        {
+          "path": "PYZ.pyz/pypdf.generic._image_inline",
+          "module": "pypdf.generic._image_inline",
+          "component": "pypdf",
+          "decoded_code_sha256": "8c3fbda7b6e58f4126e7759f21a290d8d0fc5cdc40c592dd690c52a93b865744"
+        },
+        {
+          "path": "PYZ.pyz/pypdf.generic._image_xobject",
+          "module": "pypdf.generic._image_xobject",
+          "component": "pypdf",
+          "decoded_code_sha256": "a2cdc1401f1556c9875c5f13cfb91994806db779cb100217274ef344052d6ed7"
+        },
+        {
+          "path": "PYZ.pyz/pypdf.generic._link",
+          "module": "pypdf.generic._link",
+          "component": "pypdf",
+          "decoded_code_sha256": "f2c4fae85b1c6a3a4b606551461f23933a2a0bbe029fceaaa66b7129c72dce0a"
+        },
+        {
+          "path": "PYZ.pyz/pypdf.generic._outline",
+          "module": "pypdf.generic._outline",
+          "component": "pypdf",
+          "decoded_code_sha256": "12fc3125cc694868e5d1a2580cc74fbc6705e91a503cf01ab35ec5e44507e203"
+        },
+        {
+          "path": "PYZ.pyz/pypdf.generic._rectangle",
+          "module": "pypdf.generic._rectangle",
+          "component": "pypdf",
+          "decoded_code_sha256": "43fed77dc010934577e902a6e6c291389375e1a8974dd0eb75ec4035fa29f560"
+        },
+        {
+          "path": "PYZ.pyz/pypdf.generic._utils",
+          "module": "pypdf.generic._utils",
+          "component": "pypdf",
+          "decoded_code_sha256": "ef86552687cf7b1bd823b3cad1fa9938ac67cf1b384015cd7624ef9388d73d54"
+        },
+        {
+          "path": "PYZ.pyz/pypdf.generic._viewerpref",
+          "module": "pypdf.generic._viewerpref",
+          "component": "pypdf",
+          "decoded_code_sha256": "4c5d7f24e2e482b97066c2233dffb4b74ebedbbdbb462150ced75d95612d1914"
+        },
+        {
+          "path": "PYZ.pyz/pypdf.pagerange",
+          "module": "pypdf.pagerange",
+          "component": "pypdf",
+          "decoded_code_sha256": "fc24ea027c6c323172cec9dbd54ccb366132f6ee2e3532600f6cca1c5bdf8f17"
+        },
+        {
+          "path": "PYZ.pyz/pypdf.papersizes",
+          "module": "pypdf.papersizes",
+          "component": "pypdf",
+          "decoded_code_sha256": "ee890e04acf322d22c41b7263f8c1efa9e7765e30d048f9494024a3a41b78321"
+        },
+        {
+          "path": "PYZ.pyz/pypdf.types",
+          "module": "pypdf.types",
+          "component": "pypdf",
+          "decoded_code_sha256": "9f564c30aba7e4f7f939e308e9561aad6b292ae01d28d135dfe1855d2abe570b"
+        },
+        {
+          "path": "PYZ.pyz/pypdf.xmp",
+          "module": "pypdf.xmp",
+          "component": "pypdf",
+          "decoded_code_sha256": "b8b77aea5f86a62af5e5e0d9528513c95b4eec740e8f6a9f40dfb9a69c89f65d"
+        },
+        {
+          "path": "PYZ.pyz/pypdfium2",
+          "module": "pypdfium2",
+          "component": "pypdfium2",
+          "decoded_code_sha256": "d58fe5c79fcd9f73e94b55a181683d8ee6f340ee567d33f4dacaec808cbf1f8f"
+        },
+        {
+          "path": "PYZ.pyz/pypdfium2._helpers",
+          "module": "pypdfium2._helpers",
+          "component": "pypdfium2",
+          "decoded_code_sha256": "b6dd83695958a038c23f961d6208c3f89a4eacbc3cab658bc6fee801d8c48bd2"
+        },
+        {
+          "path": "PYZ.pyz/pypdfium2._helpers.attachment",
+          "module": "pypdfium2._helpers.attachment",
+          "component": "pypdfium2",
+          "decoded_code_sha256": "a3d3db9df2fc12eaabb38b31a8eaa9e1cffc4986cbc3153a64c1f4fc72bf0127"
+        },
+        {
+          "path": "PYZ.pyz/pypdfium2._helpers.bitmap",
+          "module": "pypdfium2._helpers.bitmap",
+          "component": "pypdfium2",
+          "decoded_code_sha256": "5a42defb122e1729c2fb16c0813bd4de11cee33cc878057c3e8aaaefe8f2e9cf"
+        },
+        {
+          "path": "PYZ.pyz/pypdfium2._helpers.document",
+          "module": "pypdfium2._helpers.document",
+          "component": "pypdfium2",
+          "decoded_code_sha256": "6d4752296302909152ece52cbfc64786182c704f542b8f98ecf1e5a831cc0edf"
+        },
+        {
+          "path": "PYZ.pyz/pypdfium2._helpers.matrix",
+          "module": "pypdfium2._helpers.matrix",
+          "component": "pypdfium2",
+          "decoded_code_sha256": "21b6e4efb8192670dfca3075526f241b0c8a1453f1b58723750cc9607330b6b4"
+        },
+        {
+          "path": "PYZ.pyz/pypdfium2._helpers.misc",
+          "module": "pypdfium2._helpers.misc",
+          "component": "pypdfium2",
+          "decoded_code_sha256": "edb196709b56a08ae2bcf1f0888a94180153489323a4e0a8d2f40cd37c2f4888"
+        },
+        {
+          "path": "PYZ.pyz/pypdfium2._helpers.page",
+          "module": "pypdfium2._helpers.page",
+          "component": "pypdfium2",
+          "decoded_code_sha256": "8ddf83e05d2a498efbe45fe3bc6a439e3594a43711032f2680fd651523f2b9ac"
+        },
+        {
+          "path": "PYZ.pyz/pypdfium2._helpers.pageobjects",
+          "module": "pypdfium2._helpers.pageobjects",
+          "component": "pypdfium2",
+          "decoded_code_sha256": "393be333e63c21e461d915f2839e6d30e2079ce178b3a2656510d28ae71edf58"
+        },
+        {
+          "path": "PYZ.pyz/pypdfium2._helpers.sysfontinfo",
+          "module": "pypdfium2._helpers.sysfontinfo",
+          "component": "pypdfium2",
+          "decoded_code_sha256": "af04cdeb487f72416a5feb160fbb5d58d3f0dd75f571dd6e8a0e0d103bbf2692"
+        },
+        {
+          "path": "PYZ.pyz/pypdfium2._helpers.textpage",
+          "module": "pypdfium2._helpers.textpage",
+          "component": "pypdfium2",
+          "decoded_code_sha256": "a60ecc61591faa015466c951d80828dbcc601c673855a0dedc6c9df0ad72b6f6"
+        },
+        {
+          "path": "PYZ.pyz/pypdfium2._helpers.unsupported",
+          "module": "pypdfium2._helpers.unsupported",
+          "component": "pypdfium2",
+          "decoded_code_sha256": "98eec2682ef1d8eb0156222a41ce3c129738d5bc908e901ef0cf001704857ed1"
+        },
+        {
+          "path": "PYZ.pyz/pypdfium2._lazy",
+          "module": "pypdfium2._lazy",
+          "component": "pypdfium2",
+          "decoded_code_sha256": "875388a861fd6ccb66a223684474dc24eb77133ebcba0b64872b2ba757267429"
+        },
+        {
+          "path": "PYZ.pyz/pypdfium2._library_scope",
+          "module": "pypdfium2._library_scope",
+          "component": "pypdfium2",
+          "decoded_code_sha256": "05de6c605f228187a45e0218075d884cc230b2e84c25919ceb731781e236f62c"
+        },
+        {
+          "path": "PYZ.pyz/pypdfium2.internal",
+          "module": "pypdfium2.internal",
+          "component": "pypdfium2",
+          "decoded_code_sha256": "4d91c42725510f18789023db9a97302bf31bb22f038e01fae18da421fa26f8b1"
+        },
+        {
+          "path": "PYZ.pyz/pypdfium2.internal.bases",
+          "module": "pypdfium2.internal.bases",
+          "component": "pypdfium2",
+          "decoded_code_sha256": "8f476c2fe892c75f3a2c9597a426f32875dfcce85584b88188d9da57ae04dee4"
+        },
+        {
+          "path": "PYZ.pyz/pypdfium2.internal.consts",
+          "module": "pypdfium2.internal.consts",
+          "component": "pypdfium2",
+          "decoded_code_sha256": "7295e76ca313203d3be14f208d787f3139d02ea65ccbcbda0dc8b279a811d60c"
+        },
+        {
+          "path": "PYZ.pyz/pypdfium2.internal.utils",
+          "module": "pypdfium2.internal.utils",
+          "component": "pypdfium2",
+          "decoded_code_sha256": "5180ab64a7cd72989ace874aa9d92014903d7f2f0d9ce1c32b27d6bd63315587"
+        },
+        {
+          "path": "PYZ.pyz/pypdfium2.raw",
+          "module": "pypdfium2.raw",
+          "component": "pypdfium2",
+          "decoded_code_sha256": "e678148e9eb0d04c4d6b90b5466d933c03ce27ea9e751c9db80147c487a5258b"
+        },
+        {
+          "path": "PYZ.pyz/pypdfium2.version",
+          "module": "pypdfium2.version",
+          "component": "pypdfium2",
+          "decoded_code_sha256": "e7d2c755015937700d7fa4c1302396a4051163829afc8d57c01a856bc8cc08e0"
+        },
+        {
+          "path": "PYZ.pyz/pypdfium2_cfg",
+          "module": "pypdfium2_cfg",
+          "component": "pypdfium2_cfg",
+          "decoded_code_sha256": "e62b129910210141afc0828e96d6dd138c842aa0292eb702f8e14b273bd1cedf"
+        },
+        {
+          "path": "PYZ.pyz/pypdfium2_cfg._shared",
+          "module": "pypdfium2_cfg._shared",
+          "component": "pypdfium2_cfg",
+          "decoded_code_sha256": "1aff002dd33c09ec10e962888a9cbf29e05685bd8ece8888a29990a1b4abb320"
+        },
+        {
+          "path": "PYZ.pyz/pypdfium2_cfg._shared.stl",
+          "module": "pypdfium2_cfg._shared.stl",
+          "component": "pypdfium2_cfg",
+          "decoded_code_sha256": "55762a380f2d59b44a2263d47b48da2b991b06afe343025aca0d63f04abd38bf"
+        },
+        {
+          "path": "PYZ.pyz/pypdfium2_cfg.stl",
+          "module": "pypdfium2_cfg.stl",
+          "component": "pypdfium2_cfg",
+          "decoded_code_sha256": "394d0e86ca897d5da8829b6a845e7e86eccf3aec6df207ca132b0ece2349223c"
+        },
+        {
+          "path": "PYZ.pyz/pypdfium2_raw",
+          "module": "pypdfium2_raw",
+          "component": "pypdfium2_raw",
+          "decoded_code_sha256": "8c1a90fa99691412bb572a301775eff7b8b7d968db3fbf1d423199d4c43db840"
+        },
+        {
+          "path": "PYZ.pyz/pypdfium2_raw.bindings",
+          "module": "pypdfium2_raw.bindings",
+          "component": "pypdfium2_raw",
+          "decoded_code_sha256": "434c2e9a55d1a4544ce63710ca640fb97299f28d9c8c757ae49fa4e4a9b5ec03"
+        },
+        {
+          "path": "PYZ.pyz/pypdfium2_raw.version",
+          "module": "pypdfium2_raw.version",
+          "component": "pypdfium2_raw",
+          "decoded_code_sha256": "3b45b6e1353ace99ad5699380418463854c700f5091e01cfe2d88f700d39eb31"
+        },
+        {
+          "path": "PYZ.pyz/quopri",
+          "module": "quopri",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "6982f31449bd139a00388801990c812258197151b448c10c7dd03439602400c3"
+        },
+        {
+          "path": "PYZ.pyz/random",
+          "module": "random",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "e8cbd297b6b4a590146e3db354994128fac105b450793746c3680c72137adf81"
+        },
+        {
+          "path": "PYZ.pyz/secrets",
+          "module": "secrets",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "8fa24702ee8799a678a4d397cf0d2ca6fbc62e3fc9a76e941749177feeed5b5a"
+        },
+        {
+          "path": "PYZ.pyz/selectors",
+          "module": "selectors",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "b35ad965a7342c107916526965c18eb0312b8461ce7a26cd0e01f5567d8b1dd9"
+        },
+        {
+          "path": "PYZ.pyz/shlex",
+          "module": "shlex",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "08b9177dd1d8a0aa5aab91bd79e6607f5b78e4fef3a3ea3e6319dc5021a17291"
+        },
+        {
+          "path": "PYZ.pyz/shutil",
+          "module": "shutil",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "7631c0d28998740ce0b51edb2b56925536ddf2ee7a1002fb03e41db582096a05"
+        },
+        {
+          "path": "PYZ.pyz/signal",
+          "module": "signal",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "e58f798ef5cb1004773cc3b6f876596216ddbb77a5f5d966d6195f1bf5b1851c"
+        },
+        {
+          "path": "PYZ.pyz/socket",
+          "module": "socket",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "d42a2a6341bcb00959652904227601e19fd2386cf11ea7ec3436e31755cc19cd"
+        },
+        {
+          "path": "PYZ.pyz/ssl",
+          "module": "ssl",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "d9aff7440113edc8bacbd0842b436d15ede432492161ac97e11a6bec283898c0"
+        },
+        {
+          "path": "PYZ.pyz/statistics",
+          "module": "statistics",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "8aa63bfb16368f090b0519093db9726dea16c05b5a107b9ad652350ae7520f48"
+        },
+        {
+          "path": "PYZ.pyz/string",
+          "module": "string",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "8f796005bf8c229454129d8ce1bf0f7055b8d82431c29f4e349c66b3623c430f"
+        },
+        {
+          "path": "PYZ.pyz/stringprep",
+          "module": "stringprep",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "1952d0041104d1955e236fa40a29c3cca0cf1d136c536e87f7d029409ab00fd7"
+        },
+        {
+          "path": "PYZ.pyz/subprocess",
+          "module": "subprocess",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "1b31a0b860116ade23acf4c53650281381fc24cf0a1ad8d968e8401d119783d0"
+        },
+        {
+          "path": "PYZ.pyz/sysconfig",
+          "module": "sysconfig",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "be99486b4a384166edcc321d72623d1b4b54bced3f53c6c643820aceec5063cf"
+        },
+        {
+          "path": "PYZ.pyz/tarfile",
+          "module": "tarfile",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "4a5316cb440355bfa2432ea87603084f37e941dcde17f29a4fc70e5f4d20073a"
+        },
+        {
+          "path": "PYZ.pyz/tempfile",
+          "module": "tempfile",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "8c49ab591d4292ba6f7dc7b707dbef57128bcaf434eb91f654cc8d85a1ac1580"
+        },
+        {
+          "path": "PYZ.pyz/textwrap",
+          "module": "textwrap",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "3e80d33304c4f3dc2203de0f3fdd9293284ec8e0469c9133f0e4f727e267895f"
+        },
+        {
+          "path": "PYZ.pyz/threading",
+          "module": "threading",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "21195f292ba83d9e7911e07cad8a911ebb3f87a88890bd08f66eab5025922b5f"
+        },
+        {
+          "path": "PYZ.pyz/token",
+          "module": "token",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "57085b89f84f0b72fd9376cabacf89909d46d389fd2ae4c60044106e523bda7f"
+        },
+        {
+          "path": "PYZ.pyz/tokenize",
+          "module": "tokenize",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "309315ba7435a8115392114b31f7bf83561fd73803286ee210ef11bd255f0cf1"
+        },
+        {
+          "path": "PYZ.pyz/tracemalloc",
+          "module": "tracemalloc",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "f213b433f7071c05e0e1b132aa25b26fe15f3181a7fa667bb414ddc0b670ae0a"
+        },
+        {
+          "path": "PYZ.pyz/typing",
+          "module": "typing",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "f85a0920a48c7912950ae40d8bc3f7d583f1e0c754452f99f74ead8cae6790ef"
+        },
+        {
+          "path": "PYZ.pyz/urllib",
+          "module": "urllib",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "bbf2d4c6a62b60d2b60ecd7e90f0ba64494ebde5d7824c9767f84a154a3aec8d"
+        },
+        {
+          "path": "PYZ.pyz/urllib.error",
+          "module": "urllib.error",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "ecacbbeed0551feb633ce10cee46023e85383d7624b06d680a1c21a57a32b004"
+        },
+        {
+          "path": "PYZ.pyz/urllib.parse",
+          "module": "urllib.parse",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "2a3817561e4bb105469632fece7ac27fb31677c72775eeeb55f121cdfd573898"
+        },
+        {
+          "path": "PYZ.pyz/urllib.request",
+          "module": "urllib.request",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "9663d93e2a9a529264f6eeb0f0f935b128639b218c2a9309fc529c8edeba37a1"
+        },
+        {
+          "path": "PYZ.pyz/urllib.response",
+          "module": "urllib.response",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "09b88e499c17c08de23201c4657393fc6e6093a959d016dc68794f7ee9542702"
+        },
+        {
+          "path": "PYZ.pyz/uuid",
+          "module": "uuid",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "63e579fb5f6c1b22cb7c7ff5d022a8d71c6add3552515400b7fda646b3f7085c"
+        },
+        {
+          "path": "PYZ.pyz/xml",
+          "module": "xml",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "512c681227a47e2589f040fd400d762501972b5896537f070f96f1dc690a7a40"
+        },
+        {
+          "path": "PYZ.pyz/xml.dom",
+          "module": "xml.dom",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "647c2efc88bc2fd94d6c994a49bb75e5a0c8950ce05caf59fff19519501c7547"
+        },
+        {
+          "path": "PYZ.pyz/xml.dom.NodeFilter",
+          "module": "xml.dom.NodeFilter",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "79756dc2d5c7807c7f2c9729885cf590cadf5f52c3f4f16f6bddbc801313fed8"
+        },
+        {
+          "path": "PYZ.pyz/xml.dom.domreg",
+          "module": "xml.dom.domreg",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "7ee0b93ddcaa9c2eb7cd86f591715735e8fd698fb25e59e47c5fdff8d3198642"
+        },
+        {
+          "path": "PYZ.pyz/xml.dom.expatbuilder",
+          "module": "xml.dom.expatbuilder",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "cff10a7c7e902604a2d7d45ac34f7100a3d1efc28d5e39961cea68db8fe790f7"
+        },
+        {
+          "path": "PYZ.pyz/xml.dom.minicompat",
+          "module": "xml.dom.minicompat",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "d22e1d8a1c6e49d32ab536466117cc1c0dad229a97f8fae3f013c5478b7f517d"
+        },
+        {
+          "path": "PYZ.pyz/xml.dom.minidom",
+          "module": "xml.dom.minidom",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "336f1ad900c4442da08343788893ebd26645a449fc61cec5a6fe10c5aa1d50e1"
+        },
+        {
+          "path": "PYZ.pyz/xml.dom.pulldom",
+          "module": "xml.dom.pulldom",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "c5f418f976467ae88d545b2f696228c531446e1a8f2596cd9ba7c0b5227cf55a"
+        },
+        {
+          "path": "PYZ.pyz/xml.dom.xmlbuilder",
+          "module": "xml.dom.xmlbuilder",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "2191dc8d46642d9b52c99682e9ab47a596336726a546749d93e09f369158d4c6"
+        },
+        {
+          "path": "PYZ.pyz/xml.etree",
+          "module": "xml.etree",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "70db8823151f5578dd9a9ccd2a0cbdb675e57b9422be95ab6d0285be1ab1915e"
+        },
+        {
+          "path": "PYZ.pyz/xml.etree.ElementInclude",
+          "module": "xml.etree.ElementInclude",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "7ba9eeb0bc477865c77c20c9dd052cd3d41b3c87963d10a570cc8059377adf57"
+        },
+        {
+          "path": "PYZ.pyz/xml.etree.ElementPath",
+          "module": "xml.etree.ElementPath",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "5a01aa0b9a1bd8fc3901c901c2cda9b150171c74206089ae0ca2083d96cd780c"
+        },
+        {
+          "path": "PYZ.pyz/xml.etree.ElementTree",
+          "module": "xml.etree.ElementTree",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "d375bce2c9126baeb1a055ae1ed7078590547c892c7f324e07742dcd05df8627"
+        },
+        {
+          "path": "PYZ.pyz/xml.etree.cElementTree",
+          "module": "xml.etree.cElementTree",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "6f37b428e4c1582c5dd1af38e27351f13f6389306e0ceb15110418a85d19ac3a"
+        },
+        {
+          "path": "PYZ.pyz/xml.parsers",
+          "module": "xml.parsers",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "a201ae19321748ff58382d7a2430d5e585f9e478211b16f8c65c2a8380427ede"
+        },
+        {
+          "path": "PYZ.pyz/xml.parsers.expat",
+          "module": "xml.parsers.expat",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "a46bcf4043004a50b9d8645738df1ff2298f9ba42b3ab63f786a26e99032de5c"
+        },
+        {
+          "path": "PYZ.pyz/xml.sax",
+          "module": "xml.sax",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "9f513cfad74256847f21ee035048bbece57ccf6d995768ed914ce6ccdf5f0a17"
+        },
+        {
+          "path": "PYZ.pyz/xml.sax._exceptions",
+          "module": "xml.sax._exceptions",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "526a2522c4e3cb76486b6347b8eab6dd27007d3793cb0d4d556fcc0783ef703a"
+        },
+        {
+          "path": "PYZ.pyz/xml.sax.expatreader",
+          "module": "xml.sax.expatreader",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "d7f6e1c33380881aa25633a41b84634cc9653517ecbddbdb346f7b5236c69231"
+        },
+        {
+          "path": "PYZ.pyz/xml.sax.handler",
+          "module": "xml.sax.handler",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "8145255148e709802f47f934a06493d98eb4f162af32bc39438513bf56f7f9c7"
+        },
+        {
+          "path": "PYZ.pyz/xml.sax.saxutils",
+          "module": "xml.sax.saxutils",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "9773f219a650e2fafc1c00afe80c96786263f324f527494c15652ab3cfaa0d90"
+        },
+        {
+          "path": "PYZ.pyz/xml.sax.xmlreader",
+          "module": "xml.sax.xmlreader",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "05563228bda57d274b85d0accb2ecb2fd9985782e8f3864bd7283027978f236c"
+        },
+        {
+          "path": "PYZ.pyz/zipfile",
+          "module": "zipfile",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "695c9264a86861c873c5bbe3cf381a32fa4dcca1f3bce4ffc774fb9921f38a6c"
+        },
+        {
+          "path": "PYZ.pyz/zipfile._path",
+          "module": "zipfile._path",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "b46ee0a23d8496776c1f7f1db12318fed86cfe2ef1e479eedb31e882c55180a0"
+        },
+        {
+          "path": "PYZ.pyz/zipfile._path.glob",
+          "module": "zipfile._path.glob",
+          "component": "CPython standard library",
+          "decoded_code_sha256": "99b71fce035e4c5b3923f6816b5e8e9f7ab4d9198507c71673dfcdc9ca2cb022"
+        }
+      ]
+    },
+    {
+      "archive": "_internal/base_library.zip",
+      "sha256": "58a0dbf85bd9cf04c605caa1918141cf5e0cf2ed7682250b5788f3bdc257ed1c",
+      "members": [
+        {
+          "path": "heapq.pyc",
+          "sha256": "81d2a49295b9f523adeba81b6ebc97b43d5e24fc712aa19dab235739d1ba82eb",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "codecs.pyc",
+          "sha256": "c8089a89ac013c775af14d3f50722dde3cd4c2264f614f9df829c9d2e9a14361",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "copyreg.pyc",
+          "sha256": "c9d3813d270dc1e684669ef2445ab4ebee099400e2b3f5b92cc185504c262928",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "enum.pyc",
+          "sha256": "e7fc34e7bbadb450822acdb140012753b2e60ec641ecf85997e059582ab97dfd",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "_weakrefset.pyc",
+          "sha256": "04942bd980aece2c155245dbbe992dab7fab56200f7a9cd391c24092493cacad",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "collections/__init__.pyc",
+          "sha256": "b8fee1341f392433bebd87a0f83e9936a9f98a03056c645ad998b07db6087891",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "warnings.pyc",
+          "sha256": "5dc7ea65d9e8d89cbbc343ca83ad3070a2aad170604efed01ca86a97757c9887",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "sre_constants.pyc",
+          "sha256": "21e0d37b4bd2f030ec081e92f27ef2ecbb593828e127ccebee333f9c47d2510b",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "abc.pyc",
+          "sha256": "99b3b79161c2b850f93162e02635cfde25a63b16fd1a66413b8cc07b3935010b",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "genericpath.pyc",
+          "sha256": "b330127933deb7324f8291eaf7946c50bbdc6da5a7881aa0dc479b210d2b13b8",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "posixpath.pyc",
+          "sha256": "902b7f39c7e791d8d8894e89f36ab70b2cc51d5d102d7cf8dfbabef473964e3c",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "sre_parse.pyc",
+          "sha256": "d9177bea4ad4b3edbc3d801cf3d554f7501d0e20bd16a27c3b2b35da90fcad96",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "weakref.pyc",
+          "sha256": "ed314db5ecc17e2f35b870b79d1af49b9b0b1237e70675537d66bac57d5870c9",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "reprlib.pyc",
+          "sha256": "6eba3efa766578d3e404f010c42c77b75eb899b6c26b1a3ac29591ccd87f6685",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "functools.pyc",
+          "sha256": "a180eea7fcfd391b07c94295ffcaccaf5c7bcab95bd4defb3091212d4bfa9b7c",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "_collections_abc.pyc",
+          "sha256": "60b7ff936475c9fb15bd9bcd24b9a3343ab2563ab5a62ddd2771d22aabe9e41c",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "operator.pyc",
+          "sha256": "7b38c5660e17c43e769e09f89815a9da8da15f643df836772590d8daec1b61f4",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "sre_compile.pyc",
+          "sha256": "793489120102350d6f5b6e3fd8c6e00c79a887b7ed56102b97dfb314629ae3c7",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "keyword.pyc",
+          "sha256": "ecbdf6b3bc709322455174dde25147e3a081e8429ba1245e7d32d1f82e401b1d",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "re/_parser.pyc",
+          "sha256": "230d20c3acba1a33ee457b7d90e5257fa0036c96f440bbdbd1bf3a3121a74187",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "re/_constants.pyc",
+          "sha256": "33e3b104c8d2f797151431431951388f05f18dee78062ae23852a46f01abba39",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "re/_compiler.pyc",
+          "sha256": "d0fe7c9e4cd138f863f0878ee56e50b509e3d94c9e529418f820751f49f5f623",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "re/_casefix.pyc",
+          "sha256": "2341be6cd0ea323998aaf507d3d649e3e927527bb737407f165457c092942955",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "re/__init__.pyc",
+          "sha256": "9c0329fb306d5d7badab0136d37afcbcf8297417119969653be8736115664913",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "io.pyc",
+          "sha256": "ce9fd1f9879a5f22d0228fac0ab76065cb1bf00f57b5b65e95c1f7e22aae6a03",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "stat.pyc",
+          "sha256": "5155dd9f667bbe1279a592fa5f88da12c99bfcccc66a27570398685f50947560",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "ntpath.pyc",
+          "sha256": "6cc7ad8a3d32afe5c94829a7c58ddb9f0cd76ab8542c01afdc7ad5ea7e1854e5",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "locale.pyc",
+          "sha256": "6442401af515613bb3f2158e788401f25e19b71131a051ab00b3b32e620e99e7",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "linecache.pyc",
+          "sha256": "10d721ef153744bfe8844e1a5cc91a926858b074674f09a78aa5a3c0aab77ee4",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "types.pyc",
+          "sha256": "17c406de9780c6d8715b80b9b07695a25b9516e1d2984717c487541a0f06261c",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/zlib_codec.pyc",
+          "sha256": "95a056bec7732c02e8dcf8440b6cfddc4bf8eb7421e2bedfa29c448149c17a22",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/uu_codec.pyc",
+          "sha256": "7060e9df49097edf754af70678614291319a0e859ff1585b965e29ee92fab51c",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/utf_8_sig.pyc",
+          "sha256": "fe3382be2ba27e2ee39035ec5b9b0deed328f685166c44cdcf70f2bd6162f5bb",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/utf_8.pyc",
+          "sha256": "1f50a0c2c3d63a9054e3d831d4d8418258a4ce500aec3f0fd5317f8956b23b30",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/utf_7.pyc",
+          "sha256": "fa466aeef4b17a590fb86cf24c3b5e0cc236b89f6a100ee108ec608598b58c3a",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/utf_32_le.pyc",
+          "sha256": "4c6429c49de07a5fff028eb858f0b845a03660caadeec3c8fb0aa7780cdacd31",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/utf_32_be.pyc",
+          "sha256": "9ef54e12d7874e953fef7fa2183cb26e4d1a9be95382f4f6482f90b3e4eb4c0c",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/utf_32.pyc",
+          "sha256": "9e4a3f47dd311275604e19029619dfc7728b365ab64e92c9a59f4166de54445d",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/utf_16_le.pyc",
+          "sha256": "91401aad91c342dd1bd349773ced67b334e7fa323df1a6da66c7c9112ccdad24",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/utf_16_be.pyc",
+          "sha256": "fec2b54ae12499ef90fd0a2d29ba86f9d4c240018ad97044ceacb41f148a17fb",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/utf_16.pyc",
+          "sha256": "36ea91db4bb93d6a6f90d573d380293869f273c7a8cad817ed8047f9a5415161",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/unicode_escape.pyc",
+          "sha256": "6767d9e81299b537b57b43e8d1e0e85f43bab59f03ecb0a31d3aa786156fb3a3",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/undefined.pyc",
+          "sha256": "fb93efe8aa41fbbbaafc5c04f4bb82d9e6e4a3d5e56fb931d79fba2db324f2c5",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/tis_620.pyc",
+          "sha256": "f2ff6aef60b3f0f63bf747c110fb13bcd430734e17c93658248c267d15865e8f",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/shift_jisx0213.pyc",
+          "sha256": "82c1f2902f8b765dbbee5816578f1d7471d1ca9744ba8dee41172fddc4788c45",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/shift_jis_2004.pyc",
+          "sha256": "c41668c12503db1fc4cb12b069705a79f6019a8d4345063c02498b794df8d832",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/shift_jis.pyc",
+          "sha256": "e22ce80fc1ebd334ca64d4fa79f6d070fd7fdf1e192e0a92c0ac9e22a9ba6702",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/rot_13.pyc",
+          "sha256": "6be5259bdd5a9e5af93413c62490b43b7a5bdb3bb683ce9b5f573f8e94cbe2a0",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/raw_unicode_escape.pyc",
+          "sha256": "9ecda163c208091c5d0d11746f75c2b889dcf45d0b08f99c21196ce3fec82136",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/quopri_codec.pyc",
+          "sha256": "ac776e1f459d21b084ba2e95762292bbdbf89ae39f4aedf5d1e833c111cb44e3",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/punycode.pyc",
+          "sha256": "d52f45f289e05fb21fd3ebb62ea21cf655edaf097e6e123b7a567f52c02dce5f",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/ptcp154.pyc",
+          "sha256": "b263601a72704fc85e8b98a45330eb09e2f871d65948d67eb07190415c0bfd93",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/palmos.pyc",
+          "sha256": "0d1d229086027d865e541ceb4274636341703ce05b7180b3b2be1854e54335d7",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/oem.pyc",
+          "sha256": "073bbeef88db3db0c2d5838b6f2bdf190933d6df21e7aeaa6cc7c682f0dcd0e5",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/mbcs.pyc",
+          "sha256": "cfd5820ff902f5123a22bd5eb25a685cf42061ba1c65c185e1ce2ab0ec9e2387",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/mac_turkish.pyc",
+          "sha256": "7b5faa74cc5096c2f55fff28bb292bce26c82abe63f7c477ec5df46c253a4894",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/mac_romanian.pyc",
+          "sha256": "775563163fa9ae8a6127fc3ac3fd19c8f332eaf65f985db65d38b2b18fef380d",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/mac_roman.pyc",
+          "sha256": "3c661f2b72e43a7a3d76d1b402694e0f61bf2fbf864e62b7c6f0d121885a791a",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/mac_latin2.pyc",
+          "sha256": "70eb490c478a7941b2649bce7f7661351021697c1d194026ee854ee687a8afc9",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/mac_iceland.pyc",
+          "sha256": "a139f6aca640fd0c4d709ff6833e7a37eb22a7181c0b5e0a5988af572a700e00",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/mac_greek.pyc",
+          "sha256": "271c14cb2c784a4cd6540af9bbc2dc127b830967d7374df108a1e8346de394b9",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/mac_farsi.pyc",
+          "sha256": "f6f2d38d94bd77f8a2990ec3f8dae83acab308d1dbe5bbd507ca61d0d302a6ae",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/mac_cyrillic.pyc",
+          "sha256": "ea0ac2aca9d0a915ff495ac684c9638588286f92aa4836169a1f109aae006f26",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/mac_croatian.pyc",
+          "sha256": "95552084901824bbe95cf7a42118a851de5035f8fd2bf2e345c7dda61bbe56db",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/mac_arabic.pyc",
+          "sha256": "8d77df0f63560b39ce0bce0e4417c4721eaf5af0da83772af678e10be34d7ef0",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/latin_1.pyc",
+          "sha256": "f758a1f77a51f82825ec5137fcc24798c69d1f0d37392e481c6bf1c9de1d1312",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/kz1048.pyc",
+          "sha256": "694bdb0137550c5c8b59c24ea6d155313b2ca15851214a1f46aae96bb5d9bb15",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/koi8_u.pyc",
+          "sha256": "9529c11890ee6d115f16d01d5dffd64b817cf9182cdc3fc484921342e3a39b7c",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/koi8_t.pyc",
+          "sha256": "64613e1e4e71500c607b06d12af20394b219d2567d8d0385daf0d25657aa203b",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/koi8_r.pyc",
+          "sha256": "6a510ddadee155615a995d7f9e8ea4afcf6ab50fbc5475b338ed168f183a11e0",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/johab.pyc",
+          "sha256": "0e8632432bc1787bfef9c799ddd11404268de5b9ea6f27344dbb037ed7fbdb9c",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/iso8859_9.pyc",
+          "sha256": "5f75ea96f0486c4b7b18a88750d593f591212b6ded88b3bdf7308d8af3f59fcd",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/iso8859_8.pyc",
+          "sha256": "23ada0276a802bfcb32211bd5f51b72f9aa759fc3ef4dc651c62eeafd50be047",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/iso8859_7.pyc",
+          "sha256": "b59986237bb9dbb0d39c334db8ceb9170e3144d8ec0a423f7c63ce004ee63506",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/iso8859_6.pyc",
+          "sha256": "3e7b5714e5b0c866adf3a6f720fd90b059d0d77897eca36f264ba29d5fb82d6d",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/iso8859_5.pyc",
+          "sha256": "202bc2ad8209c8ac2898e06c655f0290e6404a90cbddac1d7403e07c92226203",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/iso8859_4.pyc",
+          "sha256": "65cc1009104d997b98cef60bb3b76533ae7c6f3bf2612cefb95c20fca7168f74",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/iso8859_3.pyc",
+          "sha256": "a796ffbe9d8c0097edba1a611fd26c8819de10edd30c73fc86475645de576515",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/iso8859_2.pyc",
+          "sha256": "c2b4a532daf7c7063d0724104b34e5a8208ae3fd893bc0216c1be7220c9f4d59",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/iso8859_16.pyc",
+          "sha256": "c0a5bdd2aeb469b29e9a63b751b99a1152e54c07372a1b6bca66466b3ead5e7c",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/iso8859_15.pyc",
+          "sha256": "9398821cec89dad3d65f2a3738347624675d47df1b4f66e28e0e2f19bb1e2f02",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/iso8859_14.pyc",
+          "sha256": "21a9d0c45332d61131f4efbc3d499c806175b847e11603ecfcc8e6031d778410",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/iso8859_13.pyc",
+          "sha256": "2722e49fcdd4e0277cda32a452885a3bb5b4befc259075443892e8c6f7a029e3",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/iso8859_11.pyc",
+          "sha256": "7771fc38d3b9ba2d8237b283d2514679cb63ae80c79d0b729a0145dd8b4cb0f4",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/iso8859_10.pyc",
+          "sha256": "7eff766e73fd968bbc8dab744a9c9f7489102ef5df2400d3d4aca1145168da15",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/iso8859_1.pyc",
+          "sha256": "65266b5315e375a96a60001883fdbe18ab84f6acfe3a4a694a9dea5f8514ee17",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/iso2022_kr.pyc",
+          "sha256": "234222195cf3fb0b0c10797fc9e5b152497d54398963fc6c60337a130284bc71",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/iso2022_jp_ext.pyc",
+          "sha256": "a09fde8a2b0bc1e87b141330b1e7947e952f47549b7862cb0a127797321bbbbd",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/iso2022_jp_3.pyc",
+          "sha256": "58e4be7e55fe0bafb3ea54b66acf69e9f8b01813449927ac763c77405cb3a228",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/iso2022_jp_2004.pyc",
+          "sha256": "b105fc9201e7549129466de2aabc7256723d4ef952b16994d0a75df86be5e6c6",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/iso2022_jp_2.pyc",
+          "sha256": "ca94155c64877e0c5fc0252c0028a6056824eba0614e8302f4c84a0cc4018141",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/iso2022_jp_1.pyc",
+          "sha256": "8c95511d1a2ebc5da64906f779bd9d4046b3f7386a8a4495a4d7a68bbb4abd2c",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/iso2022_jp.pyc",
+          "sha256": "529f30cd3485bc9f18dc4594e6688ec645c150912a8e482fba9008431b32e110",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/idna.pyc",
+          "sha256": "7bf754e78da8cb4c3bf55b7f3daea2abe5696f13f3bb6da8eab8cced91748f81",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/hz.pyc",
+          "sha256": "88311fd1485006b58e1238831ef4f88599eeb909d3bcc1ea7631ea3654e13c7e",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/hp_roman8.pyc",
+          "sha256": "349ab33604a202447c1cbfda974b4b6476b5f11525e78b978fca22d57cc43854",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/hex_codec.pyc",
+          "sha256": "fcd915403314d6e9ebeead2920574528862d864cbba44135ef767b7f9162ed61",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/gbk.pyc",
+          "sha256": "4baf3e313880621af9387bd91b7b6f2725a648f8b674b95b35bfb063e842034a",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/gb2312.pyc",
+          "sha256": "6127a4801fef78a68b9704bef799a55f9e41008ca536f5dd14974d72ff9490ad",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/gb18030.pyc",
+          "sha256": "195b77d10b7729153eeffba469964dc77d40c7542fc0320e3f583796173ece80",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/euc_kr.pyc",
+          "sha256": "60e2de6b1479afac27798ddac155896dc9f340148d755535b187b98ef969252c",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/euc_jp.pyc",
+          "sha256": "5b151e9ad01dfcad9265f31d5851f548cea0538983541bbbc7cdc91164a019b7",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/euc_jisx0213.pyc",
+          "sha256": "ff77c2c8f3326b7a5092f29b103003edd26fd372f9889f6d42122f92c7d5542b",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/euc_jis_2004.pyc",
+          "sha256": "c74300366510814f4e8ec5e0049ace7121536fa5a9cfe832ed8b908fc15eda64",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/cp950.pyc",
+          "sha256": "630c041635e138ae5d8744ca7b5dd2437686364d00757269ab95b6ed95516add",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/cp949.pyc",
+          "sha256": "099cc5308d4a04be33a7145e7f432c92f8c4e2861d3c27aefc195595548efa8a",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/cp932.pyc",
+          "sha256": "20406a76e4a246f7cd438b2e047403a6acb402ebc8ba197826b759b900e383cc",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/cp875.pyc",
+          "sha256": "2363dd41262277c793c7826f5c187b11f9be0b35c0797a2a325242bb6ca84eca",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/cp874.pyc",
+          "sha256": "15699989c8c6027c16894aa5f58b08f64dc4e53fe3ac3be5ed1557463282058f",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/cp869.pyc",
+          "sha256": "a2e6a2ac5b33ba6c02d23abebfc366f249adaa1fa9885f0ab4403741b43c6af5",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/cp866.pyc",
+          "sha256": "bf3af38264a4113ee92589801d0956a152f2cf9f62c1751f53a71032b19756b2",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/cp865.pyc",
+          "sha256": "aa5a2b6fd171367da22b81baf5b15e6e382a62404051022f070ffce3dfde1bb2",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/cp864.pyc",
+          "sha256": "aa7244ed2ad4ab2e137b44abd221e7523d000d73c4fd433b9b77baad098bedc6",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/cp863.pyc",
+          "sha256": "1706c2afc8b1f85e5f973d5fb3723f6395ceb503550a13ea63da10f1f6238477",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/cp862.pyc",
+          "sha256": "d8d661f344c38fe29fc946c68aa9ad85232f4f90072072aeecca1661aa0fc745",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/cp861.pyc",
+          "sha256": "8bce5c359ed8465ea6b36da2e74c9ab6a60ac6c072d75fd8a08c96243c1a5b08",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/cp860.pyc",
+          "sha256": "051e64061bd2de0d53f0161bf079d40778fd6481716cd42b666bd51671165a41",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/cp858.pyc",
+          "sha256": "6a4d58dda71a6e9494526ae381f1f1ad624c17403de0d360e428fcdaa770aaf7",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/cp857.pyc",
+          "sha256": "8adabeec806b6eb9467d535d9a356b6f06708b9e13b6277d0e04b8709d2cf330",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/cp856.pyc",
+          "sha256": "44b59d149debfdde2b8015c4627e7492454f889deb30310b7d1ccb5e33c7d9e7",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/cp855.pyc",
+          "sha256": "616bc71fb6c3ccece53f163e30380ecd8810a2954d999cd1fe4859468856b037",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/cp852.pyc",
+          "sha256": "c0b3a6072e9bbc4e739ac9dc0147a091e22a8adf73a4b0311556b4837e28a1b5",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/cp850.pyc",
+          "sha256": "5ae50d4d5d4e4af871e403535730103190cedd03985f8aec304280b24ad1668c",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/cp775.pyc",
+          "sha256": "e53d939e067b8efee932dd6ca09ca36bb90234f02eb6efb64bcdde9a4f7accb2",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/cp737.pyc",
+          "sha256": "c5e3cca5d2c5d85f676adf067dca19ae07fe8be8ad1d22c833f0030f0fb7f5f5",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/cp720.pyc",
+          "sha256": "8aeec4fbc36a2c8baa1aaf8ceb2121ca84a4bf9c54688f973573e090fc14d128",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/cp500.pyc",
+          "sha256": "cfcfe613d2f19a6e8c941353b26a7dc05930a708ebb5b518a722216116a63d7d",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/cp437.pyc",
+          "sha256": "96f1955cce3e1b8421d439e6c89aab5c1713a1fce293d63baa7405cfbdd4e858",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/cp424.pyc",
+          "sha256": "a49dc41794f1d20757d9609aa76f1c276c2709f6dd6a090b05de9a5d160486df",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/cp273.pyc",
+          "sha256": "5cec3de27fe24f7f32e165bca416dde32094be6ba52cae93d619cbf54f762284",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/cp1258.pyc",
+          "sha256": "dd170fcede9995d880cc25a9821ac5fa8cb7aca61223c326b0ea4e875d9902fb",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/cp1257.pyc",
+          "sha256": "dd95f45763239998774b6fbb6a8ed8dfa37c0307db4e8e783dae4c705805b1b3",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/cp1256.pyc",
+          "sha256": "cd717920d1dfdc00c325dd1f7001ebfc744afc1dd0cdc2ea0cb91c2782fd033c",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/cp1255.pyc",
+          "sha256": "1c7de22df6ad271e74f9eba17ff7aaa05edf5e20c7c922d351e18885a060c036",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/cp1254.pyc",
+          "sha256": "57c91a9c707d53b7934722aa532297ef950695ad0fdc513214ab29372631e967",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/cp1253.pyc",
+          "sha256": "73e40d60dd58a08d845a25d00e2eb6bc75f774871bea4212effce024fb8d136a",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/cp1252.pyc",
+          "sha256": "6972956d79771d92be2af6c4b5cd71258cbff8941313b3a2d774b6ff0b6e4987",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/cp1251.pyc",
+          "sha256": "dad17715877f3fecf911472872fa5dba2d9b370c355088e274e6d1132b066f70",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/cp1250.pyc",
+          "sha256": "f35a435c084727710eb4240e63b9c471a421bfc3196ac4eef007edef7522b85c",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/cp1140.pyc",
+          "sha256": "ec83e6b332059487085b6b1f419611f1db58ff6ab07455e54380a388b5c9e5de",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/cp1125.pyc",
+          "sha256": "b3283ffb9551270df4dcfbb3d4b9fcc9b9f25e0a85b0f4797f594b6871627439",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/cp1026.pyc",
+          "sha256": "7c834f71bc771a44e5786920a0c118cfedde4f4ff92ad56b31427e83ba2bf048",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/cp1006.pyc",
+          "sha256": "eba6c1bd7a4ccc2a21dbbb560a597aafcf62459aff09781cd6cdb00e0125219b",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/cp037.pyc",
+          "sha256": "f2e4dc157b039951c43d45b6dd031c737ea6ece1cbf2eb451e0ac9102e031611",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/charmap.pyc",
+          "sha256": "3d463237951a6d8bb090bfde6a27d7bd1bcd0a4f60ae193d298a2e6ea9c32acb",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/bz2_codec.pyc",
+          "sha256": "f5ddc4004ce6af91302e67438c2086952a05fd68b8a5a74845a6a1aa12184692",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/big5hkscs.pyc",
+          "sha256": "f7ab5ec629496662003088c84392c3ca978d9d0033539becef130f571a6ddb42",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/big5.pyc",
+          "sha256": "555867c3b0c89d80ffd46245a47b6c9c37392877a3d61a6edbf145d0df4367c1",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/base64_codec.pyc",
+          "sha256": "80e84e50d8ecc5fa5a7489f4a7591c78dabcbfadfac8ae353ef33599e59a54b2",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/ascii.pyc",
+          "sha256": "f62c91fc7ba31ddfae5e7e52394560758c6a0173f0a0b3bc82d7f2fd447b0c3a",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/aliases.pyc",
+          "sha256": "28ca0a7a2d180222d20a1d5c0027ad5302fd3ececf10f1b42d45b4d165d399b3",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "encodings/__init__.pyc",
+          "sha256": "edb816e8f3b5193ea6a86fa4399da59e0bdf9c347041caa9f8dc7873dcb37a24",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "traceback.pyc",
+          "sha256": "1a19102a865b7158ff58c9f3c4e78ccc248a016e3951656b2815a85ccc9c74fb",
+          "component": "CPython standard library"
+        },
+        {
+          "path": "os.pyc",
+          "sha256": "03aee6f9315e8f4d4ffe4f9a98ff6e51fc20477806d1cffc8d446e281c77a3f7",
+          "component": "CPython standard library"
+        }
+      ]
+    }
+  ],
+  "build_only_packages": [
+    "altgraph==0.17.5",
+    "packaging==26.3",
+    "pefile==2024.8.26",
+    "pip==26.2.1",
+    "pyinstaller-hooks-contrib==2026.8",
+    "pywin32-ctypes==0.2.3",
+    "setuptools==82.0.1",
+    "wheel==0.47.0"
+  ],
+  "not_applicable": [
+    "FreeCAD and its bundled dependencies",
+    "Nuitka",
+    "WiX",
+    "Qt WebEngine browser libraries"
+  ],
+  "note": "PyInstaller compiler is build-only; bootloader, importer and runtime hooks are redistributed. Names/bytecode are decoded from actual installed EXEs, not requirements metadata."
+}

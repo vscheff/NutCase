@@ -2,9 +2,12 @@
 import argparse
 import sys
 import tempfile
+import logging
+from logging.handlers import RotatingFileHandler
 from pathlib import Path
 
 from _bootstrap import PROJECT_ROOT as ROOT
+from fastener_paths import CACHE_ROOT, LOGS_ROOT, VERSION
 
 
 def main():
@@ -16,18 +19,28 @@ def main():
     parser.add_argument('--settings-dir',type=Path)
     parser.add_argument('--startup-check',action='store_true',
                         help='Initialize the actual GUI and event loop, then exit without generation or saved-settings changes')
+    parser.add_argument('--check-report',type=Path,help='Write startup diagnostics to this JSON file')
     args=parser.parse_args()
+    LOGS_ROOT.mkdir(parents=True,exist_ok=True)
+    handler=RotatingFileHandler(LOGS_ROOT/'NutCase.log',maxBytes=2_000_000,backupCount=3,encoding='utf-8')
+    logging.getLogger('nutcase').addHandler(handler);logging.getLogger('nutcase').setLevel(logging.INFO)
+    # Windowed Windows executables do not have standard console streams.
+    for stream in ('stdout','stderr'):
+        if getattr(sys,stream) is None:setattr(sys,stream,(LOGS_ROOT/'console.log').open('a',encoding='utf-8'))
     # Import GUI libraries only in external Python, never via FreeCAD's runtime.
     from PySide6.QtWidgets import QApplication
     from PySide6.QtCore import QTimer
     from fastener_gui.window import MainWindow
     from fastener_gui.theme import apply_theme
-    app=QApplication(sys.argv);app.setApplicationName('Fastener Drawing Generator')
-    app.setOrganizationName('FastenerDrawing');apply_theme(app)
+    app=QApplication(sys.argv);app.setApplicationName('NutCase')
+    app.setApplicationVersion(VERSION);app.setOrganizationName('NutCase');apply_theme(app)
+    if sys.platform=='win32':
+        import ctypes
+        ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID('NutCase.Desktop')
     # Diagnostic startup must not alter the user's persisted GUI state.
     temporary_settings=None
     if args.startup_check:
-        diagnostic_root=ROOT/'tmp'/'gui-startup'
+        diagnostic_root=CACHE_ROOT/'gui-startup'
         diagnostic_root.mkdir(parents=True,exist_ok=True)
         temporary_settings=tempfile.TemporaryDirectory(prefix='check-',dir=diagnostic_root)
     settings_dir=Path(temporary_settings.name) if temporary_settings else args.settings_dir
@@ -37,6 +50,13 @@ def main():
     if args.startup_check:
         def finish_check():
             print('GUI_STARTUP_OK',flush=True)
+            if args.check_report:
+                from fastener_gui.state import atomic_json
+                from fastener_paths import DATA_ROOT, FROZEN
+                atomic_json(args.check_report,{'status':'GUI_STARTUP_OK','frozen':FROZEN,'version':VERSION,
+                    'title':window.windowTitle(),'data_root':str(DATA_ROOT),
+                    'settings':str(window.store.directory),'runtime':window.runtime_values,
+                    'native':window.native_runtime,'status_text':window.status.text()})
             window.close()
             app.quit()
         QTimer.singleShot(100,finish_check)

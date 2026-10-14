@@ -1,0 +1,14 @@
+NutCase 0.6.0 - candidate for acceptance testing
+
+Requires 64-bit Windows 10 (1809 or later) or Windows 11 and a separate
+64-bit FreeCAD 1.1.x desktop installation from https://www.freecad.org/downloads.php.
+Python, Qt, PDFium and the Poppler PDF renderer are included.
+
+Generated drawings are preliminary and require engineering verification.
+No engineering approval, tolerances, materials or nominal dimensions are assigned.
+
+NutCase stores settings and drawings under your local application-data directory.
+Updates and uninstallation preserve those files. Back up drawings and configurations.
+
+This unsigned candidate has not passed clean-VM or final human acceptance.
+See docs/RELEASE_READINESS.md and docs/LICENSING_AUDIT.md before redistribution.

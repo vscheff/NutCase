@@ -82,8 +82,10 @@ def export_copy(release, key, destination):
     source, destination = Path(release[key]).resolve(), Path(destination).resolve()
     directory = Path(release['directory']).resolve()
     history_root = directory.parent.parent
-    suffix = '.pdf' if key == 'pdf' else '.fcstd'
-    if destination.suffix.lower() != suffix:
+    suffix = '.pdf' if key == 'pdf' else '.FCStd'
+    if not destination.suffix:
+        destination = destination.with_name(destination.name.rstrip('.') + suffix)
+    if destination.suffix.lower() != suffix.lower():
         raise ValueError('Export destination must use '+suffix)
     if destination == Path(release['manifest']['source']).resolve() or destination.is_relative_to(history_root):
         raise ValueError('Export cannot overwrite the STEP source or immutable release')

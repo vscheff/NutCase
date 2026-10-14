@@ -1,0 +1,2925 @@
+{
+  "provenance": "New independently constructed hollow pin; native measurements, MOCK release verification flags and MOCK Boolean warning.",
+  "catalog": {
+    "schema_version": 1,
+    "geometry_id": "38597c13e6fcdeac9fc83cffae64b173605eb5383f1c7dce356cb01d03e3e630",
+    "source_sha256": "2283ce684c8d88b146c72cb01dde3cf7bcd108e2e9c1bb8b4372206221e3ba4b",
+    "candidates": [
+      {
+        "stable_id": "g1-0e36da7a8c631332455f6d6607bb63864549a6388d71be3cc1ed430e9cbbdf5c",
+        "candidate_id": "D001",
+        "label": "Overall axial length",
+        "kind": "overall",
+        "value": 18.0,
+        "units": "mm",
+        "verification_status": "source_measured",
+        "source_evidence": {
+          "candidate": {
+            "kind": "overall",
+            "value": 18.0,
+            "units": "mm",
+            "label": "Overall axial length",
+            "source_faces": [],
+            "source_supports": [
+              {
+                "station_mm": -9.0,
+                "supports": [
+                  {
+                    "type": "rim",
+                    "edges": [
+                      "d69caffcdc1ebb7d2d4ab3d8d4262f8e3164aa03ab7a4792292c8c8a796ca375"
+                    ]
+                  },
+                  {
+                    "type": "rim",
+                    "edges": [
+                      "ed4464cd479ffdfdef68aed5667c34e24e210c667dbb984f467c8a7658bf35d7"
+                    ]
+                  },
+                  {
+                    "type": "plane",
+                    "faces": [
+                      "288c7b7fd7aed45640df7e917115eea7b3c93ee8bb6fb14df354e44963c1fbf1"
+                    ]
+                  }
+                ]
+              },
+              {
+                "station_mm": 9.0,
+                "supports": [
+                  {
+                    "type": "rim",
+                    "edges": [
+                      "1da13979a8b807c1984dd3a472dbfc1a4be04caf30001423da49c4e58b96ce6b"
+                    ]
+                  },
+                  {
+                    "type": "rim",
+                    "edges": [
+                      "aa6216caf9a90d96f69b7aec5a3af35a5cdb2febca15fc6ca363773316829deb"
+                    ]
+                  },
+                  {
+                    "type": "plane",
+                    "faces": [
+                      "45a238226f8164300889c1218ccf309fbbdfd86511e2c909265d4feef07aac2b"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "origin_mm": [
+              0.0,
+              0.0,
+              9.0
+            ]
+          },
+          "feature": {
+            "type": "axial_envelope",
+            "source_faces": [],
+            "measured_geometry": {
+              "length_mm": 18.0
+            },
+            "classification_basis": "Native extrema along recovered centerline"
+          }
+        }
+      },
+      {
+        "stable_id": "g1-b36dc2d9188f3c0bab7f95dc7cfbac40da6dadc33e90750d81940e67abd969e3",
+        "candidate_id": "D002",
+        "label": "External body diameter",
+        "kind": "diameter",
+        "value": 10.0,
+        "units": "mm",
+        "verification_status": "source_measured",
+        "source_evidence": {
+          "candidate": {
+            "kind": "diameter",
+            "value": 10.0,
+            "units": "mm",
+            "label": "External body diameter",
+            "source_faces": [
+              "760bd1de20f35d87c5c11bee2e663cd3c208540592df6ba8be3d6bd03d22ee4e"
+            ],
+            "source_supports": [],
+            "radius_mm": 5.0,
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "origin_mm": [
+              0.0,
+              0.0,
+              9.0
+            ],
+            "boundary_side": "external"
+          },
+          "feature": {
+            "type": "cylindrical_region",
+            "source_faces": [
+              "760bd1de20f35d87c5c11bee2e663cd3c208540592df6ba8be3d6bd03d22ee4e"
+            ],
+            "measured_geometry": {
+              "radius_mm": 5.0,
+              "diameter_mm": 10.0,
+              "axial_range_mm": [
+                -9.0,
+                9.0
+              ],
+              "axial_span_mm": 18.0,
+              "axis_offset_mm": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "angular_coverage_rad": 6.283185307
+            },
+            "classification_basis": "Native cylindrical surfaces grouped by radius, axis, side and overlapping axial support",
+            "boundary_side": "external",
+            "complete_circumference": true,
+            "coaxial": true
+          }
+        }
+      },
+      {
+        "stable_id": "g1-f50aeee5a5624a971182171b1168f4922be12a00edcdf2e3dfb05586d0d0e47b",
+        "candidate_id": "D003",
+        "label": "Cylindrical region length",
+        "kind": "axial_distance",
+        "value": 18.0,
+        "units": "mm",
+        "verification_status": "source_measured",
+        "source_evidence": {
+          "candidate": {
+            "kind": "axial_distance",
+            "value": 18.0,
+            "units": "mm",
+            "label": "Cylindrical region length",
+            "source_faces": [
+              "760bd1de20f35d87c5c11bee2e663cd3c208540592df6ba8be3d6bd03d22ee4e"
+            ],
+            "source_supports": [
+              {
+                "station_mm": -9.0,
+                "supports": [
+                  {
+                    "type": "rim",
+                    "edges": [
+                      "d69caffcdc1ebb7d2d4ab3d8d4262f8e3164aa03ab7a4792292c8c8a796ca375"
+                    ]
+                  },
+                  {
+                    "type": "rim",
+                    "edges": [
+                      "ed4464cd479ffdfdef68aed5667c34e24e210c667dbb984f467c8a7658bf35d7"
+                    ]
+                  },
+                  {
+                    "type": "plane",
+                    "faces": [
+                      "288c7b7fd7aed45640df7e917115eea7b3c93ee8bb6fb14df354e44963c1fbf1"
+                    ]
+                  }
+                ]
+              },
+              {
+                "station_mm": 9.0,
+                "supports": [
+                  {
+                    "type": "rim",
+                    "edges": [
+                      "1da13979a8b807c1984dd3a472dbfc1a4be04caf30001423da49c4e58b96ce6b"
+                    ]
+                  },
+                  {
+                    "type": "rim",
+                    "edges": [
+                      "aa6216caf9a90d96f69b7aec5a3af35a5cdb2febca15fc6ca363773316829deb"
+                    ]
+                  },
+                  {
+                    "type": "plane",
+                    "faces": [
+                      "45a238226f8164300889c1218ccf309fbbdfd86511e2c909265d4feef07aac2b"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "origin_mm": [
+              0.0,
+              0.0,
+              9.0
+            ]
+          },
+          "feature": {
+            "type": "cylindrical_region",
+            "source_faces": [
+              "760bd1de20f35d87c5c11bee2e663cd3c208540592df6ba8be3d6bd03d22ee4e"
+            ],
+            "measured_geometry": {
+              "radius_mm": 5.0,
+              "diameter_mm": 10.0,
+              "axial_range_mm": [
+                -9.0,
+                9.0
+              ],
+              "axial_span_mm": 18.0,
+              "axis_offset_mm": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "angular_coverage_rad": 6.283185307
+            },
+            "classification_basis": "Native cylindrical surfaces grouped by radius, axis, side and overlapping axial support",
+            "boundary_side": "external",
+            "complete_circumference": true,
+            "coaxial": true
+          }
+        }
+      },
+      {
+        "stable_id": "g1-d99c596b017ae31ed8c6724eef655289a2575de98518e25a9bfce3558a32b9c0",
+        "candidate_id": "D004",
+        "label": "Internal bore diameter",
+        "kind": "diameter",
+        "value": 4.0,
+        "units": "mm",
+        "verification_status": "source_measured",
+        "source_evidence": {
+          "candidate": {
+            "kind": "diameter",
+            "value": 4.0,
+            "units": "mm",
+            "label": "Internal bore diameter",
+            "source_faces": [
+              "88211bc7adf6653c6dc36d07627a9f79cdaa6089701c05cff40e2ea0d009303a"
+            ],
+            "source_supports": [],
+            "radius_mm": 2.0,
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "origin_mm": [
+              0.0,
+              0.0,
+              9.0
+            ],
+            "boundary_side": "internal"
+          },
+          "feature": {
+            "type": "cylindrical_region",
+            "source_faces": [
+              "88211bc7adf6653c6dc36d07627a9f79cdaa6089701c05cff40e2ea0d009303a"
+            ],
+            "measured_geometry": {
+              "radius_mm": 2.0,
+              "diameter_mm": 4.0,
+              "axial_range_mm": [
+                -9.0,
+                9.0
+              ],
+              "axial_span_mm": 18.0,
+              "axis_offset_mm": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "angular_coverage_rad": 6.283185307
+            },
+            "classification_basis": "Native cylindrical surfaces grouped by radius, axis, side and overlapping axial support",
+            "boundary_side": "internal",
+            "complete_circumference": true,
+            "coaxial": true
+          }
+        }
+      },
+      {
+        "stable_id": "g1-9dc2540f0623f9879a726df5c14450cd5487a6c0d2799d9f3fb5a374863d75f6",
+        "candidate_id": "D005",
+        "label": "Bore depth / cylindrical span",
+        "kind": "axial_distance",
+        "value": 18.0,
+        "units": "mm",
+        "verification_status": "source_measured",
+        "source_evidence": {
+          "candidate": {
+            "kind": "axial_distance",
+            "value": 18.0,
+            "units": "mm",
+            "label": "Bore depth / cylindrical span",
+            "source_faces": [
+              "88211bc7adf6653c6dc36d07627a9f79cdaa6089701c05cff40e2ea0d009303a"
+            ],
+            "source_supports": [
+              {
+                "station_mm": -9.0,
+                "supports": [
+                  {
+                    "type": "rim",
+                    "edges": [
+                      "d69caffcdc1ebb7d2d4ab3d8d4262f8e3164aa03ab7a4792292c8c8a796ca375"
+                    ]
+                  },
+                  {
+                    "type": "rim",
+                    "edges": [
+                      "ed4464cd479ffdfdef68aed5667c34e24e210c667dbb984f467c8a7658bf35d7"
+                    ]
+                  },
+                  {
+                    "type": "plane",
+                    "faces": [
+                      "288c7b7fd7aed45640df7e917115eea7b3c93ee8bb6fb14df354e44963c1fbf1"
+                    ]
+                  }
+                ]
+              },
+              {
+                "station_mm": 9.0,
+                "supports": [
+                  {
+                    "type": "rim",
+                    "edges": [
+                      "1da13979a8b807c1984dd3a472dbfc1a4be04caf30001423da49c4e58b96ce6b"
+                    ]
+                  },
+                  {
+                    "type": "rim",
+                    "edges": [
+                      "aa6216caf9a90d96f69b7aec5a3af35a5cdb2febca15fc6ca363773316829deb"
+                    ]
+                  },
+                  {
+                    "type": "plane",
+                    "faces": [
+                      "45a238226f8164300889c1218ccf309fbbdfd86511e2c909265d4feef07aac2b"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "origin_mm": [
+              0.0,
+              0.0,
+              9.0
+            ]
+          },
+          "feature": {
+            "type": "cylindrical_region",
+            "source_faces": [
+              "88211bc7adf6653c6dc36d07627a9f79cdaa6089701c05cff40e2ea0d009303a"
+            ],
+            "measured_geometry": {
+              "radius_mm": 2.0,
+              "diameter_mm": 4.0,
+              "axial_range_mm": [
+                -9.0,
+                9.0
+              ],
+              "axial_span_mm": 18.0,
+              "axis_offset_mm": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "angular_coverage_rad": 6.283185307
+            },
+            "classification_basis": "Native cylindrical surfaces grouped by radius, axis, side and overlapping axial support",
+            "boundary_side": "internal",
+            "complete_circumference": true,
+            "coaxial": true
+          }
+        }
+      },
+      {
+        "stable_id": "g1-f3bec90b56ace3450526fa201439315d16be09408a8f8aa42af58039c82c9624",
+        "candidate_id": "mock-unsupported",
+        "label": "Mock Unsupported Characteristic",
+        "kind": "mock",
+        "value": null,
+        "units": "mm",
+        "verification_status": "unsupported",
+        "source_evidence": {
+          "candidate": {
+            "label": "Mock Unsupported Characteristic",
+            "kind": "mock",
+            "value": null,
+            "units": "mm"
+          },
+          "feature": {
+            "type": "mock_unknown",
+            "coaxial": false
+          }
+        }
+      }
+    ],
+    "binding_policy": "Conservative native geometry fingerprint; changed pose/trim/topology requires review, even at equal dimension values. 1e-9 rounding is numeric fingerprint resolution, never a manufacturing tolerance."
+  },
+  "analysis": {
+    "schema_version": "1.1",
+    "tool_version": "0.3.0",
+    "phase": 1,
+    "generated_at_utc": "2026-10-13T17:13:12.992887+00:00",
+    "units": "mm",
+    "preliminary": true,
+    "requires_engineering_verification": true,
+    "notice": "PRELIMINARY GEOMETRY ANALYSIS. Requires engineering verification. No tolerances, material, finish or GD&T are assigned.",
+    "source": {
+      "path": "@SOURCE@",
+      "size_bytes": 4950,
+      "sha256_before": "2283ce684c8d88b146c72cb01dde3cf7bcd108e2e9c1bb8b4372206221e3ba4b",
+      "import_method": "Part.Shape.read",
+      "explicit_healing_applied": false,
+      "note": "The native STEP reader may normalize geometry internally; no source file is written.",
+      "sha256_after": "2283ce684c8d88b146c72cb01dde3cf7bcd108e2e9c1bb8b4372206221e3ba4b",
+      "unchanged": true
+    },
+    "environment": {
+      "freecad_version": [
+        "1",
+        "1",
+        "4",
+        "20260928 (Git shallow)",
+        "Unknown",
+        "2026/09/28 13:46:34",
+        "(HEAD detached at 4fd3bf320)",
+        "4fd3bf320d9566a27e60069fc8387448aaa3a094"
+      ],
+      "python_version": "3.11.14 | packaged by conda-forge | (main, Oct 13 2025, 14:00:26) [MSC v.1944 64 bit (AMD64)]",
+      "python_executable": "C:\\Program Files\\FreeCAD 1.1\\bin\\python.exe",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "freecad_module": "C:\\Program Files\\FreeCAD 1.1\\bin\\FreeCAD.pyd",
+      "part_module": "C:\\Program Files\\FreeCAD 1.1\\lib\\Part.pyd",
+      "opencascade_version": "7.8.1",
+      "executables": {
+        "freecad.exe": "C:\\Program Files\\FreeCAD 1.1\\bin\\freecad.exe",
+        "freecadcmd.exe": "C:\\Program Files\\FreeCAD 1.1\\bin\\freecadcmd.exe",
+        "python.exe": "C:\\Program Files\\FreeCAD 1.1\\bin\\python.exe",
+        "pythonw.exe": "C:\\Program Files\\FreeCAD 1.1\\bin\\pythonw.exe"
+      },
+      "capabilities": {
+        "headless_native_import": true,
+        "geometry_bounding_without_triangulation": true,
+        "extended_boolean_check": true,
+        "techdraw_module_available": true,
+        "techdraw_execution_tested": false
+      },
+      "execution_method": "Bundled python.exe importing FreeCAD before Part; no GUI required"
+    },
+    "validation": {
+      "shape_type": "Solid",
+      "basic_valid": true,
+      "closed": true,
+      "counts": {
+        "Solids": 1,
+        "Shells": 1,
+        "Faces": 4,
+        "Edges": 6,
+        "Vertexes": 4
+      },
+      "solids": [
+        {
+          "solid": 1,
+          "valid": true,
+          "closed": true,
+          "volume_mm3": 1187.5220230569416
+        }
+      ],
+      "brep_check": {
+        "status": "passed",
+        "errors": []
+      },
+      "boolean_check": {
+        "status": "failed",
+        "message": "BOPAlgo MOCK warning for GUI branch coverage only"
+      },
+      "max_brep_tolerance_mm": 1e-07,
+      "issues": [],
+      "status": "passed",
+      "measurement_note": "BRep tolerance is native numerical geometry metadata, not a manufacturing tolerance."
+    },
+    "global_bounding_box": {
+      "minimum_mm": [
+        -5.0,
+        -5.0,
+        0.0
+      ],
+      "maximum_mm": [
+        5.0,
+        5.0,
+        18.0
+      ],
+      "dimensions_mm": [
+        10.0,
+        10.0,
+        18.0
+      ],
+      "method": "TopoShape.optimalBoundingBox(useTriangulation=False, useShapeTolerance=False)"
+    },
+    "components": [
+      {
+        "component": 1,
+        "validation": {
+          "shape_type": "Solid",
+          "basic_valid": true,
+          "closed": true,
+          "counts": {
+            "Solids": 1,
+            "Shells": 1,
+            "Faces": 4,
+            "Edges": 6,
+            "Vertexes": 4
+          },
+          "solids": [
+            {
+              "solid": 1,
+              "valid": true,
+              "closed": true,
+              "volume_mm3": 1187.5220230569416
+            }
+          ],
+          "brep_check": {
+            "status": "passed",
+            "errors": []
+          },
+          "boolean_check": {
+            "status": "passed",
+            "errors": []
+          },
+          "max_brep_tolerance_mm": 1e-07,
+          "issues": [],
+          "status": "passed",
+          "measurement_note": "BRep tolerance is native numerical geometry metadata, not a manufacturing tolerance."
+        },
+        "geometry": {
+          "global_bounding_box": {
+            "minimum_mm": [
+              -5.0,
+              -5.0,
+              0.0
+            ],
+            "maximum_mm": [
+              5.0,
+              5.0,
+              18.0
+            ],
+            "dimensions_mm": [
+              10.0,
+              10.0,
+              18.0
+            ],
+            "method": "TopoShape.optimalBoundingBox(useTriangulation=False, useShapeTolerance=False)"
+          },
+          "surface_type_counts": {
+            "Cylinder": 2,
+            "Plane": 2
+          },
+          "volume_mm3": 1187.5220230569416,
+          "surface_area_mm2": 923.6282401553992,
+          "numerical_comparison_threshold_mm": 1.8e-05,
+          "threshold_note": "Algorithmic geometry-matching threshold, not a manufacturing tolerance",
+          "faces": [
+            {
+              "face": 1,
+              "surface_type": "Cylinder",
+              "area_mm2": 565.4866776461628,
+              "orientation": "Forward",
+              "centroid_mm": [
+                1.7763568394002505e-15,
+                -2.1503773612849814e-16,
+                9.0
+              ],
+              "parameter_range": [
+                0.0,
+                6.283185307179586,
+                0.0,
+                18.0
+              ],
+              "axis_direction": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "axis_point_mm": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "reference_radius_mm": 5.0,
+              "diameter_mm": 10.0,
+              "surface_axis_trimmed_range_mm": [
+                0.0,
+                18.0
+              ],
+              "surface_axis_trimmed_span_mm": 18.0,
+              "axial_range_mm": [
+                -9.000000000000002,
+                8.999999999999998
+              ],
+              "axial_span_mm": 18.0,
+              "coaxial_with_selected_axis": true,
+              "boundary_side": "external"
+            },
+            {
+              "face": 2,
+              "surface_type": "Plane",
+              "area_mm2": 65.97344572538566,
+              "orientation": "Forward",
+              "centroid_mm": [
+                0.0,
+                -4.3695404293771224e-16,
+                18.0
+              ],
+              "parameter_range": [
+                -5.0,
+                5.0,
+                -5.0,
+                5.0
+              ],
+              "normal_direction": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "plane_point_mm": [
+                0.0,
+                -4.3695404293771224e-16,
+                18.0
+              ],
+              "axial_range_mm": [
+                8.999999999999998,
+                8.999999999999998
+              ],
+              "axial_span_mm": 0.0,
+              "relation_to_axis": "end_or_shoulder",
+              "plane_offset_from_axis_origin_mm": 8.999999999999998
+            },
+            {
+              "face": 3,
+              "surface_type": "Plane",
+              "area_mm2": 65.97344572538566,
+              "orientation": "Reversed",
+              "centroid_mm": [
+                0.0,
+                -4.3695404293771224e-16,
+                0.0
+              ],
+              "parameter_range": [
+                -5.0,
+                5.0,
+                -5.0,
+                5.0
+              ],
+              "normal_direction": [
+                -0.0,
+                -0.0,
+                -1.0
+              ],
+              "plane_point_mm": [
+                0.0,
+                -4.3695404293771224e-16,
+                0.0
+              ],
+              "axial_range_mm": [
+                -9.000000000000002,
+                -9.000000000000002
+              ],
+              "axial_span_mm": 0.0,
+              "relation_to_axis": "end_or_shoulder",
+              "plane_offset_from_axis_origin_mm": 9.000000000000002
+            },
+            {
+              "face": 4,
+              "surface_type": "Cylinder",
+              "area_mm2": 226.1946710584651,
+              "orientation": "Reversed",
+              "centroid_mm": [
+                -4.440892098500626e-16,
+                -1.1982051818959735e-16,
+                9.0
+              ],
+              "parameter_range": [
+                0.0,
+                6.283185307179586,
+                0.0,
+                18.0
+              ],
+              "axis_direction": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "axis_point_mm": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "reference_radius_mm": 2.0,
+              "diameter_mm": 4.0,
+              "surface_axis_trimmed_range_mm": [
+                0.0,
+                18.0
+              ],
+              "surface_axis_trimmed_span_mm": 18.0,
+              "axial_range_mm": [
+                -9.000000000000002,
+                8.999999999999998
+              ],
+              "axial_span_mm": 18.0,
+              "coaxial_with_selected_axis": true,
+              "boundary_side": "internal"
+            }
+          ],
+          "axis": {
+            "status": "identified",
+            "direction": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "origin_mm": [
+              0.0,
+              0.0,
+              9.000000000000002
+            ],
+            "method": "Dominant common axis of coaxial analytic cylinders/cones",
+            "classification": "Common geometric axis; its longitudinal fastener role is inferred",
+            "supporting_faces": [
+              1,
+              4
+            ],
+            "candidates": [
+              {
+                "direction": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "point_mm": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "supporting_faces": [
+                  1,
+                  4
+                ],
+                "analytic_area_mm2": 791.6813487046279,
+                "full_cylinder_area_mm2": 791.6813487046279
+              }
+            ],
+            "sign_note": "Axis is unoriented; direction sign is only a deterministic convention."
+          },
+          "axis_aligned_bounding_box": {
+            "minimum_mm": [
+              -5.0,
+              -5.0,
+              -9.000000000000002
+            ],
+            "maximum_mm": [
+              5.0,
+              5.0,
+              8.999999999999998
+            ],
+            "dimensions_mm": [
+              10.0,
+              10.0,
+              18.0
+            ],
+            "method": "TopoShape.optimalBoundingBox(useTriangulation=False, useShapeTolerance=False)"
+          },
+          "cylindrical_bands": [
+            {
+              "radius_mm": 5.0,
+              "diameter_mm": 10.0,
+              "axial_range_mm": [
+                -9.000000000000002,
+                8.999999999999998
+              ],
+              "axial_span_mm": 18.0,
+              "boundary_side": "external",
+              "faces": [
+                1
+              ],
+              "area_mm2": 565.4866776461628,
+              "angular_coverage_rad": 6.283185307179586,
+              "rectangular_band_area_ratio": 1.0,
+              "complete_circular_band": true
+            },
+            {
+              "radius_mm": 2.0,
+              "diameter_mm": 4.0,
+              "axial_range_mm": [
+                -9.000000000000002,
+                8.999999999999998
+              ],
+              "axial_span_mm": 18.0,
+              "boundary_side": "internal",
+              "faces": [
+                4
+              ],
+              "area_mm2": 226.1946710584651,
+              "angular_coverage_rad": 6.283185307179586,
+              "rectangular_band_area_ratio": 1.0,
+              "complete_circular_band": true
+            }
+          ],
+          "hexagonal_regions": []
+        },
+        "recognition": {
+          "dimensions": {
+            "overall_length": {
+              "status": "recognized",
+              "value_mm": 18.0,
+              "measurement_basis": "Native BRep geometry",
+              "meaning": "Overall geometric extent along the selected common axis; fastener-axis role remains inferred",
+              "evidence": {
+                "axis": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "end_stations_mm": [
+                  -9.000000000000002,
+                  8.999999999999998
+                ],
+                "method": "TopoShape.optimalBoundingBox(useTriangulation=False, useShapeTolerance=False)"
+              },
+              "requires_manual_review": true,
+              "geometry_quality": "passed",
+              "review_note": "All outputs are preliminary; no manufacturing tolerance is assigned."
+            },
+            "length_under_head": {
+              "status": "unrecognized",
+              "value_mm": null,
+              "reason": "Coaxial internal cylindrical geometry is present; hollow-body geometry does not establish a screw/bolt head or shank.",
+              "requires_manual_review": true
+            },
+            "head_height": {
+              "status": "unrecognized",
+              "value_mm": null,
+              "reason": "Coaxial internal cylindrical geometry is present; hollow-body geometry does not establish a screw/bolt head or shank.",
+              "requires_manual_review": true
+            },
+            "head_diameter": {
+              "status": "unrecognized",
+              "value_mm": null,
+              "reason": "Coaxial internal cylindrical geometry is present; hollow-body geometry does not establish a screw/bolt head or shank.",
+              "requires_manual_review": true
+            },
+            "flange_diameter": {
+              "status": "unrecognized",
+              "value_mm": null,
+              "reason": "Insufficient geometric evidence for this feature role.",
+              "requires_manual_review": true
+            },
+            "shank_diameter": {
+              "status": "unrecognized",
+              "value_mm": null,
+              "reason": "Coaxial internal cylindrical geometry is present; hollow-body geometry does not establish a screw/bolt head or shank.",
+              "requires_manual_review": true
+            },
+            "thread_major_diameter": {
+              "status": "unrecognized",
+              "value_mm": null,
+              "reason": "Insufficient geometric evidence for this feature role.",
+              "requires_manual_review": true
+            },
+            "threaded_length": {
+              "status": "unrecognized",
+              "value_mm": null,
+              "reason": "Insufficient geometric evidence for this feature role.",
+              "requires_manual_review": true
+            },
+            "across_flats": {
+              "status": "unrecognized",
+              "value_mm": null,
+              "reason": "Coaxial internal cylindrical geometry is present; hollow-body geometry does not establish a screw/bolt head or shank.",
+              "requires_manual_review": true
+            }
+          },
+          "feature_classifications": [
+            {
+              "classification": "coaxial_hollow_body",
+              "classification_basis": "Inward-facing coaxial cylindrical surfaces",
+              "supporting_faces": [
+                4
+              ],
+              "semantic_note": "Does not establish nut type, thread size, head or shank."
+            }
+          ],
+          "threads": {
+            "status": "cannot_determine",
+            "classification_basis": "Inferred from geometry; STEP filenames are not used",
+            "reason": "No sufficient repeated helical flank evidence. Smooth bores/shafts do not distinguish simplified threads from unthreaded geometry.",
+            "helical_edge_evidence": [],
+            "helical_chain_evidence": [],
+            "limitations": [
+              "Semantic/cosmetic STEP thread annotations are not interpreted.",
+              "Internal threads, fewer than two turns, conical threads and faceted threads require manual review.",
+              "Absence of detected helices does not prove that modeled threads are absent."
+            ]
+          },
+          "manual_review": [
+            "Coaxial internal cylindrical geometry is present; hollow-body geometry does not establish a screw/bolt head or shank.",
+            "No sufficient repeated helical flank evidence. Smooth bores/shafts do not distinguish simplified threads from unthreaded geometry."
+          ],
+          "recognition_scope": "Conservative subset of circular shafts, terminal circular/hexagonal heads and annular flanges; no standard fastener sizes assumed"
+        },
+        "feature_discovery": {
+          "schema_version": "3.0",
+          "features": [
+            {
+              "id": "F001",
+              "type": "axial_envelope",
+              "source_faces": [],
+              "measured_geometry": {
+                "length_mm": 18.0
+              },
+              "classification_basis": "Native extrema along recovered centerline",
+              "candidate_ids": [
+                "D001"
+              ]
+            },
+            {
+              "id": "F002",
+              "type": "cylindrical_region",
+              "source_faces": [
+                1
+              ],
+              "measured_geometry": {
+                "radius_mm": 5.0,
+                "diameter_mm": 10.0,
+                "axial_range_mm": [
+                  -9.000000000000002,
+                  8.999999999999998
+                ],
+                "axial_span_mm": 18.0,
+                "axis_offset_mm": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "angular_coverage_rad": 6.283185307179586
+              },
+              "classification_basis": "Native cylindrical surfaces grouped by radius, axis, side and overlapping axial support",
+              "candidate_ids": [
+                "D002",
+                "D003"
+              ],
+              "boundary_side": "external",
+              "complete_circumference": true,
+              "coaxial": true
+            },
+            {
+              "id": "F003",
+              "type": "cylindrical_region",
+              "source_faces": [
+                4
+              ],
+              "measured_geometry": {
+                "radius_mm": 2.0,
+                "diameter_mm": 4.0,
+                "axial_range_mm": [
+                  -9.000000000000002,
+                  8.999999999999998
+                ],
+                "axial_span_mm": 18.0,
+                "axis_offset_mm": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "angular_coverage_rad": 6.283185307179586
+              },
+              "classification_basis": "Native cylindrical surfaces grouped by radius, axis, side and overlapping axial support",
+              "candidate_ids": [
+                "D004",
+                "D005"
+              ],
+              "boundary_side": "internal",
+              "complete_circumference": true,
+              "coaxial": true
+            },
+            {
+              "id": "mock-unsupported",
+              "type": "mock_unknown",
+              "coaxial": false
+            }
+          ],
+          "dimension_candidates": [
+            {
+              "id": "D001",
+              "feature_id": "F001",
+              "kind": "overall",
+              "value": 18.0,
+              "units": "mm",
+              "label": "Overall axial length",
+              "source_faces": [],
+              "source_supports": [
+                {
+                  "id": "S002",
+                  "station_mm": -9.000000000000002,
+                  "supports": [
+                    {
+                      "type": "plane",
+                      "faces": [
+                        3
+                      ]
+                    },
+                    {
+                      "type": "rim",
+                      "edges": [
+                        3
+                      ]
+                    },
+                    {
+                      "type": "rim",
+                      "edges": [
+                        5
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "S001",
+                  "station_mm": 8.999999999999998,
+                  "supports": [
+                    {
+                      "type": "plane",
+                      "faces": [
+                        2
+                      ]
+                    },
+                    {
+                      "type": "rim",
+                      "edges": [
+                        1
+                      ]
+                    },
+                    {
+                      "type": "rim",
+                      "edges": [
+                        4
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "priority": 100,
+              "verification_status": "source_measured",
+              "proposed_dimension_type": "Native horizontal extent",
+              "axis": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "origin_mm": [
+                0.0,
+                0.0,
+                9.000000000000002
+              ],
+              "preferred_views": [
+                "longitudinal"
+              ],
+              "stable_id": "g1-0e36da7a8c631332455f6d6607bb63864549a6388d71be3cc1ed430e9cbbdf5c"
+            },
+            {
+              "id": "D002",
+              "feature_id": "F002",
+              "kind": "diameter",
+              "value": 10.0,
+              "units": "mm",
+              "label": "External body diameter",
+              "source_faces": [
+                1
+              ],
+              "source_supports": [],
+              "priority": 80,
+              "verification_status": "source_measured",
+              "proposed_dimension_type": "Diameter or section DistanceY",
+              "preferred_views": [
+                "left_end",
+                "right_end",
+                "section"
+              ],
+              "radius_mm": 5.0,
+              "axis": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "origin_mm": [
+                0.0,
+                0.0,
+                9.000000000000002
+              ],
+              "boundary_side": "external",
+              "stable_id": "g1-b36dc2d9188f3c0bab7f95dc7cfbac40da6dadc33e90750d81940e67abd969e3"
+            },
+            {
+              "id": "D003",
+              "feature_id": "F002",
+              "kind": "axial_distance",
+              "value": 18.0,
+              "units": "mm",
+              "label": "Cylindrical region length",
+              "source_faces": [
+                1
+              ],
+              "source_supports": [
+                {
+                  "id": "S002",
+                  "station_mm": -9.000000000000002,
+                  "supports": [
+                    {
+                      "type": "plane",
+                      "faces": [
+                        3
+                      ]
+                    },
+                    {
+                      "type": "rim",
+                      "edges": [
+                        3
+                      ]
+                    },
+                    {
+                      "type": "rim",
+                      "edges": [
+                        5
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "S001",
+                  "station_mm": 8.999999999999998,
+                  "supports": [
+                    {
+                      "type": "plane",
+                      "faces": [
+                        2
+                      ]
+                    },
+                    {
+                      "type": "rim",
+                      "edges": [
+                        1
+                      ]
+                    },
+                    {
+                      "type": "rim",
+                      "edges": [
+                        4
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "priority": 65,
+              "verification_status": "source_measured",
+              "proposed_dimension_type": "DistanceX",
+              "axis": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "origin_mm": [
+                0.0,
+                0.0,
+                9.000000000000002
+              ],
+              "preferred_views": [
+                "section",
+                "longitudinal"
+              ],
+              "stable_id": "g1-f50aeee5a5624a971182171b1168f4922be12a00edcdf2e3dfb05586d0d0e47b"
+            },
+            {
+              "id": "D004",
+              "feature_id": "F003",
+              "kind": "diameter",
+              "value": 4.0,
+              "units": "mm",
+              "label": "Internal bore diameter",
+              "source_faces": [
+                4
+              ],
+              "source_supports": [],
+              "priority": 80,
+              "verification_status": "source_measured",
+              "proposed_dimension_type": "Diameter or section DistanceY",
+              "preferred_views": [
+                "section",
+                "right_end",
+                "left_end"
+              ],
+              "radius_mm": 2.0,
+              "axis": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "origin_mm": [
+                0.0,
+                0.0,
+                9.000000000000002
+              ],
+              "boundary_side": "internal",
+              "stable_id": "g1-d99c596b017ae31ed8c6724eef655289a2575de98518e25a9bfce3558a32b9c0"
+            },
+            {
+              "id": "D005",
+              "feature_id": "F003",
+              "kind": "axial_distance",
+              "value": 18.0,
+              "units": "mm",
+              "label": "Bore depth / cylindrical span",
+              "source_faces": [
+                4
+              ],
+              "source_supports": [
+                {
+                  "id": "S002",
+                  "station_mm": -9.000000000000002,
+                  "supports": [
+                    {
+                      "type": "plane",
+                      "faces": [
+                        3
+                      ]
+                    },
+                    {
+                      "type": "rim",
+                      "edges": [
+                        3
+                      ]
+                    },
+                    {
+                      "type": "rim",
+                      "edges": [
+                        5
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "S001",
+                  "station_mm": 8.999999999999998,
+                  "supports": [
+                    {
+                      "type": "plane",
+                      "faces": [
+                        2
+                      ]
+                    },
+                    {
+                      "type": "rim",
+                      "edges": [
+                        1
+                      ]
+                    },
+                    {
+                      "type": "rim",
+                      "edges": [
+                        4
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "priority": 65,
+              "verification_status": "source_measured",
+              "proposed_dimension_type": "DistanceX",
+              "axis": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "origin_mm": [
+                0.0,
+                0.0,
+                9.000000000000002
+              ],
+              "preferred_views": [
+                "section",
+                "longitudinal"
+              ],
+              "stable_id": "g1-9dc2540f0623f9879a726df5c14450cd5487a6c0d2799d9f3fb5a374863d75f6"
+            },
+            {
+              "id": "mock-unsupported",
+              "feature_id": "mock-unsupported",
+              "label": "Mock Unsupported Characteristic",
+              "kind": "mock",
+              "value": null,
+              "units": "mm",
+              "verification_status": "unsupported",
+              "stable_id": "g1-f3bec90b56ace3450526fa201439315d16be09408a8f8aa42af58039c82c9624"
+            }
+          ],
+          "recognition_is_exhaustive": false,
+          "numerical_threshold_mm": 1e-05,
+          "coverage_notice": "Candidate coverage is not proof of dimensional completeness; unrecognized geometry still requires engineering review.",
+          "axis": {
+            "direction": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "origin_mm": [
+              0.0,
+              0.0,
+              9.000000000000002
+            ],
+            "range_mm": [
+              -9.000000000000002,
+              8.999999999999998
+            ]
+          },
+          "axial_stations": [
+            {
+              "id": "S002",
+              "station_mm": -9.000000000000002,
+              "supports": [
+                {
+                  "type": "plane",
+                  "faces": [
+                    3
+                  ]
+                },
+                {
+                  "type": "rim",
+                  "edges": [
+                    3
+                  ]
+                },
+                {
+                  "type": "rim",
+                  "edges": [
+                    5
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "S001",
+              "station_mm": 8.999999999999998,
+              "supports": [
+                {
+                  "type": "plane",
+                  "faces": [
+                    2
+                  ]
+                },
+                {
+                  "type": "rim",
+                  "edges": [
+                    1
+                  ]
+                },
+                {
+                  "type": "rim",
+                  "edges": [
+                    4
+                  ]
+                }
+              ]
+            }
+          ],
+          "datum": {
+            "station": {
+              "id": "S002",
+              "station_mm": -9.000000000000002,
+              "supports": [
+                {
+                  "type": "plane",
+                  "faces": [
+                    3
+                  ]
+                },
+                {
+                  "type": "rim",
+                  "edges": [
+                    3
+                  ]
+                },
+                {
+                  "type": "rim",
+                  "edges": [
+                    5
+                  ]
+                }
+              ]
+            },
+            "basis": "Terminal plane/rim; no suitable enlargement shoulder established"
+          },
+          "unmapped_faces": [
+            {
+              "face": 2,
+              "surface_type": "Plane",
+              "reason": "Planar connecting surface/complex patch not represented as a distinct recognized feature; review geometry"
+            },
+            {
+              "face": 3,
+              "surface_type": "Plane",
+              "reason": "Planar connecting surface/complex patch not represented as a distinct recognized feature; review geometry"
+            }
+          ],
+          "limitations": [
+            "Surface seams are grouped; complex nonanalytic and oblique transitions may remain unresolved.",
+            "Repeat counts describe supported equal-radius occurrences, not a manufacturing pattern specification."
+          ]
+        }
+      }
+    ],
+    "evidence_indexing": "Face/edge numbers are one-based within each native Solid component; tied to this import and source hash, not guaranteed stable across readers/versions.",
+    "analysis_status": "completed_preliminary"
+  },
+  "config": {
+    "schema_version": 1,
+    "dimensioning": {
+      "mode": "comprehensive",
+      "include": [],
+      "exclude": []
+    },
+    "views": {
+      "isometric": true,
+      "opposite_end": true,
+      "section": true,
+      "opening_detail": true
+    },
+    "sheet": {
+      "size": "auto"
+    },
+    "scale": "auto",
+    "orientation": {
+      "axis": null,
+      "up": null
+    },
+    "metadata": {
+      "title": "IMPORTED STEP GEOMETRY",
+      "drawing_number": "",
+      "revision": "",
+      "date": null
+    },
+    "source_binding": {
+      "geometry_id": "38597c13e6fcdeac9fc83cffae64b173605eb5383f1c7dce356cb01d03e3e630",
+      "source_sha256": "2283ce684c8d88b146c72cb01dde3cf7bcd108e2e9c1bb8b4372206221e3ba4b",
+      "candidate_ids": [
+        "g1-0e36da7a8c631332455f6d6607bb63864549a6388d71be3cc1ed430e9cbbdf5c",
+        "g1-9dc2540f0623f9879a726df5c14450cd5487a6c0d2799d9f3fb5a374863d75f6",
+        "g1-b36dc2d9188f3c0bab7f95dc7cfbac40da6dadc33e90750d81940e67abd969e3",
+        "g1-d99c596b017ae31ed8c6724eef655289a2575de98518e25a9bfce3558a32b9c0",
+        "g1-f3bec90b56ace3450526fa201439315d16be09408a8f8aa42af58039c82c9624",
+        "g1-f50aeee5a5624a971182171b1168f4922be12a00edcdf2e3dfb05586d0d0e47b"
+      ]
+    }
+  },
+  "report": {
+    "fixture_only": true,
+    "source": "@SOURCE@",
+    "configuration": {
+      "schema_version": 1,
+      "dimensioning": {
+        "mode": "comprehensive",
+        "include": [],
+        "exclude": []
+      },
+      "views": {
+        "isometric": true,
+        "opposite_end": true,
+        "section": true,
+        "opening_detail": true
+      },
+      "sheet": {
+        "size": "auto"
+      },
+      "scale": "auto",
+      "orientation": {
+        "axis": null,
+        "up": null
+      },
+      "metadata": {
+        "title": "IMPORTED STEP GEOMETRY",
+        "drawing_number": "",
+        "revision": "",
+        "date": null
+      },
+      "source_binding": {
+        "geometry_id": "38597c13e6fcdeac9fc83cffae64b173605eb5383f1c7dce356cb01d03e3e630",
+        "source_sha256": "2283ce684c8d88b146c72cb01dde3cf7bcd108e2e9c1bb8b4372206221e3ba4b",
+        "candidate_ids": [
+          "g1-0e36da7a8c631332455f6d6607bb63864549a6388d71be3cc1ed430e9cbbdf5c",
+          "g1-9dc2540f0623f9879a726df5c14450cd5487a6c0d2799d9f3fb5a374863d75f6",
+          "g1-b36dc2d9188f3c0bab7f95dc7cfbac40da6dadc33e90750d81940e67abd969e3",
+          "g1-d99c596b017ae31ed8c6724eef655289a2575de98518e25a9bfce3558a32b9c0",
+          "g1-f3bec90b56ace3450526fa201439315d16be09408a8f8aa42af58039c82c9624",
+          "g1-f50aeee5a5624a971182171b1168f4922be12a00edcdf2e3dfb05586d0d0e47b"
+        ]
+      }
+    },
+    "phase1_analysis": {
+      "schema_version": "1.1",
+      "tool_version": "0.3.0",
+      "phase": 1,
+      "generated_at_utc": "2026-10-13T17:13:12.992887+00:00",
+      "units": "mm",
+      "preliminary": true,
+      "requires_engineering_verification": true,
+      "notice": "PRELIMINARY GEOMETRY ANALYSIS. Requires engineering verification. No tolerances, material, finish or GD&T are assigned.",
+      "source": {
+        "path": "@SOURCE@",
+        "size_bytes": 4950,
+        "sha256_before": "2283ce684c8d88b146c72cb01dde3cf7bcd108e2e9c1bb8b4372206221e3ba4b",
+        "import_method": "Part.Shape.read",
+        "explicit_healing_applied": false,
+        "note": "The native STEP reader may normalize geometry internally; no source file is written.",
+        "sha256_after": "2283ce684c8d88b146c72cb01dde3cf7bcd108e2e9c1bb8b4372206221e3ba4b",
+        "unchanged": true
+      },
+      "environment": {
+        "freecad_version": [
+          "1",
+          "1",
+          "4",
+          "20260928 (Git shallow)",
+          "Unknown",
+          "2026/09/28 13:46:34",
+          "(HEAD detached at 4fd3bf320)",
+          "4fd3bf320d9566a27e60069fc8387448aaa3a094"
+        ],
+        "python_version": "3.11.14 | packaged by conda-forge | (main, Oct 13 2025, 14:00:26) [MSC v.1944 64 bit (AMD64)]",
+        "python_executable": "C:\\Program Files\\FreeCAD 1.1\\bin\\python.exe",
+        "platform": "Windows-10-10.0.26200-SP0",
+        "freecad_module": "C:\\Program Files\\FreeCAD 1.1\\bin\\FreeCAD.pyd",
+        "part_module": "C:\\Program Files\\FreeCAD 1.1\\lib\\Part.pyd",
+        "opencascade_version": "7.8.1",
+        "executables": {
+          "freecad.exe": "C:\\Program Files\\FreeCAD 1.1\\bin\\freecad.exe",
+          "freecadcmd.exe": "C:\\Program Files\\FreeCAD 1.1\\bin\\freecadcmd.exe",
+          "python.exe": "C:\\Program Files\\FreeCAD 1.1\\bin\\python.exe",
+          "pythonw.exe": "C:\\Program Files\\FreeCAD 1.1\\bin\\pythonw.exe"
+        },
+        "capabilities": {
+          "headless_native_import": true,
+          "geometry_bounding_without_triangulation": true,
+          "extended_boolean_check": true,
+          "techdraw_module_available": true,
+          "techdraw_execution_tested": false
+        },
+        "execution_method": "Bundled python.exe importing FreeCAD before Part; no GUI required"
+      },
+      "validation": {
+        "shape_type": "Solid",
+        "basic_valid": true,
+        "closed": true,
+        "counts": {
+          "Solids": 1,
+          "Shells": 1,
+          "Faces": 4,
+          "Edges": 6,
+          "Vertexes": 4
+        },
+        "solids": [
+          {
+            "solid": 1,
+            "valid": true,
+            "closed": true,
+            "volume_mm3": 1187.5220230569416
+          }
+        ],
+        "brep_check": {
+          "status": "passed",
+          "errors": []
+        },
+        "boolean_check": {
+          "status": "failed",
+          "message": "BOPAlgo MOCK warning for GUI branch coverage only"
+        },
+        "max_brep_tolerance_mm": 1e-07,
+        "issues": [],
+        "status": "passed",
+        "measurement_note": "BRep tolerance is native numerical geometry metadata, not a manufacturing tolerance."
+      },
+      "global_bounding_box": {
+        "minimum_mm": [
+          -5.0,
+          -5.0,
+          0.0
+        ],
+        "maximum_mm": [
+          5.0,
+          5.0,
+          18.0
+        ],
+        "dimensions_mm": [
+          10.0,
+          10.0,
+          18.0
+        ],
+        "method": "TopoShape.optimalBoundingBox(useTriangulation=False, useShapeTolerance=False)"
+      },
+      "components": [
+        {
+          "component": 1,
+          "validation": {
+            "shape_type": "Solid",
+            "basic_valid": true,
+            "closed": true,
+            "counts": {
+              "Solids": 1,
+              "Shells": 1,
+              "Faces": 4,
+              "Edges": 6,
+              "Vertexes": 4
+            },
+            "solids": [
+              {
+                "solid": 1,
+                "valid": true,
+                "closed": true,
+                "volume_mm3": 1187.5220230569416
+              }
+            ],
+            "brep_check": {
+              "status": "passed",
+              "errors": []
+            },
+            "boolean_check": {
+              "status": "passed",
+              "errors": []
+            },
+            "max_brep_tolerance_mm": 1e-07,
+            "issues": [],
+            "status": "passed",
+            "measurement_note": "BRep tolerance is native numerical geometry metadata, not a manufacturing tolerance."
+          },
+          "geometry": {
+            "global_bounding_box": {
+              "minimum_mm": [
+                -5.0,
+                -5.0,
+                0.0
+              ],
+              "maximum_mm": [
+                5.0,
+                5.0,
+                18.0
+              ],
+              "dimensions_mm": [
+                10.0,
+                10.0,
+                18.0
+              ],
+              "method": "TopoShape.optimalBoundingBox(useTriangulation=False, useShapeTolerance=False)"
+            },
+            "surface_type_counts": {
+              "Cylinder": 2,
+              "Plane": 2
+            },
+            "volume_mm3": 1187.5220230569416,
+            "surface_area_mm2": 923.6282401553992,
+            "numerical_comparison_threshold_mm": 1.8e-05,
+            "threshold_note": "Algorithmic geometry-matching threshold, not a manufacturing tolerance",
+            "faces": [
+              {
+                "face": 1,
+                "surface_type": "Cylinder",
+                "area_mm2": 565.4866776461628,
+                "orientation": "Forward",
+                "centroid_mm": [
+                  1.7763568394002505e-15,
+                  -2.1503773612849814e-16,
+                  9.0
+                ],
+                "parameter_range": [
+                  0.0,
+                  6.283185307179586,
+                  0.0,
+                  18.0
+                ],
+                "axis_direction": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "axis_point_mm": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "reference_radius_mm": 5.0,
+                "diameter_mm": 10.0,
+                "surface_axis_trimmed_range_mm": [
+                  0.0,
+                  18.0
+                ],
+                "surface_axis_trimmed_span_mm": 18.0,
+                "axial_range_mm": [
+                  -9.000000000000002,
+                  8.999999999999998
+                ],
+                "axial_span_mm": 18.0,
+                "coaxial_with_selected_axis": true,
+                "boundary_side": "external"
+              },
+              {
+                "face": 2,
+                "surface_type": "Plane",
+                "area_mm2": 65.97344572538566,
+                "orientation": "Forward",
+                "centroid_mm": [
+                  0.0,
+                  -4.3695404293771224e-16,
+                  18.0
+                ],
+                "parameter_range": [
+                  -5.0,
+                  5.0,
+                  -5.0,
+                  5.0
+                ],
+                "normal_direction": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "plane_point_mm": [
+                  0.0,
+                  -4.3695404293771224e-16,
+                  18.0
+                ],
+                "axial_range_mm": [
+                  8.999999999999998,
+                  8.999999999999998
+                ],
+                "axial_span_mm": 0.0,
+                "relation_to_axis": "end_or_shoulder",
+                "plane_offset_from_axis_origin_mm": 8.999999999999998
+              },
+              {
+                "face": 3,
+                "surface_type": "Plane",
+                "area_mm2": 65.97344572538566,
+                "orientation": "Reversed",
+                "centroid_mm": [
+                  0.0,
+                  -4.3695404293771224e-16,
+                  0.0
+                ],
+                "parameter_range": [
+                  -5.0,
+                  5.0,
+                  -5.0,
+                  5.0
+                ],
+                "normal_direction": [
+                  -0.0,
+                  -0.0,
+                  -1.0
+                ],
+                "plane_point_mm": [
+                  0.0,
+                  -4.3695404293771224e-16,
+                  0.0
+                ],
+                "axial_range_mm": [
+                  -9.000000000000002,
+                  -9.000000000000002
+                ],
+                "axial_span_mm": 0.0,
+                "relation_to_axis": "end_or_shoulder",
+                "plane_offset_from_axis_origin_mm": 9.000000000000002
+              },
+              {
+                "face": 4,
+                "surface_type": "Cylinder",
+                "area_mm2": 226.1946710584651,
+                "orientation": "Reversed",
+                "centroid_mm": [
+                  -4.440892098500626e-16,
+                  -1.1982051818959735e-16,
+                  9.0
+                ],
+                "parameter_range": [
+                  0.0,
+                  6.283185307179586,
+                  0.0,
+                  18.0
+                ],
+                "axis_direction": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "axis_point_mm": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "reference_radius_mm": 2.0,
+                "diameter_mm": 4.0,
+                "surface_axis_trimmed_range_mm": [
+                  0.0,
+                  18.0
+                ],
+                "surface_axis_trimmed_span_mm": 18.0,
+                "axial_range_mm": [
+                  -9.000000000000002,
+                  8.999999999999998
+                ],
+                "axial_span_mm": 18.0,
+                "coaxial_with_selected_axis": true,
+                "boundary_side": "internal"
+              }
+            ],
+            "axis": {
+              "status": "identified",
+              "direction": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "origin_mm": [
+                0.0,
+                0.0,
+                9.000000000000002
+              ],
+              "method": "Dominant common axis of coaxial analytic cylinders/cones",
+              "classification": "Common geometric axis; its longitudinal fastener role is inferred",
+              "supporting_faces": [
+                1,
+                4
+              ],
+              "candidates": [
+                {
+                  "direction": [
+                    0.0,
+                    0.0,
+                    1.0
+                  ],
+                  "point_mm": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "supporting_faces": [
+                    1,
+                    4
+                  ],
+                  "analytic_area_mm2": 791.6813487046279,
+                  "full_cylinder_area_mm2": 791.6813487046279
+                }
+              ],
+              "sign_note": "Axis is unoriented; direction sign is only a deterministic convention."
+            },
+            "axis_aligned_bounding_box": {
+              "minimum_mm": [
+                -5.0,
+                -5.0,
+                -9.000000000000002
+              ],
+              "maximum_mm": [
+                5.0,
+                5.0,
+                8.999999999999998
+              ],
+              "dimensions_mm": [
+                10.0,
+                10.0,
+                18.0
+              ],
+              "method": "TopoShape.optimalBoundingBox(useTriangulation=False, useShapeTolerance=False)"
+            },
+            "cylindrical_bands": [
+              {
+                "radius_mm": 5.0,
+                "diameter_mm": 10.0,
+                "axial_range_mm": [
+                  -9.000000000000002,
+                  8.999999999999998
+                ],
+                "axial_span_mm": 18.0,
+                "boundary_side": "external",
+                "faces": [
+                  1
+                ],
+                "area_mm2": 565.4866776461628,
+                "angular_coverage_rad": 6.283185307179586,
+                "rectangular_band_area_ratio": 1.0,
+                "complete_circular_band": true
+              },
+              {
+                "radius_mm": 2.0,
+                "diameter_mm": 4.0,
+                "axial_range_mm": [
+                  -9.000000000000002,
+                  8.999999999999998
+                ],
+                "axial_span_mm": 18.0,
+                "boundary_side": "internal",
+                "faces": [
+                  4
+                ],
+                "area_mm2": 226.1946710584651,
+                "angular_coverage_rad": 6.283185307179586,
+                "rectangular_band_area_ratio": 1.0,
+                "complete_circular_band": true
+              }
+            ],
+            "hexagonal_regions": []
+          },
+          "recognition": {
+            "dimensions": {
+              "overall_length": {
+                "status": "recognized",
+                "value_mm": 18.0,
+                "measurement_basis": "Native BRep geometry",
+                "meaning": "Overall geometric extent along the selected common axis; fastener-axis role remains inferred",
+                "evidence": {
+                  "axis": [
+                    0.0,
+                    0.0,
+                    1.0
+                  ],
+                  "end_stations_mm": [
+                    -9.000000000000002,
+                    8.999999999999998
+                  ],
+                  "method": "TopoShape.optimalBoundingBox(useTriangulation=False, useShapeTolerance=False)"
+                },
+                "requires_manual_review": true,
+                "geometry_quality": "passed",
+                "review_note": "All outputs are preliminary; no manufacturing tolerance is assigned."
+              },
+              "length_under_head": {
+                "status": "unrecognized",
+                "value_mm": null,
+                "reason": "Coaxial internal cylindrical geometry is present; hollow-body geometry does not establish a screw/bolt head or shank.",
+                "requires_manual_review": true
+              },
+              "head_height": {
+                "status": "unrecognized",
+                "value_mm": null,
+                "reason": "Coaxial internal cylindrical geometry is present; hollow-body geometry does not establish a screw/bolt head or shank.",
+                "requires_manual_review": true
+              },
+              "head_diameter": {
+                "status": "unrecognized",
+                "value_mm": null,
+                "reason": "Coaxial internal cylindrical geometry is present; hollow-body geometry does not establish a screw/bolt head or shank.",
+                "requires_manual_review": true
+              },
+              "flange_diameter": {
+                "status": "unrecognized",
+                "value_mm": null,
+                "reason": "Insufficient geometric evidence for this feature role.",
+                "requires_manual_review": true
+              },
+              "shank_diameter": {
+                "status": "unrecognized",
+                "value_mm": null,
+                "reason": "Coaxial internal cylindrical geometry is present; hollow-body geometry does not establish a screw/bolt head or shank.",
+                "requires_manual_review": true
+              },
+              "thread_major_diameter": {
+                "status": "unrecognized",
+                "value_mm": null,
+                "reason": "Insufficient geometric evidence for this feature role.",
+                "requires_manual_review": true
+              },
+              "threaded_length": {
+                "status": "unrecognized",
+                "value_mm": null,
+                "reason": "Insufficient geometric evidence for this feature role.",
+                "requires_manual_review": true
+              },
+              "across_flats": {
+                "status": "unrecognized",
+                "value_mm": null,
+                "reason": "Coaxial internal cylindrical geometry is present; hollow-body geometry does not establish a screw/bolt head or shank.",
+                "requires_manual_review": true
+              }
+            },
+            "feature_classifications": [
+              {
+                "classification": "coaxial_hollow_body",
+                "classification_basis": "Inward-facing coaxial cylindrical surfaces",
+                "supporting_faces": [
+                  4
+                ],
+                "semantic_note": "Does not establish nut type, thread size, head or shank."
+              }
+            ],
+            "threads": {
+              "status": "cannot_determine",
+              "classification_basis": "Inferred from geometry; STEP filenames are not used",
+              "reason": "No sufficient repeated helical flank evidence. Smooth bores/shafts do not distinguish simplified threads from unthreaded geometry.",
+              "helical_edge_evidence": [],
+              "helical_chain_evidence": [],
+              "limitations": [
+                "Semantic/cosmetic STEP thread annotations are not interpreted.",
+                "Internal threads, fewer than two turns, conical threads and faceted threads require manual review.",
+                "Absence of detected helices does not prove that modeled threads are absent."
+              ]
+            },
+            "manual_review": [
+              "Coaxial internal cylindrical geometry is present; hollow-body geometry does not establish a screw/bolt head or shank.",
+              "No sufficient repeated helical flank evidence. Smooth bores/shafts do not distinguish simplified threads from unthreaded geometry."
+            ],
+            "recognition_scope": "Conservative subset of circular shafts, terminal circular/hexagonal heads and annular flanges; no standard fastener sizes assumed"
+          },
+          "feature_discovery": {
+            "schema_version": "3.0",
+            "features": [
+              {
+                "id": "F001",
+                "type": "axial_envelope",
+                "source_faces": [],
+                "measured_geometry": {
+                  "length_mm": 18.0
+                },
+                "classification_basis": "Native extrema along recovered centerline",
+                "candidate_ids": [
+                  "D001"
+                ]
+              },
+              {
+                "id": "F002",
+                "type": "cylindrical_region",
+                "source_faces": [
+                  1
+                ],
+                "measured_geometry": {
+                  "radius_mm": 5.0,
+                  "diameter_mm": 10.0,
+                  "axial_range_mm": [
+                    -9.000000000000002,
+                    8.999999999999998
+                  ],
+                  "axial_span_mm": 18.0,
+                  "axis_offset_mm": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "angular_coverage_rad": 6.283185307179586
+                },
+                "classification_basis": "Native cylindrical surfaces grouped by radius, axis, side and overlapping axial support",
+                "candidate_ids": [
+                  "D002",
+                  "D003"
+                ],
+                "boundary_side": "external",
+                "complete_circumference": true,
+                "coaxial": true
+              },
+              {
+                "id": "F003",
+                "type": "cylindrical_region",
+                "source_faces": [
+                  4
+                ],
+                "measured_geometry": {
+                  "radius_mm": 2.0,
+                  "diameter_mm": 4.0,
+                  "axial_range_mm": [
+                    -9.000000000000002,
+                    8.999999999999998
+                  ],
+                  "axial_span_mm": 18.0,
+                  "axis_offset_mm": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "angular_coverage_rad": 6.283185307179586
+                },
+                "classification_basis": "Native cylindrical surfaces grouped by radius, axis, side and overlapping axial support",
+                "candidate_ids": [
+                  "D004",
+                  "D005"
+                ],
+                "boundary_side": "internal",
+                "complete_circumference": true,
+                "coaxial": true
+              },
+              {
+                "id": "mock-unsupported",
+                "type": "mock_unknown",
+                "coaxial": false
+              }
+            ],
+            "dimension_candidates": [
+              {
+                "id": "D001",
+                "feature_id": "F001",
+                "kind": "overall",
+                "value": 18.0,
+                "units": "mm",
+                "label": "Overall axial length",
+                "source_faces": [],
+                "source_supports": [
+                  {
+                    "id": "S002",
+                    "station_mm": -9.000000000000002,
+                    "supports": [
+                      {
+                        "type": "plane",
+                        "faces": [
+                          3
+                        ]
+                      },
+                      {
+                        "type": "rim",
+                        "edges": [
+                          3
+                        ]
+                      },
+                      {
+                        "type": "rim",
+                        "edges": [
+                          5
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "S001",
+                    "station_mm": 8.999999999999998,
+                    "supports": [
+                      {
+                        "type": "plane",
+                        "faces": [
+                          2
+                        ]
+                      },
+                      {
+                        "type": "rim",
+                        "edges": [
+                          1
+                        ]
+                      },
+                      {
+                        "type": "rim",
+                        "edges": [
+                          4
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "priority": 100,
+                "verification_status": "source_measured",
+                "proposed_dimension_type": "Native horizontal extent",
+                "axis": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "origin_mm": [
+                  0.0,
+                  0.0,
+                  9.000000000000002
+                ],
+                "preferred_views": [
+                  "longitudinal"
+                ],
+                "stable_id": "g1-0e36da7a8c631332455f6d6607bb63864549a6388d71be3cc1ed430e9cbbdf5c"
+              },
+              {
+                "id": "D002",
+                "feature_id": "F002",
+                "kind": "diameter",
+                "value": 10.0,
+                "units": "mm",
+                "label": "External body diameter",
+                "source_faces": [
+                  1
+                ],
+                "source_supports": [],
+                "priority": 80,
+                "verification_status": "source_measured",
+                "proposed_dimension_type": "Diameter or section DistanceY",
+                "preferred_views": [
+                  "left_end",
+                  "right_end",
+                  "section"
+                ],
+                "radius_mm": 5.0,
+                "axis": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "origin_mm": [
+                  0.0,
+                  0.0,
+                  9.000000000000002
+                ],
+                "boundary_side": "external",
+                "stable_id": "g1-b36dc2d9188f3c0bab7f95dc7cfbac40da6dadc33e90750d81940e67abd969e3"
+              },
+              {
+                "id": "D003",
+                "feature_id": "F002",
+                "kind": "axial_distance",
+                "value": 18.0,
+                "units": "mm",
+                "label": "Cylindrical region length",
+                "source_faces": [
+                  1
+                ],
+                "source_supports": [
+                  {
+                    "id": "S002",
+                    "station_mm": -9.000000000000002,
+                    "supports": [
+                      {
+                        "type": "plane",
+                        "faces": [
+                          3
+                        ]
+                      },
+                      {
+                        "type": "rim",
+                        "edges": [
+                          3
+                        ]
+                      },
+                      {
+                        "type": "rim",
+                        "edges": [
+                          5
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "S001",
+                    "station_mm": 8.999999999999998,
+                    "supports": [
+                      {
+                        "type": "plane",
+                        "faces": [
+                          2
+                        ]
+                      },
+                      {
+                        "type": "rim",
+                        "edges": [
+                          1
+                        ]
+                      },
+                      {
+                        "type": "rim",
+                        "edges": [
+                          4
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "priority": 65,
+                "verification_status": "source_measured",
+                "proposed_dimension_type": "DistanceX",
+                "axis": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "origin_mm": [
+                  0.0,
+                  0.0,
+                  9.000000000000002
+                ],
+                "preferred_views": [
+                  "section",
+                  "longitudinal"
+                ],
+                "stable_id": "g1-f50aeee5a5624a971182171b1168f4922be12a00edcdf2e3dfb05586d0d0e47b"
+              },
+              {
+                "id": "D004",
+                "feature_id": "F003",
+                "kind": "diameter",
+                "value": 4.0,
+                "units": "mm",
+                "label": "Internal bore diameter",
+                "source_faces": [
+                  4
+                ],
+                "source_supports": [],
+                "priority": 80,
+                "verification_status": "source_measured",
+                "proposed_dimension_type": "Diameter or section DistanceY",
+                "preferred_views": [
+                  "section",
+                  "right_end",
+                  "left_end"
+                ],
+                "radius_mm": 2.0,
+                "axis": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "origin_mm": [
+                  0.0,
+                  0.0,
+                  9.000000000000002
+                ],
+                "boundary_side": "internal",
+                "stable_id": "g1-d99c596b017ae31ed8c6724eef655289a2575de98518e25a9bfce3558a32b9c0"
+              },
+              {
+                "id": "D005",
+                "feature_id": "F003",
+                "kind": "axial_distance",
+                "value": 18.0,
+                "units": "mm",
+                "label": "Bore depth / cylindrical span",
+                "source_faces": [
+                  4
+                ],
+                "source_supports": [
+                  {
+                    "id": "S002",
+                    "station_mm": -9.000000000000002,
+                    "supports": [
+                      {
+                        "type": "plane",
+                        "faces": [
+                          3
+                        ]
+                      },
+                      {
+                        "type": "rim",
+                        "edges": [
+                          3
+                        ]
+                      },
+                      {
+                        "type": "rim",
+                        "edges": [
+                          5
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "id": "S001",
+                    "station_mm": 8.999999999999998,
+                    "supports": [
+                      {
+                        "type": "plane",
+                        "faces": [
+                          2
+                        ]
+                      },
+                      {
+                        "type": "rim",
+                        "edges": [
+                          1
+                        ]
+                      },
+                      {
+                        "type": "rim",
+                        "edges": [
+                          4
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "priority": 65,
+                "verification_status": "source_measured",
+                "proposed_dimension_type": "DistanceX",
+                "axis": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "origin_mm": [
+                  0.0,
+                  0.0,
+                  9.000000000000002
+                ],
+                "preferred_views": [
+                  "section",
+                  "longitudinal"
+                ],
+                "stable_id": "g1-9dc2540f0623f9879a726df5c14450cd5487a6c0d2799d9f3fb5a374863d75f6"
+              },
+              {
+                "id": "mock-unsupported",
+                "feature_id": "mock-unsupported",
+                "label": "Mock Unsupported Characteristic",
+                "kind": "mock",
+                "value": null,
+                "units": "mm",
+                "verification_status": "unsupported",
+                "stable_id": "g1-f3bec90b56ace3450526fa201439315d16be09408a8f8aa42af58039c82c9624"
+              }
+            ],
+            "recognition_is_exhaustive": false,
+            "numerical_threshold_mm": 1e-05,
+            "coverage_notice": "Candidate coverage is not proof of dimensional completeness; unrecognized geometry still requires engineering review.",
+            "axis": {
+              "direction": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "origin_mm": [
+                0.0,
+                0.0,
+                9.000000000000002
+              ],
+              "range_mm": [
+                -9.000000000000002,
+                8.999999999999998
+              ]
+            },
+            "axial_stations": [
+              {
+                "id": "S002",
+                "station_mm": -9.000000000000002,
+                "supports": [
+                  {
+                    "type": "plane",
+                    "faces": [
+                      3
+                    ]
+                  },
+                  {
+                    "type": "rim",
+                    "edges": [
+                      3
+                    ]
+                  },
+                  {
+                    "type": "rim",
+                    "edges": [
+                      5
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "S001",
+                "station_mm": 8.999999999999998,
+                "supports": [
+                  {
+                    "type": "plane",
+                    "faces": [
+                      2
+                    ]
+                  },
+                  {
+                    "type": "rim",
+                    "edges": [
+                      1
+                    ]
+                  },
+                  {
+                    "type": "rim",
+                    "edges": [
+                      4
+                    ]
+                  }
+                ]
+              }
+            ],
+            "datum": {
+              "station": {
+                "id": "S002",
+                "station_mm": -9.000000000000002,
+                "supports": [
+                  {
+                    "type": "plane",
+                    "faces": [
+                      3
+                    ]
+                  },
+                  {
+                    "type": "rim",
+                    "edges": [
+                      3
+                    ]
+                  },
+                  {
+                    "type": "rim",
+                    "edges": [
+                      5
+                    ]
+                  }
+                ]
+              },
+              "basis": "Terminal plane/rim; no suitable enlargement shoulder established"
+            },
+            "unmapped_faces": [
+              {
+                "face": 2,
+                "surface_type": "Plane",
+                "reason": "Planar connecting surface/complex patch not represented as a distinct recognized feature; review geometry"
+              },
+              {
+                "face": 3,
+                "surface_type": "Plane",
+                "reason": "Planar connecting surface/complex patch not represented as a distinct recognized feature; review geometry"
+              }
+            ],
+            "limitations": [
+              "Surface seams are grouped; complex nonanalytic and oblique transitions may remain unresolved.",
+              "Repeat counts describe supported equal-radius occurrences, not a manufacturing pattern specification."
+            ]
+          }
+        }
+      ],
+      "evidence_indexing": "Face/edge numbers are one-based within each native Solid component; tied to this import and source hash, not guaranteed stable across readers/versions.",
+      "analysis_status": "completed_preliminary"
+    },
+    "geometry_requires_review": true,
+    "unresolved_dimensions": [],
+    "source_sha256_verified_unchanged": true,
+    "reopen_checks": {
+      "reopened_successfully": true,
+      "dimension_checks": {}
+    },
+    "dimensions": {
+      "D001": {
+        "status": "suppressed",
+        "selected": false,
+        "selection_reason": "Mock GUI fixture"
+      },
+      "D002": {
+        "status": "suppressed",
+        "selected": false,
+        "selection_reason": "Mock GUI fixture"
+      },
+      "D003": {
+        "status": "suppressed",
+        "selected": false,
+        "selection_reason": "Mock GUI fixture"
+      },
+      "D004": {
+        "status": "suppressed",
+        "selected": false,
+        "selection_reason": "Mock GUI fixture"
+      },
+      "D005": {
+        "status": "suppressed",
+        "selected": false,
+        "selection_reason": "Mock GUI fixture"
+      },
+      "mock-unsupported": {
+        "status": "unresolved",
+        "selected": false,
+        "selection_reason": "Mock GUI fixture"
+      }
+    }
+  },
+  "review": {
+    "preliminary": true,
+    "engineering_verification_required": true,
+    "source": "@SOURCE@",
+    "source_validation": {
+      "shape_type": "Solid",
+      "basic_valid": true,
+      "closed": true,
+      "counts": {
+        "Solids": 1,
+        "Shells": 1,
+        "Faces": 4,
+        "Edges": 6,
+        "Vertexes": 4
+      },
+      "solids": [
+        {
+          "solid": 1,
+          "valid": true,
+          "closed": true,
+          "volume_mm3": 1187.5220230569416
+        }
+      ],
+      "brep_check": {
+        "status": "passed",
+        "errors": []
+      },
+      "boolean_check": {
+        "status": "failed",
+        "message": "BOPAlgo MOCK warning for GUI branch coverage only"
+      },
+      "max_brep_tolerance_mm": 1e-07,
+      "issues": [],
+      "status": "passed",
+      "measurement_note": "BRep tolerance is native numerical geometry metadata, not a manufacturing tolerance."
+    },
+    "characteristics": [
+      {
+        "stable_id": "g1-0e36da7a8c631332455f6d6607bb63864549a6388d71be3cc1ed430e9cbbdf5c",
+        "candidate_id": "D001",
+        "label": "Overall axial length",
+        "kind": "overall",
+        "measured_value": 18.0,
+        "units": "mm",
+        "selected": false,
+        "drawing_status": "suppressed",
+        "source_verification": "source_measured",
+        "native_verification": null,
+        "reason": "Mock GUI fixture",
+        "view_role": null
+      },
+      {
+        "stable_id": "g1-b36dc2d9188f3c0bab7f95dc7cfbac40da6dadc33e90750d81940e67abd969e3",
+        "candidate_id": "D002",
+        "label": "External body diameter",
+        "kind": "diameter",
+        "measured_value": 10.0,
+        "units": "mm",
+        "selected": false,
+        "drawing_status": "suppressed",
+        "source_verification": "source_measured",
+        "native_verification": null,
+        "reason": "Mock GUI fixture",
+        "view_role": null
+      },
+      {
+        "stable_id": "g1-f50aeee5a5624a971182171b1168f4922be12a00edcdf2e3dfb05586d0d0e47b",
+        "candidate_id": "D003",
+        "label": "Cylindrical region length",
+        "kind": "axial_distance",
+        "measured_value": 18.0,
+        "units": "mm",
+        "selected": false,
+        "drawing_status": "suppressed",
+        "source_verification": "source_measured",
+        "native_verification": null,
+        "reason": "Mock GUI fixture",
+        "view_role": null
+      },
+      {
+        "stable_id": "g1-d99c596b017ae31ed8c6724eef655289a2575de98518e25a9bfce3558a32b9c0",
+        "candidate_id": "D004",
+        "label": "Internal bore diameter",
+        "kind": "diameter",
+        "measured_value": 4.0,
+        "units": "mm",
+        "selected": false,
+        "drawing_status": "suppressed",
+        "source_verification": "source_measured",
+        "native_verification": null,
+        "reason": "Mock GUI fixture",
+        "view_role": null
+      },
+      {
+        "stable_id": "g1-9dc2540f0623f9879a726df5c14450cd5487a6c0d2799d9f3fb5a374863d75f6",
+        "candidate_id": "D005",
+        "label": "Bore depth / cylindrical span",
+        "kind": "axial_distance",
+        "measured_value": 18.0,
+        "units": "mm",
+        "selected": false,
+        "drawing_status": "suppressed",
+        "source_verification": "source_measured",
+        "native_verification": null,
+        "reason": "Mock GUI fixture",
+        "view_role": null
+      },
+      {
+        "stable_id": "g1-f3bec90b56ace3450526fa201439315d16be09408a8f8aa42af58039c82c9624",
+        "candidate_id": "mock-unsupported",
+        "label": "Mock Unsupported Characteristic",
+        "kind": "mock",
+        "measured_value": null,
+        "units": "mm",
+        "selected": false,
+        "drawing_status": "unresolved",
+        "source_verification": "unsupported",
+        "native_verification": null,
+        "reason": "Mock GUI fixture",
+        "view_role": null
+      }
+    ],
+    "features": [
+      {
+        "id": "F001",
+        "type": "axial_envelope",
+        "source_faces": [],
+        "measured_geometry": {
+          "length_mm": 18.0
+        },
+        "classification_basis": "Native extrema along recovered centerline",
+        "candidate_ids": [
+          "D001"
+        ]
+      },
+      {
+        "id": "F002",
+        "type": "cylindrical_region",
+        "source_faces": [
+          1
+        ],
+        "measured_geometry": {
+          "radius_mm": 5.0,
+          "diameter_mm": 10.0,
+          "axial_range_mm": [
+            -9.000000000000002,
+            8.999999999999998
+          ],
+          "axial_span_mm": 18.0,
+          "axis_offset_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_coverage_rad": 6.283185307179586
+        },
+        "classification_basis": "Native cylindrical surfaces grouped by radius, axis, side and overlapping axial support",
+        "candidate_ids": [
+          "D002",
+          "D003"
+        ],
+        "boundary_side": "external",
+        "complete_circumference": true,
+        "coaxial": true
+      },
+      {
+        "id": "F003",
+        "type": "cylindrical_region",
+        "source_faces": [
+          4
+        ],
+        "measured_geometry": {
+          "radius_mm": 2.0,
+          "diameter_mm": 4.0,
+          "axial_range_mm": [
+            -9.000000000000002,
+            8.999999999999998
+          ],
+          "axial_span_mm": 18.0,
+          "axis_offset_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "angular_coverage_rad": 6.283185307179586
+        },
+        "classification_basis": "Native cylindrical surfaces grouped by radius, axis, side and overlapping axial support",
+        "candidate_ids": [
+          "D004",
+          "D005"
+        ],
+        "boundary_side": "internal",
+        "complete_circumference": true,
+        "coaxial": true
+      },
+      {
+        "id": "mock-unsupported",
+        "type": "mock_unknown",
+        "coaxial": false
+      }
+    ],
+    "semantic_recognition": {
+      "dimensions": {
+        "overall_length": {
+          "status": "recognized",
+          "value_mm": 18.0,
+          "measurement_basis": "Native BRep geometry",
+          "meaning": "Overall geometric extent along the selected common axis; fastener-axis role remains inferred",
+          "evidence": {
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "end_stations_mm": [
+              -9.000000000000002,
+              8.999999999999998
+            ],
+            "method": "TopoShape.optimalBoundingBox(useTriangulation=False, useShapeTolerance=False)"
+          },
+          "requires_manual_review": true,
+          "geometry_quality": "passed",
+          "review_note": "All outputs are preliminary; no manufacturing tolerance is assigned."
+        },
+        "length_under_head": {
+          "status": "unrecognized",
+          "value_mm": null,
+          "reason": "Coaxial internal cylindrical geometry is present; hollow-body geometry does not establish a screw/bolt head or shank.",
+          "requires_manual_review": true
+        },
+        "head_height": {
+          "status": "unrecognized",
+          "value_mm": null,
+          "reason": "Coaxial internal cylindrical geometry is present; hollow-body geometry does not establish a screw/bolt head or shank.",
+          "requires_manual_review": true
+        },
+        "head_diameter": {
+          "status": "unrecognized",
+          "value_mm": null,
+          "reason": "Coaxial internal cylindrical geometry is present; hollow-body geometry does not establish a screw/bolt head or shank.",
+          "requires_manual_review": true
+        },
+        "flange_diameter": {
+          "status": "unrecognized",
+          "value_mm": null,
+          "reason": "Insufficient geometric evidence for this feature role.",
+          "requires_manual_review": true
+        },
+        "shank_diameter": {
+          "status": "unrecognized",
+          "value_mm": null,
+          "reason": "Coaxial internal cylindrical geometry is present; hollow-body geometry does not establish a screw/bolt head or shank.",
+          "requires_manual_review": true
+        },
+        "thread_major_diameter": {
+          "status": "unrecognized",
+          "value_mm": null,
+          "reason": "Insufficient geometric evidence for this feature role.",
+          "requires_manual_review": true
+        },
+        "threaded_length": {
+          "status": "unrecognized",
+          "value_mm": null,
+          "reason": "Insufficient geometric evidence for this feature role.",
+          "requires_manual_review": true
+        },
+        "across_flats": {
+          "status": "unrecognized",
+          "value_mm": null,
+          "reason": "Coaxial internal cylindrical geometry is present; hollow-body geometry does not establish a screw/bolt head or shank.",
+          "requires_manual_review": true
+        }
+      },
+      "feature_classifications": [
+        {
+          "classification": "coaxial_hollow_body",
+          "classification_basis": "Inward-facing coaxial cylindrical surfaces",
+          "supporting_faces": [
+            4
+          ],
+          "semantic_note": "Does not establish nut type, thread size, head or shank."
+        }
+      ],
+      "threads": {
+        "status": "cannot_determine",
+        "classification_basis": "Inferred from geometry; STEP filenames are not used",
+        "reason": "No sufficient repeated helical flank evidence. Smooth bores/shafts do not distinguish simplified threads from unthreaded geometry.",
+        "helical_edge_evidence": [],
+        "helical_chain_evidence": [],
+        "limitations": [
+          "Semantic/cosmetic STEP thread annotations are not interpreted.",
+          "Internal threads, fewer than two turns, conical threads and faceted threads require manual review.",
+          "Absence of detected helices does not prove that modeled threads are absent."
+        ]
+      },
+      "manual_review": [
+        "Coaxial internal cylindrical geometry is present; hollow-body geometry does not establish a screw/bolt head or shank.",
+        "No sufficient repeated helical flank evidence. Smooth bores/shafts do not distinguish simplified threads from unthreaded geometry."
+      ],
+      "recognition_scope": "Conservative subset of circular shafts, terminal circular/hexagonal heads and annular flanges; no standard fastener sizes assumed"
+    },
+    "unmapped_faces": [
+      {
+        "face": 2,
+        "surface_type": "Plane",
+        "reason": "Planar connecting surface/complex patch not represented as a distinct recognized feature; review geometry"
+      },
+      {
+        "face": 3,
+        "surface_type": "Plane",
+        "reason": "Planar connecting surface/complex patch not represented as a distinct recognized feature; review geometry"
+      }
+    ],
+    "recognition_limitations": [
+      "Surface seams are grouped; complex nonanalytic and oblique transitions may remain unresolved.",
+      "Repeat counts describe supported equal-radius occurrences, not a manufacturing pattern specification."
+    ],
+    "section_diagnostics": {},
+    "notice": "Candidate coverage is not proof of dimensional completeness; unrecognized geometry still requires engineering review."
+  }
+}

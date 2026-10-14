@@ -10,6 +10,75 @@ from pathlib import Path
 
 from .dimensions import displayed_text,overlaps
 
+# Trailing-zero suppression changes the native label width and therefore
+# TechDraw's automatic arrow direction. Keep a visible paper gap after that
+# width changes instead of relying on the older fixed-decimal label behavior.
+ARROW_TEXT_GAP_MM=2.0
+
+
+class ArrowTextCollision(RuntimeError):
+    def __init__(self,key):
+        self.minimum_gap_mm=ARROW_TEXT_GAP_MM
+        super().__init__(key+': diameter text collides with an arrowhead or its required clearance')
+
+
+def arrow_bounds(svg):
+    """Bounds of actual filled native arrow triangles, including their stroke.
+
+    These are presentation polygons in paper coordinates, not CAD features.
+    Ignore transparent faces and unrecognized paths rather than guessing.
+    """
+    root=ET.parse(svg).getroot()
+    box=[float(v) for v in root.attrib['viewBox'].split()]
+    rx=box[2]/float(root.attrib['width'].replace('mm',''))
+    ry=box[3]/float(root.attrib['height'].replace('mm',''))
+    number=r'[-+]?(?:\d*\.\d+|\d+\.?\d*)(?:[eE][-+]?\d+)?'
+    triangle=re.compile(r'^\s*M\s*('+number+r')[,\s]+('+number+r')'
+                        +3*(r'\s*L\s*('+number+r')[,\s]+('+number+r')')+r'\s*[zZ]?\s*$')
+    result=[]
+    def visit(node,parent,style):
+        matrix=multiply(parent,transform_matrix(node.attrib.get('transform','')))
+        style={**style,**node.attrib}
+        match=triangle.fullmatch(node.attrib.get('d','')) if node.tag.rsplit('}',1)[-1]=='path' else None
+        if (match and style.get('fill','none')!='none' and float(style.get('fill-opacity',1))>0
+                and float(style.get('opacity',1))>0):
+            values=list(map(float,match.groups()))
+            points=list(zip(values[::2],values[1::2]))
+            if points[0]==points[-1] and len(set(points[:-1]))==3:
+                points=[((matrix[0]*x+matrix[2]*y+matrix[4]-box[0])/rx,
+                         (matrix[1]*x+matrix[3]*y+matrix[5]-box[1])/ry) for x,y in points[:-1]]
+                # Affine scale of the native stroke, converted to paper mm.
+                stroke=float(style.get('stroke-width',0))/2 if style.get('stroke','none')!='none' else 0
+                px=stroke*math.hypot(matrix[0],matrix[2])/rx
+                py=stroke*math.hypot(matrix[1],matrix[3])/ry
+                result.append({'left':min(p[0] for p in points)-px,'right':max(p[0] for p in points)+px,
+                               'top':min(p[1] for p in points)-py,'bottom':max(p[1] for p in points)+py})
+        for child in node:visit(child,matrix,style)
+    visit(root,(1,0,0,1,0,0),{})
+    return result
+
+
+def diameter_arrow_checks(doc,reports,svg,texts=None):
+    """Require diameter labels to clear every rendered arrow on the page."""
+    texts=text_bounds(svg) if texts is None else texts
+    arrows=arrow_bounds(svg);checks={}
+    page_height=doc.DrawingPage.Template.Height.Value
+    for key,record in reports.items():
+        if record['status']!='created' or '⌀' not in record['format_spec']:continue
+        dim=doc.getObject(record['object_name']);value=displayed_text(dim,record)
+        matches=[t for t in texts if t['text']==value]
+        if not matches:raise RuntimeError(key+': actual native rendered dimension text was not found')
+        if not arrows:raise RuntimeError(key+': native filled-arrow geometry was not found for clearance validation')
+        view=dim.References2D[0][0]
+        ax,ay=view.X.Value+dim.X.Value,page_height-view.Y.Value-dim.Y.Value
+        found=min(matches,key=lambda t:abs((t['bounds_mm']['left']+t['bounds_mm']['right'])/2-ax)
+                  +abs((t['bounds_mm']['top']+t['bounds_mm']['bottom'])/2-ay))
+        if any(overlaps(found['bounds_mm'],arrow,ARROW_TEXT_GAP_MM) for arrow in arrows):
+            raise ArrowTextCollision(key)
+        checks[key]={'arrow_text_clearance_verified':True,'minimum_arrow_text_gap_mm':ARROW_TEXT_GAP_MM,
+                     'native_arrow_polygons_checked':len(arrows),
+                     'basis':'Rendered native text and filled-arrow triangle bounds, including arrow stroke, in paper millimeters'}
+    return checks
 
 def multiply(a,b):
     return (a[0]*b[0]+a[2]*b[1],a[1]*b[0]+a[3]*b[1],a[0]*b[2]+a[2]*b[3],a[1]*b[2]+a[3]*b[3],
@@ -69,6 +138,7 @@ def text_bounds(svg):
 
 def check(doc,reports,layout,paper_boxes,svg):
     texts=text_bounds(svg)
+    arrow_checks=diameter_arrow_checks(doc,reports,svg,texts)
     captions=[t['bounds_mm'] for t in texts if t['text'].startswith('DETAIL ') or t['text'] in ('LONGITUDINAL','LEFT END','RIGHT END','ISOMETRIC REFERENCE','SECTION A-A','AXIAL CUT A-A (UNHATCHED)','A')]
     occupied=[];checks={};area=layout['content_area_top_origin_mm']
     for key,r in reports.items():
@@ -94,7 +164,7 @@ def check(doc,reports,layout,paper_boxes,svg):
             if Part.makeCompound(view.getVisibleEdges(True)).common(rect).Length>1e-5:
                 raise RuntimeError(key+': localized angular text intersects the actual profile outline')
         occupied.append(bounds)
-        checks[key]={'actual_rendered_text':value,'native_text_bounds_top_origin_mm':bounds,'text_no_collision_or_clipping':True,
+        checks[key]={**arrow_checks.get(key,{}),'actual_rendered_text':value,'native_text_bounds_top_origin_mm':bounds,'text_no_collision_or_clipping':True,
                      'minimum_checked_gap_mm':1.0,'basis':'Native vector scene text/transforms with installed Qt font metrics; physical paper millimeters',
-                     'line_and_arrow_review':'Separate reserved lanes; final arrows, leaders and hatching require rendered PDF inspection'}
+                     'line_and_arrow_review':'Diameter text checked against native arrow polygons; leaders and hatching still require rendered PDF inspection'}
     return checks

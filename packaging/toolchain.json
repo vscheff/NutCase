@@ -1,0 +1,20 @@
+{
+  "python": {
+    "version": "3.13.16",
+    "url": "https://api.nuget.org/v3-flatcontainer/python/3.13.16/python.3.13.16.nupkg",
+    "sha256": "95fad176338f1d6a799e45946488063f4aa61764e6cff2f132ddeffbf7a04c34",
+    "archive": "python.3.13.16.nupkg"
+  },
+  "inno": {
+    "version": "7.1.0",
+    "url": "https://github.com/jrsoftware/issrc/releases/download/is-7_1_0/innosetup-7.1.0-x64.exe",
+    "sha256": "0362a383ed217d4c4239b5933866dd96d3eb2102737da92f80f6057a4b40df2f",
+    "archive": "innosetup-7.1.0-x64.exe"
+  },
+  "poppler": {
+    "version": "26.09.0-0",
+    "url": "https://github.com/oschwartz10612/poppler-windows/releases/download/v26.09.0-0/Release-26.09.0-0.zip",
+    "sha256": "7a6f256a0ddf7536182246a5733331bf4677cbcc34f4663774947ad34556c8d0",
+    "archive": "Release-26.09.0-0.zip"
+  }
+}

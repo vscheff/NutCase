@@ -5,6 +5,7 @@ import math
 from fastener_analysis.geometry import App
 from .references import MATCH_MM, UnresolvedDimension, edge_record, inventory, match_feature, records_match, source_features, remeasure_source
 from .views import wait_for_views
+from .formatting import dimension_format_spec, format_measurement
 
 LOG = logging.getLogger("fastener_drawing")
 CHARACTERISTICS = ("overall_axial_length", "flange_diameter", "bore_diameter", "external_hex_across_flats")
@@ -51,8 +52,10 @@ def native_measurement(dimension, feature, matching):
     return result
 
 
-def set_presentation(dim, key):
-    dim.FormatSpec = ("⌀" if key in ("flange_diameter", "bore_diameter") else "") + "%.2f" + (" AF" if key == "external_hex_across_flats" else "")
+def set_presentation(dim, key, units="mm"):
+    dim.FormatSpec = dimension_format_spec(units,
+        "⌀ " if key in ("flange_diameter", "bore_diameter") else "",
+        " AF" if key == "external_hex_across_flats" else "")
     dim.ShowUnits = False
     dim.Arbitrary = False
     dim.ArbitraryTolerances = False
@@ -63,6 +66,8 @@ def set_presentation(dim, key):
     dim.ViewObject.Fontsize = 3.5
     dim.ViewObject.LineWidth = 0.25
     dim.ViewObject.Arrowsize = 2.5
+    dim.ViewObject.ArrowStyle = 'Filled arrow'
+    dim.ViewObject.FlipArrowheads = False
     dim.ViewObject.Color = (0.0, 0.0, 0.0)
     dim.ViewObject.StandardAndStyle = "ASME Inlined" if key != "bore_diameter" else "ASME Referencing"
     dim.ViewObject.RenderingExtent = "Expanded" if key == "flange_diameter" else "Confined" if key == "bore_diameter" else "Normal"
@@ -70,7 +75,7 @@ def set_presentation(dim, key):
 
 def presentation_record(dim):
     values = {key: getattr(dim.ViewObject, key) for key in
-              ("Font", "Fontsize", "LineWidth", "Arrowsize", "StandardAndStyle", "RenderingExtent")}
+              ("Font", "Fontsize", "LineWidth", "Arrowsize", "ArrowStyle", "FlipArrowheads", "StandardAndStyle", "RenderingExtent")}
     return {key: value.Value if hasattr(value, "Value") else value for key, value in values.items()}
 
 
@@ -114,7 +119,7 @@ def create_dimensions(doc, page, source, views, geometry, recognition, frames, l
                 dim.MeasureType = "Projected"
                 dim.References2D = [(view, matching["references"])]
                 page.addView(dim)
-            set_presentation(dim, key)
+            set_presentation(dim, key, feature.get("units", "mm"))
             position = layout["positions"][role]
             half_height, half_width = position["expected_height_mm"] / 2, position["expected_width_mm"] / 2
             # Dimension X/Y are paper millimeters relative to the source view.
@@ -181,7 +186,8 @@ def verify_dimensions(doc, reports, check_count=True):
             raise RuntimeError(f"{key}: native dimension references/type changed after reopening: {references_record(dim) if dim else None}/{dim.Type if dim else None} versus {record['references2d']}/{record['native_type']}")
         if dim.FormatSpec != record["format_spec"] or dim.MeasureType != record["measure_type"]:
             raise RuntimeError(f"{key}: native formatting or measurement mode changed")
-        if presentation_record(dim) != record["presentation"]:
+        actual_presentation=presentation_record(dim)
+        if any(actual_presentation.get(key)!=expected for key,expected in record["presentation"].items()):
             raise RuntimeError(f"{key}: dimension presentation changed")
         if any(abs(actual - expected) > 1e-8 for actual, expected in zip([dim.X.Value, dim.Y.Value], record["position_relative_to_view_mm"])):
             raise RuntimeError(f"{key}: dimension placement changed")
@@ -221,7 +227,14 @@ def overlaps(a, b, gap=1.0):
 
 
 def displayed_text(dim,record):
-    return record["format_spec"].replace("%.2f",f"{dim.getRawValue():.2f}")+("°" if dim.Type in ("Angle","Angle3Pt") else "")
+    import re
+    spec=record["format_spec"]
+    match=re.search(r"%[-+0-9.]*w",spec)
+    if not match:
+        raise RuntimeError("Dimension uses an unsupported native number format")
+    units=record.get("candidate",{}).get("units",record.get("source_feature",{}).get("units","mm"))
+    text=(spec[:match.start()]+format_measurement(dim.getRawValue(),units)+spec[match.end():])
+    return text+("°" if dim.Type in ("Angle","Angle3Pt") else "")
 
 
 def check_text_placement(doc, reports, layout, paper_boxes, rendered_svg):

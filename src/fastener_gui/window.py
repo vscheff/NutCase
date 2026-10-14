@@ -3,32 +3,41 @@ import copy
 import json
 from pathlib import Path
 
-from PySide6.QtCore import Qt, QTimer
+from PySide6.QtCore import Qt, QTimer, QSize
 from PySide6.QtWidgets import (QMainWindow, QWidget, QVBoxLayout, QHBoxLayout, QFormLayout,
     QSplitter, QTabWidget, QScrollArea, QGroupBox, QLabel, QLineEdit, QPushButton,
-    QComboBox, QCheckBox, QFileDialog, QPlainTextEdit, QTableWidget, QTableWidgetItem,
-    QHeaderView, QProgressBar, QAbstractItemView)
+    QComboBox, QCheckBox, QFileDialog, QDialog, QDialogButtonBox, QToolButton, QPlainTextEdit, QTableWidget, QTableWidgetItem,
+    QHeaderView, QProgressBar, QAbstractItemView, QApplication)
 
-from fastener_drawing.configuration import bind_config, read_config
+from fastener_drawing.configuration import bind_config, normalize_metadata_date, read_config
 from fastener_drawing.layout import SHEETS
+from fastener_drawing.formatting import format_measurement
 from .controller import BackendController
 from .outputs import export_copy, history_entries
 from .preview import PdfPreview
 from .file_opener import FileOpener
+from .theme import THEME_CHOICES, apply_theme, resolve_theme, settings_icon
 from .state import ROOT, ConfigStore, ModelState, atomic_json, read_json, completion_status
+from fastener_paths import SETTINGS_ROOT, DRAWINGS_ROOT, require_user_data_path
+from nutcase_discovery import find_freecad, find_poppler
+from nutcase_runtime import clean_environment, external_dll_search
 
 
 class MainWindow(QMainWindow):
     def __init__(self, freecad_python='', poppler='', output=None, settings_directory=None, controller=None):
         super().__init__()
-        self.setWindowTitle('Fastener Drawing Generator')
+        self.setWindowTitle('NutCase')
         self.resize(1420, 940); self.setMinimumSize(940, 680)
+        self.runtime_values = {}
         self.model = ModelState()
-        self.store = ConfigStore(settings_directory or ROOT/'output'/'gui-state')
+        self.store = ConfigStore(require_user_data_path(settings_directory or SETTINGS_ROOT))
         self.settings_file = self.store.directory/'settings.json'
         try: settings = read_json(self.settings_file) if self.settings_file.exists() else {}
         except (OSError, ValueError): settings = {}
         self.settings = settings
+        self.theme_preference = settings.get('theme', 'System Default')
+        if self.theme_preference not in THEME_CHOICES:self.theme_preference='System Default'
+        self._active_theme = None
         self.release = None; self.action = None; self._loading = False; self._closing = False
         self.backend = controller or BackendController(self)
         self.backend.stage.connect(self._stage)
@@ -38,21 +47,37 @@ class MainWindow(QMainWindow):
         self.file_opener=FileOpener(self)
         self.file_opener.failed.connect(self._error)
         self.file_opener.accepted.connect(lambda message:self.status.setText(message))
-        self._build(freecad_python or settings.get('freecad_python',''), poppler or settings.get('poppler',''),
-                    str(output or settings.get('output',ROOT/'output'/'gui')))
+        preferred_freecad = freecad_python or settings.get('freecad_python','')
+        discovered_freecad, self.native_runtime, runtime_error = find_freecad(preferred_freecad)
+        # Recover automatically from an uninstalled or moved saved prerequisite.
+        if not discovered_freecad and not freecad_python and preferred_freecad:
+            discovered_freecad, self.native_runtime, runtime_error = find_freecad()
+        discovered_poppler = find_poppler(poppler) or find_poppler(settings.get('poppler','')) or find_poppler()
+        self._build(discovered_freecad, discovered_poppler,
+                    str(output or settings.get('output',DRAWINGS_ROOT)))
+        self._refresh_theme()
+        self.theme_timer=QTimer(self); self.theme_timer.setInterval(2000)
+        self.theme_timer.timeout.connect(self._refresh_theme); self.theme_timer.start()
         self._apply_config()
         if settings.get('source'): self.set_source(settings['source'])
         self._busy_changed(False)
+        if runtime_error:self._error(runtime_error)
+        elif not discovered_poppler:self._error('NutCase could not find its PDF renderer. Repair or reinstall NutCase.')
 
     def _button(self, text, slot):
         button = QPushButton(text); button.clicked.connect(slot); return button
 
     def _build(self, freecad_python, poppler, output):
         central = QWidget(); root = QVBoxLayout(central); root.setContentsMargins(14,12,14,12)
-        heading = QLabel('Fastener Drawing Generator'); heading.setObjectName('Heading')
-        root.addWidget(heading)
-        notice = QLabel('Preliminary Drawings - CAD Verification Does Not Constitute Engineering Approval')
-        notice.setObjectName('Notice'); notice.setWordWrap(True); root.addWidget(notice)
+        heading_row=QHBoxLayout()
+        heading = QLabel('NutCase'); heading.setObjectName('Heading')
+        heading.setToolTip("Because sometimes you've got to examine your nuts from every angle.")
+        heading_row.addWidget(heading); heading_row.addStretch()
+        self.runtime_button=QToolButton(); self.runtime_button.setIconSize(QSize(32,32))
+        self.runtime_button.setToolTip('Settings')
+        self.runtime_button.setAccessibleName('Settings'); self.runtime_button.setObjectName('RuntimeSettings')
+        self.runtime_button.setFixedSize(40,40); self.runtime_button.clicked.connect(self.edit_settings)
+        heading_row.addWidget(self.runtime_button); root.addLayout(heading_row)
         self.splitter = QSplitter(Qt.Orientation.Horizontal)
         left = QWidget(); left.setMinimumWidth(380)
         left_layout = QVBoxLayout(left); left_layout.setContentsMargins(0,0,8,0)
@@ -69,21 +94,17 @@ class MainWindow(QMainWindow):
         left_layout.addWidget(self.import_group)
         self.config_tabs = QTabWidget(); left_layout.addWidget(self.config_tabs,1)
         self.config_tabs.addTab(self._configuration(), '2. Configure')
-        self.table = QTableWidget(0,5); self.table.setHorizontalHeaderLabels(
-            ['Draw','Characteristic','Value','Units','Source Status'])
+        self.table = QTableWidget(0,4); self.table.setHorizontalHeaderLabels(
+            ['Draw','Characteristic','Value','Units'])
         self.table.setEditTriggers(QAbstractItemView.EditTrigger.NoEditTriggers)
         self.table.setAlternatingRowColors(True); self.table.setWordWrap(True)
         self.table.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeMode.ResizeToContents)
         self.table.horizontalHeader().setSectionResizeMode(1,QHeaderView.ResizeMode.Stretch)
         self.table.setColumnWidth(1,200)
         self.table.itemChanged.connect(self._selection_changed)
-        self.table.itemSelectionChanged.connect(self._candidate_details)
         candidate_panel = QWidget(); candidate_layout = QVBoxLayout(candidate_panel)
-        hint = QLabel('Custom Mode Uses Explicit Selections. Values Are Read-Only. Source Verification Still Applies.')
-        hint.setWordWrap(True); candidate_layout.addWidget(hint); candidate_layout.addWidget(self.table,1)
-        self.candidate_detail=QPlainTextEdit();self.candidate_detail.setReadOnly(True);self.candidate_detail.setMaximumHeight(125)
-        self.candidate_detail.setPlaceholderText('Select A Characteristic To Read Its Evidence Or Unresolved Reason')
-        candidate_layout.addWidget(self.candidate_detail)
+        candidate_layout.setContentsMargins(0,0,0,0)
+        candidate_layout.addWidget(self.table,1)
         self.config_tabs.addTab(candidate_panel, 'Dimensions')
         config_buttons = QHBoxLayout()
         self.save_button = self._button('Save Configuration', self.save_configuration)
@@ -130,25 +151,27 @@ class MainWindow(QMainWindow):
         self.logs = QPlainTextEdit(); self.logs.setReadOnly(True); self.logs.setMaximumHeight(150)
         self.logs.document().setMaximumBlockCount(3000); self.logs.hide(); root.addWidget(self.logs)
         self.setCentralWidget(central)
-        self.setStyleSheet('''
-            QMainWindow { background: #f3f5f7; } QWidget { font-family: Segoe UI; font-size: 10pt; }
-            QLabel#Heading { font-size: 20pt; font-weight: 600; color: #173447; }
-            QLabel#Notice { color: #754c09; padding: 6px; background: #fff1cf; border-radius: 4px; }
-            QGroupBox { font-weight: 600; border: 1px solid #c9d1d8; border-radius: 5px; margin-top: 10px; padding-top: 8px; }
-            QGroupBox::title { subcontrol-origin: margin; left: 9px; }
-            QLineEdit,QComboBox,QSpinBox { min-height: 26px; }
-            QPushButton { padding: 6px 9px; } QPushButton#Primary { background: #176278; color: white; font-weight: 600; }
-            QPushButton#Primary:disabled { background: #a5b4bc; }
-            QTabWidget::pane { border: 1px solid #c9d1d8; background: white; }
-            QHeaderView::section { padding: 6px; background: #e5ebef; }
-        ''')
-        self.freecad_edit.setText(freecad_python); self.poppler_edit.setText(poppler); self.output_edit.setText(output)
+        self.runtime_values={'freecad_python':freecad_python,'poppler':poppler,'output':output}
+
+    def _refresh_theme(self):
+        app=QApplication.instance()
+        mode=resolve_theme(self.theme_preference,app)
+        if mode!=self._active_theme:
+            self._active_theme=apply_theme(app,mode)
+            self.runtime_button.setIcon(settings_icon(mode=='Dark Mode'))
+
+    def _select_theme(self,preference):
+        self.theme_preference=preference
+        self._refresh_theme()
 
     def _configuration(self):
         scroll = QScrollArea(); scroll.setWidgetResizable(True)
         body = QWidget(); layout = QVBoxLayout(body)
         policy = QGroupBox('Drawing Settings'); form = QFormLayout(policy)
         self.mode = QComboBox(); self.mode.addItems(['Basic','Comprehensive','Custom'])
+        self.mode.setToolTip(
+            'Basic selects key supported dimensions.\nComprehensive selects supported feature-based dimensions.\n'
+            'Custom lets you choose individual recognized dimensions.')
         self.mode.currentTextChanged.connect(self._mode_changed); form.addRow('Dimensioning Mode',self.mode)
         self.sheet = QComboBox(); self.sheet.addItems(['Automatic',*SHEETS]); form.addRow('Paper Size',self.sheet)
         self.scale = QComboBox(); self.scale.setEditable(True)
@@ -162,22 +185,10 @@ class MainWindow(QMainWindow):
         metadata = QGroupBox('Drawing Metadata'); form = QFormLayout(metadata); self.metadata={}
         for key,label,limit in [('title','Drawing Title',65),('drawing_number','Drawing Number',32),('revision','Revision',12),('date','Date (YYYY-MM-DD)',10)]:
             edit=QLineEdit(); edit.setMaxLength(limit); self.metadata[key]=edit; form.addRow(label,edit)
-        self.metadata['date'].setPlaceholderText('Blank Uses Generation Date'); layout.addWidget(metadata)
-        orientation=QGroupBox('Orientation Overrides'); form=QFormLayout(orientation); self.orientation={}
-        for key,label in [('axis','Longitudinal Axis (X, Y, Z)'),('up','View Up (X, Y, Z)')]:
-            edit=QLineEdit(); edit.setPlaceholderText('Automatic'); self.orientation[key]=edit; form.addRow(label,edit)
-        caption=QLabel('Overrides Are Verified Against Source Geometry. Blank Keeps Automatic Orientation.')
-        caption.setWordWrap(True); form.addRow(caption); layout.addWidget(orientation)
-        runtime=QGroupBox('Runtime And Output'); form=QFormLayout(runtime)
-        self.output_edit=QLineEdit(); self.freecad_edit=QLineEdit(); self.poppler_edit=QLineEdit()
-        for label,edit,folder,filter_text in [('Output Directory',self.output_edit,True,''),
-                ('FreeCAD Python',self.freecad_edit,False,'Python (python.exe)'),
-                ('Poppler Renderer',self.poppler_edit,False,'Poppler (pdftoppm.exe)')]:
-            row=QWidget(); bar=QHBoxLayout(row); bar.setContentsMargins(0,0,0,0); bar.addWidget(edit,1)
-            bar.addWidget(self._button('…',lambda checked=False,e=edit,d=folder,f=filter_text:self._browse_runtime(e,d,f)))
-            form.addRow(label,row)
-        layout.addWidget(runtime); layout.addStretch(); scroll.setWidget(body)
-        for widget in [self.sheet,self.scale,*self.views.values(),*self.metadata.values(),*self.orientation.values()]:
+        self.metadata['date'].setPlaceholderText('YYYY-MM-DD')
+        self.metadata['date'].editingFinished.connect(self._normalize_date_field); layout.addWidget(metadata)
+        layout.addStretch(); scroll.setWidget(body)
+        for widget in [self.sheet,self.scale,*self.views.values(),*self.metadata.values()]:
             signal = (widget.currentTextChanged if isinstance(widget,QComboBox) else
                       widget.toggled if isinstance(widget,QCheckBox) else widget.textChanged)
             signal.connect(self._changed)
@@ -188,6 +199,34 @@ class MainWindow(QMainWindow):
         path = (QFileDialog.getExistingDirectory(self,'Select Output Directory',edit.text(),options=options) if directory
                 else QFileDialog.getOpenFileName(self,'Select Runtime Executable',edit.text(),filter_text,options=options)[0])
         if path: edit.setText(path)
+
+    def edit_settings(self):
+        if self.backend.busy:return
+        dialog=QDialog(self); dialog.setWindowTitle('Settings'); dialog.resize(880,340)
+        layout=QVBoxLayout(dialog); layout.setContentsMargins(16,16,16,16); layout.setSpacing(12)
+        appearance=QGroupBox('Appearance'); appearance_form=QFormLayout(appearance)
+        theme=QComboBox(); theme.setObjectName('ThemeSelection'); theme.addItems(THEME_CHOICES)
+        theme.setFixedWidth(200)
+        original_theme=self.theme_preference; theme.setCurrentText(original_theme)
+        theme.currentTextChanged.connect(self._select_theme)
+        appearance_form.addRow('Theme',theme); layout.addWidget(appearance)
+        runtime=QGroupBox('Runtime And Output'); form=QFormLayout(runtime); edits={}
+        for key,label,directory,filter_text in [('output','Output Directory',True,''),
+                ('freecad_python','FreeCAD Python',False,'Python (python.exe)'),
+                ('poppler','Poppler Renderer',False,'Poppler (pdftoppm.exe)')]:
+            edit=QLineEdit(self.runtime_values.get(key,'') or ''); edit.setMinimumWidth(600); edits[key]=edit
+            row=QWidget(dialog); bar=QHBoxLayout(row); bar.setContentsMargins(0,0,0,0); bar.addWidget(edit,1)
+            bar.addWidget(self._button('…',lambda checked=False,e=edit,d=directory,f=filter_text:self._browse_runtime(e,d,f)))
+            form.addRow(label,row)
+        layout.addWidget(runtime)
+        buttons=QDialogButtonBox(QDialogButtonBox.StandardButton.Ok|QDialogButtonBox.StandardButton.Cancel)
+        buttons.accepted.connect(dialog.accept); buttons.rejected.connect(dialog.reject); layout.addWidget(buttons)
+        if dialog.exec()!=QDialog.DialogCode.Accepted:
+            self._select_theme(original_theme)
+            return
+        self.runtime_values={key:edit.text() for key,edit in edits.items()}
+        self._settings_save()
+        self._refresh_history()
 
     def browse_source(self):
         path,_=QFileDialog.getOpenFileName(self,'Import STEP Model',self.source_edit.text(),'STEP Models (*.stp *.step)',
@@ -210,15 +249,17 @@ class MainWindow(QMainWindow):
 
     def _request(self,action):
         if self.model.source is None: raise ValueError('Choose a STEP source file')
-        return {'action':action,'source':str(self.model.source),'output':str(Path(self.output_edit.text()).resolve()),
-                'freecad_python':self.freecad_edit.text(),'poppler':self.poppler_edit.text()}
+        if action in ('analyze','generate') and not self.runtime_values['freecad_python']:
+            from nutcase_discovery import FREECAD_GUIDANCE
+            raise ValueError(FREECAD_GUIDANCE)
+        return {'action':action,'source':str(self.model.source),'output':str(require_user_data_path(self.runtime_values['output'])),
+                'freecad_python':self.runtime_values['freecad_python'],'poppler':self.runtime_values['poppler']}
 
     def _settings_save(self):
         if self.model.source:
             recent=[str(self.model.source),*[x for x in self.settings.get('recent',[]) if x!=str(self.model.source)]][:12]
         else: recent=self.settings.get('recent',[])
-        self.settings={'source':str(self.model.source or ''),'recent':recent,'output':self.output_edit.text(),
-                       'freecad_python':self.freecad_edit.text(),'poppler':self.poppler_edit.text()}
+        self.settings={'source':str(self.model.source or ''),'recent':recent,'theme':self.theme_preference,**self.runtime_values}
         atomic_json(self.settings_file,self.settings)
 
     def analyze(self):
@@ -236,24 +277,33 @@ class MainWindow(QMainWindow):
         config['scale']='auto' if self.scale.currentText()=='Automatic' else float(self.scale.currentText())
         config['views']={key:widget.isChecked() for key,widget in self.views.items()}
         config['metadata']={key:widget.text() or (None if key=='date' else '') for key,widget in self.metadata.items()}
-        for key,widget in self.orientation.items():
-            text=widget.text().strip()
-            config['orientation'][key]=[float(x.strip()) for x in text.split(',')] if text else None
+        config['metadata']['date']=normalize_metadata_date(config['metadata']['date'])
+        self.metadata['date'].setText(config['metadata']['date'] or '')
+        config['orientation']={'axis':None,'up':None}
         from fastener_drawing.configuration import validate_config
         validate_config(config)
         if self.model.catalog: config=bind_config(config,self.model.catalog)
         self.model.config=config
         return self.model.checked_config()
 
+    def _normalize_date_field(self):
+        text=self.metadata['date'].text().strip()
+        if not text:return
+        try:
+            self.metadata['date'].setText(normalize_metadata_date(text))
+        except ValueError as error:
+            self.status.setText(str(error))
+
     def _apply_config(self):
         self._loading=True
         config=self.model.config
+        # Keep the GUI on automatic orientation, including for legacy saved JSON.
+        config['orientation']={'axis':None,'up':None}
         self.mode.setCurrentText(config['dimensioning']['mode'].title())
         self.sheet.setCurrentText('Automatic' if config['sheet']['size']=='auto' else config['sheet']['size'])
         self.scale.setCurrentText('Automatic' if config['scale']=='auto' else str(config['scale']))
         for key,widget in self.views.items(): widget.setChecked(config['views'][key])
         for key,widget in self.metadata.items(): widget.setText(config['metadata'][key] or '')
-        for key,widget in self.orientation.items(): widget.setText(', '.join(map(str,config['orientation'][key])) if config['orientation'][key] else '')
         self._loading=False; self._populate_candidates()
 
     def _mode_changed(self,text):
@@ -263,13 +313,17 @@ class MainWindow(QMainWindow):
 
     def _changed(self,*args):
         if not self._loading and self.release:
-            self.preview.message.setText('Preview From Previous Generation - Regenerate To Apply Configuration Changes')
+            self.preview.set_message('Preview From Previous Generation - Regenerate To Apply Configuration Changes')
 
     def _populate_candidates(self):
-        self._loading=True; self.table.setRowCount(0);self.candidate_detail.clear()
+        self._loading=True; self.table.setRowCount(0)
         if self.model.catalog and not self.model.binding_problem:
             decisions=self.model.decisions()
-            rows=self.model.catalog['candidates']; self.table.setRowCount(len(rows))
+            # Unsupported candidates remain in the source-bound report for
+            # diagnostics, but are not selectable as drawing dimensions.
+            rows=[row for row in self.model.catalog['candidates']
+                  if row['verification_status']!='unsupported']
+            self.table.setRowCount(len(rows))
             for index,row in enumerate(rows):
                 item=QTableWidgetItem('')
                 flags=Qt.ItemFlag.ItemIsEnabled|Qt.ItemFlag.ItemIsSelectable
@@ -277,22 +331,12 @@ class MainWindow(QMainWindow):
                 item.setFlags(flags); item.setData(Qt.ItemDataRole.UserRole,row['stable_id'])
                 item.setCheckState(Qt.CheckState.Checked if decisions[row['candidate_id']]['selected'] else Qt.CheckState.Unchecked)
                 item.setToolTip('Source-Bound Identity: '+row['stable_id']); self.table.setItem(index,0,item)
-                value='Unresolved' if row['value'] is None else f"{row['value']:.8g}"
-                status={'source_measured':'Measured','unsupported':'Unsupported'}.get(row['verification_status'],row['verification_status'])
-                values=[row['label'],value,row['units'],status]
+                value=format_measurement(row['value'],row['units'])
+                values=[row['label'],value,row['units']]
                 for column,value in enumerate(values,1):
                     cell=QTableWidgetItem(str(value)); cell.setToolTip(str(value)); self.table.setItem(index,column,cell)
             self.table.resizeRowsToContents()
         self._loading=False
-
-    def _candidate_details(self):
-        if self._loading or self.model.catalog is None:return
-        index=self.table.currentRow()
-        if index<0:return
-        row=self.model.catalog['candidates'][index]
-        source=next(c for c in self.model.analysis['components'][0]['feature_discovery']['dimension_candidates'] if c['id']==row['candidate_id'])
-        reason=source.get('reason') or 'Source geometry measured. Drawing associativity and independent measurements are verified during generation.'
-        self.candidate_detail.setPlainText(row['label']+'\nSource Status: '+row['verification_status']+'\n'+reason)
 
     def _selection_changed(self,item):
         if self._loading or item.column()!=0: return
@@ -355,7 +399,7 @@ class MainWindow(QMainWindow):
     def _refresh_history(self):
         self.history.clear(); self.history.addItem('Select A Previous Release',None)
         if self.model.source:
-            for run,path in history_entries(self.output_edit.text(),self.model.source): self.history.addItem(run,path)
+            for run,path in history_entries(self.runtime_values['output'],self.model.source): self.history.addItem(run,path)
 
     def _clear_release(self,message):
         self.release=None; self.preview.clear(message); self.release_label.setText('No Verified Release Selected')
@@ -369,6 +413,8 @@ class MainWindow(QMainWindow):
 
     def _log(self,message):
         self.logs.appendPlainText(str(message))
+        import logging
+        logging.getLogger('nutcase').info('%s', message)
 
     def _error(self,error):
         self.status.setText('Action Requires Review: '+str(error)); self._log(str(error))
@@ -378,6 +424,7 @@ class MainWindow(QMainWindow):
         self._log(message); self.status.setText('Drawing Published - Embedded Preview Requires Review')
 
     def _busy_changed(self,busy):
+        self.runtime_button.setEnabled(not busy)
         for widget in (self.import_group,self.config_tabs,self.save_button,self.load_button,self.fresh_button,
                        self.current_button,self.history_button,self.history):widget.setEnabled(not busy)
         self.generate_button.setEnabled(not busy and self.model.catalog is not None and not self.model.binding_problem)
@@ -461,14 +508,19 @@ class MainWindow(QMainWindow):
 
     def open_project(self):
         if not self.release:return
-        executable=Path(self.freecad_edit.text()).parent/'freecad.exe'
+        executable=Path(self.runtime_values['freecad_python']).parent/'freecad.exe'
         if not executable.is_file():self._error('FreeCAD GUI Executable Not Found Beside Its Configured Python');return
         from PySide6.QtCore import QProcess, QProcessEnvironment
-        process=QProcess(self); environment=QProcessEnvironment.systemEnvironment()
-        for key in ('PYTHONPATH','PYTHONHOME','QT_PLUGIN_PATH','QML2_IMPORT_PATH','QT_QPA_PLATFORM'):environment.remove(key)
+        process=QProcess(self); environment=QProcessEnvironment()
+        for key,value in clean_environment().items():environment.insert(key,value)
         process.setProcessEnvironment(environment)
         process.setProgram(str(executable));process.setArguments([self.release['project']])
-        if not process.startDetached()[0]:self._error('FreeCAD Could Not Be Launched')
+        # The independent GUI must not hold our worker/log console pipes open.
+        process.setStandardOutputFile(QProcess.nullDevice());process.setStandardErrorFile(QProcess.nullDevice())
+        with external_dll_search():
+            started=process.startDetached()
+        if not started:self._error('FreeCAD Could Not Be Launched')
+        return started
 
     def export_artifact(self,key):
         if not self.release:return
@@ -477,7 +529,9 @@ class MainWindow(QMainWindow):
             str(Path.home()/Path(self.release[key]).name),f'{suffix} Files (*.{suffix})',
             options=QFileDialog.Option.DontUseNativeDialog)
         if not path:return
-        try:export_copy(self.release,key,path);self.status.setText('Export Copy Saved And Checksum Verified')
+        try:
+            saved=export_copy(self.release,key,path)
+            self.status.setText('Export Copy Saved And Checksum Verified: '+str(saved))
         except Exception as error:self._error(error)
 
     def _toggle_logs(self):

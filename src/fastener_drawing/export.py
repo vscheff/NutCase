@@ -108,6 +108,8 @@ def _export_native(doc, page, destination, TechDrawGui):
         verify_overlay(reopened)
         rendered_svg = Path(str(destination) + ".render.svg")
         TechDrawGui.exportPageAsSvg(page, str(rendered_svg))
+        from .svg_placement import diameter_arrow_checks
+        diameter_clearance=diameter_arrow_checks(reopened,dimensions,rendered_svg)
         root = ET.parse(rendered_svg).getroot()
         # Qt can split one datum into several SVG text runs (e.g. the
         # diameter glyph and digits). Join sibling runs of the same item.
@@ -121,6 +123,7 @@ def _export_native(doc, page, destination, TechDrawGui):
         if any(element.tag.rsplit("}", 1)[-1] == "image" for element in root.iter()):
             raise RuntimeError("Native drawing scene unexpectedly contains raster images")
         render_checks = {"all_dimension_text_present": True, "actual_dimension_labels": expected_text,
+                         "diameter_arrow_clearance":diameter_clearance,
                          "no_raster_images_in_native_scene": True,
                          "basis": "Native SVG scene export from reopened FCStd immediately before native PDF export; PDF still needs independent rendering review"}
         TechDrawGui.exportPageAsPdf(page, str(temporary_pdf))
